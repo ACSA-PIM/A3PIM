@@ -15,7 +15,8 @@ def gapbsInput(taskPath, taskName, mode, coreNums):
 		 " -c pimprof_"+mode+" -d "+gapbslogPath+\
 		 " -- "+ taskPath + " -f "+ pregraphFullName +" -n1"
     ic(command)
-    return [coreNums, command,gapbslogPath+"/pimprofreuse.out"]
+    # print("command : {}".format(command))
+    return [coreNums, command, gapbslogPath+"/pimprofreuse.out"]
     
     
     

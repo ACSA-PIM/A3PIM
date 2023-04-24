@@ -23,14 +23,14 @@ def main():
     
     # Step2: run-sniper phase
     # Step2.1: parallel run single cpu mode
-        # parallelSingleCpuMode(taskList)
+    parallelSingleCpuMode(taskList)
     # Step2.2: consecutive run multi pim-cores mode
-    
+    multiCorePIMMode(taskList, 32)
     # test
-    for taskKey, taskName in taskList.items():
-        dataDict = dataDictInit()
-        queueDict = queueDictInit(dataDict)
-        singleCpuMode(queueDict, taskKey, taskName)
+    # for taskKey, taskName in taskList.items():
+    #     dataDict = dataDictInit()
+    #     queueDict = queueDictInit(dataDict)
+    #     singleCpuMode(queueDict, taskKey, taskName)
     # for taskKey, taskName in taskList.items():
     #     errorPrint("-----------------------------------Task cut line----------------------------------------")
     #     # filename=pasteFullFileName(taskKey)

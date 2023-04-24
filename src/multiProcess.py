@@ -45,19 +45,35 @@ def fileLineNum(filename):
     fread.close() 
     return num_file
 
-def singleCpuMode(queueDict, taskKey, taskName):
+def multiCorePIMMode(taskList, coreNums):
+    totolCount = len(taskList)
+    countId = 0
+    for taskKey, taskName in taskList.items():
+        countId = countId + 1
+        yellowPrint("[   {}/{}   ] PIM-{} Task {} is running……".format( countId, totolCount,coreNums, taskName))
+        if taskName in glv._get("gapbsList"):
+            [core, command,targetFile] = gapbsInput(taskKey, taskName, "pim", coreNums)
+        if not checkFileExists(targetFile):
+            list=TIMEOUT_COMMAND(core, command,glv._get("timeout"))
+            ic(list)
+            assert len(list)!=0
+        else:
+            yellowPrint("[   {}/{}   ] PIM-{} Task {} already finished".format( countId, totolCount,coreNums, taskName))
+        passPrint("[   {}/{}   ] PIM-{} Task {} finished successfully".format( countId, totolCount,coreNums, taskName))
+
+    
+def singleCpuMode(queueDict, taskKey, taskName, countId, totolCount):
     sys.stdout.flush()
-    yellowPrint("Task {} is running……".format(taskName))
+    yellowPrint("[   {}/{}   ] CPU-1 Task {} is running……".format( countId, totolCount, taskName))
     if taskName in glv._get("gapbsList"):
         [core, command,targetFile] = gapbsInput(taskKey, taskName, "cpu", 1)
-    # command=glv._get("BHivePath")+' '+input+" "+str(glv._get("BHiveCount"))
-    if(~checkFileExists(targetFile)):
+    if not checkFileExists(targetFile):
         list=TIMEOUT_COMMAND(core, command,glv._get("timeout"))
         ic(list)
-        assert list.size()!=0
+        assert len(list)!=0
     else:
-        yellowPrint("Task {} already finished".format(taskName))
-    passPrint("Task {} finished successfully".format(taskName))
+        yellowPrint("[   {}/{}   ] CPU-1 Task {} already finished".format( countId, totolCount, taskName))
+    passPrint("[   {}/{}   ] CPU-1 Task {} finished successfully".format( countId, totolCount, taskName))
     queueDict.get("finishedSubTask").put(taskName)
     
 def parallelSingleCpuMode(taskList):
@@ -66,13 +82,17 @@ def parallelSingleCpuMode(taskList):
     queueDict = queueDictInit(dataDict)
     
     pList=[]
+    totolCount = len(taskList)
+    countId = 0
     for taskKey, taskName in taskList.items():
-        pList.append(Process(target=singleCpuMode, args=(queueDict, taskKey, taskName)))   
+        countId = countId + 1
+        pList.append(Process(target=singleCpuMode, args=(queueDict, taskKey, taskName, countId, totolCount)))   
         
     for p in pList:
         p.start()
         
     ProcessNum = len(taskList)
+    time.sleep(0.5)
     while queueDict.get("finishedSubTask").qsize()<ProcessNum:
         print("QueueNum : {}".format(queueDict.get("finishedSubTask").qsize()))
         sys.stdout.flush()
