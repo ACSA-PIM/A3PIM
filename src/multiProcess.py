@@ -61,8 +61,19 @@ def multiCorePIMMode(taskList, coreNums):
             yellowPrint("[   {}/{}   ] PIM-{} Task {} already finished".format( countId, totolCount,coreNums, taskName))
         passPrint("[   {}/{}   ] PIM-{} Task {} finished successfully".format( countId, totolCount,coreNums, taskName))
 
+def pimprof(queueDict, taskKey, taskName, countId, totolCount, coreCount):
+    yellowPrint("[   {}/{}   ] PIMProf {} is running……".format( countId, totolCount, taskName))
+    [command,targetFile, redirect2log] = pimprofInput(taskKey, taskName, coreCount)
+    if not checkFileExists(targetFile):
+        list=TIMEOUT_COMMAND_2FILE(1, command, redirect2log, glv._get("timeout"))
+        ic(list)
+        assert len(list)!=0
+    else:
+        yellowPrint("[   {}/{}   ] PIMProf {} already finished".format( countId, totolCount, taskName))
+    passPrint("[   {}/{}   ] PIMProf {} finished successfully".format( countId, totolCount, taskName))
+    queueDict.get("finishedSubTask").put(taskName)
     
-def singleCpuMode(queueDict, taskKey, taskName, countId, totolCount):
+def singleCpuMode(queueDict, taskKey, taskName, countId, totolCount, **kwargs):
     sys.stdout.flush()
     yellowPrint("[   {}/{}   ] CPU-1 Task {} is running……".format( countId, totolCount, taskName))
     if taskName in glv._get("gapbsList"):
@@ -76,7 +87,7 @@ def singleCpuMode(queueDict, taskKey, taskName, countId, totolCount):
     passPrint("[   {}/{}   ] CPU-1 Task {} finished successfully".format( countId, totolCount, taskName))
     queueDict.get("finishedSubTask").put(taskName)
     
-def parallelSingleCpuMode(taskList):
+def parallelTask(taskList, SubFunc,  **kwargs):
     
     dataDict = dataDictInit()
     queueDict = queueDictInit(dataDict)
@@ -86,7 +97,12 @@ def parallelSingleCpuMode(taskList):
     countId = 0
     for taskKey, taskName in taskList.items():
         countId = countId + 1
-        pList.append(Process(target=singleCpuMode, args=(queueDict, taskKey, taskName, countId, totolCount)))   
+        if "coreCount" in kwargs:
+            ic(kwargs)
+            pList.append(Process(target=SubFunc, args=(queueDict, taskKey, taskName, countId, totolCount, int(kwargs["coreCount"]))))
+        else:
+            pList.append(Process(target=SubFunc, args=(queueDict, taskKey, taskName, countId, totolCount)))
+            
         
     for p in pList:
         p.start()
