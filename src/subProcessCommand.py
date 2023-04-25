@@ -35,7 +35,7 @@ def pimprofInput(taskPath, taskName, coreNums):
                 " -p " + pimprofstatsPath + \
                 " -r " + pimprofreusePath + \
                 " -o " + pimprofResultFile
-    print("command : {}".format(command))
+    # print("command : {}".format(command))
     ic(command)
     return [command, pimprofResultFile, redirect2log]
     

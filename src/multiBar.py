@@ -64,7 +64,8 @@ def barString(name,current=0,total=-1):
         leftNum=100-spaceNum
         retSting=retSting.ljust(spaceNum+len(retSting),space)
         retSting=retSting.ljust(leftNum+len(retSting),' ')
-        retSting+="| {} [{}<{}, {} s/it]".format(str(current)+"/"+str(total),time2String(pastTime),time2String(restTime),time2String(pastTime/(current+1)))
+        retSting+="| {} [{}<{}, {} s/it]".format(str(current)+"/"+str(total),time2String(pastTime),time2String(restTime)\
+                ,time2String(pastTime/(current+1)))
     return retSting 
 
 def display_info(str, x, y, colorpair=2):
@@ -141,7 +142,8 @@ def multBarCore(stdscr,Msg,ProcessNum,total,sendPipe,receivePipe,pList):
         if childProcessNum==0:
             break
         whileTimes+=1
-        display_info("childProcessNum/remainBarNum: "+str(childProcessNum)+"/"+str(len(receivePipe))+" "+Msg+" check time: "+str(whileTimes),0,0,2)
+        display_info("childProcessNum/remainBarNum: "+str(childProcessNum)+"/"+str(len(receivePipe))+" "+Msg+\
+                " check time: "+str(whileTimes),0,0,2)
         remainReceive=0
         deleteReceivePipeID=[] 
         for ProcessID , receiveID in receivePipe.items():
@@ -152,7 +154,8 @@ def multBarCore(stdscr,Msg,ProcessNum,total,sendPipe,receivePipe,pList):
                     except Exception  as e:
                         clearBarInfo()
                         unset_win()
-                        raise TypeError("e={} ProcessID={} barTotalNum[ProcessID]={} currentTmp[ProcessID]={}".format(e,ProcessID,barTotalNum[ProcessID],currentTmp[ProcessID]))
+                        raise TypeError("e={} ProcessID={} barTotalNum[ProcessID]={} currentTmp[ProcessID]={}"\
+                                .format(e,ProcessID,barTotalNum[ProcessID],currentTmp[ProcessID]))
                         print("{} {} {}".format(e,ProcessID,barTotalNum[ProcessID]))
                         msg=0
                     if isinstance(msg,int):
@@ -165,7 +168,8 @@ def multBarCore(stdscr,Msg,ProcessNum,total,sendPipe,receivePipe,pList):
                     else:
                         clearBarInfo()
                         unset_win()
-                        raise TypeError("ProcessID={} sub process msg={}\nbarTotalNum[ProcessID]={} currentTmp[ProcessID]={}".format(ProcessID,msg,barTotalNum[ProcessID],currentTmp[ProcessID]))
+                        raise TypeError("ProcessID={} sub process msg={}\nbarTotalNum[ProcessID]={} currentTmp[ProcessID]={}"\
+                                .format(ProcessID,msg,barTotalNum[ProcessID],currentTmp[ProcessID]))
                 else:
                     display_info(barString(ProcessID,0),0,ProcessID+1,1)
                 remainReceive=1
@@ -189,4 +193,5 @@ def multBar(Msg,ProcessNum,total,sendPipe,receivePipe,pList,stdscrInput):
     unset_win()
     yellowPrint("\n\r{} : start multiple Processes at: {}".format(Msg,time.strftime("%Y-%m-%d %H:%M:%S", time.localtime())))
     wrapper(multBarCore,Msg,ProcessNum,total,sendPipe,receivePipe,pList)  
-    passPrint("{} : wait {} to finish multiple Processes at: {}".format(Msg,time2String(int(time.time()-processBeginTime)),time.strftime("%Y-%m-%d %H:%M:%S", time.localtime())))
+    passPrint("{} : wait {} to finish multiple Processes at: {}".format(Msg,time2String(int(time.time()-processBeginTime))\
+                    ,time.strftime("%Y-%m-%d %H:%M:%S", time.localtime())))

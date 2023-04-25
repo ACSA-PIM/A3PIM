@@ -1,5 +1,6 @@
 log
 *.log
 *.out
+*.xlsx
 pyEnv
 __pycache__
