@@ -8,6 +8,7 @@ from input_process import inputParameters, isIceEnable
 from multiProcess import *
 from logPrint import *
 from analysis import *
+from graph import *
 
 def main():
     ## icecream & input
@@ -36,6 +37,8 @@ def main():
     
     # Step4: build excel & graphics to analyse results
     analyseResults(taskList, coreCount=32 )
+    
+    generateAppComparisonGraph()
 
     #     # addData2Excel(wb,taskName,isFirstSheet,dataDict)
 

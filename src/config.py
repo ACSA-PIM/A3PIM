@@ -30,7 +30,9 @@ glv._set("taskList",
 
 glv._set("run-sniperPath", "/staff/shaojiemike/github/sniper_PIMProf/run-sniper")
 glv._set("PIMProfSolverPath", "/staff/shaojiemike/github/PIMProf/debug/PIMProfSolver/Solver.exe")
-
+glv._set("graphEntryList",["CPU-ONLY","PIM-ONLY", 'MPKI-based',\
+                "Architecture-Suitability/Greedy","PIMProf"])
+glv._set("graphAppDict",{})
 # glv._set("ProcessNum",16)
 # glv._set("failedRetryTimes",3)
 # glv._set("failedSleepTime",1)

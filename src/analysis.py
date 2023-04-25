@@ -11,7 +11,14 @@ def analyseResults(taskList, **kwargs):
     countId = 0
     for taskKey, taskName in taskList.items():
         countId = countId + 1
-        write2ExcelList = [taskName] + readDataFromOutputFile(taskName, pimCoreCount)
+        [Instructions, resultList] = readDataFromOutputFile(taskName, pimCoreCount)
+        glvGraphDict = glv._get("graphAppDict")
+        glvGraphDict[taskName] = resultList
+        # ic(glvGraphDict)
+        glv._set("graphAppDict",glvGraphDict)
+        write2ExcelList = [taskName]
+        write2ExcelList.append(Instructions) 
+        write2ExcelList += resultList
         excelGraphAdd(wb, write2ExcelList)
 
 def readDataFromOutputFile(taskName, pimCoreCount):
@@ -20,6 +27,9 @@ def readDataFromOutputFile(taskName, pimCoreCount):
     mkdir(pimprofResultPath)
     targetFile = pimprofResultPath+"/reusedecision_"+taskName+"_cpu_"+ str(cpucore)+"_pim_"+ str(pimCoreCount)+".out"
     excelOutFile = pimprofResultPath+"/Summary_cpu_"+ str(cpucore)+"_pim_"+ str(pimCoreCount)+".xlsx"
+    graphOutFile = pimprofResultPath+"/ExeTime_cpu_"+ str(cpucore)+"_pim_"+ str(pimCoreCount)+".png"
+    
+    glv._set("graphlOutPath",graphOutFile)
     glv._set("excelOutPath",excelOutFile)
     
     if not checkFileExists(targetFile):
@@ -45,11 +55,14 @@ def readListBasedonName(targetFile):
     while lineNum <= useLineCount:
         line = fread.readline()
         ic(line)
-        costTime = string2int(re.search(regexPattern[lineNum],line).group(1))
-        resultList.append(costTime)
+        if lineNum == 3:
+            Instructions = string2int(re.search(regexPattern[lineNum],line).group(1))
+        else:
+            costTime = string2int(re.search(regexPattern[lineNum],line).group(1))
+            resultList.append(costTime)
         lineNum = lineNum + 1
     ic(resultList)
-    return resultList
+    return [Instructions, resultList]
 
 def string2int(S):
     floatGroup = re.search("(.*)e+(.*)$",S)

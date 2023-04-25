@@ -49,8 +49,7 @@ def excelGraphInit():
     ws = wb["Graph"]
     for i in string.ascii_uppercase[:14]:
         ws.column_dimensions[i].width = 15 # 修改列宽
-    ws.append(["Applications","CPU-ONLY","PIM-ONLY","Instruction", 'MPKI-based',\
-                "Architecture-Suitability/Greedy","PIMProf"])
+    ws.append(["Applications","Instruction"]+glv._get("graphEntryList"))
     return wb
 
 def excelGraphAdd(wb,writeList):
