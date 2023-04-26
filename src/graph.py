@@ -8,6 +8,13 @@ from logPrint import *
 import sys
 
 def generateAppComparisonGraph():
+    # matplotlib.use("pgf")
+	matplotlib.rcParams.update({
+        "pgf.texsystem": "pdflatex",
+        'font.family': 'serif',
+        'text.usetex': True,
+        'pgf.rcfonts': False,
+    })
     # data from https://allisonhorst.github.io/palmerpenguins/
 	
 	[species,dictData, maxVal] = normalizedGraphAppDict()
@@ -31,14 +38,13 @@ def generateAppComparisonGraph():
 	ax.set_title('Execution time breakdown of GAP and PARSEC workloads using different offloading decisions')
 	ax.set_xticks(x + 2 * width, species)
 	ax.legend(loc='upper left', ncols=3)
-	ax.set_ylim(0, maxVal+2) # 2
-	# matplotlib.use("pgf")
-	matplotlib.rcParams.update({
-        "pgf.texsystem": "pdflatex",
-        'font.family': 'serif',
-        'text.usetex': True,
-        'pgf.rcfonts': False,
-    })
+	if(maxVal > 15):
+		plt.yscale('log',base=10)
+		ax.set_ylim(0.1, maxVal+100) # 2
+	else:
+		plt.yscale('linear')
+		ax.set_ylim(0, maxVal+2) # 2
+	ic(maxVal)
 	plt.savefig(glv._get("graphlOutPath"))
  
 def normalizedGraphAppDict():
@@ -60,5 +66,5 @@ def normalizedGraphAppDict():
                 result2[entryList[i]] = [List[i]]  
             else:
                 result2[entryList[i]].append(List[i])   
-    return [result1, result2, maxVal]
+    return [result1, result2, int(maxVal)]
     

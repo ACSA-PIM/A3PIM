@@ -56,7 +56,10 @@ def multiCorePIMMode(taskList, coreNums):
         if not checkFileExists(targetFile):
             list=TIMEOUT_COMMAND(core, command,glv._get("timeout"))
             ic(list)
-            assert len(list)!=0
+            if not checkFileExists(targetFile):
+                errorPrint("{}-PIM falied for targetFile {} not found".format(taskName,targetFile))
+                yellowPrint("Falied command {}".format(command))
+                exit(1)
         else:
             yellowPrint("[   {}/{}   ] PIM-{} Task {} already finished".format( countId, totolCount,coreNums, taskName))
         passPrint("[   {}/{}   ] PIM-{} Task {} finished successfully".format( countId, totolCount,coreNums, taskName))
