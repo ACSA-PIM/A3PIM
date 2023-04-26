@@ -18,27 +18,30 @@ def main():
     taskList = glv._get("taskList")
     processBeginTime=timeBeginPrint("multiple taskList")
 
-    # Step1: manual compile all exe before run-sniper phase
-    errorPrint("-----------------------------------STEP1----------------------------------------")
-    
-    
-    errorPrint("-----------------------------------STEP2.1----------------------------------------")
-    # Step2: run-sniper phase
-    # Step2.1: parallel run single cpu mode
-    parallelTask( taskList, singleCpuMode)
-    errorPrint("-----------------------------------STEP2.2----------------------------------------")
-    
-    # Step2.2: consecutive run multi pim-cores mode
-    multiCorePIMMode(taskList, 32)
+    for diffGraph in glv._get("gapbsGraphNameList"):
+        glv._set("gapbsGraphName", diffGraph)
+        # Step1: manual compile all exe before run-sniper phase
+        errorPrint("-----------------------------------{}----------------------------------------".format(diffGraph))
+        errorPrint("-----------------------------------STEP1----------------------------------------")
+        
+        
+        errorPrint("-----------------------------------STEP2.1----------------------------------------")
+        # Step2: run-sniper phase
+        # Step2.1: parallel run single cpu mode
+        parallelTask( taskList, singleCpuMode)
+        errorPrint("-----------------------------------STEP2.2----------------------------------------")
+        
+        # Step2.2: consecutive run multi pim-cores mode
+        multiCorePIMMode(taskList, 32)
 
-    errorPrint("-----------------------------------STEP3----------------------------------------")
-    # Step3: run modified PIMProf result
-    parallelTask(taskList, pimprof, coreCount=32 ) # 
-    
-    # Step4: build excel & graphics to analyse results
-    analyseResults(taskList, coreCount=32 )
-    
-    generateAppComparisonGraph()
+        errorPrint("-----------------------------------STEP3----------------------------------------")
+        # Step3: run modified PIMProf result
+        parallelTask(taskList, pimprof, coreCount=32 ) # 
+        
+        # Step4: build excel & graphics to analyse results
+        analyseResults(taskList, coreCount=32 ) 
+        generateAppComparisonGraph()
+        passPrint("-----------------------------------{}----------------------------------------".format(diffGraph))
 
     #     # addData2Excel(wb,taskName,isFirstSheet,dataDict)
 

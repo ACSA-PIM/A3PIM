@@ -17,6 +17,7 @@ glv._set("gapbsList", [
     "sssp"
 ])  # abbreviation of applications in gapbs benchmark
 gapbsTaskfilePath = "/staff/shaojiemike/github/sniper_PIMProf/PIMProf/gapbs/"
+glv._set("gapbsGraphNameList",["kron-5","kron-10","kron-15","kron-20"])
 glv._set("gapbsGraphName", "kron-5")
 glv._set("gapbsGraphPath", gapbsTaskfilePath+"benchmark/")
 glv._set("taskList",
@@ -36,7 +37,7 @@ glv._set("graphAppDict",{})
 # glv._set("ProcessNum",16)
 # glv._set("failedRetryTimes",3)
 # glv._set("failedSleepTime",1)
-glv._set("timeout",180)
+glv._set("timeout",3600*5)
 glv._set("debug","yes")
 
 
