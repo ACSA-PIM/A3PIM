@@ -97,11 +97,12 @@ def readListBasedonName(targetFile):
             3:"Instruction (.*)$",
             4:"MPKI offloading time \(ns\): (.*) = CPU (.*)$",
             5:"Greedy offloading time \(ns\): (.*) = CPU (.*)$",
-            6:"Reuse offloading time \(ns\): (.*) = CPU (.*)$"
+            6:"Reuse offloading time \(ns\): (.*) = CPU (.*)$",
+            7:"SCA offloading time \(ns\): (.*) = CPU (.*)$"
         }
     ic(targetFile)
     fread=open(targetFile, 'r') 
-    useLineCount=6
+    useLineCount=7
     lineNum = 1
     resultList=[]
     while lineNum <= useLineCount:
