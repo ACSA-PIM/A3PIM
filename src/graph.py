@@ -44,7 +44,11 @@ def generateAppStackedBarPlotly():
 	# ]
 	fig = go.Figure()
 
-	color_list = ['rgb(0, 128, 0)', 'rgb(135, 206, 235)', 'rgb(255, 192, 203)', 'rgb(218, 112, 214)', 'rgb(255, 255, 224)']
+	# color from https://stackoverflow.com/questions/68596628/change-colors-in-100-stacked-barchart-plotly-python
+	color_list = ['rgb(29, 105, 150)', \
+            	'rgb(56, 166, 165)', \
+				'rgb(15, 133, 84)',\
+        		'rgb(95, 70, 144)']
 	for i, entry in enumerate( barDict.items()):
 		barName=entry[0]
 		yList = entry[1]
