@@ -41,6 +41,8 @@ def main():
         # Step4: build excel & graphics to analyse results
         analyseResults(taskList, coreCount=32 ) 
         generateAppComparisonGraph()
+        generateAppStackedBar()
+        generateAppStackedBarPlotly()
         passPrint("-----------------------------------{}----------------------------------------".format(diffGraph))
 
     #     # addData2Excel(wb,taskName,isFirstSheet,dataDict)

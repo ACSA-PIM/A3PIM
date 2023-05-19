@@ -117,9 +117,13 @@ def readListBasedonName(targetFile):
     return [Instructions, resultList]
 
 def string2int(S):
-    floatGroup = re.search("(.*)e+(.*)$",S)
-    if floatGroup:
-        return int(float(floatGroup.group(1)) * pow(10, int(floatGroup.group(2))))
+    floatExp = re.search("(.*)e+(.*)$",S)
+    if floatExp:
+        return int(float(floatExp.group(1)) * pow(10, int(floatExp.group(2))))
     else:
-        return int(S)
+        floatGroup = re.search("([0-9]*)\.(.*)$",S)
+        if floatGroup:
+            return int(floatGroup.group(1))
+        else:
+            return int(S)
         

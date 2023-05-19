@@ -17,7 +17,8 @@ glv._set("gapbsList", [
     "sssp"
 ])  # abbreviation of applications in gapbs benchmark
 gapbsTaskfilePath = "/staff/shaojiemike/github/sniper_PIMProf/PIMProf/gapbs/"
-glv._set("gapbsGraphNameList",["kron-5","kron-10","kron-15","kron-20"])
+# glv._set("gapbsGraphNameList",["kron-5","kron-10","kron-15","kron-20"])
+glv._set("gapbsGraphNameList",["kron-20"])
 glv._set("gapbsGraphName", "kron-5")
 glv._set("gapbsGraphPath", gapbsTaskfilePath+"benchmark/")
 glv._set("taskList",
@@ -32,8 +33,11 @@ glv._set("taskList",
 glv._set("run-sniperPath", "/staff/shaojiemike/github/sniper_PIMProf/run-sniper")
 glv._set("PIMProfSolverPath", "/staff/shaojiemike/github/PIMProf/debug/PIMProfSolver/Solver.exe")
 glv._set("graphEntryList",["CPU-ONLY","PIM-ONLY", 'MPKI-based',\
-                "Architecture-Suitability/Greedy","PIMProf"])
+                "Architecture-Suitability/Greedy","PIMProf", "SCA"])
 glv._set("graphAppDict",{})
+glv._set("graphAppDetailDict",{})
+glv._set("graphDetailList",["CPU-Time","PIM-Time", 'DataMove',\
+                "Context Switch Time"])
 # glv._set("ProcessNum",16)
 # glv._set("failedRetryTimes",3)
 # glv._set("failedSleepTime",1)
