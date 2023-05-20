@@ -37,7 +37,7 @@ def generateAppStackedBar():
 	plt.savefig(glv._get("graphlOutPathTest1"))
 
 def generateAppStackedBarPlotly():
-	[x, barDict] = detailNormalizedGraphAppDict()
+	[x, barDict, maxY] = detailNormalizedGraphAppDict()
 	# x = [
 	# 	["bc", "bc", "bc", "sssp", "sssp", "sssp"],
 	# 	["CPU-ONLY", "PIM_ONLY", "PIMProf", "CPU-ONLY", "PIM_ONLY", "PIMProf",]
@@ -60,7 +60,7 @@ def generateAppStackedBarPlotly():
 					title="Execution time breakdown of GAP and PARSEC workloads using different offloading decisions",
 					xaxis_title="GAP and PARSEC workloads",
 					yaxis_title="Normalized Execution Time",
-					yaxis_range=[0,1],
+					yaxis_range=[0,maxY],
 					legend_title="Legend Title",
 					font=dict(
 						family="serif",
@@ -157,11 +157,13 @@ def detailNormalizedGraphAppDict():
     ic(x)
     barDict = {}
     detailList = glv._get("graphDetailList")
+    maxY = 0
     for i, detailName in enumerate(detailList):
         tmp = []
         for _ , appDataDict in detailAppDictData.items():
             for line in appDataDict:
+                maxY = max(line[i], maxY)
                 tmp.append(line[i])
         ic(tmp)
         barDict[detailName]=tmp
-    return [x, barDict]
+    return [x, barDict, maxY]
