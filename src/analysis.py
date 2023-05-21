@@ -28,8 +28,8 @@ def readDataFromOutputFile(taskName, pimCoreCount):
     targetFile = pimprofResultPath+"/reusedecision_"+taskName+"_cpu_"+ str(cpucore)+"_pim_"+ str(pimCoreCount)+".out"
     excelOutFile = pimprofResultPath+"/Summary_cpu_"+ str(cpucore)+"_pim_"+ str(pimCoreCount)+".xlsx"
     graphOutFile = pimprofResultPath+"/ExeTime_cpu_"+ str(cpucore)+"_pim_"+ str(pimCoreCount)+".png"
-    graphOutFileTest1 = pimprofResultPath+"/test1_ExeTime_cpu_"+ str(cpucore)+"_pim_"+ str(pimCoreCount)+".png"
-    graphOutFileTest2 = pimprofResultPath+"/test2_ExeTime_cpu_"+ str(cpucore)+"_pim_"+ str(pimCoreCount)+".png"
+    graphOutFileTest1 = pimprofResultPath+"/speedup_ExeTime_cpu_"+ str(cpucore)+"_pim_"+ str(pimCoreCount)+".png"
+    graphOutFileTest2 = pimprofResultPath+"/stackedBar_ExeTime_cpu_"+ str(cpucore)+"_pim_"+ str(pimCoreCount)+".png"
     
     glv._set("graphlOutPath",graphOutFile)
     glv._set("graphlOutPathTest1",graphOutFileTest1)

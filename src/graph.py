@@ -74,6 +74,13 @@ def generateAppStackedBarPlotly():
   
     
 def generateAppComparisonGraph():
+    [species,dictData, maxVal] = normalizedGraphAppDict()
+    ic(dictData)
+    BreakdownGraph(species,dictData, maxVal)
+    SpeedUpGraph(species,dictData)
+
+
+def SpeedUpGraph(species,dictData):
     # matplotlib.use("pgf")
 	matplotlib.rcParams.update({
         "pgf.texsystem": "pdflatex",
@@ -83,8 +90,48 @@ def generateAppComparisonGraph():
     })
     # data from https://allisonhorst.github.io/palmerpenguins/
 	
-	[species,dictData, maxVal] = normalizedGraphAppDict()
-	ic(dictData)
+	x = np.arange(len(species))  # the label locations
+	width = 0.25/2  # the width of the bars
+	multiplier = 0
+
+	fig, ax = plt.subplots(layout='constrained')
+	fig.set_size_inches(w=10.1413, h=5.75) #(8, 6.5)
+
+	maxVal = 0
+	for attribute, measurement in dictData.items():
+		for i in range(len(measurement)):
+			measurement[i] = round(1/measurement[i],2)
+		ic(measurement)
+		maxVal = max(maxVal, max(measurement))
+		offset = width * multiplier
+		rects = ax.bar(x + offset, measurement, width, label=attribute)
+		ax.bar_label(rects, padding=3) # Distance of label from the end of the bar, in points.
+		multiplier += 1
+
+	# Add some text for labels, title and custom x-axis tick labels, etc.
+	ax.set_ylabel('Normalized Execution Time')
+	ax.set_title('Execution time breakdown of GAP and PARSEC workloads using different offloading decisions')
+	ax.set_xticks(x + 2 * width, species)
+	ax.legend(loc='upper left', ncols=3)
+	if(maxVal > 15):
+		plt.yscale('log',base=10)
+		ax.set_ylim(0.1, maxVal+100) # 2
+	else:
+		plt.yscale('linear')
+		ax.set_ylim(0, maxVal+2) # 2
+	ic(maxVal)
+	plt.savefig(glv._get("graphlOutPathTest1"))
+
+def BreakdownGraph(species,dictData, maxVal):
+    # matplotlib.use("pgf")
+	matplotlib.rcParams.update({
+        "pgf.texsystem": "pdflatex",
+        'font.family': 'serif',
+        'text.usetex': True,
+        'pgf.rcfonts': False,
+    })
+    # data from https://allisonhorst.github.io/palmerpenguins/
+	
 	x = np.arange(len(species))  # the label locations
 	width = 0.25/2  # the width of the bars
 	multiplier = 0
