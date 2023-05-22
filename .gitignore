@@ -5,3 +5,4 @@ log
 *.png
 pyEnv
 __pycache__
+build

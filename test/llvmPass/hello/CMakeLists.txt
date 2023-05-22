@@ -1,0 +1,1 @@
+add_library(LLVMPassname MODULE hello.cpp)
