@@ -1,0 +1,10 @@
+define i8 @test() {
+entry:
+%48 = phi i8 [ %40, %38 ], [ %46, %41 ], !dbg !6091
+call void asm sideeffect "\09mov $0, %rax \0A\09mov $1, %rbx \0A\09mov $2, %rcx \0A\09xchg %bx, %bx\0A", "imr,imr,imr,~{rax},~{rbx},~{rcx},~{dirflag},~{fpsr},~{flags}"(i64 1024, i64 195851253743562898, i64 -4353206102027315105)
+%49 = tail call dereferenceable(272) %"class.std::basic_ostream"* @_ZNSo3putEc(%"class.std::basic_ostream"* nonnull %21, i8 signext %48), !dbg !6104
+call void @llvm.dbg.value(metadata %"class.std::basic_ostream"* %49, metadata !6646, metadata !DIExpression()), !dbg !26413
+%50 = tail call dereferenceable(272) %"class.std::basic_ostream"* @_ZNSo5flushEv(%"class.std::basic_ostream"* nonnull %49), !dbg !6110
+call void asm sideeffect "\09mov $0, %rax \0A\09mov $1, %rbx \0A\09mov $2, %rcx \0A\09xchg %bx, %bx\0A", "imr,imr,imr,~{rax},~{rbx},~{rcx},~{dirflag},~{fpsr},~{flags}"(i64 1025, i64 195851253743562898, i64 -4353206102027315105)
+ret void, !dbg !6111
+}
