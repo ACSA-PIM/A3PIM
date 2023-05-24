@@ -28,7 +28,7 @@ def abstractBBLfromAssembly(assembly):
     tmpBBL = []
     with open(bblFile, 'w') as f:
         for match in matches:
-            if matchStep=="none" and match == "mov    $0x400,%rax":
+            if match == "mov    $0x400,%rax":
                 matchStep="bbl start"
             elif matchStep=="bbl start":
                 matchhigher = re.match(r"movabs \$0x(.*),%rbx",match)
@@ -48,6 +48,7 @@ def abstractBBLfromAssembly(assembly):
             elif matchStep=="bbl Lower hash":
                 if match == "xchg   %bx,%bx":
                     matchStep="record"
+                    tmpBBL = []
                 else:
                     matchStep="none"
             elif matchStep=="record":
