@@ -1,6 +1,14 @@
 import global_variable as glv
 from terminal_command import mkdir
 
+def disassemblyInput(taskPath, taskName):
+    assemblyPath = glv._get("logPath")+ "assembly/"
+    targetAssembly = assemblyPath + taskName + ".s"
+    command = "objdump -d " +  taskPath 
+    # + " 2>&1 > " + targetAssembly # weird, can not parallel objdump > Difffile
+    ic(command)
+    return [command, targetAssembly]
+    
 def gapbsInput(taskPath, taskName, mode, coreNums):
     
     gapbslogPath = glv._get("logPath")+glv._get("gapbsGraphName")+\

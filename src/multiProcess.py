@@ -14,6 +14,7 @@ from data import dataDictInit,dataDictClass
 from terminal_command import *
 from subProcessCommand import *
 from tsjPython.tsjCommonFunc import *
+from disassembly import abstractBBLfromAssembly
 import traceback
 import time
 
@@ -80,7 +81,7 @@ def singleCpuMode(queueDict, taskKey, taskName, countId, totolCount, **kwargs):
     sys.stdout.flush()
     yellowPrint("[   {}/{}   ] CPU-1 Task {} is running……".format( countId, totolCount, taskName))
     if taskName in glv._get("gapbsList"):
-        [core, command,targetFile] = gapbsInput(taskKey, taskName, "cpu", 1)
+        [core, command,targetFile] = disassemblyInput(taskKey, taskName, "cpu", 1)
     if not checkFileExists(targetFile):
         list=TIMEOUT_COMMAND(core, command,glv._get("timeout"))
         ic(list)
@@ -89,6 +90,24 @@ def singleCpuMode(queueDict, taskKey, taskName, countId, totolCount, **kwargs):
         yellowPrint("[   {}/{}   ] CPU-1 Task {} already finished".format( countId, totolCount, taskName))
     passPrint("[   {}/{}   ] CPU-1 Task {} finished successfully".format( countId, totolCount, taskName))
     queueDict.get("finishedSubTask").put(taskName)
+    
+
+def singleDisassembly(queueDict, taskKey, taskName, countId, totolCount, **kwargs):
+    sys.stdout.flush()
+    yellowPrint("[   {}/{}   ] Disassembly-1 Task {} is running……".format( countId, totolCount, taskName))
+    if taskName in glv._get("gapbsList"):
+        [command,targetFile] = disassemblyInput(taskKey, taskName)
+    if not checkFileExists(targetFile):
+        # list=TIMEOUT_COMMAND(1, command,glv._get("timeout")) weird, can not parallel objdump > Difffile
+        list=TIMEOUT_COMMAND_2FILE(1, command, targetFile, glv._get("timeout"))
+        ic(list)
+        assert len(list)!=0
+    else:
+        yellowPrint("[   {}/{}   ] Disassembly-1 Task {} already finished".format( countId, totolCount, taskName))
+    abstractBBLfromAssembly(targetFile)
+    passPrint("[   {}/{}   ] Disassembly-1 Task {} finished successfully".format( countId, totolCount, taskName))
+    queueDict.get("finishedSubTask").put(taskName)
+    
     
 def parallelTask(taskList, SubFunc,  **kwargs):
     
