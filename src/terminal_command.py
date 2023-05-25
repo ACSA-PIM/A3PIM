@@ -49,6 +49,7 @@ def TIMEOUT_COMMAND(core, command, timeout=30):
             return None
         time.sleep(2)
     ic("SubProcess-Finished",process.pid,process.poll())
+    # ic(process.stderr)
     return process.stdout.readlines()
 
 
@@ -83,29 +84,31 @@ def TIMEOUT_COMMAND_2FILE(core, command, filename, timeout=30):
             return None
         time.sleep(2)
     ic("SubProcess-Finished",process.pid,process.poll())
+    # ic(process.stderr)
     return ["Finished/Killed"]
 
-# def TIMEOUT_severalCOMMAND(command, timeout=10):
-#     """call shell-command and either return its output or kill it
-#     if it doesn't normally exit within timeout seconds and return None"""
-#     import subprocess, datetime, os, time, signal
-#     start = datetime.datetime.now()
-#     process = subprocess.Popen(command,shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE,encoding="utf-8")
-#     ic("LLVM-before",process.pid,process.poll())
-#     time.sleep(0.2)
-#     while process.poll() is None: # poll()返回0 正常结束， 1 sleep， 2 子进程不存在，-15 kill，None 在运行
-#         ic("LLVM-During",process.pid,process.poll())
-#         now = datetime.datetime.now()
-#         if (now - start).seconds> timeout:
-#             os.kill(process.pid, signal.SIGKILL)
-#             # https://blog.csdn.net/zhupenghui176/article/details/109097737
-#             # os.waitpid(-1, os.WNOHANG)
-#             (killPid,killSig) = os.waitpid(process.pid, 0)
-#             if killPid != process.pid or killSig!=9:
-#                 errorPrint("TIMEOUT_COMMAND kill failed! killPid %d process.pid %d killSig %d" % (killPid, process.pid, killSig))
-#             ic("LLVM-Killed",process.pid,process.poll())
-#             return None
-#         time.sleep(2)
-#     ic("LLVM-Finished",process.pid,process.poll())
-#     return process.stdout.readlines()   
+def TIMEOUT_severalCOMMAND(command, timeout=10):
+    """call shell-command and either return its output or kill it
+    if it doesn't normally exit within timeout seconds and return None"""
+    import subprocess, datetime, os, time, signal
+    start = datetime.datetime.now()
+    process = subprocess.Popen(command,shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE,encoding="utf-8")
+    ic("LLVM-before",process.pid,process.poll())
+    time.sleep(0.2)
+    while process.poll() is None: # poll()返回0 正常结束， 1 sleep， 2 子进程不存在，-15 kill，None 在运行
+        ic("LLVM-During",process.pid,process.poll())
+        now = datetime.datetime.now()
+        if (now - start).seconds> timeout:
+            os.kill(process.pid, signal.SIGKILL)
+            # https://blog.csdn.net/zhupenghui176/article/details/109097737
+            # os.waitpid(-1, os.WNOHANG)
+            (killPid,killSig) = os.waitpid(process.pid, 0)
+            if killPid != process.pid or killSig!=9:
+                errorPrint("TIMEOUT_COMMAND kill failed! killPid %d process.pid %d killSig %d" % (killPid, process.pid, killSig))
+            ic("LLVM-Killed",process.pid,process.poll())
+            return None
+        time.sleep(2)
+    ic("LLVM-Finished",process.pid,process.poll())
+    # ic(process.stderr.readlines())
+    return [process.stdout.readlines() , process.stderr.readlines()]
 
