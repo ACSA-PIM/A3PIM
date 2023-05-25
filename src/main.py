@@ -34,7 +34,6 @@ def main():
         
         # calculateSCADecisionTime(taskList)
         
-        exit(0)
         errorPrint("-----------------------------------STEP2.1----------------------------------------")
         # Step2: run-sniper phase
         # Step2.1: parallel run single cpu mode

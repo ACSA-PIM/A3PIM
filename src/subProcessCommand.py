@@ -39,10 +39,12 @@ def pimprofInput(taskPath, taskName, coreNums):
     pimprofstatsPath = pimlogPath + "/pimprofstats.out"
     pimprofreusePath = cpulogPath + "/pimprofreuse.out"
     redirect2log = pimprofResultPath +"/output_"+taskName+"_cpu_"+ str(cpucore)+"_pim_"+ str(coreNums)+".log"
+    bblDecisionFile = glv._get("logPath")+ "assembly/" + taskName + "_bbl.decision"
     command = glv._get("PIMProfSolverPath")+" reuse -c "+cpuprofstatsPath+\
                 " -p " + pimprofstatsPath + \
                 " -r " + pimprofreusePath + \
-                " -o " + pimprofResultFile
+                " -o " + pimprofResultFile +\
+                " -s " + bblDecisionFile
     # print("command : {}".format(command))
     ic(command)
     return [command, pimprofResultFile, redirect2log]

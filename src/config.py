@@ -33,7 +33,7 @@ glv._set("taskList",
 glv._set("run-sniperPath", "/staff/shaojiemike/github/sniper_PIMProf/run-sniper")
 glv._set("PIMProfSolverPath", "/staff/shaojiemike/github/PIMProf/debug/PIMProfSolver/Solver.exe")
 glv._set("graphEntryList",["CPU-ONLY","PIM-ONLY", 'MPKI-based',\
-                "Architecture-Suitability/Greedy","PIMProf", "SCA"])
+                "Architecture-Suitability/Greedy","PIMProf", "SCAFromfile", "SCA"])
 glv._set("graphAppDict",{})
 glv._set("graphAppDetailDict",{})
 glv._set("graphDetailList",["CPU-Time","PIM-Time", 'DataMove',\

@@ -54,11 +54,12 @@ def readListDetail(targetFile):
         4:"MPKI offloading time \(ns\): (.*) = CPU (.*) \+ PIM (.*) \+ REUSE (.*) \+ SWITCH (.*)$",
         5:"Greedy offloading time \(ns\): (.*) = CPU (.*) \+ PIM (.*) \+ REUSE (.*) \+ SWITCH (.*)$",
         6:"Reuse offloading time \(ns\): (.*) = CPU (.*) \+ PIM (.*) \+ REUSE (.*) \+ SWITCH (.*)$",
-        7:"SCA offloading time \(ns\): (.*) = CPU (.*) \+ PIM (.*) \+ REUSE (.*) \+ SWITCH (.*)$"
+        7:"SCAFromfile offloading time \(ns\): (.*) = CPU (.*) \+ PIM (.*) \+ REUSE (.*) \+ SWITCH (.*)$",
+        8:"SCA offloading time \(ns\): (.*) = CPU (.*) \+ PIM (.*) \+ REUSE (.*) \+ SWITCH (.*)$"
         }
     ic(targetFile)
     fread=open(targetFile, 'r') 
-    useLineCount=7
+    useLineCount=8
     lineNum = 1
     resultList=[]
     while lineNum <= useLineCount:
@@ -98,11 +99,12 @@ def readListBasedonName(targetFile):
             4:"MPKI offloading time \(ns\): (.*) = CPU (.*)$",
             5:"Greedy offloading time \(ns\): (.*) = CPU (.*)$",
             6:"Reuse offloading time \(ns\): (.*) = CPU (.*)$",
-            7:"SCA offloading time \(ns\): (.*) = CPU (.*)$"
+            7:"SCAFromfile offloading time \(ns\): (.*) = CPU (.*)$",
+            8:"SCA offloading time \(ns\): (.*) = CPU (.*)$"
         }
     ic(targetFile)
     fread=open(targetFile, 'r') 
-    useLineCount=7
+    useLineCount=8
     lineNum = 1
     resultList=[]
     while lineNum <= useLineCount:

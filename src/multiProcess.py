@@ -68,6 +68,7 @@ def multiCorePIMMode(taskList, coreNums):
 def pimprof(queueDict, taskKey, taskName, countId, totolCount, coreCount):
     yellowPrint("[   {}/{}   ] PIMProf {} is running……".format( countId, totolCount, taskName))
     [command,targetFile, redirect2log] = pimprofInput(taskKey, taskName, coreCount)
+    print(command)
     if not checkFileExists(targetFile):
         list=TIMEOUT_COMMAND_2FILE(1, command, redirect2log, glv._get("timeout"))
         ic(list)
@@ -81,7 +82,7 @@ def singleCpuMode(queueDict, taskKey, taskName, countId, totolCount, **kwargs):
     sys.stdout.flush()
     yellowPrint("[   {}/{}   ] CPU-1 Task {} is running……".format( countId, totolCount, taskName))
     if taskName in glv._get("gapbsList"):
-        [core, command,targetFile] = disassemblyInput(taskKey, taskName, "cpu", 1)
+        [core, command,targetFile] = gapbsInput(taskKey, taskName, "cpu", 1)
     if not checkFileExists(targetFile):
         list=TIMEOUT_COMMAND(core, command,glv._get("timeout"))
         ic(list)
