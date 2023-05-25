@@ -9,6 +9,7 @@ from multiProcess import *
 from logPrint import *
 from analysis import *
 from graph import *
+from SCA import OffloadBySCA
 
 def main():
     ## icecream & input
@@ -27,6 +28,11 @@ def main():
         
         errorPrint("-----------------------------------STEP SCA BB abstract----------------------------------------")
         parallelTask(taskList, singleDisassembly)
+        
+
+        OffloadBySCA(taskList)
+        
+        # calculateSCADecisionTime(taskList)
         
         exit(0)
         errorPrint("-----------------------------------STEP2.1----------------------------------------")
