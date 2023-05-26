@@ -50,12 +50,12 @@ def main():
         errorPrint("-----------------------------------STEP4----------------------------------------")
         # Step4: build excel & graphics to analyse results
         analyseResults(taskList, coreCount=32 ) 
-        generateAppComparisonGraph()
+        maxValue = generateAppComparisonGraph()
         
         errorPrint("-----------------------------------STEP4.1----------------------------------------")
         
         # generateAppStackedBar()
-        generateAppStackedBarPlotly()
+        generateAppStackedBarPlotly(maxValue)
         passPrint("-----------------------------------{}----------------------------------------".format(diffGraph))
 
     #     # addData2Excel(wb,taskName,isFirstSheet,dataDict)

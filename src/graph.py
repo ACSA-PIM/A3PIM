@@ -36,8 +36,8 @@ def generateAppStackedBar():
 	# show plot
 	plt.savefig(glv._get("graphlOutPathTest1"))
 
-def generateAppStackedBarPlotly():
-	[x, barDict, maxY] = detailNormalizedGraphAppDict()
+def generateAppStackedBarPlotly(maxY):
+	[x, barDict] = detailNormalizedGraphAppDict()
 	# x = [
 	# 	["bc", "bc", "bc", "sssp", "sssp", "sssp"],
 	# 	["CPU-ONLY", "PIM_ONLY", "PIMProf", "CPU-ONLY", "PIM_ONLY", "PIMProf",]
@@ -56,6 +56,7 @@ def generateAppStackedBarPlotly():
 	# fig.add_bar(x=x,y=[10,2,3,4,5,6], name="CPU")
 	# fig.add_bar(x=x,y=[6,5,4,3,2,1], name="DataMove")
 	# fig.add_bar(x=x,y=[6,5,4,3,2,1], name="PIM")
+	ic(maxY)
 	fig.update_layout(barmode="relative", 
 					title="Execution time breakdown of GAP and PARSEC workloads using different offloading decisions",
 					xaxis_title="GAP and PARSEC workloads",
@@ -78,6 +79,7 @@ def generateAppComparisonGraph():
     ic(dictData)
     BreakdownGraph(species,dictData, maxVal)
     SpeedUpGraph(species,dictData)
+    return maxVal
 
 
 def SpeedUpGraph(species,dictData):
@@ -187,7 +189,7 @@ def normalizedGraphAppDict():
                 result2[entryList[i]] = [List[i]]  
             else:
                 result2[entryList[i]].append(List[i])   
-    return [result1, result2, int(maxVal)]
+    return [result1, result2, maxVal]
 
 def detailNormalizedGraphAppDict():
     x = []
@@ -212,13 +214,11 @@ def detailNormalizedGraphAppDict():
     ic(x)
     barDict = {}
     detailList = glv._get("graphDetailList")
-    maxY = 0
     for i, detailName in enumerate(detailList):
         tmp = []
         for _ , appDataDict in detailAppDictData.items():
             for line in appDataDict:
-                maxY = max(line[i], maxY)
                 tmp.append(line[i])
-        ic(tmp)
+        # ic(tmp)
         barDict[detailName]=tmp
-    return [x, barDict, maxY]
+    return [x, barDict]
