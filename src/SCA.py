@@ -4,6 +4,8 @@ import global_variable as glv
 from terminal_command import *
 import re
 from tqdm import tqdm
+from multiProcess import parallelGetBBL, llvmCommand
+from tsjPython.tsjCommonFunc import *
 
 def OffloadBySCA(taskList):
     for taskKey, taskName in taskList.items():
@@ -13,15 +15,20 @@ def OffloadBySCA(taskList):
         bblJsonFile = targetAssembly[:-2] + "_bbl.json"
         bblDecisionFile = targetAssembly[:-2] + "_bbl.decision"
         bblSCAFile = targetAssembly[:-2] + "_bbl.sca"
-        bblHashDict = dict()
-        with open(bblJsonFile, 'r') as f:
-            bblHashDict = json.load(f)
-        with open(bblSCAFile, 'w') as fsca:
-            with open(bblDecisionFile, 'w') as f:
-                for bblHashStr, bblList in tqdm(bblHashDict.items()):
-                    [decision, cycles, pressure] = llvmResult(bblList)
-                    f.write(bblHashStr + " " + decision + '\n')   
-                    fsca.write(bblHashStr + "\t" + decision + " pressure: " + str(pressure) + "\t cycles: " + str(cycles) + '\n')        
+        if not checkFileExists(bblDecisionFile):
+            bblHashDict = dict()
+            with open(bblJsonFile, 'r') as f:
+                bblHashDict = json.load(f)
+            parallelGetBBL(taskName, bblHashDict, bblDecisionFile, bblSCAFile)
+        else:
+            yellowPrint("{} bblDecisionFile already existed".format(taskName))
+    
+        # with open(bblSCAFile, 'w') as fsca:
+        #     with open(bblDecisionFile, 'w') as f:
+        #         for bblHashStr, bblList in tqdm(bblHashDict.items()):
+        #             [decision, cycles, pressure] = llvmResult(bblList)
+        #             f.write(bblHashStr + " " + decision + '\n')   
+        #             fsca.write(bblHashStr + "\t" + decision + " pressure: " + str(pressure) + "\t cycles: " + str(cycles) + '\n')        
 
 def llvmResult(bblList):
     command = llvmCommand(bblList)
@@ -45,10 +52,3 @@ def llvmResult(bblList):
         decision = "PIM"
     # ic(decision, cycles, pressure)
     return [decision, cycles, pressure]
-        
-def llvmCommand(bblList):
-    bbl = '\n'.join(bblList)
-    bbl = bbl.replace('$', '\\$')
-    command = 'echo "'+ bbl + '" |'+" llvm-mca -march=x86 -mcpu=x86-64 -timeline --bottleneck-analysis --resource-pressure --iterations=1000 |head -n 30"
-    # ic(command)
-    return command

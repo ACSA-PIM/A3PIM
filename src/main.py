@@ -47,9 +47,13 @@ def main():
         # Step3: run modified PIMProf result
         parallelTask(taskList, pimprof, coreCount=32 ) # 
         
+        errorPrint("-----------------------------------STEP4----------------------------------------")
         # Step4: build excel & graphics to analyse results
         analyseResults(taskList, coreCount=32 ) 
         generateAppComparisonGraph()
+        
+        errorPrint("-----------------------------------STEP4.1----------------------------------------")
+        
         # generateAppStackedBar()
         generateAppStackedBarPlotly()
         passPrint("-----------------------------------{}----------------------------------------".format(diffGraph))

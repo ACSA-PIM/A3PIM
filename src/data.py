@@ -25,6 +25,28 @@ class dataDictClass():
         except KeyError:
             return "Not Found"
 
+def bblDictInit():
+    dataDict = dataDictClass()
+
+    dataDict.set("finishedSubTask",set())
+    dataDict.set("llvmCycles" , defaultdict(int))
+    dataDict.set("llvmPressure" , defaultdict(float))
+    # dataDict.set("llvmmcaCyclesRevBiBlock" , defaultdict(int))
+    # dataDict.set("BaselineCyclesRevBiBlock" , defaultdict(int))
+    # dataDict.set("OSACA_TPLCDmax_CyclesRevBiBlock" , defaultdict(float))
+    # dataDict.set("OSACA_TPLCDavg_CyclesRevBiBlock" , defaultdict(float))
+    # dataDict.set("OSACATPCyclesRevBiBlock" , defaultdict(float))
+    # dataDict.set("OSACALCDCyclesRevBiBlock" , defaultdict(float))
+    # dataDict.set("BhiveCyclesRevBiBlock" , defaultdict(int))
+    # dataDict.set("accuracyLLVM" , defaultdict(float))
+    # dataDict.set("accuracyLLVM_MuliplyFrequency" , defaultdict(float))
+    # dataDict.set("accuracyBaseline" , defaultdict(float))
+    # dataDict.set("accuracyBaseline_MuliplyFrequency" , defaultdict(float))
+    # dataDict.set("accuracyMax" , defaultdict(float))
+    # dataDict.set("accuracyAvg" , defaultdict(float))
+    # dataDict.set("accuracyCP" , defaultdict(float))
+    return dataDict
+
 def dataDictInit():
     dataDict = dataDictClass()
 

@@ -38,7 +38,7 @@ glv._set("graphAppDict",{})
 glv._set("graphAppDetailDict",{})
 glv._set("graphDetailList",["CPU-Time","PIM-Time", 'DataMove',\
                 "Context Switch Time"])
-# glv._set("ProcessNum",16)
+glv._set("ProcessNum",40)
 # glv._set("failedRetryTimes",3)
 # glv._set("failedSleepTime",1)
 glv._set("timeout",3600*5)

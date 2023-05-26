@@ -3,14 +3,14 @@ import sys
 import multiprocessing as mp
 from data import queueDictInit
 from multiprocessing import Pipe,Queue
-# from multiBar import *
+from multiBar import *
 from collections import defaultdict
 # from Bhive import *
 # from llvm_mca import *
 # from OSACA import *
 from collections import defaultdict
 # from KendallIndex import calculateKendallIndex
-from data import dataDictInit,dataDictClass
+from data import dataDictInit,dataDictClass,bblDictInit
 from terminal_command import *
 from subProcessCommand import *
 from tsjPython.tsjCommonFunc import *
@@ -139,3 +139,134 @@ def parallelTask(taskList, SubFunc,  **kwargs):
 
     yellowPrint("Reducing parallel processes result...")
 
+        
+def llvmCommand(bblList):
+    bbl = '\n'.join(bblList)
+    bbl = bbl.replace('$', '\\$')
+    command = 'echo "'+ bbl + '" |'+" llvm-mca -march=x86 -mcpu=x86-64 -timeline --bottleneck-analysis --resource-pressure --iterations=100 |head -n 30"
+    # ic(command)
+    return command
+
+def mergeQueue2dataDict(queueDict,dataDict):
+    for key, value in dataDict.dataDict.items():
+        # ic(key,type(value))
+        if isinstance(value,set):
+            # ic("set")
+            dataDict.dataDict[key]=dataDict.dataDict[key].union(queueDict.dataDict[key].get())
+        elif isinstance(value,defaultdict):
+            # ic("defaultdict(int)")
+            ic(key)
+            if key == "frequencyRevBiBlock":
+                a=dataDict.dataDict[key]
+                b=queueDict.dataDict[key].get()
+                for key2 in b:
+                    dataDict.dataDict[key][key2]=a[key2]+b[key2]
+            else:
+                dataDict.dataDict[key].update(queueDict.dataDict[key].get())
+    return dataDict
+
+def getBBLFunc(bblHashDict, sendPipe,rank,queueDict):
+    llvmCycles = defaultdict(int)
+    llvmPressure = defaultdict(float)
+    finishedSubTask = set()
+    
+    i=1
+    sendSkipNum=int(len(bblHashDict)/50)+1
+    ic(sendSkipNum)
+    try:
+        for bblHashStr, bblList in bblHashDict.items():
+            if i%sendSkipNum==0:
+                sendPipe.send(i)
+            i+=1
+            command = llvmCommand(bblList)
+            [list, errList]=TIMEOUT_severalCOMMAND(command, glv._get("timeout"))
+            # ic(errList)
+            if errList and errList[-1]=="error: no assembly instructions found.\n":
+                cycles = 0
+                pressure = 0
+            else:
+                # ic(list[2])
+                # ic(list[11])
+                cycles = int(re.match(r"Total Cycles:(\s*)([0-9]*)(\s*)",list[2]).group(2))
+                if list[11]=="No resource or data dependency bottlenecks discovered.\n":
+                    pressure = 0
+                else:
+                    pressure = float(re.match(r"Cycles with backend pressure increase(\s*)\[ ([0-9\.]*)% \](\s*)",list[11]).group(2))              
+            llvmCycles[bblHashStr]=cycles
+            llvmPressure[bblHashStr]=pressure                    
+    except Exception as e:
+        sendPipe.send(e)
+        errorPrint("error = {}".format(e))
+        raise TypeError("paralleReadProcess = {}".format(e))
+    queueDict.get("llvmCycles").put(llvmCycles)
+    queueDict.get("llvmPressure").put(llvmPressure)
+    queueDict.get("finishedSubTask").put(finishedSubTask)
+    ic(str(rank) + "end")
+    sendPipe.send(i+sendSkipNum)
+    sendPipe.close()
+    
+def parallelGetBBL(taskName, bblHashDict, bblDecisionFile, bblSCAFile):
+    bblDict = bblDictInit()
+    ProcessNum=glv._get("ProcessNum")
+    
+    queueDict = queueDictInit(bblDict)
+
+    sendPipe=dict()
+    receivePipe=dict()
+    total=dict()
+    
+    # 用 items() 方法将所有的键值对转成元组
+    items = list(bblHashDict.items())
+
+    # 我们需要计算每个变量存储的键值对数量
+    count = len(items) // ProcessNum
+    
+    # 循环30次，每次取出 count 个键值对存入变量
+    for i in range(ProcessNum):
+        ic(i)
+        vars()["var_" + str(i+1)] = dict(items[i*count:(i+1)*count])
+        # ic(vars()["var_" + str(i+1)])
+    
+    # 最后如果键值对数量不能整除30，将剩余的键值对存入一个变量
+    # if len(items) % ProcessNum != 0:
+    vars()["var_" + str(ProcessNum+1)] = dict(items[ProcessNum*count:])
+    # ic(vars()["var_" + str(ProcessNum+1)])
+    
+    pList=[]
+    for i in range(ProcessNum+1):
+        receivePipe[i], sendPipe[i] = Pipe(False)
+        total[i]=len(vars()["var_" + str(i+1)])
+        pList.append(Process(target=getBBLFunc, args=(vars()["var_" + str(i+1)],sendPipe[i],i,queueDict)))
+
+    for p in pList:
+        p.start()
+    
+    if glv._get("debug")=='no':
+        stdscr = curses.initscr()
+        multBar(taskName,ProcessNum+1,total,sendPipe,receivePipe,pList,stdscr)
+    
+    while queueDict.get("finishedSubTask").qsize()<ProcessNum:
+        print("QueueNum : {}".format(queueDict.get("finishedSubTask").qsize()))
+        sys.stdout.flush()
+        time.sleep(5)
+
+    yellowPrint("Reducing parallel processes result...")
+    
+    for i in range(ProcessNum):
+        bblDict=mergeQueue2dataDict(queueDict,bblDict)
+        
+    for key, value in bblDict.dataDict.items():
+        globals()[key]=value
+        
+    # bblDecisionFile, bblSCAFile save to file
+    with open(bblSCAFile, 'w') as fsca:
+            with open(bblDecisionFile, 'w') as f:
+                for [bblHashStr, cycles] in llvmCycles.items() :
+                    pressure = llvmPressure[bblHashStr]
+                    if pressure < 70:
+                        decision = "CPU"
+                    else:
+                        decision = "PIM"
+                    f.write(bblHashStr + " " + decision + '\n')   
+                    fsca.write(bblHashStr + "\t" + decision + " pressure: " + str(pressure) + "\t cycles: " + str(cycles) + '\n')    
+    return bblDict

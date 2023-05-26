@@ -124,6 +124,7 @@ def SpeedUpGraph(species,dictData):
 
 def BreakdownGraph(species,dictData, maxVal):
     # matplotlib.use("pgf")
+	ic("BreakdownGraph")
 	matplotlib.rcParams.update({
         "pgf.texsystem": "pdflatex",
         'font.family': 'serif',
@@ -136,15 +137,22 @@ def BreakdownGraph(species,dictData, maxVal):
 	width = 0.25/2  # the width of the bars
 	multiplier = 0
 
-	fig, ax = plt.subplots(layout='constrained')
+	ic("BreakdownGraph why stucked 0")
+	matplotlib.use('Agg') # 禁止交互式窗口
+	fig, ax = plt.subplots()
+	ic("BreakdownGraph why stucked 0.5")
+ 
 	fig.set_size_inches(w=10.1413, h=5.75) #(8, 6.5)
 
+	ic("BreakdownGraph why stucked 1")
 	for attribute, measurement in dictData.items():
 		ic(measurement)
 		offset = width * multiplier
 		rects = ax.bar(x + offset, measurement, width, label=attribute)
 		ax.bar_label(rects, padding=3) # Distance of label from the end of the bar, in points.
 		multiplier += 1
+
+	ic("BreakdownGraph why stucked 2")
 
 	# Add some text for labels, title and custom x-axis tick labels, etc.
 	ax.set_ylabel('Normalized Execution Time')
