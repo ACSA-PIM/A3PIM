@@ -18,6 +18,8 @@ from disassembly import abstractBBLfromAssembly
 import traceback
 import time
 
+FollowStatus = -1
+
 class Process(mp.Process):
     def __init__(self, *args, **kwargs):
         mp.Process.__init__(self, *args, **kwargs)
@@ -143,7 +145,7 @@ def parallelTask(taskList, SubFunc,  **kwargs):
 def llvmCommand(bblList):
     bbl = '\n'.join(bblList)
     bbl = bbl.replace('$', '\\$')
-    command = 'echo "'+ bbl + '" |'+" llvm-mca -march=x86 -mcpu=x86-64 -timeline --bottleneck-analysis --resource-pressure --iterations=100 |head -n 30"
+    command = 'echo "'+ bbl + '" |'+" llvm-mca -march=x86 -mcpu=x86-64 -timeline --bottleneck-analysis --resource-pressure --iterations=100"
     # ic(command)
     return command
 
@@ -168,6 +170,7 @@ def mergeQueue2dataDict(queueDict,dataDict):
 def getBBLFunc(bblHashDict, sendPipe,rank,queueDict):
     llvmCycles = defaultdict(int)
     llvmPressure = defaultdict(float)
+    llvmPortUsage = defaultdict(float)
     finishedSubTask = set()
     
     i=1
@@ -182,8 +185,9 @@ def getBBLFunc(bblHashDict, sendPipe,rank,queueDict):
             [list, errList]=TIMEOUT_severalCOMMAND(command, glv._get("timeout"))
             # ic(errList)
             if errList and errList[-1]=="error: no assembly instructions found.\n":
-                cycles = 0
-                pressure = 0
+                cycles = FollowStatus
+                pressure = FollowStatus
+                loadPortUsage = FollowStatus
             else:
                 # ic(list[2])
                 # ic(list[11])
@@ -192,14 +196,25 @@ def getBBLFunc(bblHashDict, sendPipe,rank,queueDict):
                     pressure = 0
                 else:
                     pressure = float(re.match(r"Cycles with backend pressure increase(\s*)\[ ([0-9\.]*)% \](\s*)",list[11]).group(2))              
+                loadPortUsage = 0.0
+                for i in range(len(list)):
+                    # ic(list[i])
+                    if list[i].startswith('Resource pressure per iteration'):     
+                        matchPort = re.match(r".*(\s+)([0-9\.]+)(\s*)\n$",list[i+2])
+                        if not matchPort:
+                            loadPortUsage = -2
+                        else:
+                            loadPortUsage = float(matchPort.group(2))
             llvmCycles[bblHashStr]=cycles
-            llvmPressure[bblHashStr]=pressure                    
+            llvmPressure[bblHashStr]=pressure      
+            llvmPortUsage[bblHashStr]=loadPortUsage             
     except Exception as e:
         sendPipe.send(e)
         errorPrint("error = {}".format(e))
         raise TypeError("paralleReadProcess = {}".format(e))
     queueDict.get("llvmCycles").put(llvmCycles)
     queueDict.get("llvmPressure").put(llvmPressure)
+    queueDict.get("llvmPortUsage").put(llvmPortUsage)
     queueDict.get("finishedSubTask").put(finishedSubTask)
     ic(str(rank) + "end")
     sendPipe.send(i+sendSkipNum)
@@ -263,10 +278,18 @@ def parallelGetBBL(taskName, bblHashDict, bblDecisionFile, bblSCAFile):
             with open(bblDecisionFile, 'w') as f:
                 for [bblHashStr, cycles] in llvmCycles.items() :
                     pressure = llvmPressure[bblHashStr]
-                    if pressure < 70:
-                        decision = "CPU"
-                    else:
+                    portUsage = llvmPortUsage[bblHashStr]
+                    if pressure == FollowStatus:
+                        decision = "Follower"
+                    elif portUsage > 0:
                         decision = "PIM"
+                    elif pressure >= 70:
+                        decision = "PIM"
+                    else:
+                        decision = "CPU"
                     f.write(bblHashStr + " " + decision + '\n')   
-                    fsca.write(bblHashStr + "\t" + decision + " pressure: " + str(pressure) + "\t cycles: " + str(cycles) + '\n')    
+                    fsca.write(bblHashStr + "\t" + decision + \
+                                " portUsage: " + str(portUsage) + \
+                                "\t pressure: " + str(pressure) + \
+                                "\t cycles: " + str(cycles) + '\n')    
     return bblDict

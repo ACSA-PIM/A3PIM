@@ -3,6 +3,7 @@ from terminal_command import mkdir
 
 def disassemblyInput(taskPath, taskName):
     assemblyPath = glv._get("logPath")+ "assembly/"
+    mkdir(assemblyPath)
     targetAssembly = assemblyPath + taskName + ".s"
     command = "objdump -d " +  taskPath 
     # + " 2>&1 > " + targetAssembly # weird, can not parallel objdump > Difffile

@@ -31,6 +31,7 @@ def bblDictInit():
     dataDict.set("finishedSubTask",set())
     dataDict.set("llvmCycles" , defaultdict(int))
     dataDict.set("llvmPressure" , defaultdict(float))
+    dataDict.set("llvmPortUsage" , defaultdict(float))
     # dataDict.set("llvmmcaCyclesRevBiBlock" , defaultdict(int))
     # dataDict.set("BaselineCyclesRevBiBlock" , defaultdict(int))
     # dataDict.set("OSACA_TPLCDmax_CyclesRevBiBlock" , defaultdict(float))

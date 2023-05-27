@@ -23,13 +23,12 @@ def OffloadBySCA(taskList):
         else:
             yellowPrint("{} bblDecisionFile already existed".format(taskName))
     
-        # with open(bblSCAFile, 'w') as fsca:
-        #     with open(bblDecisionFile, 'w') as f:
-        #         for bblHashStr, bblList in tqdm(bblHashDict.items()):
-        #             [decision, cycles, pressure] = llvmResult(bblList)
-        #             f.write(bblHashStr + " " + decision + '\n')   
-        #             fsca.write(bblHashStr + "\t" + decision + " pressure: " + str(pressure) + "\t cycles: " + str(cycles) + '\n')        
-
+        # bblHashDict = dict()
+        # with open(bblJsonFile, 'r') as f:
+        #     bblHashDict = json.load(f)
+        # for bblHashStr, bblList in tqdm(bblHashDict.items()):
+        #     [decision, cycles, pressure] = llvmResult(bblList)
+            
 def llvmResult(bblList):
     command = llvmCommand(bblList)
     [list, errList]=TIMEOUT_severalCOMMAND(command, glv._get("timeout"))
@@ -39,6 +38,23 @@ def llvmResult(bblList):
         pressure = 0
         decision = "None"
         return [decision, cycles, pressure]
+    loadPortUsage = 0.0
+    for i in range(len(list)):
+        # ic(list[i])
+        if list[i].startswith('Resource pressure per iteration'):
+            ic(list[i])
+            ic(list[i+1])
+            ic(list[i+2])       
+            matchPort = re.match(r".*(\s+)([0-9\.]+)(\s*)\n$",list[i+2])
+            if not matchPort:
+                loadPortUsage = -2
+            else:
+                ic(matchPort)
+                ic(matchPort.group(0))
+                ic(matchPort.group(1))
+                ic(matchPort.group(2))
+                loadPortUsage = float(matchPort.group(2))
+            ic(loadPortUsage)
     # ic(list[2])
     # ic(list[11])
     cycles = int(re.match(r"Total Cycles:(\s*)([0-9]*)(\s*)",list[2]).group(2))
