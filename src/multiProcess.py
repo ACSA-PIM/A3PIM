@@ -287,7 +287,8 @@ def parallelGetBBL(taskName, bblHashDict, bblDecisionFile, bblSCAFile):
                         decision = "PIM"
                     else:
                         decision = "CPU"
-                    f.write(bblHashStr + " " + decision + '\n')   
+                    f.write(bblHashStr + " " + decision + \
+                            " " + str(cycles) + '\n')   
                     fsca.write(bblHashStr + "\t" + decision + \
                                 " portUsage: " + str(portUsage) + \
                                 "\t pressure: " + str(pressure) + \
