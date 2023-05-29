@@ -181,9 +181,11 @@ def normalizedGraphAppDict():
     result1 = []
     result2 = {}
     maxVal = 0
+    ic(dictData)
     for key, List in dictData.items():
+        ic(key, List)
         result1.append(key)
-        for i in range(len(List)):
+        for i in range(min(len(List),len(entryList))):
             maxVal = max(List[i], maxVal)
             if entryList[i] not in result2:
                 result2[entryList[i]] = [List[i]]  
@@ -217,6 +219,7 @@ def detailNormalizedGraphAppDict():
     for i, detailName in enumerate(detailList):
         tmp = []
         for _ , appDataDict in detailAppDictData.items():
+            appDataDict=appDataDict[:len(entryList)]
             for line in appDataDict:
                 tmp.append(line[i])
         # ic(tmp)

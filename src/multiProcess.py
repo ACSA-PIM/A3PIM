@@ -281,9 +281,9 @@ def parallelGetBBL(taskName, bblHashDict, bblDecisionFile, bblSCAFile):
                     portUsage = llvmPortUsage[bblHashStr]
                     if pressure == FollowStatus:
                         decision = "Follower"
-                    elif portUsage > 0 and cycles > 200: #enough big 2 PIM
+                    elif portUsage > 0 and pressure*6 + cycles > 306: #enough big 2 PIM
                         decision = "PIM"
-                    elif pressure >= 40:
+                    elif pressure >= 50:
                         decision = "PIM"
                     else:
                         decision = "CPU"
