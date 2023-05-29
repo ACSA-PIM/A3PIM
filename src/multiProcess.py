@@ -171,6 +171,9 @@ def getBBLFunc(bblHashDict, sendPipe,rank,queueDict):
     llvmCycles = defaultdict(int)
     llvmPressure = defaultdict(float)
     llvmPortUsage = defaultdict(float)
+    llvmResourcePressure = defaultdict(float)
+    llvmRegisterPressure = defaultdict(float)
+    llvmMemoryPressure = defaultdict(float)
     finishedSubTask = set()
     
     i=1
@@ -188,6 +191,9 @@ def getBBLFunc(bblHashDict, sendPipe,rank,queueDict):
                 cycles = FollowStatus
                 pressure = FollowStatus
                 loadPortUsage = FollowStatus
+                resourcePressure = FollowStatus
+                registerPressure = FollowStatus
+                memoryPressure = FollowStatus
             else:
                 # ic(list[2])
                 # ic(list[11])
@@ -197,9 +203,30 @@ def getBBLFunc(bblHashDict, sendPipe,rank,queueDict):
                 else:
                     pressure = float(re.match(r"Cycles with backend pressure increase(\s*)\[ ([0-9\.]*)% \](\s*)",list[11]).group(2))              
                 loadPortUsage = 0.0
+                resourcePressure = 0.0
+                registerPressure = 0.0
+                memoryPressure = 0.0
                 for i in range(len(list)):
                     # ic(list[i])
-                    if list[i].startswith('Resource pressure per iteration'):     
+                    if list[i].startswith('  Resource Pressure       '):
+                        matchPressure = re.match(r".*\[ ([0-9\.]*)% \](\s*)$",list[i])
+                        if not matchPressure:
+                            resourcePressure = -2
+                        else:
+                            resourcePressure = float(matchPressure.group(1))
+                    elif list[i].startswith('  - Register Dependencies ['):
+                        matchPressure = re.match(r".*\[ ([0-9\.]*)% \](\s*)$",list[i])
+                        if not matchPressure:
+                            registerPressure = -2
+                        else:
+                            registerPressure = float(matchPressure.group(1))
+                    elif list[i].startswith('  - Memory Dependencies   ['):
+                        matchPressure = re.match(r".*\[ ([0-9\.]*)% \](\s*)$",list[i])
+                        if not matchPressure:
+                            memoryPressure = -2
+                        else:
+                            memoryPressure = float(matchPressure.group(1))
+                    elif list[i].startswith('Resource pressure per iteration'):     
                         matchPort = re.match(r".*(\s+)([0-9\.]+)(\s*)\n$",list[i+2])
                         if not matchPort:
                             loadPortUsage = -2
@@ -207,7 +234,10 @@ def getBBLFunc(bblHashDict, sendPipe,rank,queueDict):
                             loadPortUsage = float(matchPort.group(2))
             llvmCycles[bblHashStr]=cycles
             llvmPressure[bblHashStr]=pressure      
-            llvmPortUsage[bblHashStr]=loadPortUsage             
+            llvmPortUsage[bblHashStr]=loadPortUsage   
+            llvmResourcePressure[bblHashStr] = resourcePressure
+            llvmRegisterPressure[bblHashStr] = registerPressure
+            llvmMemoryPressure[bblHashStr] = memoryPressure         
     except Exception as e:
         sendPipe.send(e)
         errorPrint("error = {}".format(e))
@@ -215,6 +245,9 @@ def getBBLFunc(bblHashDict, sendPipe,rank,queueDict):
     queueDict.get("llvmCycles").put(llvmCycles)
     queueDict.get("llvmPressure").put(llvmPressure)
     queueDict.get("llvmPortUsage").put(llvmPortUsage)
+    queueDict.get("llvmResourcePressure").put(llvmResourcePressure)
+    queueDict.get("llvmRegisterPressure").put(llvmRegisterPressure)
+    queueDict.get("llvmMemoryPressure").put(llvmMemoryPressure)
     queueDict.get("finishedSubTask").put(finishedSubTask)
     ic(str(rank) + "end")
     sendPipe.send(i+sendSkipNum)
@@ -279,6 +312,9 @@ def parallelGetBBL(taskName, bblHashDict, bblDecisionFile, bblSCAFile):
                 for [bblHashStr, cycles] in llvmCycles.items() :
                     pressure = llvmPressure[bblHashStr]
                     portUsage = llvmPortUsage[bblHashStr]
+                    resourcePressure = llvmResourcePressure[bblHashStr] 
+                    registerPressure = llvmRegisterPressure[bblHashStr] 
+                    memoryPressure = llvmMemoryPressure[bblHashStr]   
                     if pressure == FollowStatus:
                         decision = "Follower"
                     elif portUsage > 0 and pressure*6 + cycles > 306: #enough big 2 PIM
@@ -289,8 +325,10 @@ def parallelGetBBL(taskName, bblHashDict, bblDecisionFile, bblSCAFile):
                         decision = "CPU"
                     f.write(bblHashStr + " " + decision + \
                             " " + str(cycles) + '\n')   
-                    fsca.write(bblHashStr + "\t" + decision + \
-                                " portUsage: " + str(portUsage) + \
-                                "\t pressure: " + str(pressure) + \
-                                "\t cycles: " + str(cycles) + '\n')    
+                    fsca.write("{:36} {:10} portUsage: {:5} cycles: {:5} pressure:{:5} resourcePressure:{:5} registerPressure:{:5} memoryPressure:{:5}\n".format(
+                                bblHashStr, decision,
+                                str(portUsage),
+                                str(cycles),
+                                str(pressure), str(resourcePressure), str(registerPressure), str(memoryPressure)
+                            )) 
     return bblDict

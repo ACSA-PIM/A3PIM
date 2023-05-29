@@ -28,6 +28,7 @@ def OffloadBySCA(taskList):
         #     bblHashDict = json.load(f)
         # for bblHashStr, bblList in tqdm(bblHashDict.items()):
         #     [decision, cycles, pressure] = llvmResult(bblList)
+        # exit(0)
             
 def llvmResult(bblList):
     command = llvmCommand(bblList)
@@ -39,22 +40,41 @@ def llvmResult(bblList):
         decision = "None"
         return [decision, cycles, pressure]
     loadPortUsage = 0.0
+    resourcePressure = 0.0
+    registerPressure = 0.0
+    memoryPressure = 0.0
     for i in range(len(list)):
         # ic(list[i])
-        if list[i].startswith('Resource pressure per iteration'):
+        if list[i].startswith('  Resource Pressure       '):
             ic(list[i])
-            ic(list[i+1])
-            ic(list[i+2])       
-            matchPort = re.match(r".*(\s+)([0-9\.]+)(\s*)\n$",list[i+2])
-            if not matchPort:
-                loadPortUsage = -2
+            matchPressure = re.match(r".*\[ ([0-9\.]*)% \](\s*)$",list[i])
+            if not matchPressure:
+                resourcePressure = -2
             else:
-                ic(matchPort)
-                ic(matchPort.group(0))
-                ic(matchPort.group(1))
-                ic(matchPort.group(2))
-                loadPortUsage = float(matchPort.group(2))
-            ic(loadPortUsage)
+                resourcePressure = float(matchPressure.group(1))
+            ic(resourcePressure)
+        if list[i].startswith('  - Register Dependencies ['):
+            ic(list[i])
+            registerPressure = float(re.match(r".*\[ ([0-9\.]*)% \](\s*)$",list[i]).group(1))
+            ic(registerPressure)
+        if list[i].startswith('  - Memory Dependencies   ['):
+            ic(list[i])
+            memoryPressure = float(re.match(r".*\[ ([0-9\.]*)% \](\s*)$",list[i]).group(1))
+            ic(memoryPressure)
+        # if list[i].startswith('Resource pressure per iteration'):
+        #     ic(list[i])
+        #     ic(list[i+1])
+        #     ic(list[i+2])       
+        #     matchPort = re.match(r".*(\s+)([0-9\.]+)(\s*)\n$",list[i+2])
+        #     if not matchPort:
+        #         loadPortUsage = -2
+        #     else:
+        #         ic(matchPort)
+        #         ic(matchPort.group(0))
+        #         ic(matchPort.group(1))
+        #         ic(matchPort.group(2))
+        #         loadPortUsage = float(matchPort.group(2))
+        #     ic(loadPortUsage)
     # ic(list[2])
     # ic(list[11])
     cycles = int(re.match(r"Total Cycles:(\s*)([0-9]*)(\s*)",list[2]).group(2))
