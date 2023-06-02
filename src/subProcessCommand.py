@@ -27,13 +27,51 @@ def gapbsInput(taskPath, taskName, mode, coreNums):
     # print("command : {}".format(command))
     return [coreNums, command, gapbslogPath+"/pimprofreuse.out"]
 
-def pimprofInput(taskPath, taskName, coreNums):
+def defaultInput(taskPath, taskName, mode, coreNums):
+    # gemv select unique mlp
+    defaultLogPath = glv._get("logPath")+"default"+\
+    				"/"+taskName+"_pimprof_"+mode+"_"+ str(coreNums)
+    command = glv._get("run-sniperPath") +" --roi -n " + str(coreNums)+\
+		 " -c pimprof_"+mode+" -d "+defaultLogPath+\
+		 " -- "+ taskPath 
+    ic(command)
+    # print("command : {}".format(command))
+    return [coreNums, command, defaultLogPath+"/pimprofreuse.out"]
+
+def specialInput(taskPath, taskName, mode, coreNums):
+    specialLogPath = glv._get("logPath")+"special"+\
+    				"/"+taskName+"_pimprof_"+mode+"_"+ str(coreNums)
+        
+    if taskName == "spmv":
+        dataPath = glv._get("taskfilePath") + "spmv/data/bcsstk30.mtx"
+        command = glv._get("run-sniperPath") +" --roi -n " + str(coreNums)+\
+		 " -c pimprof_"+mode+" -d "+specialLogPath+\
+		 " -- "+ taskPath + " -f " + dataPath
+    elif taskName == "hashjoin":
+        dataPath = glv._get("taskfilePath") + "hashJoin/checker/"
+        Rfile = dataPath + "R.file"
+        Sfile = dataPath + "S.file"
+        command = glv._get("run-sniperPath") +" --roi -n " + str(coreNums)+\
+		 " -c pimprof_"+mode+" -d "+specialLogPath+\
+		 " -- "+ taskPath + " " + Rfile + " " + Sfile + " hash 40"
+    elif taskName == "svm":
+        dataPath = glv._get("taskfilePath") + "svm/SVM-RFE/outData.txt"
+        command = glv._get("run-sniperPath") +" --roi -n " + str(coreNums)+\
+		 " -c pimprof_"+mode+" -d "+specialLogPath+\
+		 " -- "+ taskPath + " " + dataPath + " 253 15154 4"
+    else:
+        assert("error speacial application!")
+    ic(command)
+    # print("command : {}".format(command))
+    return [coreNums, command, specialLogPath+"/pimprofreuse.out"]
+
+def pimprofInput(taskPath, taskName, coreNums, class1):
     cpucore = 1
-    cpulogPath = glv._get("logPath")+glv._get("gapbsGraphName")+\
+    cpulogPath = glv._get("logPath")+class1+\
     				"/"+taskName+"_pimprof_cpu_"+ str(cpucore)
-    pimlogPath = glv._get("logPath")+glv._get("gapbsGraphName")+\
+    pimlogPath = glv._get("logPath")+class1+\
     				"/"+taskName+"_pimprof_pim_"+ str(coreNums)
-    pimprofResultPath = glv._get("resultPath")+glv._get("gapbsGraphName")+"_cpu_"+ str(cpucore)+"_pim_"+ str(coreNums)
+    pimprofResultPath = glv._get("resultPath")+class1+"_cpu_"+ str(cpucore)+"_pim_"+ str(coreNums)
     mkdir(pimprofResultPath)
     pimprofResultFile = pimprofResultPath+"/reusedecision_"+taskName+"_cpu_"+ str(cpucore)+"_pim_"+ str(coreNums)+".out"
     cpuprofstatsPath = cpulogPath + "/pimprofstats.out"
@@ -49,5 +87,3 @@ def pimprofInput(taskPath, taskName, coreNums):
     # print("command : {}".format(command))
     ic(command)
     return [command, pimprofResultFile, redirect2log]
-    
-    

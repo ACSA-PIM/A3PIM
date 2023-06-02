@@ -56,6 +56,10 @@ def multiCorePIMMode(taskList, coreNums):
         yellowPrint("[   {}/{}   ] PIM-{} Task {} is running……".format( countId, totolCount,coreNums, taskName))
         if taskName in glv._get("gapbsList"):
             [core, command,targetFile] = gapbsInput(taskKey, taskName, "pim", coreNums)
+        elif taskName in glv._get("specialInputList"):
+            [core, command,targetFile] = specialInput(taskKey, taskName, "pim", coreNums)
+        else:
+            [core, command,targetFile] = defaultInput(taskKey, taskName, "pim", coreNums)
         if not checkFileExists(targetFile):
             list=TIMEOUT_COMMAND(core, command,glv._get("timeout"))
             ic(list)
@@ -69,7 +73,12 @@ def multiCorePIMMode(taskList, coreNums):
 
 def pimprof(queueDict, taskKey, taskName, countId, totolCount, coreCount):
     yellowPrint("[   {}/{}   ] PIMProf {} is running……".format( countId, totolCount, taskName))
-    [command,targetFile, redirect2log] = pimprofInput(taskKey, taskName, coreCount)
+    if taskName in glv._get("gapbsList"):
+        [command,targetFile, redirect2log] = pimprofInput(taskKey, taskName, coreCount, glv._get("gapbsGraphName"))
+    elif taskName in glv._get("specialInputList"):
+        [command,targetFile, redirect2log] = pimprofInput(taskKey, taskName, coreCount, "special")
+    else:
+        [command,targetFile, redirect2log] = pimprofInput(taskKey, taskName, coreCount, "default")
     print(command)
     if not checkFileExists(targetFile):
         list=TIMEOUT_COMMAND_2FILE(1, command, redirect2log, glv._get("timeout"))
@@ -85,6 +94,10 @@ def singleCpuMode(queueDict, taskKey, taskName, countId, totolCount, **kwargs):
     yellowPrint("[   {}/{}   ] CPU-1 Task {} is running……".format( countId, totolCount, taskName))
     if taskName in glv._get("gapbsList"):
         [core, command,targetFile] = gapbsInput(taskKey, taskName, "cpu", 1)
+    elif taskName in glv._get("specialInputList"):
+        [core, command,targetFile] = specialInput(taskKey, taskName, "cpu", 1)
+    else:
+        [core, command,targetFile] = defaultInput(taskKey, taskName, "cpu", 1)
     if not checkFileExists(targetFile):
         list=TIMEOUT_COMMAND(core, command,glv._get("timeout"))
         ic(list)
@@ -98,8 +111,8 @@ def singleCpuMode(queueDict, taskKey, taskName, countId, totolCount, **kwargs):
 def singleDisassembly(queueDict, taskKey, taskName, countId, totolCount, **kwargs):
     sys.stdout.flush()
     yellowPrint("[   {}/{}   ] Disassembly-1 Task {} is running……".format( countId, totolCount, taskName))
-    if taskName in glv._get("gapbsList"):
-        [command,targetFile] = disassemblyInput(taskKey, taskName)
+    # if taskName in glv._get("gapbsList"):
+    [command,targetFile] = disassemblyInput(taskKey, taskName)
     if not checkFileExists(targetFile):
         # list=TIMEOUT_COMMAND(1, command,glv._get("timeout")) weird, can not parallel objdump > Difffile
         list=TIMEOUT_COMMAND_2FILE(1, command, targetFile, glv._get("timeout"))

@@ -9,6 +9,19 @@ def analyseResults(taskList, **kwargs):
     wb = excelGraphInit()
     totolCount = len(taskList)
     countId = 0
+    
+    cpucore = 1
+    class1 = glv._get("gapbsGraphName")
+    pimprofResultPath = glv._get("resultPath")+class1+"_cpu_"+ str(cpucore)+"_pim_"+ str(pimCoreCount)
+    excelOutFile = pimprofResultPath+"/Summary_cpu_"+ str(cpucore)+"_pim_"+ str(pimCoreCount)+".xlsx"
+    graphOutFile = pimprofResultPath+"/ExeTime_cpu_"+ str(cpucore)+"_pim_"+ str(pimCoreCount)+".png"
+    graphOutFileTest1 = pimprofResultPath+"/speedup_ExeTime_cpu_"+ str(cpucore)+"_pim_"+ str(pimCoreCount)+".png"
+    graphOutFileTest2 = pimprofResultPath+"/stackedBar_ExeTime_cpu_"+ str(cpucore)+"_pim_"+ str(pimCoreCount)+".png" 
+    glv._set("graphlOutPath",graphOutFile)
+    glv._set("graphlOutPathTest1",graphOutFileTest1)
+    glv._set("graphlOutPathTest2",graphOutFileTest2)
+    glv._set("excelOutPath",excelOutFile)
+    
     for taskKey, taskName in taskList.items():
         countId = countId + 1
         [Instructions, resultList] = readDataFromOutputFile(taskName, pimCoreCount)
@@ -23,18 +36,16 @@ def analyseResults(taskList, **kwargs):
 
 def readDataFromOutputFile(taskName, pimCoreCount):
     cpucore = 1
-    pimprofResultPath = glv._get("resultPath")+glv._get("gapbsGraphName")+"_cpu_"+ str(cpucore)+"_pim_"+ str(pimCoreCount)
+    if taskName in glv._get("gapbsList"):
+        class1 = glv._get("gapbsGraphName")
+    elif taskName in glv._get("specialInputList"):
+        class1 = "special"
+    else:
+        class1 = "default"
+    pimprofResultPath = glv._get("resultPath")+class1+"_cpu_"+ str(cpucore)+"_pim_"+ str(pimCoreCount)
     mkdir(pimprofResultPath)
     targetFile = pimprofResultPath+"/reusedecision_"+taskName+"_cpu_"+ str(cpucore)+"_pim_"+ str(pimCoreCount)+".out"
-    excelOutFile = pimprofResultPath+"/Summary_cpu_"+ str(cpucore)+"_pim_"+ str(pimCoreCount)+".xlsx"
-    graphOutFile = pimprofResultPath+"/ExeTime_cpu_"+ str(cpucore)+"_pim_"+ str(pimCoreCount)+".png"
-    graphOutFileTest1 = pimprofResultPath+"/speedup_ExeTime_cpu_"+ str(cpucore)+"_pim_"+ str(pimCoreCount)+".png"
-    graphOutFileTest2 = pimprofResultPath+"/stackedBar_ExeTime_cpu_"+ str(cpucore)+"_pim_"+ str(pimCoreCount)+".png"
     
-    glv._set("graphlOutPath",graphOutFile)
-    glv._set("graphlOutPathTest1",graphOutFileTest1)
-    glv._set("graphlOutPathTest2",graphOutFileTest2)
-    glv._set("excelOutPath",excelOutFile)
     
     if not checkFileExists(targetFile):
         errorPrint("Could not find decision file!!!")

@@ -8,7 +8,11 @@ working_fold="/staff/shaojiemike/github/sniper-pim/"
 glv._set("logPath", working_fold+"log/")
 glv._set("resultPath", working_fold+"Summary/")
 
-
+glv._set("specialInputList", [
+    "spmv",
+    "hashjoin",
+    "svm"
+]) 
 glv._set("gapbsList", [
     "bc",
     "cc",
@@ -17,6 +21,8 @@ glv._set("gapbsList", [
     "sssp"
 ])  # abbreviation of applications in gapbs benchmark
 gapbsTaskfilePath = "/staff/shaojiemike/github/sniper_PIMProf/PIMProf/gapbs/"
+taskfilePath = "/staff/shaojiemike/github/sniper_PIMProf/PIMProf/"
+glv._set("taskfilePath", taskfilePath)
 # glv._set("gapbsGraphNameList",["kron-5","kron-10","kron-15","kron-20"])
 glv._set("gapbsGraphNameList",["kron-20"])
 glv._set("gapbsGraphName", "kron-5")
@@ -27,7 +33,14 @@ glv._set("taskList",
              gapbsTaskfilePath+"sssp.inj": "sssp",
              gapbsTaskfilePath+"cc.inj": "cc",
              gapbsTaskfilePath+"bfs.inj": "bfs",
-             gapbsTaskfilePath+"pr.inj": "pr"
+             gapbsTaskfilePath+"pr.inj": "pr",
+             taskfilePath+"gemv/gemv.inj": "gemv", 
+             taskfilePath+"spmv/spmv.inj": "spmv", #./spmv -f ./data/bcsstk30.mtx 
+             taskfilePath+"select/select.inj": "select", # ./sel -i 1258291200 -t 4
+             taskfilePath+"unique/unique.inj": "unique", # first default
+             taskfilePath+"hashJoin/hashjoin.inj": "hashjoin", # ./hashjoin.inj checker/R.file checker/S.file hash 40
+             taskfilePath+"mlp/mlp.inj": "mlp", # 3.9s
+             taskfilePath+"svm/svm.inj": "svm" # 2.7s ./svm.inj ./SVM-RFE/outData.txt 253 15154 4
          })  # exe name &  abbreviation
 
 glv._set("run-sniperPath", "/staff/shaojiemike/github/sniper_PIMProf/run-sniper")

@@ -31,7 +31,7 @@ def main():
         
 
         OffloadBySCA(taskList)
-        
+
         # calculateSCADecisionTime(taskList)
         
         errorPrint("-----------------------------------STEP2.1----------------------------------------")
