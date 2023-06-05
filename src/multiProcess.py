@@ -107,6 +107,26 @@ def singleCpuMode(queueDict, taskKey, taskName, countId, totolCount, **kwargs):
     passPrint("[   {}/{}   ] CPU-1 Task {} finished successfully".format( countId, totolCount, taskName))
     queueDict.get("finishedSubTask").put(taskName)
     
+def singlePIMMode(queueDict, taskKey, taskName, countId, totolCount, coreNums):
+    yellowPrint("[   {}/{}   ] PIM-{} Task {} is running……".format( countId, totolCount,coreNums, taskName))
+    if taskName in glv._get("gapbsList"):
+        [core, command,targetFile] = gapbsInput(taskKey, taskName, "pim", coreNums)
+    elif taskName in glv._get("specialInputList"):
+        [core, command,targetFile] = specialInput(taskKey, taskName, "pim", coreNums)
+    else:
+        [core, command,targetFile] = defaultInput(taskKey, taskName, "pim", coreNums)
+    if not checkFileExists(targetFile):
+        list=TIMEOUT_COMMAND(core, command,glv._get("timeout"))
+        ic(list)
+        if not checkFileExists(targetFile):
+            errorPrint("{}-PIM falied for targetFile {} not found".format(taskName,targetFile))
+            yellowPrint("Falied command {}".format(command))
+            exit(1)
+    else:
+        yellowPrint("[   {}/{}   ] PIM-{} Task {} already finished".format( countId, totolCount,coreNums, taskName))
+    passPrint("[   {}/{}   ] PIM-{} Task {} finished successfully".format( countId, totolCount,coreNums, taskName))
+    queueDict.get("finishedSubTask").put(taskName)
+
 
 def singleDisassembly(queueDict, taskKey, taskName, countId, totolCount, **kwargs):
     sys.stdout.flush()
