@@ -289,6 +289,7 @@ def getBBLFunc(bblHashDict, sendPipe,rank,queueDict):
 def parallelGetBBL(taskName, bblHashDict, bblDecisionFile, bblSCAFile):
     bblDict = bblDictInit()
     ProcessNum=glv._get("ProcessNum")
+    DivideNum = ProcessNum-1
     
     queueDict = queueDictInit(bblDict)
 
@@ -300,21 +301,21 @@ def parallelGetBBL(taskName, bblHashDict, bblDecisionFile, bblSCAFile):
     items = list(bblHashDict.items())
 
     # 我们需要计算每个变量存储的键值对数量
-    count = len(items) // ProcessNum
+    count = len(items) // DivideNum
     
     # 循环30次，每次取出 count 个键值对存入变量
-    for i in range(ProcessNum):
+    for i in range(DivideNum):
         ic(i)
         vars()["var_" + str(i+1)] = dict(items[i*count:(i+1)*count])
         # ic(vars()["var_" + str(i+1)])
     
     # 最后如果键值对数量不能整除30，将剩余的键值对存入一个变量
-    # if len(items) % ProcessNum != 0:
-    vars()["var_" + str(ProcessNum+1)] = dict(items[ProcessNum*count:])
-    # ic(vars()["var_" + str(ProcessNum+1)])
+    # if len(items) % DivideNum != 0:
+    vars()["var_" + str(DivideNum+1)] = dict(items[DivideNum*count:])
+    # ic(vars()["var_" + str(DivideNum+1)])
     
     pList=[]
-    for i in range(ProcessNum+1):
+    for i in range(ProcessNum):
         receivePipe[i], sendPipe[i] = Pipe(False)
         total[i]=len(vars()["var_" + str(i+1)])
         pList.append(Process(target=getBBLFunc, args=(vars()["var_" + str(i+1)],sendPipe[i],i,queueDict)))
@@ -324,7 +325,7 @@ def parallelGetBBL(taskName, bblHashDict, bblDecisionFile, bblSCAFile):
     
     if glv._get("debug")=='no':
         stdscr = curses.initscr()
-        multBar(taskName,ProcessNum+1,total,sendPipe,receivePipe,pList,stdscr)
+        multBar(taskName,ProcessNum,total,sendPipe,receivePipe,pList,stdscr)
     
     while queueDict.get("finishedSubTask").qsize()<ProcessNum:
         print("QueueNum : {}".format(queueDict.get("finishedSubTask").qsize()))
