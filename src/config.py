@@ -12,7 +12,7 @@ glv._set("specialInputList", [
     "spmv",
     "hashjoin",
     "svm"
-]) 
+]) # 需要特殊处理执行应用命令 的应用名。应用命令具体怎么写，请修改 specialInput 函数
 glv._set("gapbsList", [
     "bc",
     "cc",

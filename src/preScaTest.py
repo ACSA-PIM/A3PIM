@@ -1,13 +1,14 @@
 import config  # 加载配置
-from config import pasteFullFileName
 import global_variable as glv
+from analysis import *
+from config import pasteFullFileName
+from graph import *
 from input_process import inputParameters, isIceEnable
+from logPrint import *
 # from excel import *
 from multiProcess import *
-from logPrint import *
-from analysis import *
-from graph import *
 from SCA import OffloadBySCA
+
 
 def main():
     ## icecream & input
