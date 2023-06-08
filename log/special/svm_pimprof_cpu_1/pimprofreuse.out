@@ -1,0 +1,111 @@
+============================================================
+ReuseSegment - Thread 0
+head = 0, count = 140 | 0 374 
+head = 374, count = 1 | 0 374 
+head = 0, count = 1 | 0 498 
+head = 374, count = 4 | 374 498 
+head = 374, count = 1 | 374 361 
+head = 374, count = 19 | 374 101 
+head = 0, count = 10 | 0 101 
+head = 374, count = 1 | 374 498 101 
+head = 101, count = 1 | 101 98 
+head = 374, count = 2 | 374 373 
+head = 361, count = 1 | 1 361 
+head = 101, count = 32 | 1 101 
+head = 0, count = 71 | 0 1 
+head = 374, count = 29 | 374 1 
+head = 498, count = 1 | 498 1 
+head = 0, count = 3 | 0 1 101 
+head = 374, count = 1 | 0 374 1 
+head = 374, count = 3 | 374 1 101 
+head = 373, count = 1 | 1 373 
+head = 0, count = 6 | 0 374 1 101 
+head = 1, count = 2 | 1 351 
+head = 351, count = 1 | 351 328 
+head = 328, count = 1 | 328 326 
+head = 101, count = 1 | 101 363 342 
+head = 351, count = 1 | 1 351 
+head = 1, count = 22731 | 1 356 
+head = 356, count = 15154 | 1 356 
+head = 328, count = 1 | 1 328 356 
+head = 326, count = 7577 | 1 326 356 
+head = 1, count = 2 | 1 353 
+head = 1, count = 1 | 1 150 
+head = 150, count = 1 | 150 487 
+head = 487, count = 1 | 487 597 
+head = 373, count = 1 | 373 339 
+head = 1, count = 1 | 1 360 
+head = 360, count = 1 | 1 360 
+head = 339, count = 1 | 339 366 
+head = 1, count = 1 | 1 366 354 
+head = 1, count = 25 | 1 354 
+head = 374, count = 1 | 374 498 354 
+head = 366, count = 1 | 366 338 
+head = 354, count = 1 | 354 338 
+head = 354, count = 1 | 1 354 338 
+head = 150, count = 1 | 150 97 
+head = 597, count = 1 | 597 97 
+head = 1, count = 2 | 1 97 
+head = 97, count = 1 | 97 465 
+head = 97, count = 1 | 97 93 
+head = 465, count = 1 | 97 465 464 96 
+head = 354, count = 3 | 354 96 
+head = 1, count = 4 | 1 96 
+head = 338, count = 1 | 338 96 
+head = 93, count = 1 | 93 96 
+head = 96, count = 2 | 96 94 
+head = 96, count = 1 | 96 89 
+head = 94, count = 1 | 94 89 
+head = 94, count = 1 | 1 94 
+head = 354, count = 17 | 354 574 
+head = 96, count = 4 | 96 574 
+head = 1, count = 60 | 1 574 
+head = 150, count = 1 | 150 574 
+head = 101, count = 2 | 101 574 
+head = 0, count = 2 | 0 574 
+head = 97, count = 1 | 97 582 
+head = 574, count = 27 | 574 582 
+head = 0, count = 13 | 0 582 
+head = 354, count = 1 | 354 576 
+head = 582, count = 21 | 1 582 
+head = 1, count = 1517 | 1 577 
+head = 582, count = 6 | 582 577 
+head = 574, count = 1 | 574 577 
+head = 1, count = 1 | 1 96 574 582 577 
+head = 577, count = 2024 | 1 577 
+head = 101, count = 1 | 1 101 356 
+head = 574, count = 5 | 1 574 
+head = 374, count = 13 | 374 1 574 
+head = 1, count = 4 | 1 96 574 
+head = 582, count = 1 | 1 582 577 
+head = 0, count = 2 | 0 1 101 96 
+head = 582, count = 1 | 582 585 
+head = 1, count = 253 | 1 585 
+head = 577, count = 253 | 577 575 
+head = 1, count = 3833709 | 1 575 
+head = 575, count = 253 | 575 578 
+head = 1, count = 252 | 1 577 575 
+head = 577, count = 216 | 577 575 578 
+head = 585, count = 3 | 1 585 
+head = 575, count = 30 | 577 575 578 
+head = 101, count = 2 | 1 101 574 
+head = 0, count = 10 | 0 374 1 101 574 
+head = 101, count = 39 | 1 101 354 574 582 
+head = 0, count = 16 | 0 374 1 101 354 574 582 
+head = 0, count = 25 | 0 374 1 
+head = 577, count = 7 | 1 577 575 578 
+head = 0, count = 10 | 0 374 1 574 
+head = 1, count = 24 | 581 1 
+head = 574, count = 4 | 581 1 574 
+head = 1, count = 1 | 581 1 575 
+head = 354, count = 5 | 354 94 
+head = 101, count = 3 | 1 101 354 582 
+head = 1, count = 1 | 1 354 582 
+head = 0, count = 33 | 0 374 1 101 354 582 
+head = 0, count = 1 | 0 354 
+head = 374, count = 2 | 374 1 101 354 582 
+head = 0, count = 6 | 0 374 1 101 582 
+head = 0, count = 1 | 0 374 1 354 
+head = 585, count = 1 | 581 1 585 
+head = 1, count = 1 | 581 1 577 
+head = 0, count = 4 | 0 374 101 

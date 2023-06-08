@@ -1,6 +1,17 @@
-log
+log/assembly
+*debug*
+**/pimprofstats2.out
+*.cfg
+*.info
+*.sqlite3
+**/sim.out
+
+Summary
 *.log
-*.out
+
+a.out
+
+# *.out
 *.xlsx
 *.png
 pyEnv

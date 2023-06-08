@@ -1,0 +1,1672 @@
+============================================================
+ReuseSegment - Thread 0
+head = 0, count = 114 | 0 424 
+head = 424, count = 3 | 424 1 
+head = 0, count = 52 | 0 1 
+head = 1, count = 2 | 1 441 
+head = 441, count = 1 | 1 441 
+head = 1, count = 1 | 1 71 
+head = 71, count = 1 | 71 72 
+head = 72, count = 1 | 72 61 
+head = 1, count = 4 | 1 61 
+head = 441, count = 1 | 441 61 
+head = 61, count = 3 | 61 62 
+head = 1, count = 18 | 1 62 
+head = 0, count = 2 | 0 62 
+head = 62, count = 2 | 62 57 
+head = 57, count = 1 | 1 57 
+head = 62, count = 4 | 1 62 
+head = 62, count = 1 | 62 112 
+head = 1, count = 1 | 1 123 
+head = 123, count = 1 | 123 134 
+head = 62, count = 4 | 62 134 
+head = 61, count = 1 | 61 134 
+head = 57, count = 1 | 57 134 
+head = 112, count = 1 | 112 134 
+head = 1, count = 1 | 1 134 
+head = 134, count = 2 | 134 118 
+head = 134, count = 1 | 134 122 
+head = 118, count = 1 | 118 122 
+head = 118, count = 1 | 1 118 122 
+head = 134, count = 1 | 1 134 
+head = 62, count = 1 | 151 62 
+head = 62, count = 4 | 157 62 
+head = 134, count = 1 | 157 134 
+head = 122, count = 1 | 157 122 
+head = 168, count = 1 | 157 168 
+head = 157, count = 2 | 157 186 
+head = 157, count = 1 | 157 154 
+head = 186, count = 1 | 186 154 
+head = 1, count = 1 | 1 154 
+head = 1, count = 1 | 1 441 154 
+head = 134, count = 1 | 134 154 
+head = 62, count = 1 | 62 154 
+head = 151, count = 1 | 151 157 154 
+head = 186, count = 1 | 1 186 
+head = 157, count = 4 | 1 157 
+head = 154, count = 1 | 1 154 
+head = 154, count = 2 | 154 177 
+head = 62, count = 1 | 62 177 
+head = 1, count = 1 | 1 177 
+head = 62, count = 3 | 62 103 
+head = 0, count = 2 | 0 103 
+head = 103, count = 6 | 103 100 
+head = 1, count = 25 | 1 90 
+head = 100, count = 4 | 100 90 
+head = 103, count = 21 | 103 90 
+head = 424, count = 1 | 424 90 
+head = 62, count = 1 | 62 90 
+head = 0, count = 2 | 0 90 
+head = 90, count = 65 | 1 90 
+head = 103, count = 1 | 1 103 
+head = 177, count = 1 | 1 177 90 
+head = 90, count = 10 | 1 90 88 
+head = 1, count = 15 | 1 109 
+head = 88, count = 6 | 88 93 
+head = 109, count = 16 | 109 93 
+head = 109, count = 6 | 1 109 
+head = 1, count = 5 | 1 337 
+head = 1, count = 4 | 1 333 
+head = 333, count = 5 | 333 341 
+head = 90, count = 25 | 341 90 
+head = 103, count = 1 | 341 103 
+head = 0, count = 1 | 0 341 
+head = 1, count = 16 | 1 341 
+head = 93, count = 5 | 341 93 
+head = 341, count = 1 | 341 342 
+head = 342, count = 1 | 342 336 
+head = 336, count = 5 | 336 331 
+head = 93, count = 4 | 342 93 336 331 
+head = 154, count = 1 | 337 154 93 339 
+head = 1, count = 1 | 1 155 
+head = 341, count = 19 | 341 155 
+head = 341, count = 1 | 1 341 155 
+head = 90, count = 1 | 90 155 
+head = 424, count = 1 | 424 155 
+head = 0, count = 7 | 0 155 
+head = 90, count = 1 | 90 109 155 
+head = 177, count = 1 | 177 90 155 
+head = 0, count = 1 | 0 1 157 61 134 341 155 
+head = 62, count = 1 | 62 149 
+head = 177, count = 1 | 177 90 184 149 
+head = 154, count = 1 | 1 154 177 149 
+head = 155, count = 4 | 1 155 
+head = 149, count = 1 | 149 171 
+head = 1, count = 1 | 1 171 
+head = 109, count = 1 | 109 171 
+head = 134, count = 1 | 134 171 
+head = 90, count = 6 | 1 90 109 93 
+head = 337, count = 3 | 1 337 103 339 
+head = 103, count = 10 | 103 110 
+head = 155, count = 1 | 155 274 
+head = 331, count = 3 | 331 85 274 
+head = 1, count = 11 | 1 274 
+head = 274, count = 11 | 110 274 
+head = 155, count = 16 | 155 110 
+head = 341, count = 5 | 341 110 
+head = 90, count = 1 | 90 110 
+head = 103, count = 1 | 103 100 110 
+head = 274, count = 7 | 110 274 272 
+head = 424, count = 2 | 424 110 
+head = 110, count = 23 | 1 110 
+head = 1, count = 7 | 1 105 
+head = 105, count = 5 | 105 101 
+head = 101, count = 7 | 101 102 
+head = 1, count = 4 | 1 101 102 
+head = 1, count = 4 | 1 89 
+head = 149, count = 1 | 103 149 110 274 276 77 89 
+head = 89, count = 7 | 89 84 
+head = 102, count = 4 | 102 86 89 84 78 
+head = 89, count = 4 | 100 89 
+head = 78, count = 3 | 90 78 79 
+head = 155, count = 5 | 90 155 
+head = 110, count = 6 | 90 110 
+head = 102, count = 3 | 90 102 
+head = 341, count = 6 | 1 341 
+head = 336, count = 2 | 1 336 
+head = 331, count = 1 | 331 343 
+head = 343, count = 9 | 343 338 
+head = 338, count = 15 | 338 335 
+head = 331, count = 1 | 331 343 335 
+head = 109, count = 1 | 109 338 335 
+head = 341, count = 4 | 1 341 332 
+head = 341, count = 5 | 341 332 
+head = 335, count = 4 | 335 332 
+head = 1, count = 3 | 1 332 
+head = 1, count = 3 | 1 341 332 
+head = 339, count = 2 | 337 93 339 
+head = 1, count = 1 | 1 152 
+head = 90, count = 1 | 90 109 152 
+head = 171, count = 1 | 90 171 152 
+head = 332, count = 2 | 332 152 
+head = 171, count = 1 | 100 90 171 185 178 
+head = 149, count = 1 | 1 149 171 178 
+head = 152, count = 3 | 1 152 
+head = 332, count = 3 | 1 332 
+head = 178, count = 1 | 1 178 163 
+head = 171, count = 1 | 90 171 170 163 
+head = 1, count = 1 | 1 163 
+head = 335, count = 1 | 335 163 
+head = 84, count = 1 | 90 84 160 163 
+head = 100, count = 12 | 100 75 
+head = 332, count = 2 | 274 332 
+head = 274, count = 9 | 274 75 
+head = 274, count = 7 | 274 272 75 
+head = 75, count = 24 | 1 75 
+head = 1, count = 7 | 1 108 
+head = 108, count = 3 | 108 95 
+head = 95, count = 7 | 95 82 
+head = 1, count = 2 | 1 95 82 
+head = 1, count = 2 | 1 83 
+head = 163, count = 1 | 100 274 276 163 75 92 83 
+head = 83, count = 7 | 83 107 
+head = 82, count = 2 | 82 96 83 107 76 
+head = 76, count = 6 | 90 76 87 
+head = 83, count = 2 | 90 83 
+head = 332, count = 2 | 90 332 
+head = 341, count = 7 | 341 90 
+head = 82, count = 2 | 90 82 
+head = 152, count = 1 | 90 152 
+head = 341, count = 1 | 341 343 
+head = 331, count = 1 | 331 338 
+head = 335, count = 10 | 343 338 335 
+head = 338, count = 1 | 343 338 
+head = 1, count = 1 | 1 166 
+head = 90, count = 1 | 90 109 166 
+head = 163, count = 1 | 90 163 166 
+head = 332, count = 2 | 332 166 
+head = 1, count = 1 | 1 169 
+head = 163, count = 1 | 90 163 176 169 
+head = 166, count = 4 | 1 166 
+head = 169, count = 1 | 1 169 167 
+head = 163, count = 1 | 90 163 167 
+head = 1, count = 1 | 1 167 
+head = 134, count = 1 | 134 167 
+head = 169, count = 1 | 103 110 274 276 77 89 169 
+head = 166, count = 1 | 90 166 
+head = 1, count = 1 | 1 104 
+head = 104, count = 4 | 104 98 
+head = 98, count = 6 | 98 99 
+head = 93, count = 3 | 93 104 98 99 
+head = 339, count = 2 | 93 339 99 
+head = 1, count = 3 | 1 188 
+head = 90, count = 1 | 90 109 188 
+head = 167, count = 1 | 90 167 188 
+head = 84, count = 1 | 90 84 183 164 
+head = 154, count = 1 | 154 164 
+head = 167, count = 1 | 90 167 156 164 
+head = 188, count = 4 | 1 188 
+head = 164, count = 1 | 164 153 
+head = 167, count = 1 | 90 167 153 
+head = 1, count = 1 | 1 153 
+head = 167, count = 1 | 100 90 167 190 153 
+head = 109, count = 1 | 103 109 
+head = 99, count = 1 | 274 99 
+head = 164, count = 1 | 103 110 274 276 77 89 164 
+head = 188, count = 1 | 90 188 
+head = 93, count = 6 | 1 93 
+head = 335, count = 8 | 343 335 
+head = 335, count = 1 | 338 335 
+head = 99, count = 1 | 338 335 99 
+head = 0, count = 2 | 0 332 
+head = 99, count = 2 | 337 93 339 99 
+head = 1, count = 2 | 1 159 
+head = 90, count = 1 | 90 109 159 
+head = 153, count = 1 | 90 153 159 
+head = 332, count = 1 | 332 159 
+head = 177, count = 1 | 177 175 
+head = 153, count = 1 | 90 153 162 175 
+head = 164, count = 1 | 1 164 153 175 
+head = 159, count = 4 | 1 159 
+head = 175, count = 1 | 175 187 
+head = 153, count = 1 | 90 153 187 
+head = 1, count = 1 | 1 187 
+head = 331, count = 1 | 1 331 85 
+head = 1, count = 15 | 1 212 
+head = 159, count = 1 | 159 212 
+head = 337, count = 1 | 1 337 339 212 
+head = 110, count = 15 | 110 212 
+head = 90, count = 17 | 90 212 
+head = 62, count = 1 | 62 118 186 109 89 83 212 
+head = 332, count = 2 | 332 212 
+head = 341, count = 2 | 341 212 
+head = 212, count = 3 | 212 210 
+head = 210, count = 2 | 210 208 
+head = 212, count = 3 | 1 212 208 
+head = 210, count = 2 | 103 210 
+head = 212, count = 1 | 274 212 
+head = 1, count = 1 | 1 274 212 
+head = 175, count = 1 | 110 89 175 
+head = 187, count = 1 | 103 274 276 77 84 187 
+head = 110, count = 4 | 110 274 
+head = 78, count = 3 | 274 78 79 
+head = 102, count = 1 | 274 102 
+head = 208, count = 1 | 100 274 276 75 92 83 208 
+head = 212, count = 43 | 90 212 
+head = 331, count = 2 | 331 104 
+head = 339, count = 1 | 93 339 99 187 
+head = 1, count = 3 | 1 172 
+head = 90, count = 1 | 90 109 172 
+head = 187, count = 1 | 90 187 172 
+head = 1, count = 1 | 1 128 
+head = 107, count = 1 | 1 90 107 148 128 
+head = 118, count = 1 | 118 186 128 
+head = 172, count = 2 | 172 128 
+head = 154, count = 2 | 154 136 
+head = 128, count = 5 | 1 128 
+head = 84, count = 1 | 1 90 84 158 
+head = 99, count = 3 | 1 99 
+head = 172, count = 3 | 1 172 
+head = 175, count = 1 | 1 175 187 
+head = 163, count = 1 | 1 163 
+head = 84, count = 1 | 1 90 84 161 165 
+head = 84, count = 1 | 1 90 84 
+head = 212, count = 3 | 1 212 
+head = 177, count = 1 | 1 177 103 100 90 182 150 
+head = 178, count = 1 | 1 103 90 178 180 
+head = 99, count = 1 | 1 99 136 
+head = 187, count = 1 | 1 90 187 
+head = 61, count = 1 | 61 131 
+head = 134, count = 1 | 134 122 168 130 131 
+head = 1, count = 1 | 1 131 
+head = 131, count = 1 | 1 131 
+head = 153, count = 1 | 1 100 90 153 189 
+head = 131, count = 1 | 131 126 
+head = 1, count = 2 | 1 126 
+head = 61, count = 2 | 61 126 
+head = 1, count = 2 | 1 103 
+head = 107, count = 1 | 103 90 107 179 
+head = 75, count = 5 | 274 75 
+head = 1, count = 1 | 1 75 
+head = 1, count = 4 | 1 108 95 
+head = 108, count = 4 | 108 82 
+head = 82, count = 5 | 82 96 83 
+head = 126, count = 1 | 100 274 276 75 83 126 
+head = 83, count = 5 | 83 107 76 
+head = 82, count = 4 | 82 83 76 
+head = 76, count = 5 | 90 76 
+head = 75, count = 4 | 90 75 
+head = 126, count = 1 | 1 90 126 
+head = 1, count = 5 | 1 88 
+head = 88, count = 5 | 88 109 
+head = 93, count = 3 | 93 104 99 
+head = 88, count = 3 | 88 93 98 99 
+head = 1, count = 2 | 1 93 99 
+head = 1, count = 3 | 1 127 
+head = 90, count = 1 | 1 90 109 127 
+head = 126, count = 1 | 90 126 127 
+head = 107, count = 1 | 90 107 121 
+head = 131, count = 1 | 103 90 131 141 121 
+head = 62, count = 1 | 62 121 
+head = 127, count = 1 | 127 121 
+head = 121, count = 1 | 1 121 
+head = 127, count = 4 | 1 127 
+head = 121, count = 1 | 121 117 
+head = 126, count = 1 | 90 126 129 117 
+head = 1, count = 2 | 1 117 
+head = 152, count = 1 | 152 117 
+head = 99, count = 3 | 99 212 
+head = 121, count = 1 | 212 121 
+head = 1, count = 1 | 1 210 
+head = 212, count = 2 | 103 212 
+head = 1, count = 2 | 1 110 
+head = 1, count = 2 | 1 105 101 
+head = 105, count = 2 | 105 102 
+head = 102, count = 3 | 102 86 89 
+head = 212, count = 1 | 103 110 274 276 89 212 208 
+head = 89, count = 3 | 89 84 78 
+head = 102, count = 2 | 102 89 78 
+head = 78, count = 3 | 100 78 
+head = 110, count = 2 | 100 110 
+head = 110, count = 3 | 110 75 
+head = 208, count = 2 | 100 274 276 75 83 208 
+head = 90, count = 3 | 90 109 
+head = 99, count = 1 | 104 99 
+head = 99, count = 1 | 93 99 
+head = 1, count = 3 | 1 116 
+head = 90, count = 1 | 1 90 109 116 
+head = 117, count = 1 | 90 117 116 
+head = 126, count = 1 | 90 276 92 107 126 113 125 
+head = 117, count = 1 | 90 117 133 125 
+head = 116, count = 1 | 116 125 
+head = 125, count = 1 | 1 125 
+head = 116, count = 4 | 1 116 
+head = 125, count = 2 | 125 115 
+head = 1, count = 2 | 1 115 
+head = 117, count = 1 | 90 117 115 
+head = 122, count = 1 | 122 168 115 
+head = 99, count = 1 | 103 99 
+head = 115, count = 1 | 103 110 274 276 77 89 115 
+head = 84, count = 1 | 100 274 276 84 75 83 
+head = 337, count = 1 | 337 333 
+head = 1, count = 1 | 1 342 331 
+head = 88, count = 1 | 88 93 336 331 
+head = 99, count = 2 | 343 338 335 99 
+head = 1, count = 2 | 1 119 
+head = 90, count = 1 | 1 90 109 119 
+head = 115, count = 1 | 90 115 119 
+head = 332, count = 1 | 332 119 
+head = 121, count = 1 | 90 276 77 84 121 135 139 
+head = 119, count = 1 | 119 139 
+head = 139, count = 1 | 1 139 
+head = 119, count = 3 | 1 119 
+head = 1, count = 2 | 1 120 
+head = 115, count = 1 | 90 115 144 120 
+head = 109, count = 1 | 109 120 
+head = 115, count = 1 | 90 276 92 107 115 140 120 
+head = 120, count = 1 | 1 120 
+head = 331, count = 1 | 1 331 
+head = 331, count = 1 | 1 103 331 85 
+head = 332, count = 1 | 1 103 339 332 
+head = 332, count = 1 | 332 75 
+head = 120, count = 1 | 100 274 276 75 92 83 120 
+head = 1, count = 1 | 1 90 114 137 
+head = 90, count = 1 | 1 90 109 137 
+head = 120, count = 1 | 90 120 137 
+head = 1, count = 2 | 1 137 
+head = 1, count = 1 | 1 112 56 73 
+head = 107, count = 1 | 1 90 107 73 
+head = 119, count = 1 | 119 73 
+head = 137, count = 2 | 137 73 
+head = 136, count = 1 | 136 69 
+head = 136, count = 1 | 136 117 69 
+head = 73, count = 5 | 1 73 
+head = 99, count = 1 | 1 99 69 
+head = 1, count = 2 | 1 65 
+head = 65, count = 1 | 1 65 
+head = 1, count = 3 | 1 67 
+head = 65, count = 1 | 65 67 
+head = 67, count = 1 | 1 67 
+head = 107, count = 1 | 1 90 107 146 
+head = 107, count = 1 | 90 107 212 147 
+head = 117, count = 1 | 212 117 
+head = 137, count = 2 | 212 137 
+head = 90, count = 1 | 90 109 212 
+head = 120, count = 1 | 212 120 
+head = 67, count = 1 | 212 67 
+head = 1, count = 1 | 1 209 
+head = 209, count = 1 | 208 209 
+head = 139, count = 1 | 1 103 90 139 142 
+head = 212, count = 1 | 103 212 209 
+head = 212, count = 1 | 110 212 
+head = 1, count = 1 | 1 105 101 102 
+head = 212, count = 1 | 103 110 274 276 77 89 212 208 
+head = 1, count = 1 | 1 100 
+head = 102, count = 1 | 274 102 79 
+head = 1, count = 1 | 1 108 95 82 
+head = 82, count = 1 | 90 82 87 
+head = 84, count = 1 | 90 276 84 92 107 138 
+head = 1, count = 1 | 1 90 70 60 
+head = 1, count = 3 | 1 60 
+head = 67, count = 1 | 90 67 60 
+head = 1, count = 1 | 1 71 437 442 
+head = 107, count = 1 | 1 90 107 442 
+head = 441, count = 1 | 441 62 442 
+head = 60, count = 2 | 60 442 
+head = 442, count = 3 | 1 442 
+head = 1, count = 6 | 1 399 
+head = 90, count = 14 | 90 399 
+head = 90, count = 1 | 1 90 88 109 93 399 
+head = 99, count = 1 | 99 399 
+head = 110, count = 1 | 1 103 100 110 75 399 
+head = 84, count = 1 | 90 276 84 92 107 64 68 399 
+head = 60, count = 2 | 60 399 
+head = 90, count = 1 | 90 109 399 
+head = 0, count = 2 | 0 399 
+head = 399, count = 5 | 400 399 
+head = 400, count = 3 | 400 192 
+head = 399, count = 1 | 192 399 
+head = 192, count = 1 | 192 269 
+head = 399, count = 1 | 399 261 
+head = 261, count = 1 | 261 257 
+head = 257, count = 1 | 269 257 
+head = 399, count = 4 | 269 399 
+head = 1, count = 1 | 1 269 
+head = 269, count = 1 | 269 267 
+head = 267, count = 1 | 267 254 
+head = 269, count = 1 | 269 254 
+head = 254, count = 2 | 254 264 
+head = 69, count = 1 | 69 67 256 262 
+head = 264, count = 1 | 264 262 255 
+head = 255, count = 1 | 255 259 
+head = 192, count = 2 | 400 192 
+head = 269, count = 1 | 400 192 269 
+head = 259, count = 1 | 400 259 
+head = 269, count = 1 | 400 269 
+head = 192, count = 1 | 192 271 
+head = 399, count = 19 | 399 271 
+head = 269, count = 1 | 269 271 
+head = 90, count = 1 | 90 271 
+head = 0, count = 1 | 0 271 
+head = 400, count = 1 | 400 271 
+head = 262, count = 1 | 262 271 
+head = 271, count = 1 | 400 192 271 
+head = 271, count = 1 | 400 271 
+head = 400, count = 2 | 400 398 
+head = 398, count = 1 | 1 398 
+head = 400, count = 2 | 400 347 
+head = 398, count = 1 | 398 347 
+head = 269, count = 1 | 269 360 
+head = 360, count = 1 | 1 360 
+head = 269, count = 2 | 1 269 
+head = 271, count = 2 | 1 271 
+head = 264, count = 1 | 1 264 
+head = 347, count = 1 | 347 358 
+head = 1, count = 1 | 1 358 373 
+head = 1, count = 1 | 1 373 
+head = 358, count = 1 | 358 346 
+head = 373, count = 2 | 373 346 
+head = 1, count = 1 | 1 346 
+head = 346, count = 2 | 346 354 
+head = 373, count = 1 | 373 354 
+head = 442, count = 1 | 442 354 
+head = 442, count = 1 | 1 269 442 354 
+head = 347, count = 1 | 347 379 
+head = 354, count = 1 | 354 367 
+head = 367, count = 1 | 1 367 
+head = 354, count = 4 | 1 354 
+head = 379, count = 1 | 379 362 
+head = 1, count = 1 | 1 362 352 
+head = 1, count = 1 | 1 352 
+head = 346, count = 1 | 346 352 
+head = 362, count = 1 | 362 345 
+head = 352, count = 1 | 352 345 
+head = 346, count = 1 | 346 345 
+head = 352, count = 1 | 352 345 349 
+head = 349, count = 1 | 1 349 
+head = 345, count = 1 | 345 380 
+head = 1, count = 1 | 1 380 364 
+head = 1, count = 1 | 1 364 
+head = 380, count = 1 | 380 351 
+head = 364, count = 1 | 364 351 
+head = 364, count = 1 | 364 351 355 
+head = 1, count = 3 | 1 355 
+head = 352, count = 1 | 352 364 355 
+head = 355, count = 3 | 1 355 
+head = 355, count = 1 | 355 53 
+head = 271, count = 17 | 271 53 
+head = 1, count = 4 | 1 53 
+head = 0, count = 2 | 0 53 
+head = 1, count = 1 | 1 49 
+head = 53, count = 2 | 53 51 
+head = 51, count = 2 | 51 52 
+head = 351, count = 1 | 351 53 54 49 52 
+head = 49, count = 2 | 49 50 
+head = 52, count = 2 | 52 50 
+head = 50, count = 1 | 1 50 366 
+head = 52, count = 1 | 52 50 366 
+head = 53, count = 21 | 53 366 
+head = 0, count = 1 | 0 366 
+head = 366, count = 1 | 1 366 377 
+head = 366, count = 2 | 1 366 
+head = 366, count = 3 | 366 417 
+head = 417, count = 1 | 53 417 
+head = 366, count = 1 | 49 366 
+head = 366, count = 1 | 52 366 
+head = 52, count = 1 | 52 50 417 
+head = 417, count = 2 | 417 407 
+head = 212, count = 4 | 212 407 
+head = 366, count = 16 | 366 407 
+head = 1, count = 5 | 1 407 
+head = 90, count = 8 | 90 407 
+head = 110, count = 1 | 90 110 75 407 
+head = 271, count = 2 | 271 407 
+head = 50, count = 2 | 50 417 407 
+head = 0, count = 12 | 0 407 
+head = 103, count = 1 | 103 100 398 346 366 417 407 
+head = 424, count = 9 | 424 407 
+head = 0, count = 6 | 0 1 157 61 134 341 269 407 
+head = 351, count = 1 | 351 53 52 407 
+head = 424, count = 1 | 0 424 407 
+head = 90, count = 1 | 90 212 407 
+head = 399, count = 1 | 400 399 398 346 366 417 407 
+head = 407, count = 24 | 407 416 
+head = 0, count = 1 | 0 424 1 62 341 103 90 155 110 212 399 271 53 407 416 
+head = 424, count = 1 | 424 416 
+head = 416, count = 26 | 1 416 
+head = 407, count = 18 | 1 407 
+head = 424, count = 2 | 424 1 407 
+head = 0, count = 1 | 0 1 157 61 134 341 269 155 332 152 166 188 159 172 128 127 116 119 137 73 60 442 354 355 407 
+head = 1, count = 1 | 1 421 412 
+head = 1, count = 2 | 1 404 
+head = 404, count = 1 | 1 404 
+head = 1, count = 1 | 1 409 
+head = 404, count = 1 | 404 409 
+head = 409, count = 2 | 1 409 
+head = 53, count = 2 | 1 53 
+head = 0, count = 4 | 0 1 407 
+head = 0, count = 1 | 0 424 1 90 400 399 407 
+head = 0, count = 2 | 0 1 399 
+head = 60, count = 1 | 1 60 
+head = 137, count = 1 | 1 137 
+head = 120, count = 1 | 1 90 120 
+head = 0, count = 1 | 0 1 341 407 
+head = 424, count = 1 | 424 1 90 212 271 
+head = 0, count = 1 | 0 1 157 61 134 341 
+head = 1, count = 2 | 1 277 
+head = 277, count = 2 | 277 281 
+head = 1, count = 74 | 1 281 
+head = 407, count = 1 | 407 281 
+head = 1, count = 2 | 1 282 
+head = 62, count = 1 | 1 62 341 103 90 155 110 212 399 271 53 407 416 281 
+head = 1, count = 36 | 1 62 341 103 90 155 110 212 399 271 53 366 407 416 281 
+head = 0, count = 22 | 0 424 1 62 341 103 90 155 110 212 399 271 53 366 407 416 281 
+head = 0, count = 4 | 0 424 1 62 341 103 90 155 110 212 399 271 53 407 416 281 
+head = 424, count = 2 | 424 1 62 341 103 90 155 110 212 399 271 53 407 416 281 
+head = 0, count = 1 | 0 424 1 341 103 90 155 110 399 407 416 
+head = 0, count = 1 | 0 424 1 341 90 155 212 399 271 407 281 
+head = 0, count = 1 | 0 424 1 157 61 62 134 341 103 90 269 155 110 332 152 166 188 159 212 172 128 127 116 119 137 73 60 442 399 271 354 355 53 366 407 416 281 
+head = 0, count = 1 | 0 424 1 90 399 
+head = 0, count = 5 | 0 424 1 62 103 90 155 110 212 399 271 366 407 416 281 
+head = 0, count = 1 | 0 1 90 281 
+head = 1, count = 1 | 1 62 103 90 155 110 212 271 53 366 407 416 281 
+head = 0, count = 1 | 0 424 1 62 103 90 155 110 212 53 366 407 416 281 
+head = 212, count = 3 | 1 212 407 281 
+head = 0, count = 1 | 0 424 1 62 90 212 399 271 281 
+head = 332, count = 9 | 1 332 152 166 188 159 172 128 127 116 119 137 73 60 442 354 355 281 
+head = 0, count = 1 | 0 424 1 157 61 134 341 269 155 332 152 166 188 159 172 128 127 116 119 137 73 60 442 354 355 407 281 
+head = 0, count = 1 | 0 1 155 332 152 166 188 159 172 128 127 116 119 137 73 60 442 354 355 281 
+head = 0, count = 2 | 0 1 157 61 134 341 269 155 332 152 166 188 159 172 128 127 116 119 137 73 60 442 354 355 407 281 
+head = 1, count = 1 | 411 1 277 282 
+head = 400, count = 1 | 400 407 
+head = 279, count = 8 | 279 1 
+head = 0, count = 1 | 0 399 407 
+head = 0, count = 2 | 0 416 
+head = 0, count = 10 | 0 424 1 
+head = 0, count = 2 | 0 424 53 
+head = 0, count = 2 | 0 424 1 341 155 407 
+head = 103, count = 1 | 1 103 90 110 212 271 53 407 
+head = 0, count = 1 | 0 424 1 341 103 155 110 53 407 416 
+head = 0, count = 1 | 0 424 1 341 103 155 110 53 366 407 416 
+head = 103, count = 1 | 1 103 155 110 366 407 416 
+head = 0, count = 7 | 0 424 1 103 155 110 366 407 416 
+head = 0, count = 8 | 0 424 407 
+head = 103, count = 1 | 103 155 
+head = 0, count = 1 | 0 424 1 155 110 53 407 416 
+head = 0, count = 1 | 0 1 155 
+head = 0, count = 2 | 0 424 155 
+head = 332, count = 3 | 332 152 166 188 159 172 128 127 116 119 137 73 60 442 354 355 
+head = 155, count = 2 | 155 332 152 166 188 159 172 128 127 116 119 137 73 60 442 354 355 
+head = 0, count = 3 | 0 424 1 271 
+head = 424, count = 1 | 424 366 
+head = 0, count = 2 | 0 424 1 103 155 366 407 
+head = 0, count = 1 | 0 424 1 155 407 
+head = 0, count = 18 | 0 424 1 62 103 90 155 110 212 399 271 366 407 416 
+head = 0, count = 1 | 0 424 1 103 90 399 271 
+head = 0, count = 1 | 0 424 1 62 110 271 407 
+head = 0, count = 2 | 0 1 62 110 
+head = 0, count = 1 | 0 424 1 103 90 155 212 399 271 366 407 416 
+head = 155, count = 3 | 1 155 366 407 
+head = 0, count = 1 | 0 424 1 103 90 155 212 399 271 366 407 
+head = 0, count = 1 | 0 424 1 103 155 110 366 407 
+head = 407, count = 1 | 1 407 281 
+head = 90, count = 45 | 1 90 212 281 
+head = 1, count = 2 | 403 1 
+head = 412, count = 1 | 403 412 282 
+head = 403, count = 2 | 403 1 
+head = 1, count = 2 | 214 1 
+head = 214, count = 2 | 214 217 
+head = 118, count = 1 | 118 186 109 89 83 210 254 373 352 364 52 
+head = 212, count = 1 | 109 89 83 212 210 254 373 352 364 52 
+head = 118, count = 1 | 1 118 186 90 109 110 89 75 83 210 254 373 352 364 52 281 
+head = 118, count = 2 | 1 118 186 90 110 89 75 83 210 52 281 
+head = 219, count = 2 | 219 217 
+head = 217, count = 4 | 217 218 
+head = 274, count = 1 | 90 274 257 
+head = 90, count = 1 | 90 274 257 
+head = 100, count = 1 | 1 103 100 90 274 399 257 398 346 366 417 281 
+head = 100, count = 1 | 1 103 100 90 274 399 257 398 346 
+head = 218, count = 5 | 1 218 
+head = 100, count = 1 | 1 103 100 110 75 398 346 366 417 
+head = 110, count = 3 | 1 110 75 
+head = 1, count = 1 | 219 415 1 
+head = 1, count = 32 | 415 1 
+head = 0, count = 1 | 0 424 62 90 212 399 
+head = 0, count = 2 | 0 424 1 399 
+head = 0, count = 1 | 0 424 1 103 90 212 366 416 
+head = 279, count = 1 | 279 403 415 1 
+head = 0, count = 1 | 0 400 399 
+head = 424, count = 1 | 424 1 90 212 281 
+head = 0, count = 1 | 0 424 1 62 103 90 400 110 212 399 366 281 
+head = 100, count = 1 | 103 100 398 346 
+head = 90, count = 9 | 1 90 281 
+head = 279, count = 10 | 279 415 
+head = 90, count = 1 | 1 90 400 399 407 281 
+head = 90, count = 1 | 1 90 399 257 366 417 281 
+head = 61, count = 2 | 1 157 61 134 341 269 407 281 
+head = 1, count = 2 | 1 157 61 134 341 269 407 281 
+head = 1, count = 4 | 1 157 61 134 341 269 407 
+head = 61, count = 16 | 1 157 61 134 341 269 407 
+head = 424, count = 1 | 424 1 90 281 
+head = 424, count = 1 | 424 400 399 
+head = 431, count = 1 | 431 347 379 
+head = 405, count = 1 | 405 418 
+head = 415, count = 1 | 415 423 408 405 406 
+head = 415, count = 22 | 415 406 
+head = 62, count = 1 | 1 62 341 155 271 
+head = 0, count = 1 | 0 424 110 407 
+head = 1, count = 1 | 415 422 1 
+head = 1, count = 3 | 422 1 
+head = 406, count = 23 | 406 422 
+head = 0, count = 1 | 0 424 1 212 407 
+head = 110, count = 2 | 1 110 416 
+head = 0, count = 2 | 0 424 1 407 
+head = 50, count = 1 | 53 54 49 50 366 407 
+head = 1, count = 3 | 348 1 
+head = 345, count = 1 | 345 351 
+head = 271, count = 1 | 271 398 435 431 347 379 
+head = 454, count = 234 | 454 449 
+head = 449, count = 234 | 454 449 
+head = 1, count = 2 | 44 1 
+head = 403, count = 1 | 403 219 217 423 418 44 
+head = 348, count = 2 | 348 44 
+head = 422, count = 14 | 422 44 
+head = 1, count = 1 | 422 44 1 
+head = 415, count = 7 | 415 44 
+head = 103, count = 1 | 1 103 90 110 416 
+head = 1, count = 2 | 1 103 90 110 416 
+head = 1, count = 1 | 1 103 110 416 
+head = 0, count = 1 | 0 1 103 110 53 407 416 
+head = 361, count = 1 | 376 361 44 
+head = 0, count = 1 | 0 424 1 62 110 
+head = 424, count = 1 | 424 110 407 
+head = 422, count = 1 | 422 348 44 
+head = 110, count = 1 | 1 109 110 89 75 83 210 254 373 352 364 52 
+head = 44, count = 9 | 44 48 
+head = 171, count = 1 | 171 120 
+head = 48, count = 10 | 48 43 
+head = 44, count = 33 | 44 43 
+head = 43, count = 10 | 43 47 
+head = 44, count = 21 | 44 47 
+head = 103, count = 3 | 1 103 110 53 407 
+head = 415, count = 1 | 415 406 422 44 47 
+head = 0, count = 1 | 0 424 1 103 90 407 
+head = 103, count = 2 | 1 103 90 
+head = 0, count = 1 | 0 424 1 110 
+head = 415, count = 3 | 415 44 48 43 47 
+head = 47, count = 7 | 47 1 
+head = 47, count = 8 | 47 319 
+head = 43, count = 1 | 43 319 
+head = 61, count = 1 | 1 157 61 134 269 407 
+head = 1, count = 1 | 1 157 61 134 269 407 
+head = 415, count = 8 | 415 319 
+head = 1, count = 2 | 319 1 
+head = 418, count = 1 | 418 319 
+head = 319, count = 9 | 319 1 
+head = 44, count = 1 | 44 1 
+head = 422, count = 3 | 422 1 
+head = 348, count = 1 | 348 1 
+head = 47, count = 1 | 47 469 
+head = 469, count = 2 | 469 478 
+head = 1, count = 29 | 478 1 
+head = 47, count = 7 | 47 478 
+head = 422, count = 11 | 422 478 
+head = 415, count = 38 | 415 478 
+head = 0, count = 1 | 0 424 1 407 281 
+head = 0, count = 1 | 0 424 1 281 
+head = 90, count = 5 | 1 90 212 407 281 
+head = 279, count = 5 | 279 478 
+head = 90, count = 1 | 90 281 
+head = 1, count = 2 | 473 1 
+head = 1, count = 1 | 472 1 
+head = 473, count = 2 | 473 475 
+head = 403, count = 1 | 403 415 47 319 
+head = 47, count = 1 | 47 319 478 
+head = 1, count = 2 | 406 348 478 1 
+head = 1, count = 1 | 415 406 348 319 478 1 
+head = 1, count = 1 | 406 348 319 478 1 
+head = 1, count = 3 | 415 348 319 478 1 
+head = 1, count = 7 | 348 478 1 
+head = 279, count = 1 | 279 403 415 406 422 348 44 48 43 47 319 478 1 
+head = 418, count = 1 | 418 426 44 43 319 
+head = 476, count = 2 | 476 1 
+head = 1, count = 1 | 415 406 422 44 47 319 478 1 
+head = 319, count = 2 | 319 478 1 
+head = 415, count = 2 | 415 319 478 1 
+head = 1, count = 1 | 415 406 319 1 
+head = 406, count = 1 | 406 319 478 
+head = 279, count = 1 | 279 415 406 422 44 47 319 478 1 
+head = 406, count = 1 | 406 319 
+head = 1, count = 7 | 322 1 
+head = 403, count = 1 | 403 319 
+head = 415, count = 4 | 415 44 48 43 
+head = 90, count = 1 | 1 90 212 
+head = 415, count = 5 | 415 44 48 43 478 
+head = 330, count = 1 | 330 1 
+head = 322, count = 21 | 322 1 
+head = 313, count = 1 | 313 1 
+head = 439, count = 1 | 439 425 433 
+head = 1, count = 1 | 220 1 
+head = 322, count = 1 | 322 224 
+head = 230, count = 1 | 227 230 
+head = 227, count = 1 | 227 229 
+head = 230, count = 28 | 230 229 
+head = 230, count = 1 | 227 230 229 
+head = 229, count = 1 | 229 225 
+head = 220, count = 1 | 220 228 225 
+head = 225, count = 1 | 225 231 
+head = 44, count = 16 | 44 48 43 
+head = 220, count = 1 | 220 223 1 
+head = 224, count = 1 | 224 1 
+head = 44, count = 9 | 44 48 43 47 
+head = 1, count = 1 | 1 157 61 134 269 
+head = 1, count = 36 | 415 406 422 44 47 478 1 
+head = 279, count = 27 | 279 415 406 422 44 47 478 1 
+head = 470, count = 1 | 470 1 
+head = 0, count = 1 | 0 424 1 90 110 212 53 407 281 
+head = 279, count = 1 | 279 415 406 422 47 478 1 
+head = 1, count = 1 | 415 422 44 47 1 
+head = 1, count = 4 | 406 422 44 47 1 
+head = 1, count = 1 | 415 406 422 47 478 1 
+head = 1, count = 9 | 422 44 47 1 
+head = 422, count = 1 | 422 44 43 
+head = 44, count = 1 | 44 45 
+head = 44, count = 1 | 44 46 
+head = 415, count = 1 | 415 47 
+head = 1, count = 3 | 303 1 
+head = 319, count = 2 | 319 469 
+head = 303, count = 2 | 303 1 
+head = 1, count = 1 | 394 1 
+head = 394, count = 2 | 391 394 
+head = 1, count = 52 | 391 1 
+head = 322, count = 37 | 322 391 
+head = 303, count = 1 | 303 394 387 
+head = 392, count = 1 | 392 385 
+head = 322, count = 1 | 322 303 1 
+head = 1, count = 1 | 322 303 1 
+head = 1, count = 1 | 322 391 303 1 
+head = 1, count = 10 | 320 1 
+head = 383, count = 1 | 383 320 
+head = 0, count = 1 | 0 212 
+head = 422, count = 1 | 422 44 47 
+head = 62, count = 3 | 1 62 155 110 212 271 
+head = 279, count = 5 | 279 415 44 47 478 1 
+head = 415, count = 13 | 415 44 47 
+head = 1, count = 8 | 415 44 47 1 
+head = 0, count = 1 | 0 424 1 62 90 155 110 212 366 407 416 
+head = 0, count = 1 | 0 424 1 155 
+head = 279, count = 1 | 279 415 478 
+head = 1, count = 1 | 322 391 1 
+head = 0, count = 1 | 0 424 1 62 103 90 110 366 
+head = 62, count = 1 | 1 62 110 366 
+head = 1, count = 1 | 242 1 
+head = 330, count = 1 | 330 309 326 
+head = 242, count = 7 | 242 1 
+head = 322, count = 5 | 322 391 1 
+head = 242, count = 1 | 389 242 
+head = 242, count = 1 | 394 387 242 
+head = 389, count = 1 | 389 392 
+head = 242, count = 6 | 391 242 1 
+head = 385, count = 1 | 385 236 
+head = 329, count = 1 | 329 298 
+head = 1, count = 1 | 234 1 
+head = 234, count = 1 | 234 1 
+head = 236, count = 1 | 236 1 
+head = 115, count = 1 | 1 90 115 
+head = 1, count = 2 | 252 1 
+head = 236, count = 1 | 236 234 240 
+head = 236, count = 1 | 236 240 244 
+head = 1, count = 1 | 240 244 1 
+head = 1, count = 26 | 244 1 
+head = 383, count = 1 | 383 244 
+head = 242, count = 1 | 394 242 
+head = 385, count = 1 | 385 244 
+head = 16, count = 1 | 244 16 
+head = 244, count = 1 | 244 19 
+head = 244, count = 1 | 244 21 
+head = 244, count = 7 | 244 40 
+head = 19, count = 1 | 19 40 
+head = 40, count = 15 | 244 40 
+head = 40, count = 3 | 244 40 14 
+head = 61, count = 1 | 1 157 61 134 341 269 
+head = 244, count = 5 | 244 2 
+head = 2, count = 4 | 2 24 
+head = 40, count = 21 | 40 24 
+head = 1, count = 2 | 406 422 44 47 478 1 
+head = 24, count = 3 | 24 15 12 
+head = 406, count = 3 | 406 348 
+head = 244, count = 6 | 244 12 
+head = 252, count = 1 | 252 24 12 
+head = 1, count = 1 | 12 1 
+head = 240, count = 1 | 240 17 14 3 
+head = 3, count = 3 | 3 29 
+head = 12, count = 6 | 12 29 
+head = 24, count = 21 | 24 29 
+head = 0, count = 1 | 0 1 53 
+head = 0, count = 1 | 0 424 1 103 407 
+head = 0, count = 1 | 0 424 103 
+head = 424, count = 1 | 424 1 212 
+head = 244, count = 13 | 244 34 
+head = 29, count = 35 | 29 34 
+head = 40, count = 18 | 40 34 
+head = 21, count = 1 | 244 21 17 14 3 36 
+head = 34, count = 72 | 34 36 
+head = 0, count = 1 | 0 1 155 407 
+head = 244, count = 7 | 244 36 
+head = 61, count = 1 | 1 157 61 134 269 
+head = 36, count = 9 | 244 36 
+head = 244, count = 13 | 244 25 
+head = 36, count = 8 | 244 36 27 25 
+head = 25, count = 65278 | 244 25 10 
+head = 389, count = 2787 | 389 31 23 
+head = 10, count = 579953 | 244 10 
+head = 25, count = 2 | 25 8 32 41 
+head = 10, count = 2 | 244 10 41 
+head = 36, count = 215 | 36 41 
+head = 36, count = 5 | 244 36 27 25 38 41 
+head = 41, count = 35 | 41 37 
+head = 41, count = 7 | 244 41 37 
+head = 36, count = 4 | 36 37 
+head = 244, count = 1 | 244 19 14 34 37 
+head = 37, count = 6 | 37 18 
+head = 25, count = 2 | 25 18 
+head = 37, count = 6 | 37 18 13 
+head = 18, count = 6 | 18 13 
+head = 37, count = 37 | 37 13 
+head = 37, count = 7 | 37 20 
+head = 13, count = 7 | 244 20 13 
+head = 13, count = 7 | 20 13 
+head = 13, count = 35 | 13 30 
+head = 20, count = 14 | 20 30 
+head = 30, count = 36 | 40 30 
+head = 12, count = 3 | 244 12 
+head = 244, count = 2 | 244 24 
+head = 24, count = 2 | 24 12 
+head = 29, count = 2 | 17 14 3 29 4 
+head = 30, count = 5 | 34 30 
+head = 41, count = 2 | 244 17 14 3 36 41 13 
+head = 41, count = 296 | 36 41 
+head = 10, count = 751 | 10 18 
+head = 23, count = 187203 | 31 23 11 
+head = 10, count = 65278 | 244 25 10 
+head = 25, count = 99192 | 25 8 32 
+head = 23, count = 458058 | 23 11 
+head = 244, count = 8 | 244 36 41 
+head = 1, count = 4 | 244 12 36 41 1 
+head = 36, count = 3 | 24 36 41 18 
+head = 12, count = 10 | 12 36 41 
+head = 37, count = 21 | 34 37 13 30 
+head = 20, count = 3 | 14 34 37 20 30 
+head = 18, count = 43 | 25 18 
+head = 13, count = 13 | 40 13 
+head = 29, count = 2 | 14 29 4 35 
+head = 40, count = 4 | 40 14 29 
+head = 40, count = 4 | 40 29 
+head = 41, count = 4 | 14 36 41 13 
+head = 18, count = 59 | 10 18 
+head = 11, count = 140597 | 31 23 11 
+head = 20, count = 3 | 14 34 20 30 
+head = 10, count = 35 | 244 10 22 
+head = 18, count = 1 | 24 18 
+head = 24, count = 1 | 24 18 
+head = 41, count = 3 | 36 41 18 
+head = 22, count = 4947 | 10 22 
+head = 10, count = 6352 | 10 22 
+head = 25, count = 36 | 25 8 32 22 
+head = 11, count = 4444634 | 31 11 
+head = 31, count = 1 | 31 11 
+head = 36, count = 1 | 244 36 27 25 22 
+head = 25, count = 25 | 25 22 
+head = 25, count = 579986 | 244 25 
+head = 25, count = 546034 | 25 32 
+head = 7, count = 42100 | 31 7 11 8 
+head = 11, count = 354452 | 31 7 11 8 
+head = 11, count = 491884 | 31 11 8 
+head = 11, count = 978 | 11 8 
+head = 244, count = 1 | 244 21 38 13 
+head = 25, count = 5 | 25 32 41 
+head = 25, count = 5 | 244 25 41 
+head = 1, count = 3 | 244 40 29 34 36 41 37 20 13 30 1 
+head = 244, count = 1 | 244 40 29 34 36 41 37 20 13 30 
+head = 1, count = 1 | 244 34 36 41 37 13 30 1 
+head = 244, count = 1 | 244 40 34 36 41 37 13 30 
+head = 25, count = 1 | 25 38 41 
+head = 1, count = 1 | 244 40 29 34 41 37 20 13 30 1 
+head = 1, count = 1 | 244 40 24 12 29 34 36 41 1 
+head = 1, count = 2 | 244 36 41 1 
+head = 37, count = 1 | 244 37 
+head = 36, count = 2 | 34 36 37 13 30 
+head = 34, count = 2 | 34 37 13 30 
+head = 244, count = 1 | 244 34 37 13 30 
+head = 244, count = 4 | 244 40 34 36 37 13 30 
+head = 244, count = 2 | 244 40 29 34 36 37 20 13 30 
+head = 13, count = 31 | 34 13 30 
+head = 1, count = 3 | 244 34 37 13 30 1 
+head = 18, count = 1 | 244 18 
+head = 13, count = 1 | 244 13 
+head = 40, count = 6 | 40 13 
+head = 29, count = 2 | 40 29 20 13 
+head = 20, count = 1 | 244 20 
+head = 29, count = 3 | 29 20 
+head = 20, count = 3 | 29 20 
+head = 30, count = 2 | 244 30 
+head = 3, count = 1 | 244 3 
+head = 34, count = 1 | 244 34 
+head = 41, count = 2 | 24 36 41 18 
+head = 7, count = 246 | 7 11 8 
+head = 25, count = 2 | 244 25 22 
+head = 282, count = 1 | 405 282 
+head = 244, count = 1 | 244 39 
+head = 29, count = 2 | 29 4 
+head = 37, count = 2 | 40 29 34 36 37 20 13 30 
+head = 41, count = 6 | 40 29 34 36 41 37 20 13 30 
+head = 41, count = 2 | 34 36 41 37 13 30 
+head = 37, count = 2 | 40 34 36 37 13 30 
+head = 25, count = 1 | 25 38 41 22 
+head = 37, count = 2 | 40 29 34 37 20 13 30 
+head = 41, count = 5 | 244 12 36 41 
+head = 41, count = 2 | 244 36 41 
+head = 12, count = 10 | 12 36 
+head = 13, count = 4 | 34 36 13 30 
+head = 13, count = 8 | 40 34 36 13 30 
+head = 13, count = 4 | 40 29 34 36 20 13 30 
+head = 20, count = 4 | 40 29 20 
+head = 4, count = 2 | 14 29 4 35 
+head = 109, count = 1 | 1 109 254 373 352 364 
+head = 30, count = 3 | 26 30 
+head = 1, count = 1 | 406 1 
+head = 36, count = 2 | 244 36 41 
+head = 37, count = 1 | 244 40 34 36 41 37 13 30 
+head = 41, count = 1 | 244 40 29 34 36 41 37 20 13 30 
+head = 13, count = 1 | 244 40 29 34 36 37 20 13 30 
+head = 252, count = 1 | 235 252 248 244 31 11 1 
+head = 244, count = 21 | 244 1 
+head = 235, count = 1 | 235 246 
+head = 1, count = 2 | 232 1 
+head = 232, count = 1 | 238 232 
+head = 244, count = 1 | 238 244 
+head = 1, count = 1 | 238 1 
+head = 29, count = 1 | 235 241 244 29 
+head = 241, count = 1 | 247 241 
+head = 238, count = 5 | 238 253 
+head = 26, count = 3 | 253 26 
+head = 1, count = 2 | 294 1 
+head = 244, count = 1 | 244 40 24 29 34 36 
+head = 322, count = 1 | 322 303 
+head = 246, count = 1 | 243 247 294 246 1 
+head = 39, count = 1 | 294 39 
+head = 253, count = 2 | 294 253 
+head = 26, count = 3 | 294 26 
+head = 41, count = 1 | 294 41 13 
+head = 30, count = 2 | 294 30 
+head = 30, count = 1 | 294 26 30 
+head = 41, count = 10 | 294 41 
+head = 294, count = 11 | 294 1 
+head = 40, count = 36 | 40 24 29 34 36 
+head = 253, count = 3 | 253 1 
+head = 35, count = 1 | 232 35 1 
+head = 26, count = 3 | 253 26 1 
+head = 8, count = 1 | 291 8 
+head = 1, count = 1 | 291 1 
+head = 247, count = 1 | 247 291 
+head = 291, count = 1 | 291 1 
+head = 41, count = 1 | 244 41 1 
+head = 238, count = 1 | 238 1 
+head = 13, count = 1 | 478 244 38 13 
+head = 244, count = 1 | 478 244 
+head = 244, count = 1 | 478 244 25 
+head = 294, count = 9 | 294 478 
+head = 41, count = 6 | 478 41 
+head = 11, count = 2290 | 473 11 
+head = 11, count = 528 | 473 31 11 
+head = 23, count = 6 | 473 23 11 
+head = 23, count = 1 | 473 31 23 11 
+head = 291, count = 1 | 291 472 
+head = 41, count = 1 | 478 244 34 36 41 37 13 30 1 
+head = 41, count = 2 | 478 244 40 29 34 36 41 37 20 13 30 1 
+head = 37, count = 1 | 478 244 40 29 34 41 37 20 13 30 1 
+head = 37, count = 2 | 244 34 37 13 30 1 
+head = 37, count = 1 | 478 244 40 29 34 36 41 37 20 13 30 1 
+head = 13, count = 2 | 244 34 37 13 30 1 
+head = 13, count = 4 | 244 40 34 36 37 13 30 1 
+head = 13, count = 1 | 244 40 29 34 36 37 20 13 30 1 
+head = 36, count = 3 | 478 244 36 41 1 
+head = 36, count = 9 | 238 253 26 478 244 36 41 
+head = 41, count = 4 | 238 253 26 478 244 36 41 1 
+head = 41, count = 1 | 238 294 253 26 478 244 36 41 1 
+head = 36, count = 1 | 238 478 244 36 41 
+head = 1, count = 2 | 295 1 
+head = 291, count = 1 | 291 469 
+head = 20, count = 1 | 244 20 30 
+head = 295, count = 1 | 295 300 1 
+head = 295, count = 1 | 295 300 
+head = 29, count = 3 | 29 20 1 
+head = 1, count = 33 | 300 1 
+head = 36, count = 7 | 478 36 41 1 
+head = 41, count = 2 | 478 36 41 1 
+head = 470, count = 1 | 300 470 
+head = 206, count = 7 | 206 300 
+head = 300, count = 144 | 196 300 
+head = 13, count = 1 | 34 36 37 13 30 
+head = 13, count = 1 | 253 26 34 36 37 13 30 
+head = 36, count = 18 | 478 36 41 
+head = 41, count = 26 | 478 36 41 
+head = 36, count = 10 | 294 478 36 41 
+head = 41, count = 30 | 294 478 36 41 
+head = 41, count = 2 | 294 232 478 36 41 18 
+head = 41, count = 1 | 294 478 36 41 18 
+head = 36, count = 1 | 478 36 
+head = 196, count = 18 | 196 300 
+head = 25, count = 1 | 323 25 
+head = 300, count = 9 | 200 300 
+head = 473, count = 2126 | 207 473 
+head = 200, count = 5 | 199 200 300 207 
+head = 196, count = 3 | 199 197 196 
+head = 196, count = 186 | 199 196 
+head = 300, count = 16 | 199 196 300 
+head = 196, count = 21 | 199 196 300 
+head = 300, count = 8 | 206 300 
+head = 300, count = 7 | 198 200 300 
+head = 199, count = 33 | 199 300 
+head = 199, count = 7 | 199 206 
+head = 199, count = 277 | 199 196 
+head = 194, count = 2202 | 207 194 
+head = 207, count = 2125 | 207 194 
+head = 196, count = 4 | 197 196 
+head = 1, count = 9 | 199 196 300 1 
+head = 1, count = 1 | 199 300 1 
+head = 1, count = 1 | 199 295 196 300 1 
+head = 476, count = 1 | 206 295 200 476 
+head = 199, count = 22 | 199 196 300 
+head = 207, count = 1 | 300 207 
+head = 200, count = 2 | 200 300 207 
+head = 200, count = 1 | 198 200 
+head = 300, count = 20 | 300 207 
+head = 300, count = 1 | 199 300 207 
+head = 198, count = 1 | 198 300 
+head = 300, count = 1 | 199 300 
+head = 198, count = 1 | 198 200 
+head = 300, count = 7 | 300 328 
+head = 196, count = 5 | 196 328 
+head = 199, count = 9 | 199 328 
+head = 328, count = 3 | 310 328 
+head = 310, count = 3 | 312 310 
+head = 300, count = 1 | 312 300 1 
+head = 328, count = 7 | 312 328 
+head = 300, count = 134 | 312 300 
+head = 300, count = 1 | 290 300 
+head = 290, count = 1 | 284 290 
+head = 300, count = 1 | 284 300 
+head = 110, count = 1 | 90 110 75 281 
+head = 18, count = 1 | 232 18 
+head = 206, count = 1 | 206 284 
+head = 199, count = 11 | 199 284 
+head = 328, count = 8 | 284 328 
+head = 312, count = 8 | 312 284 
+head = 196, count = 2 | 284 196 
+head = 284, count = 1 | 284 289 
+head = 289, count = 1 | 289 283 
+head = 300, count = 1 | 312 284 300 
+head = 199, count = 5 | 199 312 284 196 300 
+head = 300, count = 1 | 199 312 284 300 
+head = 24, count = 36 | 24 29 34 36 
+head = 199, count = 1 | 199 312 284 310 196 300 328 
+head = 29, count = 4 | 29 34 36 
+head = 40, count = 2 | 40 29 34 36 
+head = 300, count = 5 | 312 196 300 
+head = 300, count = 11 | 199 312 284 196 300 
+head = 283, count = 27 | 287 283 
+head = 287, count = 8 | 287 312 
+head = 312, count = 1 | 312 289 
+head = 300, count = 9 | 199 284 310 196 300 
+head = 199, count = 4 | 199 312 284 310 196 300 
+head = 300, count = 1 | 199 284 196 300 
+head = 283, count = 3 | 287 312 283 
+head = 200, count = 1 | 290 200 
+head = 206, count = 1 | 206 290 
+head = 312, count = 1 | 312 491 
+head = 283, count = 1 | 287 283 491 
+head = 491, count = 2 | 485 491 
+head = 287, count = 10 | 287 485 
+head = 283, count = 2 | 485 283 
+head = 196, count = 17 | 199 284 196 
+head = 312, count = 18 | 312 485 
+head = 199, count = 26 | 199 284 196 
+head = 196, count = 10 | 199 284 196 328 
+head = 199, count = 33 | 199 284 196 328 
+head = 312, count = 1 | 312 480 
+head = 207, count = 1 | 289 207 
+head = 312, count = 1 | 483 312 
+head = 480, count = 1 | 481 480 
+head = 481, count = 1 | 481 492 
+head = 283, count = 5 | 287 312 485 283 
+head = 492, count = 1 | 318 312 492 
+head = 196, count = 1 | 310 196 
+head = 312, count = 1 | 318 312 
+head = 200, count = 1 | 206 325 200 1 
+head = 318, count = 2 | 318 324 
+head = 312, count = 1 | 312 324 
+head = 324, count = 2 | 293 324 
+head = 318, count = 2 | 318 293 
+head = 198, count = 1 | 198 304 1 
+head = 293, count = 4 | 314 293 
+head = 492, count = 1 | 314 492 
+head = 200, count = 1 | 200 328 1 
+head = 1, count = 2 | 465 1 
+head = 312, count = 1 | 465 312 
+head = 314, count = 1 | 314 465 
+head = 306, count = 1 | 306 465 
+head = 293, count = 1 | 314 465 293 
+head = 465, count = 1 | 464 465 
+head = 464, count = 1 | 464 1 
+head = 465, count = 2 | 465 1 
+head = 69, count = 1 | 400 69 399 
+head = 1, count = 1 | 453 219 1 
+head = 465, count = 2 | 465 453 
+head = 1, count = 2 | 453 1 
+head = 314, count = 1 | 314 453 
+head = 90, count = 1 | 1 90 399 257 
+head = 453, count = 1 | 453 446 463 
+head = 293, count = 1 | 314 465 446 293 
+head = 446, count = 2 | 446 451 
+head = 1, count = 1 | 453 432 1 
+head = 451, count = 1 | 461 451 
+head = 254, count = 1 | 254 373 352 
+head = 453, count = 1 | 461 453 
+head = 324, count = 1 | 461 324 
+head = 99, count = 1 | 400 99 399 398 
+head = 461, count = 4 | 430 461 
+head = 171, count = 1 | 90 171 
+head = 318, count = 1 | 314 430 465 318 293 
+head = 430, count = 2 | 430 445 
+head = 462, count = 1 | 445 462 
+head = 445, count = 2 | 445 458 
+head = 1, count = 1 | 1 400 399 
+head = 430, count = 2 | 430 458 
+head = 458, count = 4 | 428 458 
+============================================================
+BBLSwitchCount - Thread 0
+from = 0 | 424:1 1:1 
+from = 424 | 0:1 
+from = 1 | 0:1 459:1 441:1 71:1 72:1 61:1 63:1 62:1 57:1 112:1 123:1 134:1 132:1 118:1 122:1 168:1 151:1 157:1 173:1 186:1 154:1 177:1 103:11 100:11 90:11 97:11 88:11 81:11 109:11 93:11 74:5 337:5 333:5 341:5 342:5 336:5 331:5 340:5 334:5 339:5 85:5 94:11 182:1 184:1 155:1 150:1 149:1 171:1 110:7 111:7 105:7 101:7 102:7 86:7 77:7 89:7 84:7 78:7 79:7 91:7 343:15 338:15 335:15 332:4 185:1 170:1 152:1 160:1 178:1 163:1 75:7 106:7 108:7 95:7 82:7 96:7 92:7 83:7 107:7 76:7 87:7 80:7 179:1 176:1 166:1 180:1 169:1 167:1 104:6 98:6 99:6 190:1 156:1 188:1 183:1 164:1 153:1 189:1 162:1 159:1 158:1 175:1 187:1 212:3 211:3 210:2 208:3 174:1 148:1 161:1 172:1 165:1 181:1 130:1 128:1 136:1 124:1 131:1 126:1 113:1 129:1 127:1 141:1 121:1 117:1 143:1 138:1 133:1 116:1 135:1 125:1 115:1 140:1 144:1 119:1 146:1 139:1 120:1 147:1 114:1 137:1 142:1 145:1 56:1 73:1 69:1 66:1 65:1 67:1 209:1 59:1 64:1 70:1 60:1 68:1 58:1 437:1 442:1 450:1 399:1 395:1 400:2 398:1 397:1 396:1 440:1 435:1 431:1 347:1 360:1 378:1 358:1 369:1 373:1 346:1 354:1 353:1 379:1 367:1 344:1 362:1 365:1 352:1 345:1 349:1 374:1 380:1 370:1 364:1 351:1 355:1 371:1 53:1 54:1 49:1 51:1 55:1 52:1 50:1 366:1 377:1 368:1 359:1 417:1 413:1 407:1 416:1 414:1 419:1 421:1 412:1 402:1 401:1 404:1 409:1 277:1 281:1 278:1 282:1048576 279:1 280:1 411:1 410:1 420:1 403:1 219:2 214:2 213:2 217:2 218:2 216:2 215:2 415:1 408:1 423:1 405:1 418:1 406:1 422:1 363:1 348:1 375:1 356:1 372:1 357:1 361:1 376:1 350:1 439:1 454:312 449:311 426:1 44:1 48:1 43:1 45:1 46:1 47:1 425:1 443:1 433:1 319:1 469:2 478:2 468:2 467:2 471:2 472:2 473:131070 474:2 475:2 466:2 479:2 476:14 470:2 477:2 302:1 330:1 313:1 322:1 309:1 305:1 316:1 308:1 220:1 221:1 224:1 222:1 223:1 326:1 292:1 315:1 307:1 296:1 311:1 327:1 301:1 303:1 394:2 391:2 390:2 393:2 386:2 387:2 389:131070 388:2 392:2 381:2 384:2 385:14 383:2 382:2 329:1 298:1 320:1 297:1 242:1 236:1 234:1 233:1 239:1 245:1 252:1 248:1 240:1 244:1 235:1 251:1 250:1 237:1 246:1 232:1 243:1 238:1 241:1 247:1 253:1 249:1 294:1 323:1 291:1 295:1 300:8 328:1 304:1 310:1 325:1 312:1 318:1 321:1 324:1 306:1 293:1 299:1 314:1 317:1 448:1 465:1 456:1 464:1 453:1 463:1 447:1 446:1 455:1 451:1 436:1 444:1 432:1 461:1 438:1 462:11 430:11 457:11 460:1 434:1 445:1 452:1 458:1 427:1 428:1 429:1 
+from = 459 | 1:1 
+from = 441 | 1:1 
+from = 71 | 1:1 
+from = 72 | 1:1 
+from = 61 | 1:1 
+from = 63 | 1:1 
+from = 62 | 1:1 
+from = 57 | 1:1 
+from = 112 | 1:1 
+from = 123 | 1:1 
+from = 134 | 1:1 
+from = 132 | 1:1 
+from = 118 | 1:1 
+from = 122 | 1:1 
+from = 168 | 1:1 
+from = 151 | 1:1 
+from = 157 | 1:1 
+from = 173 | 1:1 
+from = 186 | 1:1 
+from = 154 | 1:1 
+from = 177 | 1:1 
+from = 103 | 1:11 
+from = 100 | 1:11 
+from = 90 | 1:11 
+from = 97 | 1:11 
+from = 88 | 1:11 
+from = 81 | 1:11 
+from = 109 | 1:11 
+from = 93 | 1:11 
+from = 74 | 1:5 
+from = 337 | 1:5 
+from = 333 | 1:5 
+from = 341 | 1:5 
+from = 342 | 1:5 
+from = 336 | 1:5 
+from = 331 | 1:5 
+from = 340 | 1:5 
+from = 334 | 1:5 
+from = 339 | 1:5 
+from = 85 | 1:5 
+from = 94 | 1:11 
+from = 182 | 1:1 
+from = 184 | 1:1 
+from = 155 | 1:1 
+from = 150 | 1:1 
+from = 149 | 1:1 
+from = 171 | 1:1 
+from = 110 | 1:7 274:7 272:7 273:7 276:7 275:7 
+from = 274 | 110:7 75:7 
+from = 272 | 110:7 75:7 
+from = 273 | 110:7 75:7 
+from = 276 | 110:7 75:7 
+from = 275 | 110:7 75:7 
+from = 111 | 1:7 
+from = 105 | 1:7 
+from = 101 | 1:7 
+from = 102 | 1:7 
+from = 86 | 1:7 
+from = 77 | 1:7 
+from = 89 | 1:7 
+from = 84 | 1:7 
+from = 78 | 1:7 
+from = 79 | 1:7 
+from = 91 | 1:7 
+from = 343 | 1:15 
+from = 338 | 1:15 
+from = 335 | 1:15 
+from = 332 | 1:4 
+from = 185 | 1:1 
+from = 170 | 1:1 
+from = 152 | 1:1 
+from = 160 | 1:1 
+from = 178 | 1:1 
+from = 163 | 1:1 
+from = 75 | 1:7 274:7 272:7 273:7 276:7 275:7 
+from = 106 | 1:7 
+from = 108 | 1:7 
+from = 95 | 1:7 
+from = 82 | 1:7 
+from = 96 | 1:7 
+from = 92 | 1:7 
+from = 83 | 1:7 
+from = 107 | 1:7 
+from = 76 | 1:7 
+from = 87 | 1:7 
+from = 80 | 1:7 
+from = 179 | 1:1 
+from = 176 | 1:1 
+from = 166 | 1:1 
+from = 180 | 1:1 
+from = 169 | 1:1 
+from = 167 | 1:1 
+from = 104 | 1:6 
+from = 98 | 1:6 
+from = 99 | 1:6 
+from = 190 | 1:1 
+from = 156 | 1:1 
+from = 188 | 1:1 
+from = 183 | 1:1 
+from = 164 | 1:1 
+from = 153 | 1:1 
+from = 189 | 1:1 
+from = 162 | 1:1 
+from = 159 | 1:1 
+from = 158 | 1:1 
+from = 175 | 1:1 
+from = 187 | 1:1 
+from = 212 | 1:3 
+from = 211 | 1:3 
+from = 210 | 1:2 
+from = 208 | 1:3 
+from = 174 | 1:1 
+from = 148 | 1:1 
+from = 161 | 1:1 
+from = 172 | 1:1 
+from = 165 | 1:1 
+from = 181 | 1:1 
+from = 130 | 1:1 
+from = 128 | 1:1 
+from = 136 | 1:1 
+from = 124 | 1:1 
+from = 131 | 1:1 
+from = 126 | 1:1 
+from = 113 | 1:1 
+from = 129 | 1:1 
+from = 127 | 1:1 
+from = 141 | 1:1 
+from = 121 | 1:1 
+from = 117 | 1:1 
+from = 143 | 1:1 
+from = 138 | 1:1 
+from = 133 | 1:1 
+from = 116 | 1:1 
+from = 135 | 1:1 
+from = 125 | 1:1 
+from = 115 | 1:1 
+from = 140 | 1:1 
+from = 144 | 1:1 
+from = 119 | 1:1 
+from = 146 | 1:1 
+from = 139 | 1:1 
+from = 120 | 1:1 
+from = 147 | 1:1 
+from = 114 | 1:1 
+from = 137 | 1:1 
+from = 142 | 1:1 
+from = 145 | 1:1 
+from = 56 | 1:1 
+from = 73 | 1:1 
+from = 69 | 1:1 
+from = 66 | 1:1 
+from = 65 | 1:1 
+from = 67 | 1:1 
+from = 209 | 1:1 
+from = 59 | 1:1 
+from = 64 | 1:1 
+from = 70 | 1:1 
+from = 60 | 1:1 
+from = 68 | 1:1 
+from = 58 | 1:1 
+from = 437 | 1:1 
+from = 442 | 1:1 
+from = 450 | 1:1 
+from = 399 | 1:1 
+from = 395 | 1:1 
+from = 400 | 1:2 191:2 192:2 193:2 
+from = 191 | 400:2 
+from = 192 | 400:2 268:2 269:1 270:2 271:1 
+from = 268 | 192:2 
+from = 269 | 192:1 260:1 261:1 257:1 258:1 267:1 266:1 254:1 264:1 256:1 262:1 255:1 259:1 263:1 265:1 
+from = 260 | 269:1 
+from = 261 | 269:1 
+from = 257 | 269:1 
+from = 258 | 269:1 
+from = 267 | 269:1 
+from = 266 | 269:1 
+from = 254 | 269:1 
+from = 264 | 269:1 
+from = 256 | 269:1 
+from = 262 | 269:1 
+from = 255 | 269:1 
+from = 259 | 269:1 
+from = 263 | 269:1 
+from = 265 | 269:1 
+from = 270 | 192:2 
+from = 193 | 400:2 
+from = 271 | 192:1 
+from = 398 | 1:1 
+from = 397 | 1:1 
+from = 396 | 1:1 
+from = 440 | 1:1 
+from = 435 | 1:1 
+from = 431 | 1:1 
+from = 347 | 1:1 
+from = 360 | 1:1 
+from = 378 | 1:1 
+from = 358 | 1:1 
+from = 369 | 1:1 
+from = 373 | 1:1 
+from = 346 | 1:1 
+from = 354 | 1:1 
+from = 353 | 1:1 
+from = 379 | 1:1 
+from = 367 | 1:1 
+from = 344 | 1:1 
+from = 362 | 1:1 
+from = 365 | 1:1 
+from = 352 | 1:1 
+from = 345 | 1:1 
+from = 349 | 1:1 
+from = 374 | 1:1 
+from = 380 | 1:1 
+from = 370 | 1:1 
+from = 364 | 1:1 
+from = 351 | 1:1 
+from = 355 | 1:1 
+from = 371 | 1:1 
+from = 53 | 1:1 417:1 
+from = 54 | 1:1 417:1 
+from = 49 | 1:1 417:1 
+from = 51 | 1:1 417:1 
+from = 55 | 1:1 417:1 
+from = 52 | 1:1 417:1 
+from = 50 | 1:1 417:1 
+from = 366 | 1:1 
+from = 377 | 1:1 
+from = 368 | 1:1 
+from = 359 | 1:1 
+from = 417 | 1:1 53:1 54:1 49:1 51:1 55:1 52:1 50:1 
+from = 413 | 1:1 
+from = 407 | 1:1 
+from = 416 | 1:1 
+from = 414 | 1:1 
+from = 419 | 1:1 
+from = 421 | 1:1 
+from = 412 | 1:1 
+from = 402 | 1:1 
+from = 401 | 1:1 
+from = 404 | 1:1 
+from = 409 | 1:1 
+from = 277 | 1:1 
+from = 281 | 1:1 
+from = 278 | 1:1 
+from = 282 | 1:1048576 
+from = 279 | 1:1 
+from = 280 | 1:1 
+from = 411 | 1:1 
+from = 410 | 1:1 
+from = 420 | 1:1 
+from = 403 | 1:1 
+from = 219 | 1:2 
+from = 214 | 1:2 
+from = 213 | 1:2 
+from = 217 | 1:2 
+from = 218 | 1:2 
+from = 216 | 1:2 
+from = 215 | 1:2 
+from = 415 | 1:1 
+from = 408 | 1:1 
+from = 423 | 1:1 
+from = 405 | 1:1 
+from = 418 | 1:1 
+from = 406 | 1:1 
+from = 422 | 1:1 
+from = 363 | 1:1 
+from = 348 | 1:1 
+from = 375 | 1:1 
+from = 356 | 1:1 
+from = 372 | 1:1 
+from = 357 | 1:1 
+from = 361 | 1:1 
+from = 376 | 1:1 
+from = 350 | 1:1 
+from = 439 | 1:1 
+from = 454 | 1:312 
+from = 449 | 1:311 
+from = 426 | 1:1 
+from = 44 | 1:1 
+from = 48 | 1:1 
+from = 43 | 1:1 
+from = 45 | 1:1 
+from = 46 | 1:1 
+from = 47 | 1:1 
+from = 425 | 1:1 
+from = 443 | 1:1 
+from = 433 | 1:1 
+from = 319 | 1:1 
+from = 469 | 1:2 
+from = 478 | 1:2 
+from = 468 | 1:2 
+from = 467 | 1:2 
+from = 471 | 1:2 
+from = 472 | 1:2 
+from = 473 | 1:131070 
+from = 474 | 1:2 
+from = 475 | 1:2 
+from = 466 | 1:2 
+from = 479 | 1:2 
+from = 476 | 1:14 
+from = 470 | 1:2 
+from = 477 | 1:2 
+from = 302 | 1:1 
+from = 330 | 1:1 
+from = 313 | 1:1 
+from = 322 | 1:1 
+from = 309 | 1:1 
+from = 305 | 1:1 
+from = 316 | 1:1 
+from = 308 | 1:1 
+from = 220 | 1:1 
+from = 221 | 1:1 
+from = 224 | 1:1 228:1 226:1 230:113 227:1 229:198 225:1 231:1 
+from = 228 | 224:1 
+from = 226 | 224:1 
+from = 230 | 224:113 
+from = 227 | 224:1 
+from = 229 | 224:198 
+from = 225 | 224:1 
+from = 231 | 224:1 
+from = 222 | 1:1 
+from = 223 | 1:1 
+from = 326 | 1:1 
+from = 292 | 1:1 
+from = 315 | 1:1 
+from = 307 | 1:1 
+from = 296 | 1:1 
+from = 311 | 1:1 
+from = 327 | 1:1 
+from = 301 | 1:1 
+from = 303 | 1:1 
+from = 394 | 1:2 
+from = 391 | 1:2 
+from = 390 | 1:2 
+from = 393 | 1:2 
+from = 386 | 1:2 
+from = 387 | 1:2 
+from = 389 | 1:131070 
+from = 388 | 1:2 
+from = 392 | 1:2 
+from = 381 | 1:2 
+from = 384 | 1:2 
+from = 385 | 1:14 
+from = 383 | 1:2 
+from = 382 | 1:2 
+from = 329 | 1:1 
+from = 298 | 1:1 
+from = 320 | 1:1 
+from = 297 | 1:1 
+from = 242 | 1:1 
+from = 236 | 1:1 
+from = 234 | 1:1 
+from = 233 | 1:1 
+from = 239 | 1:1 
+from = 245 | 1:1 
+from = 252 | 1:1 
+from = 248 | 1:1 
+from = 240 | 1:1 
+from = 244 | 1:1 16:1 19:1 21:1 40:7 14:7 17:3 28:3 9:3 5:3 2:3 24:3 15:3 12:3 3:3 29:7 34:7 36:7 27:7 25:645269 31:31398992 23:645268 7:645268 10:645268 11:31398992 39:7858396 4:7858396 8:7858396 33:31398992 32:645269 42:645269 38:7 41:7 6:7 37:7 18:6 13:7 20:7 30:7 35:4 22:37 26:1 
+from = 16 | 244:1 
+from = 19 | 244:1 
+from = 21 | 244:1 
+from = 40 | 244:7 
+from = 14 | 244:7 
+from = 17 | 244:3 
+from = 28 | 244:3 
+from = 9 | 244:3 
+from = 5 | 244:3 
+from = 2 | 244:3 
+from = 24 | 244:3 
+from = 15 | 244:3 
+from = 12 | 244:3 
+from = 3 | 244:3 
+from = 29 | 244:7 
+from = 34 | 244:7 
+from = 36 | 244:7 
+from = 27 | 244:7 
+from = 25 | 244:645269 
+from = 31 | 244:31398992 
+from = 23 | 244:645268 
+from = 7 | 244:645268 
+from = 10 | 244:645268 
+from = 11 | 244:31398992 
+from = 39 | 244:7858396 
+from = 4 | 244:7858396 
+from = 8 | 244:7858396 
+from = 33 | 244:31398992 
+from = 32 | 244:645269 
+from = 42 | 244:645269 
+from = 38 | 244:7 
+from = 41 | 244:7 
+from = 6 | 244:7 
+from = 37 | 244:7 
+from = 18 | 244:6 
+from = 13 | 244:7 
+from = 20 | 244:7 
+from = 30 | 244:7 
+from = 35 | 244:4 
+from = 22 | 244:37 
+from = 26 | 244:1 
+from = 235 | 1:1 
+from = 251 | 1:1 
+from = 250 | 1:1 
+from = 237 | 1:1 
+from = 246 | 1:1 
+from = 232 | 1:1 
+from = 243 | 1:1 
+from = 238 | 1:1 
+from = 241 | 1:1 
+from = 247 | 1:1 
+from = 253 | 1:1 
+from = 249 | 1:1 
+from = 294 | 1:1 
+from = 323 | 1:1 
+from = 291 | 1:1 
+from = 295 | 1:1 
+from = 300 | 1:8 206:8 196:7 202:7 197:7 200:7 203:645269 198:645269 195:31398992 201:31398992 207:645269 199:7 204:7 205:8 194:7858396 
+from = 206 | 300:8 
+from = 196 | 300:7 
+from = 202 | 300:7 
+from = 197 | 300:7 
+from = 200 | 300:7 
+from = 203 | 300:645269 
+from = 198 | 300:645269 
+from = 195 | 300:31398992 
+from = 201 | 300:31398992 
+from = 207 | 300:645269 
+from = 199 | 300:7 
+from = 204 | 300:7 
+from = 205 | 300:8 
+from = 194 | 300:7858396 
+from = 328 | 1:1 
+from = 304 | 1:1 
+from = 310 | 1:1 
+from = 325 | 1:1 
+from = 312 | 1:1 290:1 284:1 288:1 289:1048575 283:1 287:1 285:1 286:1 491:1 485:1 482:1 488:1 484:1 483:1 480:131071 486:1 481:1 493:1 487:1 492:3 490:1 489:1 
+from = 290 | 312:1 
+from = 284 | 312:1 
+from = 288 | 312:1 
+from = 289 | 312:1048575 
+from = 283 | 312:1 
+from = 287 | 312:1 
+from = 285 | 312:1 
+from = 286 | 312:1 
+from = 491 | 312:1 
+from = 485 | 312:1 
+from = 482 | 312:1 
+from = 488 | 312:1 
+from = 484 | 312:1 
+from = 483 | 312:1 
+from = 480 | 312:131071 
+from = 486 | 312:1 
+from = 481 | 312:1 
+from = 493 | 312:1 
+from = 487 | 312:1 
+from = 492 | 312:3 
+from = 490 | 312:1 
+from = 489 | 312:1 
+from = 318 | 1:1 
+from = 321 | 1:1 
+from = 324 | 1:1 
+from = 306 | 1:1 
+from = 293 | 1:1 
+from = 299 | 1:1 
+from = 314 | 1:1 
+from = 317 | 1:1 
+from = 448 | 1:1 
+from = 465 | 1:1 
+from = 456 | 1:1 
+from = 464 | 1:1 
+from = 453 | 1:1 
+from = 463 | 1:1 
+from = 447 | 1:1 
+from = 446 | 1:1 
+from = 455 | 1:1 
+from = 451 | 1:1 
+from = 436 | 1:1 
+from = 444 | 1:1 
+from = 432 | 1:1 
+from = 461 | 1:1 
+from = 438 | 1:1 
+from = 462 | 1:11 
+from = 430 | 1:11 
+from = 457 | 1:11 
+from = 460 | 1:1 
+from = 434 | 1:1 
+from = 445 | 1:1 
+from = 452 | 1:1 
+from = 458 | 1:1 
+from = 427 | 1:1 
+from = 428 | 1:1 
+from = 429 | 1:1 

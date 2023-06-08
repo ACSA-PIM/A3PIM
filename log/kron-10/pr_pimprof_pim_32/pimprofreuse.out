@@ -1,0 +1,5194 @@
+============================================================
+ReuseSegment - Thread 0
+head = 0, count = 41 | 0 179 
+head = 179, count = 1 | 179 281 
+head = 179, count = 4 | 179 1 
+head = 179, count = 22 | 179 347 
+head = 330, count = 1 | 330 347 
+head = 347, count = 1 | 347 329 
+head = 347, count = 11 | 1 347 
+head = 347, count = 1 | 347 86 
+head = 1, count = 1 | 1 82 
+head = 82, count = 1 | 82 80 
+head = 86, count = 1 | 86 80 
+head = 80, count = 1 | 80 99 
+head = 179, count = 1 | 179 99 
+head = 80, count = 1 | 1 80 99 
+head = 179, count = 2 | 179 40 
+head = 347, count = 1 | 347 61 
+head = 61, count = 1 | 61 46 
+head = 40, count = 1 | 40 46 
+head = 46, count = 2 | 46 59 
+head = 1, count = 1 | 1 59 
+head = 179, count = 1 | 179 59 
+head = 0, count = 1 | 0 59 
+head = 347, count = 2 | 347 59 
+head = 59, count = 1 | 1 59 
+head = 0, count = 3 | 0 179 347 
+head = 59, count = 2 | 59 53 
+head = 1, count = 2 | 1 53 
+head = 347, count = 1 | 347 301 
+head = 1, count = 24 | 1 301 
+head = 179, count = 1 | 179 1 347 
+head = 179, count = 4 | 179 1 347 301 
+head = 301, count = 10 | 301 286 
+head = 286, count = 4 | 286 318 
+head = 301, count = 25 | 301 318 
+head = 179, count = 2 | 179 301 
+head = 1, count = 37 | 1 318 
+head = 0, count = 2 | 0 179 1 347 301 318 
+head = 53, count = 1 | 301 53 286 318 
+head = 179, count = 4 | 179 1 347 301 318 
+head = 0, count = 3 | 0 179 347 301 318 
+head = 179, count = 2 | 179 301 318 
+head = 318, count = 43 | 1 318 
+head = 286, count = 4 | 1 286 
+head = 53, count = 1 | 1 53 318 
+head = 318, count = 8 | 1 318 309 
+head = 1, count = 18 | 1 302 
+head = 309, count = 8 | 309 311 
+head = 302, count = 16 | 302 311 
+head = 302, count = 5 | 1 302 
+head = 1, count = 5 | 1 228 
+head = 228, count = 5 | 228 224 
+head = 224, count = 4 | 224 221 
+head = 318, count = 26 | 318 221 
+head = 301, count = 1 | 301 221 
+head = 1, count = 31 | 1 221 
+head = 311, count = 5 | 311 221 
+head = 221, count = 1 | 221 231 
+head = 231, count = 1 | 223 231 
+head = 223, count = 5 | 223 222 
+head = 311, count = 4 | 223 222 311 231 
+head = 59, count = 1 | 59 232 311 228 
+head = 1, count = 1 | 1 65 
+head = 221, count = 25 | 221 65 
+head = 221, count = 1 | 1 232 221 65 
+head = 0, count = 1 | 0 179 1 347 301 318 221 
+head = 179, count = 2 | 179 1 301 
+head = 179, count = 1 | 179 347 301 318 
+head = 318, count = 1 | 1 318 302 65 
+head = 53, count = 1 | 53 318 65 
+head = 0, count = 1 | 0 1 221 65 
+head = 347, count = 1 | 347 54 
+head = 53, count = 1 | 53 318 44 54 
+head = 65, count = 1 | 65 54 
+head = 54, count = 1 | 1 54 
+head = 65, count = 4 | 1 65 
+head = 54, count = 1 | 54 27 
+head = 1, count = 2 | 1 27 
+head = 302, count = 1 | 302 27 
+head = 53, count = 1 | 53 318 31 27 
+head = 318, count = 7 | 1 318 302 311 
+head = 65, count = 1 | 301 65 
+head = 301, count = 16 | 301 299 
+head = 299, count = 8 | 299 71 
+head = 222, count = 3 | 222 295 71 
+head = 71, count = 10 | 299 71 
+head = 179, count = 4 | 179 1 347 301 318 221 65 
+head = 65, count = 18 | 65 299 
+head = 221, count = 5 | 221 299 
+head = 347, count = 1 | 1 347 301 318 221 65 
+head = 0, count = 1 | 0 179 1 347 301 318 221 65 
+head = 318, count = 1 | 318 299 
+head = 301, count = 1 | 301 286 299 
+head = 71, count = 8 | 299 71 70 
+head = 301, count = 2 | 301 65 
+head = 179, count = 1 | 179 1 347 221 
+head = 0, count = 1 | 0 179 347 301 318 65 
+head = 347, count = 1 | 347 301 318 
+head = 179, count = 1 | 179 299 
+head = 80, count = 1 | 80 46 318 302 
+head = 299, count = 20 | 1 299 
+head = 1, count = 8 | 1 292 
+head = 292, count = 8 | 292 285 
+head = 285, count = 8 | 285 303 
+head = 1, count = 6 | 1 288 
+head = 54, count = 1 | 301 54 299 71 69 290 288 
+head = 288, count = 8 | 288 289 
+head = 303, count = 6 | 287 303 288 289 297 
+head = 288, count = 6 | 286 288 
+head = 299, count = 4 | 286 299 
+head = 299, count = 7 | 318 299 
+head = 65, count = 2 | 318 65 
+head = 297, count = 3 | 318 297 316 
+head = 1, count = 2 | 1 221 65 
+head = 221, count = 6 | 1 221 
+head = 223, count = 2 | 1 223 
+head = 222, count = 1 | 222 225 
+head = 225, count = 9 | 225 230 
+head = 230, count = 15 | 227 230 
+head = 222, count = 1 | 227 222 225 
+head = 302, count = 1 | 227 302 230 
+head = 221, count = 3 | 1 221 226 
+head = 221, count = 8 | 221 226 
+head = 227, count = 4 | 227 226 
+head = 1, count = 3 | 1 226 
+head = 232, count = 2 | 232 311 228 
+head = 318, count = 1 | 1 318 302 38 
+head = 27, count = 1 | 318 27 38 
+head = 226, count = 2 | 226 38 
+head = 27, count = 1 | 286 318 27 52 50 
+head = 347, count = 1 | 347 50 
+head = 38, count = 1 | 38 50 
+head = 50, count = 1 | 1 50 
+head = 38, count = 4 | 1 38 
+head = 226, count = 1 | 1 226 
+head = 50, count = 1 | 50 49 
+head = 1, count = 2 | 1 49 
+head = 227, count = 1 | 227 49 
+head = 347, count = 1 | 347 49 
+head = 289, count = 1 | 318 289 25 
+head = 226, count = 2 | 1 301 232 226 
+head = 286, count = 14 | 286 314 
+head = 314, count = 6 | 71 314 
+head = 71, count = 10 | 71 314 
+head = 71, count = 8 | 71 70 314 
+head = 314, count = 30 | 1 314 
+head = 1, count = 8 | 1 298 
+head = 298, count = 8 | 298 313 
+head = 313, count = 8 | 313 308 
+head = 1, count = 4 | 1 291 
+head = 49, count = 1 | 286 71 69 49 314 291 
+head = 291, count = 8 | 291 294 
+head = 308, count = 4 | 308 315 291 294 305 
+head = 291, count = 4 | 318 291 
+head = 226, count = 3 | 318 226 
+head = 221, count = 6 | 318 221 
+head = 305, count = 4 | 318 306 305 
+head = 221, count = 1 | 221 225 
+head = 222, count = 1 | 222 230 
+head = 227, count = 10 | 227 225 230 
+head = 230, count = 1 | 225 230 
+head = 1, count = 2 | 1 221 226 
+head = 1, count = 1 | 1 45 
+head = 318, count = 1 | 1 318 302 45 
+head = 49, count = 1 | 318 49 45 
+head = 226, count = 2 | 226 45 
+head = 49, count = 1 | 318 69 49 307 294 51 33 
+head = 49, count = 1 | 318 49 56 33 
+head = 45, count = 1 | 45 33 
+head = 33, count = 1 | 1 33 
+head = 45, count = 4 | 1 45 
+head = 33, count = 1 | 33 55 
+head = 49, count = 1 | 318 49 55 
+head = 1, count = 2 | 1 55 
+head = 318, count = 1 | 318 28 55 
+head = 33, count = 1 | 301 299 71 69 290 288 33 
+head = 1, count = 1 | 1 320 
+head = 320, count = 5 | 320 319 
+head = 319, count = 7 | 319 312 
+head = 311, count = 7 | 311 320 319 312 
+head = 232, count = 2 | 232 311 312 
+head = 1, count = 3 | 1 30 
+head = 318, count = 1 | 1 318 302 30 
+head = 55, count = 1 | 318 55 30 
+head = 289, count = 1 | 318 289 58 37 
+head = 30, count = 1 | 30 37 
+head = 37, count = 1 | 1 37 
+head = 30, count = 4 | 1 30 
+head = 37, count = 1 | 37 64 
+head = 55, count = 1 | 318 55 64 
+head = 1, count = 2 | 1 64 
+head = 294, count = 1 | 318 294 64 
+head = 55, count = 1 | 286 318 55 43 64 
+head = 302, count = 2 | 301 302 
+head = 312, count = 1 | 71 312 
+head = 37, count = 1 | 301 299 71 69 288 37 
+head = 311, count = 6 | 1 311 
+head = 227, count = 8 | 227 225 
+head = 227, count = 1 | 227 230 
+head = 312, count = 1 | 227 230 312 
+head = 312, count = 1 | 232 311 228 312 
+head = 1, count = 2 | 1 39 
+head = 318, count = 1 | 1 318 302 39 
+head = 64, count = 1 | 318 64 39 
+head = 226, count = 1 | 226 39 
+head = 39, count = 1 | 66 39 
+head = 66, count = 1 | 1 66 
+head = 39, count = 3 | 1 39 
+head = 66, count = 1 | 66 36 
+head = 64, count = 1 | 318 64 36 
+head = 1, count = 2 | 1 36 
+head = 222, count = 1 | 1 222 295 
+head = 39, count = 1 | 39 168 
+head = 1, count = 17 | 1 168 
+head = 299, count = 16 | 299 168 
+head = 221, count = 3 | 221 168 
+head = 318, count = 92 | 318 168 
+head = 179, count = 3 | 179 1 347 301 318 221 65 299 
+head = 347, count = 4 | 1 347 301 318 221 65 299 
+head = 347, count = 1 | 347 65 299 
+head = 301, count = 1 | 301 318 221 65 299 
+head = 179, count = 3 | 179 347 301 318 65 299 
+head = 0, count = 1 | 0 179 347 301 318 65 299 
+head = 318, count = 1 | 318 65 299 
+head = 226, count = 1 | 1 232 226 168 
+head = 226, count = 1 | 226 168 
+head = 42, count = 1 | 42 168 
+head = 168, count = 5 | 168 169 
+head = 80, count = 1 | 80 46 318 299 288 314 291 
+head = 1, count = 1 | 1 169 
+head = 169, count = 4 | 169 171 
+head = 168, count = 4 | 1 168 171 
+head = 169, count = 3 | 301 169 
+head = 1, count = 3 | 1 71 168 
+head = 36, count = 1 | 301 299 71 69 290 288 36 
+head = 297, count = 3 | 71 297 316 
+head = 171, count = 2 | 286 71 69 314 291 171 
+head = 168, count = 60 | 318 168 
+head = 179, count = 1 | 179 318 168 
+head = 222, count = 2 | 222 320 
+head = 232, count = 1 | 232 311 312 36 
+head = 1, count = 3 | 1 63 
+head = 318, count = 1 | 1 318 302 63 
+head = 36, count = 1 | 318 36 63 
+head = 99, count = 1 | 99 40 46 
+head = 40, count = 1 | 40 76 
+head = 59, count = 1 | 59 76 
+head = 294, count = 1 | 1 318 294 
+head = 289, count = 1 | 1 318 289 
+head = 55, count = 1 | 318 55 35 
+head = 312, count = 3 | 1 312 
+head = 63, count = 5 | 1 63 
+head = 48, count = 1 | 1 48 
+head = 289, count = 1 | 1 318 289 60 57 
+head = 64, count = 1 | 1 318 69 290 289 64 26 32 
+head = 1, count = 1 | 1 301 221 65 299 
+head = 179, count = 3 | 179 1 301 65 299 
+head = 168, count = 3 | 1 168 
+head = 1, count = 13 | 1 301 318 221 65 299 168 
+head = 347, count = 10 | 1 347 301 318 221 65 299 168 
+head = 318, count = 1 | 318 221 65 299 168 
+head = 179, count = 2 | 179 1 301 221 65 299 
+head = 168, count = 1 | 1 318 69 307 294 168 171 29 
+head = 50, count = 1 | 301 318 50 
+head = 301, count = 1 | 1 301 65 299 
+head = 80, count = 1 | 80 46 318 299 288 314 291 169 
+head = 36, count = 1 | 1 318 36 
+head = 1, count = 1 | 1 100 
+head = 100, count = 1 | 1 100 
+head = 1, count = 1 | 1 221 65 226 38 45 30 39 63 
+head = 64, count = 1 | 1 286 318 64 
+head = 100, count = 1 | 100 87 
+head = 1, count = 2 | 1 87 
+head = 179, count = 1 | 179 87 
+head = 64, count = 1 | 301 318 64 62 
+head = 1, count = 7 | 1 71 
+head = 1, count = 1 | 1 314 
+head = 1, count = 4 | 1 298 313 308 
+head = 308, count = 4 | 308 315 291 
+head = 87, count = 1 | 286 71 69 314 307 291 87 
+head = 291, count = 4 | 291 294 305 
+head = 305, count = 4 | 318 305 
+head = 308, count = 4 | 318 308 306 
+head = 87, count = 1 | 1 318 87 
+head = 1, count = 4 | 1 309 
+head = 309, count = 4 | 309 302 
+head = 312, count = 4 | 311 312 
+head = 1, count = 3 | 1 90 
+head = 226, count = 1 | 226 38 45 30 39 63 
+head = 87, count = 1 | 318 87 90 
+head = 90, count = 1 | 90 103 
+head = 103, count = 1 | 1 103 
+head = 90, count = 4 | 1 90 
+head = 1, count = 2 | 1 104 
+head = 27, count = 1 | 318 27 104 
+head = 100, count = 1 | 301 318 168 100 79 
+head = 318, count = 3 | 1 318 309 302 311 
+head = 168, count = 1 | 301 168 169 
+head = 168, count = 1 | 299 168 
+head = 1, count = 2 | 1 292 285 303 
+head = 303, count = 2 | 287 303 288 
+head = 103, count = 1 | 301 299 71 69 290 288 103 
+head = 288, count = 2 | 288 289 297 
+head = 297, count = 2 | 286 297 
+head = 1, count = 2 | 1 286 
+head = 303, count = 2 | 71 303 316 
+head = 299, count = 2 | 299 314 
+head = 171, count = 2 | 286 71 69 314 307 291 171 
+head = 318, count = 3 | 318 302 
+head = 312, count = 2 | 320 312 
+head = 1, count = 4 | 1 85 
+head = 65, count = 1 | 65 226 38 45 30 39 63 90 
+head = 104, count = 1 | 318 104 85 
+head = 294, count = 1 | 318 294 77 84 
+head = 104, count = 1 | 318 104 91 84 
+head = 85, count = 1 | 85 84 
+head = 84, count = 1 | 1 84 
+head = 85, count = 4 | 1 85 
+head = 84, count = 1 | 84 83 
+head = 1, count = 2 | 1 83 
+head = 104, count = 1 | 318 104 83 
+head = 312, count = 1 | 301 312 
+head = 1, count = 1 | 1 299 
+head = 84, count = 1 | 301 299 71 69 290 288 84 
+head = 83, count = 1 | 286 71 69 314 307 291 83 
+head = 1, count = 1 | 1 223 222 231 
+head = 312, count = 2 | 227 225 230 312 
+head = 232, count = 1 | 1 232 
+head = 311, count = 1 | 232 311 228 
+head = 1, count = 3 | 1 96 
+head = 83, count = 1 | 318 83 96 
+head = 226, count = 1 | 226 96 
+head = 289, count = 1 | 318 289 78 81 
+head = 96, count = 1 | 96 81 
+head = 81, count = 1 | 1 81 
+head = 96, count = 3 | 1 96 
+head = 1, count = 2 | 1 97 
+head = 302, count = 1 | 302 97 
+head = 294, count = 1 | 318 294 94 97 
+head = 97, count = 1 | 1 97 
+head = 222, count = 1 | 1 301 222 295 
+head = 224, count = 1 | 1 301 232 224 
+head = 286, count = 2 | 301 286 
+head = 226, count = 1 | 226 314 
+head = 97, count = 1 | 286 71 69 314 307 291 97 
+head = 288, count = 1 | 1 318 302 299 288 314 291 169 
+head = 1, count = 1 | 1 318 98 95 
+head = 1, count = 3 | 1 95 
+head = 97, count = 1 | 318 97 95 
+head = 76, count = 1 | 76 104 331 
+head = 1, count = 1 | 1 331 
+head = 329, count = 1 | 329 86 80 349 341 
+head = 0, count = 1 | 0 1 221 65 226 38 45 30 39 63 90 85 96 95 
+head = 95, count = 3 | 1 95 
+head = 341, count = 1 | 1 341 344 
+head = 1, count = 2 | 1 344 
+head = 97, count = 1 | 318 97 344 
+head = 289, count = 1 | 1 318 289 105 
+head = 294, count = 1 | 318 294 168 92 
+head = 294, count = 1 | 318 294 168 75 
+head = 87, count = 1 | 318 168 87 74 
+head = 95, count = 2 | 168 95 
+head = 318, count = 1 | 1 318 309 302 311 168 
+head = 312, count = 1 | 312 168 
+head = 318, count = 1 | 318 302 168 
+head = 83, count = 1 | 318 168 83 102 
+head = 81, count = 1 | 1 301 318 81 93 
+head = 168, count = 1 | 71 168 
+head = 318, count = 1 | 1 318 299 71 314 36 
+head = 1, count = 2 | 1 285 303 
+head = 341, count = 1 | 301 299 71 69 290 288 341 
+head = 303, count = 2 | 71 303 
+head = 1, count = 2 | 1 313 308 
+head = 308, count = 2 | 318 308 
+head = 1, count = 3 | 1 335 
+head = 318, count = 1 | 318 302 335 
+head = 344, count = 1 | 318 344 335 
+head = 344, count = 1 | 344 334 
+head = 289, count = 1 | 318 289 334 345 
+head = 335, count = 2 | 1 335 
+head = 334, count = 1 | 168 334 
+head = 347, count = 1 | 347 80 46 302 288 291 169 
+head = 294, count = 1 | 318 294 169 343 
+head = 299, count = 2 | 318 299 314 
+head = 1, count = 1 | 1 317 
+head = 168, count = 1 | 301 299 71 69 288 168 171 
+head = 169, count = 1 | 318 169 
+head = 221, count = 1 | 1 221 226 38 45 30 39 63 90 85 96 95 335 
+head = 281, count = 1 | 281 339 347 
+head = 1, count = 5 | 1 181 
+head = 294, count = 1 | 1 318 294 181 
+head = 318, count = 9 | 318 181 
+head = 318, count = 1 | 318 302 181 
+head = 302, count = 1 | 302 181 
+head = 312, count = 1 | 312 181 
+head = 318, count = 1 | 318 302 311 181 
+head = 179, count = 1 | 179 1 301 318 299 168 
+head = 179, count = 1 | 179 1 347 301 318 221 65 299 168 
+head = 168, count = 2 | 168 181 
+head = 318, count = 2 | 1 318 221 65 299 168 
+head = 179, count = 1 | 179 318 
+head = 221, count = 1 | 1 221 65 299 168 
+head = 318, count = 3 | 318 65 299 168 
+head = 179, count = 3 | 179 347 301 318 65 299 168 
+head = 347, count = 1 | 347 301 318 65 299 168 
+head = 0, count = 1 | 0 179 347 301 318 65 299 168 
+head = 318, count = 1 | 318 65 168 
+head = 299, count = 1 | 1 301 286 299 314 181 
+head = 289, count = 1 | 318 69 289 307 294 342 181 
+head = 334, count = 1 | 318 69 290 289 334 346 333 181 
+head = 344, count = 1 | 318 344 338 
+head = 181, count = 6 | 181 185 
+head = 181, count = 1 | 181 24 
+head = 24, count = 1 | 24 115 
+head = 181, count = 3 | 181 115 
+head = 181, count = 1 | 181 9 
+head = 9, count = 1 | 9 12 
+head = 115, count = 1 | 115 12 
+head = 12, count = 1 | 115 12 
+head = 1, count = 1 | 1 221 65 226 38 45 30 39 63 90 85 96 95 335 
+head = 1, count = 3 | 1 115 
+head = 311, count = 1 | 311 115 
+head = 115, count = 1 | 115 17 
+head = 12, count = 1 | 115 12 17 
+head = 17, count = 1 | 17 14 
+head = 80, count = 1 | 80 46 302 288 291 169 
+head = 299, count = 1 | 1 302 299 288 314 291 169 
+head = 115, count = 1 | 115 14 
+head = 17, count = 1 | 17 19 
+head = 14, count = 1 | 14 19 
+head = 312, count = 1 | 312 13 10 
+head = 14, count = 1 | 14 19 21 
+head = 19, count = 1 | 19 10 16 
+head = 115, count = 1 | 185 24 115 
+head = 16, count = 1 | 185 115 16 
+head = 318, count = 1 | 318 168 181 
+head = 0, count = 1 | 0 179 347 301 318 299 168 181 
+head = 185, count = 1 | 185 24 
+head = 24, count = 1 | 24 114 
+head = 299, count = 1 | 299 168 181 
+head = 185, count = 1 | 185 114 
+head = 181, count = 16 | 181 114 
+head = 179, count = 1 | 179 1 347 301 318 221 65 299 168 181 
+head = 65, count = 1 | 1 65 299 168 181 
+head = 347, count = 2 | 1 347 301 318 221 65 299 168 181 
+head = 318, count = 1 | 1 318 221 65 299 168 181 
+head = 179, count = 1 | 179 347 299 
+head = 347, count = 1 | 347 65 299 168 
+head = 179, count = 1 | 179 347 318 168 181 
+head = 301, count = 1 | 1 301 318 299 168 
+head = 21, count = 1 | 21 16 114 
+head = 331, count = 1 | 331 344 334 
+head = 114, count = 1 | 185 24 114 
+head = 114, count = 1 | 185 114 
+head = 185, count = 2 | 185 184 
+head = 286, count = 1 | 301 286 318 71 168 181 12 
+head = 181, count = 1 | 181 185 266 
+head = 184, count = 2 | 1 184 
+head = 185, count = 2 | 185 132 
+head = 114, count = 1 | 114 132 
+head = 132, count = 1 | 132 148 
+head = 148, count = 1 | 1 148 
+head = 115, count = 6 | 1 115 
+head = 1, count = 12 | 1 221 115 
+head = 114, count = 2 | 1 114 
+head = 1, count = 1 | 1 155 
+head = 132, count = 1 | 132 155 
+head = 155, count = 1 | 155 159 
+head = 1, count = 1 | 1 159 
+head = 159, count = 2 | 159 138 
+head = 1, count = 1 | 1 138 
+head = 138, count = 2 | 138 145 
+head = 159, count = 1 | 159 145 
+head = 335, count = 1 | 335 145 
+head = 335, count = 1 | 1 335 115 145 
+head = 132, count = 1 | 132 135 
+head = 145, count = 1 | 145 153 
+head = 153, count = 1 | 1 153 
+head = 145, count = 4 | 1 145 
+head = 135, count = 1 | 135 126 
+head = 1, count = 1 | 1 126 
+head = 1, count = 1 | 1 126 157 
+head = 1, count = 1 | 1 157 
+head = 138, count = 1 | 138 157 
+head = 126, count = 1 | 126 129 
+head = 157, count = 2 | 129 157 
+head = 129, count = 1 | 129 144 
+head = 144, count = 1 | 1 144 
+head = 129, count = 1 | 1 129 
+head = 1, count = 1 | 1 123 
+head = 123, count = 1 | 123 139 
+head = 1, count = 1 | 1 139 
+head = 139, count = 2 | 139 130 
+head = 130, count = 1 | 130 134 
+head = 1, count = 3 | 1 134 
+head = 157, count = 1 | 157 139 134 
+head = 134, count = 2 | 1 134 
+head = 1, count = 2 | 1 108 
+head = 114, count = 12 | 114 108 
+head = 1, count = 1 | 1 301 299 
+head = 299, count = 1 | 299 168 181 114 
+head = 318, count = 1 | 318 108 
+head = 299, count = 1 | 1 299 168 181 114 
+head = 179, count = 1 | 179 65 299 
+head = 1, count = 1 | 1 181 114 
+head = 347, count = 1 | 1 347 301 318 221 65 299 168 181 114 
+head = 179, count = 1 | 179 1 301 299 
+head = 1, count = 1 | 1 115 108 
+head = 1, count = 1 | 1 108 110 112 
+head = 108, count = 2 | 108 109 
+head = 109, count = 2 | 109 107 
+head = 299, count = 1 | 1 318 299 288 314 291 168 169 
+head = 110, count = 2 | 110 107 
+head = 107, count = 2 | 107 111 
+head = 111, count = 1 | 1 156 111 
+head = 107, count = 1 | 1 107 156 111 
+head = 286, count = 1 | 301 286 184 138 
+head = 108, count = 20 | 108 156 
+head = 114, count = 2 | 114 156 
+head = 65, count = 1 | 1 65 299 
+head = 179, count = 1 | 179 301 65 
+head = 168, count = 1 | 168 181 114 
+head = 347, count = 1 | 347 318 65 299 168 
+head = 318, count = 1 | 318 65 168 181 114 
+head = 156, count = 1 | 1 156 124 
+head = 156, count = 2 | 1 156 
+head = 156, count = 2 | 156 199 
+head = 156, count = 1 | 108 156 
+head = 156, count = 1 | 110 156 
+head = 107, count = 1 | 107 111 199 
+head = 199, count = 3 | 199 198 
+head = 108, count = 2 | 108 198 
+head = 156, count = 14 | 156 198 
+head = 347, count = 1 | 1 347 301 318 221 65 299 168 181 114 108 
+head = 168, count = 1 | 168 198 
+head = 318, count = 4 | 318 198 
+head = 301, count = 1 | 301 318 299 168 181 114 108 
+head = 114, count = 1 | 114 198 
+head = 1, count = 10 | 1 198 
+head = 111, count = 1 | 111 199 198 
+head = 1, count = 7 | 1 301 318 221 65 299 168 181 114 108 156 198 
+head = 299, count = 2 | 1 299 168 181 114 108 156 198 
+head = 299, count = 1 | 1 299 156 
+head = 1, count = 1 | 1 156 
+head = 114, count = 4 | 114 108 156 198 
+head = 347, count = 4 | 1 347 301 318 221 65 299 168 181 114 108 156 198 
+head = 1, count = 5 | 1 181 114 108 156 198 
+head = 179, count = 1 | 179 1 221 65 
+head = 1, count = 1 | 1 108 198 
+head = 168, count = 2 | 1 168 181 114 108 156 198 
+head = 179, count = 1 | 179 168 
+head = 301, count = 1 | 301 318 65 299 168 181 114 156 
+head = 181, count = 1 | 181 114 156 
+head = 179, count = 1 | 179 1 301 318 221 65 299 168 181 114 108 156 198 
+head = 179, count = 1 | 179 301 65 299 156 
+head = 179, count = 2 | 179 347 301 318 65 299 168 181 114 156 
+head = 115, count = 2 | 1 115 145 134 
+head = 1, count = 1 | 1 221 226 90 85 96 95 335 115 145 134 
+head = 221, count = 1 | 1 221 115 
+head = 179, count = 1 | 0 179 
+head = 181, count = 3 | 181 114 108 156 198 
+head = 108, count = 1 | 108 156 198 
+head = 1, count = 6 | 1 221 115 198 
+head = 1, count = 2 | 1 115 198 
+head = 1, count = 1 | 1 335 115 145 134 198 
+head = 115, count = 4 | 1 115 198 
+head = 0, count = 2 | 0 1 221 115 
+head = 181, count = 1 | 181 185 184 138 156 199 
+head = 114, count = 2 | 114 108 198 
+head = 301, count = 1 | 301 318 221 65 299 181 
+head = 301, count = 2 | 301 318 299 168 181 114 108 198 
+head = 198, count = 30 | 198 203 
+head = 181, count = 1 | 181 114 108 198 
+head = 301, count = 1 | 1 301 299 108 198 
+head = 181, count = 2 | 181 114 108 156 198 203 
+head = 181, count = 3 | 181 114 156 198 
+head = 114, count = 2 | 114 156 198 
+head = 301, count = 1 | 301 318 65 299 168 181 114 156 198 
+head = 299, count = 1 | 299 168 181 114 156 198 
+head = 114, count = 1 | 114 108 156 198 203 
+head = 203, count = 40 | 1 203 
+head = 179, count = 1 | 179 318 221 65 299 114 198 
+head = 168, count = 3 | 1 168 181 114 108 156 198 203 
+head = 198, count = 38 | 1 198 
+head = 198, count = 40 | 1 198 203 
+head = 114, count = 8 | 1 114 108 156 198 203 
+head = 181, count = 5 | 1 181 114 108 156 198 203 
+head = 318, count = 2 | 1 318 221 65 299 168 181 114 108 156 198 203 
+head = 114, count = 3 | 114 156 198 203 
+head = 181, count = 1 | 181 114 156 198 203 
+head = 1, count = 3 | 1 301 318 221 65 299 168 181 114 108 156 198 203 
+head = 299, count = 4 | 1 299 314 
+head = 1, count = 1 | 1 318 302 288 314 291 168 169 14 159 157 139 107 
+head = 1, count = 1 | 1 318 299 288 314 291 168 169 107 
+head = 114, count = 3 | 1 114 108 198 203 
+head = 156, count = 1 | 156 213 
+head = 1, count = 1 | 1 213 197 
+head = 318, count = 1 | 1 318 221 65 299 226 38 45 30 39 168 63 90 85 96 95 335 181 115 114 145 134 108 156 198 203 
+head = 213, count = 1 | 1 213 
+head = 159, count = 2 | 159 157 139 107 
+head = 213, count = 1 | 213 207 
+head = 1, count = 2 | 1 207 
+head = 207, count = 1 | 1 207 
+head = 207, count = 2 | 207 204 
+head = 221, count = 2 | 1 221 65 299 168 181 114 108 156 198 203 
+head = 108, count = 2 | 1 108 156 198 203 
+head = 299, count = 1 | 1 299 168 181 114 108 156 198 203 
+head = 347, count = 1 | 347 65 299 168 114 
+head = 181, count = 2 | 1 181 114 156 198 203 
+head = 299, count = 1 | 1 299 168 181 114 156 198 203 
+head = 179, count = 2 | 179 1 347 301 318 65 299 168 181 114 156 198 203 
+head = 65, count = 1 | 1 65 299 168 181 114 156 198 203 
+head = 0, count = 1 | 0 179 1 347 301 318 65 299 168 181 114 156 198 203 
+head = 138, count = 1 | 138 156 199 
+head = 318, count = 1 | 318 71 168 181 12 156 199 
+head = 181, count = 1 | 181 185 12 14 114 
+head = 108, count = 1 | 1 108 198 
+head = 185, count = 1 | 1 185 156 
+head = 318, count = 1 | 1 318 181 185 198 
+head = 318, count = 1 | 318 181 12 
+head = 286, count = 1 | 301 286 318 181 12 184 138 
+head = 0, count = 1 | 0 65 
+head = 226, count = 10 | 226 38 45 30 39 63 90 85 96 95 335 145 134 
+head = 226, count = 1 | 1 226 38 45 30 39 63 90 85 96 95 335 145 134 
+head = 156, count = 4 | 1 156 198 203 
+head = 1, count = 1 | 1 181 114 108 156 198 203 
+head = 318, count = 1 | 318 168 198 
+head = 318, count = 1 | 318 168 114 
+head = 185, count = 1 | 185 198 
+head = 181, count = 4 | 1 181 
+head = 159, count = 2 | 159 157 139 
+head = 83, count = 1 | 318 83 
+head = 344, count = 1 | 318 344 
+head = 347, count = 6 | 347 299 
+head = 318, count = 1 | 1 318 168 198 
+head = 318, count = 1 | 318 12 
+head = 1, count = 2 | 1 5 
+head = 5, count = 2 | 5 4 
+head = 1, count = 44 | 1 4 
+head = 314, count = 2 | 318 314 
+head = 108, count = 1 | 1 108 198 203 
+head = 4, count = 4 | 4 6 
+head = 6, count = 2 | 1 6 
+head = 7, count = 1 | 7 215 
+head = 5, count = 1 | 1 5 215 
+head = 4, count = 16 | 1 4 
+head = 179, count = 1 | 179 108 
+head = 168, count = 3 | 168 181 198 
+head = 1, count = 1 | 1 156 198 203 
+head = 85, count = 1 | 226 85 96 95 335 145 134 
+head = 226, count = 1 | 226 96 95 335 145 134 
+head = 156, count = 2 | 1 156 198 
+head = 1, count = 3 | 1 202 
+head = 202, count = 2 | 1 202 
+head = 1, count = 2 | 1 175 
+head = 175, count = 2 | 175 173 
+head = 288, count = 1 | 302 288 291 14 159 157 139 107 
+head = 173, count = 4 | 173 172 
+head = 71, count = 1 | 318 71 12 
+head = 318, count = 1 | 318 71 12 
+head = 172, count = 4 | 1 172 
+head = 286, count = 1 | 1 301 286 299 314 184 138 156 199 
+head = 1, count = 53 | 1 214 
+head = 347, count = 1 | 347 318 168 181 114 
+head = 4, count = 42 | 4 214 
+head = 266, count = 1 | 266 132 135 
+head = 208, count = 1 | 208 201 
+head = 214, count = 1 | 214 211 205 
+head = 214, count = 22 | 214 205 
+head = 1, count = 20 | 1 4 214 
+head = 4, count = 12 | 1 4 214 
+head = 4, count = 1 | 1 4 205 
+head = 7, count = 1 | 7 208 
+head = 179, count = 1 | 179 198 
+head = 1, count = 4 | 1 216 
+head = 205, count = 24 | 205 216 
+head = 4, count = 1 | 1 4 214 205 
+head = 1, count = 3 | 1 214 205 
+head = 1, count = 4 | 1 205 
+head = 4, count = 6 | 1 4 214 205 216 
+head = 1, count = 1 | 1 4 214 205 216 
+head = 1, count = 1 | 1 202 216 
+head = 1, count = 4 | 1 214 205 216 
+head = 1, count = 1 | 1 108 110 112 198 
+head = 1, count = 1 | 1 131 136 
+head = 65, count = 2 | 221 65 226 38 45 30 39 63 90 85 96 95 335 145 134 
+head = 1, count = 1 | 1 136 
+head = 126, count = 1 | 126 129 130 
+head = 1, count = 2 | 1 323 
+head = 202, count = 1 | 202 174 173 217 208 201 323 
+head = 216, count = 13 | 216 323 
+head = 1, count = 1 | 1 214 211 323 
+head = 1, count = 3 | 1 216 323 
+head = 216, count = 1 | 216 136 323 
+head = 205, count = 2 | 205 323 
+head = 214, count = 9 | 214 323 
+head = 140, count = 1 | 140 133 323 
+head = 214, count = 1 | 214 216 
+head = 4, count = 5 | 1 4 214 205 216 323 
+head = 1, count = 1 | 1 205 216 
+head = 136, count = 2 | 136 323 
+head = 4, count = 1 | 4 173 214 
+head = 1, count = 2 | 1 205 216 323 
+head = 1, count = 3 | 1 214 205 216 323 
+head = 323, count = 10 | 323 324 
+head = 27, count = 1 | 27 97 
+head = 324, count = 10 | 324 326 
+head = 323, count = 3 | 323 326 
+head = 326, count = 10 | 326 327 
+head = 323, count = 29 | 323 327 
+head = 323, count = 3 | 323 324 326 327 
+head = 205, count = 1 | 205 216 323 
+head = 1, count = 4 | 1 214 205 216 323 327 
+head = 1, count = 1 | 1 4 214 323 
+head = 205, count = 13 | 205 216 323 327 
+head = 4, count = 6 | 1 4 214 205 216 323 327 
+head = 1, count = 6 | 1 4 214 205 216 323 327 
+head = 214, count = 1 | 214 327 
+head = 214, count = 1 | 214 323 324 326 327 
+head = 327, count = 15 | 1 327 
+head = 1, count = 1 | 1 164 
+head = 327, count = 5 | 327 164 
+head = 214, count = 1 | 214 205 136 
+head = 205, count = 6 | 205 164 
+head = 326, count = 1 | 326 164 
+head = 214, count = 2 | 214 164 
+head = 7, count = 1 | 7 164 
+head = 164, count = 7 | 1 164 
+head = 1, count = 3 | 1 4 6 
+head = 4, count = 1 | 1 4 6 
+head = 5, count = 1 | 5 323 326 164 
+head = 1, count = 1 | 1 191 
+head = 191, count = 1 | 191 194 
+head = 1, count = 7 | 1 194 
+head = 327, count = 4 | 327 194 
+head = 1, count = 1 | 1 4 214 164 
+head = 205, count = 1 | 205 136 164 
+head = 216, count = 1 | 216 194 
+head = 4, count = 1 | 4 214 323 324 326 
+head = 323, count = 4 | 323 324 326 
+head = 4, count = 1 | 4 172 214 
+head = 4, count = 1 | 4 172 
+head = 4, count = 4 | 1 4 205 136 
+head = 4, count = 1 | 1 4 136 
+head = 4, count = 3 | 4 214 194 
+head = 164, count = 1 | 164 186 
+head = 194, count = 2 | 194 190 
+head = 201, count = 1 | 201 323 326 164 
+head = 216, count = 1 | 216 323 327 164 
+head = 136, count = 1 | 136 164 194 
+head = 327, count = 1 | 1 327 164 194 
+head = 1, count = 2 | 1 214 164 
+head = 164, count = 1 | 164 165 
+head = 1, count = 122 | 1 167 
+head = 165, count = 1 | 165 167 
+head = 194, count = 1 | 1 194 167 
+head = 190, count = 2 | 190 167 
+head = 194, count = 1 | 194 167 
+head = 167, count = 10 | 121 167 
+head = 121, count = 10 | 121 117 
+head = 167, count = 188 | 167 117 
+head = 194, count = 28 | 194 117 
+head = 136, count = 1 | 1 136 164 194 
+head = 1, count = 1 | 1 118 
+head = 117, count = 27 | 117 122 
+head = 167, count = 11 | 167 119 
+head = 122, count = 21 | 167 122 
+head = 117, count = 10 | 167 117 
+head = 191, count = 1 | 191 121 
+head = 167, count = 10 | 167 245 
+head = 167, count = 99 | 167 234 
+head = 245, count = 10 | 245 234 
+head = 117, count = 429 | 117 234 
+head = 327, count = 2 | 327 234 
+head = 194, count = 1 | 194 234 
+head = 1, count = 1 | 1 194 190 167 117 122 234 
+head = 216, count = 23 | 216 323 327 
+head = 214, count = 2 | 214 205 216 323 327 
+head = 205, count = 1 | 205 216 327 
+head = 1, count = 1 | 1 167 117 234 
+head = 1, count = 1 | 1 194 167 117 234 
+head = 194, count = 1 | 1 194 117 234 
+head = 323, count = 3 | 323 324 326 194 117 234 
+head = 194, count = 37 | 194 117 234 
+head = 214, count = 1 | 214 194 117 234 
+head = 167, count = 279 | 167 239 
+head = 234, count = 140 | 234 239 
+head = 1, count = 2 | 1 167 234 
+head = 239, count = 11 | 239 328 
+head = 1, count = 22 | 1 167 239 
+head = 167, count = 10 | 167 246 
+head = 328, count = 10 | 239 328 246 
+head = 1, count = 1 | 1 122 234 
+head = 234, count = 11 | 234 246 
+head = 239, count = 27 | 239 246 
+head = 1, count = 1 | 1 214 205 216 327 
+head = 234, count = 1 | 234 239 246 
+head = 216, count = 1 | 216 323 327 234 
+head = 205, count = 1 | 205 216 323 327 234 
+head = 194, count = 1 | 1 194 190 167 117 122 234 239 
+head = 246, count = 33 | 167 246 
+head = 239, count = 43 | 167 239 246 
+head = 1, count = 3 | 1 194 167 117 234 239 
+head = 239, count = 218 | 167 239 
+head = 234, count = 2 | 167 234 239 246 
+head = 214, count = 3 | 214 323 324 326 
+head = 194, count = 18 | 194 167 117 234 
+head = 167, count = 9 | 1 167 
+head = 1, count = 2 | 1 167 234 239 
+head = 1, count = 1 | 1 194 167 117 234 239 246 
+head = 167, count = 36 | 167 234 239 
+head = 194, count = 1 | 1 194 167 234 239 
+head = 121, count = 1 | 121 119 245 
+head = 194, count = 1 | 194 190 117 122 
+head = 164, count = 2 | 1 164 194 117 234 
+head = 234, count = 52 | 117 234 
+head = 214, count = 1 | 214 194 167 117 234 
+head = 117, count = 83 | 167 117 234 
+head = 136, count = 1 | 136 194 117 234 
+head = 4, count = 1 | 4 117 
+head = 186, count = 2 | 186 118 
+head = 167, count = 10 | 167 122 
+head = 234, count = 1 | 167 117 122 234 239 
+head = 234, count = 22 | 167 117 234 
+head = 234, count = 9 | 167 117 234 239 246 
+head = 167, count = 5 | 167 117 122 
+head = 167, count = 30 | 167 117 234 
+head = 239, count = 9 | 167 234 239 
+head = 246, count = 1 | 167 122 246 
+head = 234, count = 23 | 167 234 
+head = 214, count = 1 | 214 167 
+head = 167, count = 8 | 167 117 234 239 246 
+head = 239, count = 8 | 167 239 328 
+head = 121, count = 8 | 121 245 
+head = 239, count = 3 | 117 239 
+head = 164, count = 1 | 164 191 119 
+head = 117, count = 4 | 167 117 122 234 239 
+head = 234, count = 1 | 167 234 239 
+head = 167, count = 7 | 167 117 122 234 239 
+head = 167, count = 6 | 167 234 239 246 
+head = 167, count = 1 | 167 117 234 239 
+head = 239, count = 1 | 167 117 234 239 
+head = 167, count = 3 | 167 166 
+head = 205, count = 2 | 205 136 
+head = 205, count = 1 | 1 205 164 
+head = 118, count = 1 | 118 166 
+head = 1, count = 1 | 1 257 
+head = 1, count = 1 | 1 161 
+head = 166, count = 2 | 166 257 
+head = 166, count = 1 | 1 166 257 
+head = 257, count = 1 | 257 283 
+head = 119, count = 1 | 121 119 245 
+head = 283, count = 1 | 1 283 
+head = 257, count = 1 | 1 257 
+head = 119, count = 1 | 119 267 
+head = 1, count = 1 | 1 174 265 
+head = 166, count = 2 | 166 265 
+head = 257, count = 1 | 257 265 
+head = 1, count = 1 | 1 265 
+head = 246, count = 1 | 167 117 234 239 246 166 257 
+head = 239, count = 1 | 239 265 
+head = 167, count = 16 | 167 265 
+head = 246, count = 2 | 246 265 
+head = 117, count = 1 | 167 117 234 265 
+head = 265, count = 1 | 265 262 268 
+head = 265, count = 1 | 265 268 
+head = 257, count = 3 | 257 268 
+head = 118, count = 1 | 118 268 
+head = 268, count = 7 | 268 251 
+head = 117, count = 1 | 117 234 166 257 268 
+head = 265, count = 1 | 265 251 
+head = 257, count = 1 | 257 251 
+head = 1, count = 1 | 1 265 277 
+head = 10, count = 1 | 10 184 132 135 
+head = 251, count = 2 | 251 258 
+head = 14, count = 1 | 14 159 157 
+head = 258, count = 4 | 258 252 
+head = 251, count = 1 | 251 252 
+head = 252, count = 2 | 252 253 
+head = 260, count = 1 | 260 253 
+head = 234, count = 1 | 234 253 
+head = 1, count = 1 | 1 181 185 
+head = 253, count = 2 | 253 272 
+head = 252, count = 2 | 252 272 
+============================================================
+ReuseSegment - Thread 1
+head = 0, count = 2 | 5 0 
+head = 5, count = 2 | 5 4 
+head = 0, count = 8 | 4 0 
+head = 4, count = 16 | 4 6 
+head = 0, count = 1 | 6 0 
+head = 6, count = 3 | 6 0 
+head = 4, count = 3 | 4 0 
+head = 0, count = 1 | 191 0 
+head = 191, count = 1 | 194 191 
+head = 0, count = 7 | 194 0 
+head = 6, count = 22 | 6 194 
+head = 6, count = 1 | 6 194 0 
+head = 4, count = 9 | 4 194 
+head = 194, count = 2 | 194 190 
+head = 194, count = 4 | 194 0 
+head = 190, count = 2 | 190 0 
+head = 0, count = 10 | 121 0 
+head = 121, count = 10 | 121 117 
+head = 0, count = 58 | 117 0 
+head = 194, count = 19 | 194 117 
+head = 117, count = 22 | 117 122 
+head = 0, count = 10 | 119 0 
+head = 122, count = 20 | 122 0 
+head = 117, count = 30 | 117 0 
+head = 0, count = 10 | 245 0 
+head = 0, count = 82 | 234 0 
+head = 245, count = 10 | 245 234 
+head = 117, count = 203 | 117 234 
+head = 194, count = 9 | 194 234 
+head = 194, count = 1 | 194 117 234 0 
+head = 0, count = 2 | 4 194 117 0 
+head = 4, count = 12 | 4 194 117 234 
+head = 0, count = 21 | 4 194 117 234 0 
+head = 234, count = 9 | 234 0 
+head = 234, count = 1 | 234 236 237 
+head = 0, count = 5 | 237 244 0 
+head = 234, count = 247 | 234 244 
+head = 0, count = 23 | 4 194 117 234 244 0 
+head = 0, count = 1 | 4 6 194 190 117 122 234 244 0 
+head = 244, count = 95 | 244 239 
+head = 0, count = 119 | 239 0 
+head = 234, count = 60 | 234 239 
+head = 0, count = 5 | 234 239 0 
+head = 0, count = 1 | 4 6 194 190 117 122 244 239 0 
+head = 239, count = 124 | 239 0 
+head = 0, count = 5 | 4 194 117 234 244 239 0 
+head = 244, count = 10 | 244 0 
+head = 239, count = 63 | 117 239 
+head = 0, count = 1 | 4 6 194 190 117 122 0 
+head = 4, count = 41 | 4 194 117 234 244 
+head = 244, count = 60 | 117 244 
+head = 234, count = 29 | 117 234 
+head = 4, count = 4 | 4 194 117 
+head = 194, count = 7 | 194 117 234 244 
+head = 194, count = 1 | 194 117 234 
+head = 4, count = 3 | 4 117 
+head = 186, count = 2 | 186 118 
+head = 249, count = 196 | 248 249 
+head = 118, count = 13 | 118 248 249 
+head = 7, count = 2 | 7 118 
+head = 194, count = 1 | 194 190 122 234 
+head = 190, count = 5 | 190 122 
+head = 194, count = 1 | 194 234 244 239 0 
+head = 239, count = 19 | 234 239 
+head = 244, count = 95 | 234 244 
+head = 117, count = 30 | 117 234 244 
+head = 248, count = 65 | 248 249 
+head = 234, count = 6 | 234 236 237 238 
+head = 0, count = 2 | 237 0 
+head = 238, count = 6 | 238 244 
+head = 0, count = 1 | 234 244 239 0 
+head = 244, count = 5 | 117 234 244 239 0 
+head = 244, count = 43 | 117 234 244 
+head = 234, count = 7 | 117 234 244 
+head = 249, count = 1 | 249 0 
+head = 239, count = 12 | 234 239 0 
+head = 5, count = 1 | 5 191 121 245 
+head = 191, count = 1 | 191 119 237 
+head = 0, count = 2 | 244 0 
+head = 0, count = 1 | 4 6 194 190 117 122 234 244 239 0 
+head = 0, count = 2 | 249 0 
+head = 0, count = 2 | 117 122 234 244 239 0 
+head = 0, count = 1 | 194 117 234 244 239 0 
+head = 4, count = 1 | 4 117 234 244 
+head = 239, count = 1 | 117 234 239 0 
+head = 0, count = 1 | 117 234 244 239 0 
+head = 119, count = 1 | 121 119 245 
+head = 117, count = 1 | 117 234 244 239 0 
+head = 118, count = 1 | 119 118 
+head = 234, count = 1 | 234 244 239 0 
+head = 234, count = 1 | 117 234 244 239 0 
+head = 242, count = 1 | 242 0 
+head = 118, count = 2 | 118 242 
+head = 244, count = 1 | 234 244 239 0 
+head = 239, count = 1 | 117 122 234 244 239 0 
+head = 237, count = 1 | 119 237 
+head = 118, count = 1 | 118 240 
+head = 242, count = 2 | 118 242 
+head = 0, count = 1 | 122 0 
+head = 7, count = 1 | 7 118 237 240 
+============================================================
+ReuseSegment - Thread 2
+head = 0, count = 1 | 5 0 
+head = 5, count = 1 | 5 4 
+head = 0, count = 9 | 4 0 
+head = 4, count = 16 | 4 6 
+head = 0, count = 1 | 6 0 
+head = 6, count = 3 | 6 0 
+head = 4, count = 2 | 4 0 
+head = 0, count = 1 | 191 0 
+head = 191, count = 1 | 191 194 
+head = 0, count = 6 | 194 0 
+head = 6, count = 22 | 6 194 
+head = 6, count = 1 | 6 194 0 
+head = 4, count = 8 | 4 194 
+head = 0, count = 1 | 4 194 0 
+head = 194, count = 2 | 194 190 
+head = 194, count = 3 | 194 0 
+head = 190, count = 2 | 190 0 
+head = 0, count = 10 | 121 0 
+head = 121, count = 10 | 121 117 
+head = 0, count = 50 | 117 0 
+head = 194, count = 20 | 117 194 
+head = 117, count = 21 | 117 122 
+head = 0, count = 10 | 119 0 
+head = 122, count = 20 | 122 0 
+head = 117, count = 20 | 117 0 
+head = 0, count = 10 | 245 0 
+head = 0, count = 70 | 234 0 
+head = 245, count = 10 | 245 234 
+head = 117, count = 207 | 117 234 
+head = 194, count = 9 | 194 234 
+head = 194, count = 1 | 117 194 234 0 
+head = 4, count = 5 | 117 4 194 
+head = 0, count = 4 | 117 4 194 0 
+head = 4, count = 9 | 117 4 194 234 
+head = 0, count = 17 | 117 4 194 234 0 
+head = 234, count = 10 | 234 0 
+head = 234, count = 7 | 234 236 237 238 
+head = 0, count = 6 | 237 244 0 
+head = 238, count = 7 | 238 244 
+head = 234, count = 230 | 234 244 
+head = 0, count = 2 | 117 122 4 6 194 190 0 
+head = 0, count = 27 | 117 4 194 234 244 0 
+head = 4, count = 39 | 117 4 194 234 244 
+head = 0, count = 102 | 239 0 
+head = 244, count = 98 | 244 239 
+head = 234, count = 63 | 234 239 
+head = 0, count = 6 | 234 239 0 
+head = 239, count = 10 | 239 328 
+head = 239, count = 103 | 239 0 
+head = 0, count = 2 | 117 4 194 234 244 239 0 
+head = 239, count = 9 | 239 328 0 
+head = 328, count = 10 | 239 328 
+head = 244, count = 10 | 244 0 
+head = 239, count = 69 | 117 239 
+head = 244, count = 52 | 117 244 
+head = 234, count = 43 | 117 234 
+head = 194, count = 9 | 117 194 234 244 
+head = 194, count = 1 | 117 194 234 
+head = 186, count = 2 | 118 186 
+head = 248, count = 76 | 248 249 
+head = 118, count = 10 | 118 248 249 
+head = 194, count = 1 | 122 194 190 234 
+head = 194, count = 1 | 194 234 244 239 0 
+head = 239, count = 19 | 234 239 
+head = 244, count = 78 | 234 244 
+head = 234, count = 16 | 117 234 244 
+head = 249, count = 194 | 248 249 
+head = 0, count = 1 | 237 0 
+head = 0, count = 2 | 117 122 4 6 194 190 234 244 239 0 
+head = 0, count = 2 | 234 244 239 0 
+head = 4, count = 1 | 117 4 234 244 
+head = 249, count = 3 | 249 0 
+head = 5, count = 1 | 245 121 5 191 
+head = 117, count = 48 | 117 234 244 
+head = 191, count = 1 | 119 191 237 
+head = 7, count = 2 | 118 7 
+head = 190, count = 4 | 122 190 
+head = 234, count = 5 | 234 244 239 0 
+head = 244, count = 54 | 117 234 244 
+head = 239, count = 1 | 117 122 244 239 0 
+head = 0, count = 1 | 244 0 
+head = 239, count = 2 | 117 234 244 239 0 
+head = 0, count = 2 | 117 234 244 239 0 
+head = 239, count = 2 | 234 239 0 
+head = 234, count = 2 | 117 234 244 239 0 
+head = 244, count = 5 | 117 234 244 239 0 
+head = 239, count = 2 | 117 122 239 0 
+head = 239, count = 3 | 117 234 239 0 
+head = 244, count = 2 | 234 244 239 0 
+head = 328, count = 1 | 328 0 
+head = 4, count = 3 | 117 4 
+head = 0, count = 1 | 117 194 234 244 239 0 
+head = 239, count = 2 | 117 122 234 239 0 
+head = 119, count = 1 | 245 121 119 
+head = 237, count = 1 | 119 237 
+head = 118, count = 1 | 118 248 
+head = 0, count = 1 | 249 0 
+head = 118, count = 1 | 118 119 240 
+head = 244, count = 1 | 117 122 234 244 239 0 
+============================================================
+ReuseSegment - Thread 3
+head = 0, count = 2 | 5 0 
+head = 5, count = 2 | 5 4 
+head = 0, count = 8 | 4 0 
+head = 4, count = 4 | 4 6 
+head = 6, count = 3 | 6 0 
+head = 4, count = 3 | 4 0 
+head = 0, count = 1 | 191 0 
+head = 191, count = 1 | 194 191 
+head = 0, count = 7 | 194 0 
+head = 4, count = 32 | 4 194 
+head = 4, count = 1 | 4 194 0 
+head = 194, count = 2 | 194 190 
+head = 194, count = 4 | 194 0 
+head = 190, count = 2 | 190 0 
+head = 0, count = 10 | 121 0 
+head = 121, count = 10 | 117 121 
+head = 0, count = 60 | 117 0 
+head = 194, count = 18 | 117 194 
+head = 0, count = 1 | 4 194 0 
+head = 117, count = 21 | 117 122 
+head = 0, count = 10 | 119 0 
+head = 122, count = 20 | 122 0 
+head = 117, count = 30 | 117 0 
+head = 0, count = 10 | 245 0 
+head = 0, count = 84 | 234 0 
+head = 245, count = 10 | 245 234 
+head = 117, count = 213 | 117 234 
+head = 194, count = 9 | 194 234 
+head = 194, count = 1 | 117 194 234 0 
+head = 0, count = 2 | 117 4 194 0 
+head = 4, count = 5 | 117 4 194 
+head = 4, count = 7 | 117 4 194 234 
+head = 0, count = 10 | 117 4 194 234 0 
+head = 234, count = 10 | 234 0 
+head = 234, count = 1 | 234 236 237 
+head = 0, count = 9 | 237 244 0 
+head = 234, count = 319 | 234 244 
+head = 0, count = 31 | 117 4 194 234 244 0 
+head = 0, count = 107 | 239 0 
+head = 244, count = 126 | 244 239 
+head = 234, count = 33 | 234 239 
+head = 0, count = 2 | 234 239 0 
+head = 239, count = 119 | 239 0 
+head = 244, count = 9 | 244 0 
+head = 5, count = 1 | 245 5 121 191 
+head = 239, count = 61 | 117 239 
+head = 0, count = 1 | 117 122 4 6 194 190 0 
+head = 4, count = 41 | 117 4 194 234 244 
+head = 244, count = 78 | 117 244 
+head = 234, count = 24 | 117 234 
+head = 194, count = 1 | 117 194 234 
+head = 186, count = 2 | 118 186 
+head = 249, count = 272 | 248 249 
+head = 118, count = 13 | 118 248 249 
+head = 194, count = 1 | 122 194 190 234 
+head = 194, count = 1 | 194 234 244 239 0 
+head = 239, count = 21 | 234 239 
+head = 244, count = 96 | 234 244 
+head = 234, count = 10 | 117 234 244 
+head = 248, count = 93 | 248 249 
+head = 234, count = 8 | 234 236 237 238 
+head = 238, count = 8 | 238 244 
+head = 0, count = 2 | 117 122 4 6 194 190 234 244 239 0 
+head = 0, count = 2 | 117 194 234 244 239 0 
+head = 0, count = 3 | 117 4 194 234 244 239 0 
+head = 0, count = 1 | 234 244 239 0 
+head = 244, count = 30 | 117 234 244 
+head = 117, count = 52 | 117 234 244 
+head = 4, count = 2 | 117 4 
+head = 194, count = 3 | 117 194 234 244 
+head = 7, count = 3 | 118 7 
+head = 190, count = 4 | 122 190 
+head = 249, count = 3 | 249 0 
+head = 4, count = 1 | 117 4 234 244 
+head = 234, count = 1 | 117 234 244 239 0 
+head = 0, count = 1 | 117 122 4 6 194 190 244 239 0 
+head = 239, count = 7 | 234 239 0 
+head = 234, count = 3 | 234 244 239 0 
+head = 244, count = 5 | 117 234 244 239 0 
+head = 244, count = 3 | 234 244 239 0 
+head = 7, count = 1 | 119 118 7 
+head = 191, count = 1 | 119 191 237 
+head = 239, count = 1 | 117 234 239 0 
+head = 121, count = 1 | 245 121 
+head = 118, count = 1 | 118 249 
+head = 240, count = 1 | 240 237 
+============================================================
+ReuseSegment - Thread 4
+head = 0, count = 2 | 5 0 
+head = 5, count = 2 | 5 4 
+head = 0, count = 22 | 4 0 
+head = 4, count = 3 | 4 6 
+head = 6, count = 3 | 6 0 
+head = 4, count = 3 | 4 0 
+head = 0, count = 1 | 191 0 
+head = 191, count = 1 | 194 191 
+head = 0, count = 8 | 194 0 
+head = 4, count = 22 | 4 194 
+head = 0, count = 4 | 4 194 0 
+head = 194, count = 2 | 194 190 
+head = 194, count = 2 | 194 0 
+head = 190, count = 2 | 190 0 
+head = 0, count = 10 | 121 0 
+head = 121, count = 10 | 121 117 
+head = 0, count = 52 | 117 0 
+head = 194, count = 20 | 194 117 
+head = 117, count = 20 | 122 117 
+head = 0, count = 10 | 119 0 
+head = 122, count = 20 | 122 0 
+head = 117, count = 26 | 117 0 
+head = 0, count = 10 | 245 0 
+head = 0, count = 76 | 234 0 
+head = 245, count = 10 | 245 234 
+head = 117, count = 194 | 117 234 
+head = 194, count = 9 | 194 234 
+head = 194, count = 1 | 194 117 234 0 
+head = 4, count = 6 | 4 194 117 
+head = 0, count = 1 | 4 194 117 0 
+head = 4, count = 7 | 4 194 117 234 
+head = 0, count = 1 | 4 6 194 122 190 117 234 0 
+head = 0, count = 14 | 4 194 117 234 0 
+head = 234, count = 6 | 234 0 
+head = 234, count = 1 | 234 236 237 
+head = 0, count = 1 | 237 0 
+head = 234, count = 31 | 234 244 
+head = 0, count = 2 | 117 234 0 
+head = 0, count = 13 | 4 194 117 234 244 0 
+head = 4, count = 4 | 4 194 117 234 244 
+head = 244, count = 13 | 244 239 
+head = 0, count = 87 | 239 0 
+head = 234, count = 145 | 234 239 
+head = 239, count = 10 | 239 328 
+head = 0, count = 1 | 4 6 194 122 190 117 244 239 0 
+head = 239, count = 94 | 239 0 
+head = 0, count = 1 | 4 194 117 234 244 239 0 
+head = 328, count = 1 | 328 0 
+head = 328, count = 10 | 239 328 
+head = 239, count = 70 | 117 239 
+head = 0, count = 1 | 4 6 194 122 190 117 0 
+head = 244, count = 8 | 117 244 
+head = 234, count = 89 | 117 234 
+head = 194, count = 1 | 194 117 234 244 
+head = 194, count = 1 | 194 117 234 
+head = 186, count = 2 | 118 186 
+head = 118, count = 3 | 118 248 249 
+head = 194, count = 1 | 194 122 190 234 
+head = 190, count = 1 | 122 190 
+head = 194, count = 1 | 194 234 244 239 0 
+head = 0, count = 9 | 234 239 0 
+head = 0, count = 1 | 194 117 234 244 239 0 
+head = 239, count = 18 | 234 239 
+head = 244, count = 10 | 234 244 
+head = 234, count = 2 | 117 234 244 
+head = 244, count = 1 | 117 234 244 239 0 
+head = 239, count = 9 | 239 328 0 
+head = 239, count = 8 | 117 234 239 0 
+============================================================
+ReuseSegment - Thread 5
+head = 0, count = 2 | 5 0 
+head = 5, count = 2 | 5 4 
+head = 0, count = 7 | 4 0 
+head = 4, count = 3 | 4 6 
+head = 6, count = 3 | 6 0 
+head = 4, count = 3 | 4 0 
+head = 0, count = 1 | 191 0 
+head = 191, count = 1 | 191 194 
+head = 0, count = 8 | 194 0 
+head = 4, count = 20 | 4 194 
+head = 4, count = 1 | 4 194 0 
+head = 194, count = 2 | 194 190 
+head = 194, count = 4 | 194 0 
+head = 190, count = 2 | 190 0 
+head = 0, count = 10 | 121 0 
+head = 121, count = 10 | 117 121 
+head = 0, count = 60 | 117 0 
+head = 194, count = 18 | 117 194 
+head = 117, count = 22 | 117 122 
+head = 0, count = 10 | 119 0 
+head = 122, count = 20 | 122 0 
+head = 117, count = 29 | 117 0 
+head = 0, count = 10 | 245 0 
+head = 0, count = 81 | 234 0 
+head = 245, count = 10 | 245 234 
+head = 117, count = 185 | 117 234 
+head = 194, count = 9 | 194 234 
+head = 194, count = 1 | 117 194 234 0 
+head = 4, count = 5 | 117 4 194 
+head = 0, count = 1 | 117 4 194 0 
+head = 0, count = 22 | 117 4 194 234 0 
+head = 4, count = 13 | 117 4 194 234 
+head = 0, count = 1 | 194 234 0 
+head = 0, count = 160 | 239 0 
+head = 234, count = 60 | 234 239 
+head = 0, count = 7 | 234 239 0 
+head = 239, count = 131 | 239 0 
+head = 239, count = 60 | 117 239 
+head = 234, count = 33 | 117 234 
+head = 186, count = 2 | 118 186 
+head = 194, count = 1 | 122 194 190 234 
+head = 239, count = 19 | 234 239 
+head = 234, count = 8 | 234 0 
+head = 234, count = 6 | 234 236 237 238 
+head = 0, count = 6 | 237 244 0 
+head = 238, count = 6 | 238 244 
+head = 234, count = 241 | 234 244 
+head = 0, count = 3 | 117 4 194 234 239 0 
+head = 234, count = 1 | 117 234 239 0 
+head = 4, count = 29 | 117 4 194 234 244 
+head = 0, count = 19 | 117 4 194 234 244 0 
+head = 194, count = 1 | 194 234 239 0 
+head = 244, count = 98 | 239 244 
+head = 239, count = 5 | 234 239 0 
+head = 0, count = 2 | 234 239 244 0 
+head = 244, count = 9 | 244 0 
+head = 0, count = 1 | 117 122 4 6 194 190 0 
+head = 244, count = 79 | 117 244 
+head = 194, count = 3 | 117 194 234 244 
+head = 194, count = 1 | 117 194 234 
+head = 7, count = 1 | 118 119 7 
+head = 248, count = 57 | 248 249 
+head = 118, count = 11 | 118 248 249 
+head = 7, count = 1 | 118 7 
+head = 249, count = 220 | 248 249 
+head = 244, count = 74 | 234 244 
+head = 4, count = 1 | 117 4 234 244 
+head = 117, count = 16 | 117 234 244 
+head = 0, count = 3 | 117 122 4 6 194 190 234 239 244 0 
+head = 244, count = 35 | 117 234 244 
+head = 239, count = 1 | 234 239 244 0 
+head = 249, count = 3 | 249 0 
+head = 244, count = 5 | 117 234 239 244 0 
+head = 0, count = 3 | 117 4 194 234 239 244 0 
+head = 234, count = 6 | 117 234 244 
+head = 4, count = 1 | 117 4 
+head = 191, count = 1 | 119 191 237 
+head = 118, count = 2 | 118 119 
+head = 190, count = 1 | 122 190 
+head = 239, count = 1 | 117 122 239 244 0 
+head = 119, count = 1 | 245 119 121 
+head = 0, count = 1 | 122 0 
+head = 234, count = 2 | 234 239 244 0 
+head = 0, count = 3 | 244 0 
+head = 242, count = 1 | 242 0 
+head = 5, count = 1 | 245 5 191 121 
+head = 0, count = 1 | 117 194 234 239 244 0 
+head = 234, count = 1 | 117 234 239 244 0 
+head = 0, count = 1 | 249 0 
+head = 234, count = 1 | 234 236 237 
+head = 0, count = 1 | 237 0 
+head = 239, count = 1 | 117 122 234 239 244 0 
+head = 118, count = 1 | 118 249 
+============================================================
+ReuseSegment - Thread 6
+head = 0, count = 1 | 5 0 
+head = 5, count = 1 | 5 4 
+head = 0, count = 7 | 4 0 
+head = 4, count = 3 | 4 6 
+head = 6, count = 3 | 6 0 
+head = 4, count = 2 | 4 0 
+head = 0, count = 1 | 191 0 
+head = 191, count = 1 | 191 194 
+head = 0, count = 7 | 194 0 
+head = 4, count = 21 | 4 194 
+head = 4, count = 1 | 4 194 0 
+head = 194, count = 2 | 194 190 
+head = 194, count = 3 | 194 0 
+head = 190, count = 2 | 190 0 
+head = 0, count = 10 | 121 0 
+head = 121, count = 10 | 117 121 
+head = 0, count = 50 | 117 0 
+head = 194, count = 21 | 194 117 
+head = 117, count = 19 | 122 117 
+head = 0, count = 10 | 119 0 
+head = 122, count = 20 | 122 0 
+head = 117, count = 20 | 117 0 
+head = 0, count = 10 | 245 0 
+head = 0, count = 72 | 234 0 
+head = 245, count = 10 | 245 234 
+head = 117, count = 201 | 117 234 
+head = 194, count = 9 | 194 234 
+head = 194, count = 1 | 194 117 234 0 
+head = 0, count = 4 | 4 194 117 0 
+head = 4, count = 14 | 4 194 117 234 
+head = 0, count = 20 | 4 194 117 234 0 
+head = 234, count = 8 | 234 0 
+head = 234, count = 6 | 234 236 237 238 
+head = 0, count = 6 | 237 244 0 
+head = 238, count = 6 | 238 244 
+head = 234, count = 211 | 234 244 
+head = 0, count = 1 | 122 4 6 194 117 190 234 0 
+head = 0, count = 27 | 4 194 117 234 244 0 
+head = 4, count = 35 | 4 194 117 234 244 
+head = 0, count = 112 | 239 0 
+head = 244, count = 83 | 244 239 
+head = 234, count = 74 | 234 239 
+head = 239, count = 10 | 239 328 
+head = 0, count = 4 | 234 239 0 
+head = 239, count = 105 | 239 0 
+head = 0, count = 6 | 234 244 239 0 
+head = 239, count = 10 | 239 328 0 
+head = 328, count = 10 | 239 328 
+head = 244, count = 8 | 244 0 
+head = 5, count = 1 | 245 5 191 121 
+head = 239, count = 72 | 117 239 
+head = 0, count = 1 | 122 4 6 194 117 190 0 
+head = 0, count = 2 | 4 194 117 234 244 239 0 
+head = 244, count = 48 | 117 244 
+head = 234, count = 44 | 117 234 
+head = 4, count = 4 | 4 194 117 
+head = 194, count = 9 | 194 117 234 244 
+head = 194, count = 1 | 194 117 234 
+head = 186, count = 2 | 118 186 
+head = 7, count = 4 | 118 7 
+head = 118, count = 8 | 118 248 249 
+head = 194, count = 1 | 122 194 190 234 
+head = 190, count = 4 | 122 190 
+head = 194, count = 1 | 194 234 244 239 0 
+head = 239, count = 22 | 234 239 
+head = 244, count = 76 | 234 244 
+head = 234, count = 12 | 117 234 244 
+head = 0, count = 2 | 122 4 6 194 117 190 234 244 239 0 
+head = 249, count = 155 | 248 249 
+head = 248, count = 50 | 248 249 
+head = 234, count = 1 | 117 234 244 239 0 
+head = 4, count = 1 | 4 117 234 244 
+head = 244, count = 50 | 117 234 244 
+head = 239, count = 4 | 234 239 0 
+head = 117, count = 24 | 117 234 244 
+head = 234, count = 5 | 234 244 239 0 
+head = 244, count = 5 | 117 234 244 239 0 
+head = 249, count = 2 | 249 0 
+head = 4, count = 3 | 4 117 
+head = 191, count = 1 | 119 191 237 
+head = 0, count = 1 | 244 0 
+head = 239, count = 1 | 117 234 239 0 
+head = 121, count = 1 | 245 121 
+head = 118, count = 1 | 118 119 240 
+head = 118, count = 2 | 118 249 
+head = 0, count = 1 | 194 117 234 244 239 0 
+head = 117, count = 1 | 117 234 244 239 0 
+head = 239, count = 2 | 117 234 244 239 0 
+head = 0, count = 1 | 122 117 234 244 239 0 
+head = 237, count = 1 | 119 237 
+============================================================
+ReuseSegment - Thread 7
+head = 0, count = 2 | 5 0 
+head = 5, count = 2 | 5 4 
+head = 0, count = 8 | 4 0 
+head = 4, count = 3 | 4 6 
+head = 6, count = 3 | 6 0 
+head = 4, count = 3 | 4 0 
+head = 0, count = 1 | 191 0 
+head = 191, count = 1 | 191 194 
+head = 0, count = 8 | 194 0 
+head = 4, count = 22 | 4 194 
+head = 4, count = 1 | 4 194 0 
+head = 0, count = 3 | 4 194 0 
+head = 194, count = 2 | 194 190 
+head = 194, count = 4 | 194 0 
+head = 190, count = 2 | 190 0 
+head = 0, count = 10 | 121 0 
+head = 121, count = 10 | 121 117 
+head = 0, count = 60 | 117 0 
+head = 194, count = 23 | 117 194 
+head = 117, count = 22 | 117 122 
+head = 0, count = 10 | 119 0 
+head = 122, count = 20 | 122 0 
+head = 117, count = 30 | 117 0 
+head = 0, count = 10 | 245 0 
+head = 0, count = 82 | 234 0 
+head = 245, count = 10 | 245 234 
+head = 117, count = 205 | 117 234 
+head = 194, count = 9 | 194 234 
+head = 194, count = 1 | 117 194 234 0 
+head = 0, count = 2 | 117 4 194 0 
+head = 4, count = 19 | 117 4 194 234 
+head = 0, count = 22 | 117 4 194 234 0 
+head = 0, count = 116 | 239 0 
+head = 234, count = 75 | 234 239 
+head = 0, count = 8 | 234 239 0 
+head = 0, count = 3 | 117 4 194 234 239 0 
+head = 239, count = 117 | 239 0 
+head = 234, count = 10 | 234 0 
+head = 239, count = 61 | 117 239 
+head = 234, count = 49 | 117 234 
+head = 4, count = 4 | 117 4 194 
+head = 186, count = 2 | 118 186 
+head = 7, count = 3 | 118 7 
+head = 194, count = 1 | 122 194 190 234 
+head = 0, count = 1 | 117 122 4 6 194 190 0 
+head = 239, count = 20 | 234 239 
+head = 194, count = 3 | 117 194 234 
+head = 234, count = 6 | 234 236 237 238 
+head = 0, count = 6 | 237 244 0 
+head = 238, count = 6 | 238 244 
+head = 234, count = 222 | 234 244 
+head = 234, count = 1 | 117 234 239 0 
+head = 0, count = 2 | 117 122 4 6 194 190 234 239 0 
+head = 0, count = 2 | 117 4 194 234 239 244 0 
+head = 0, count = 16 | 117 4 194 234 244 0 
+head = 4, count = 22 | 117 4 194 234 244 
+head = 244, count = 81 | 239 244 
+head = 244, count = 5 | 244 0 
+head = 5, count = 1 | 121 5 191 245 
+head = 234, count = 20 | 117 234 244 
+head = 117, count = 32 | 117 234 244 
+head = 244, count = 53 | 117 244 
+head = 191, count = 1 | 119 191 237 
+head = 118, count = 4 | 118 119 
+head = 249, count = 187 | 248 249 
+head = 118, count = 9 | 118 248 249 
+head = 0, count = 6 | 234 239 244 0 
+head = 194, count = 1 | 194 234 239 244 0 
+head = 239, count = 4 | 234 239 0 
+head = 244, count = 53 | 234 244 
+head = 248, count = 49 | 248 249 
+head = 0, count = 1 | 117 122 4 6 194 190 234 239 244 0 
+head = 244, count = 11 | 117 234 239 244 0 
+head = 234, count = 1 | 117 234 239 244 0 
+head = 194, count = 4 | 117 194 234 244 
+head = 244, count = 38 | 117 234 244 
+head = 249, count = 1 | 249 0 
+head = 4, count = 2 | 117 4 
+head = 7, count = 1 | 118 7 237 240 
+head = 190, count = 4 | 122 190 
+head = 4, count = 1 | 117 4 234 244 
+head = 121, count = 1 | 121 245 
+head = 117, count = 1 | 117 234 239 244 0 
+head = 234, count = 1 | 234 239 244 0 
+head = 0, count = 1 | 117 194 234 239 244 0 
+head = 0, count = 2 | 249 0 
+head = 119, count = 2 | 119 237 
+============================================================
+ReuseSegment - Thread 8
+head = 0, count = 2 | 5 0 
+head = 5, count = 2 | 5 4 
+head = 0, count = 12 | 4 0 
+head = 4, count = 3 | 4 6 
+head = 6, count = 3 | 6 0 
+head = 4, count = 3 | 4 0 
+head = 0, count = 1 | 191 0 
+head = 191, count = 1 | 194 191 
+head = 0, count = 8 | 194 0 
+head = 4, count = 20 | 4 194 
+head = 0, count = 2 | 4 194 0 
+head = 194, count = 2 | 194 190 
+head = 194, count = 3 | 194 0 
+head = 190, count = 2 | 190 0 
+head = 0, count = 10 | 121 0 
+head = 121, count = 10 | 117 121 
+head = 0, count = 50 | 117 0 
+head = 194, count = 20 | 194 117 
+head = 117, count = 20 | 117 122 
+head = 0, count = 10 | 119 0 
+head = 122, count = 20 | 122 0 
+head = 117, count = 24 | 117 0 
+head = 0, count = 10 | 245 0 
+head = 0, count = 77 | 234 0 
+head = 245, count = 10 | 245 234 
+head = 117, count = 211 | 117 234 
+head = 194, count = 8 | 194 234 
+head = 194, count = 1 | 194 117 234 0 
+head = 0, count = 3 | 4 194 117 0 
+head = 4, count = 6 | 4 194 117 
+head = 4, count = 11 | 4 194 117 234 
+head = 0, count = 1 | 4 6 194 117 190 122 234 0 
+head = 0, count = 24 | 4 194 117 234 0 
+head = 234, count = 9 | 234 0 
+head = 234, count = 1 | 234 236 237 238 
+head = 0, count = 1 | 237 0 
+head = 238, count = 1 | 238 244 
+head = 234, count = 32 | 234 244 
+head = 0, count = 8 | 4 194 117 234 244 0 
+head = 4, count = 13 | 4 194 117 234 244 
+head = 0, count = 88 | 239 0 
+head = 244, count = 14 | 244 239 
+head = 234, count = 144 | 234 239 
+head = 194, count = 1 | 194 234 244 0 
+head = 239, count = 10 | 239 328 
+head = 0, count = 1 | 234 239 0 
+head = 239, count = 97 | 239 0 
+head = 239, count = 10 | 239 328 0 
+head = 328, count = 10 | 239 328 
+head = 234, count = 1 | 234 244 239 0 
+head = 5, count = 1 | 5 191 121 245 
+head = 239, count = 63 | 117 239 
+head = 0, count = 1 | 4 6 194 117 190 122 0 
+head = 194, count = 3 | 194 117 234 244 
+head = 244, count = 10 | 117 244 
+head = 234, count = 95 | 117 234 
+head = 117, count = 2 | 117 234 244 
+head = 194, count = 1 | 194 117 234 
+head = 186, count = 2 | 186 118 
+head = 118, count = 3 | 118 248 249 
+head = 7, count = 2 | 7 118 
+head = 194, count = 1 | 194 190 122 234 
+head = 190, count = 3 | 190 122 
+head = 239, count = 12 | 234 239 
+head = 244, count = 9 | 234 244 
+head = 234, count = 2 | 117 234 244 
+head = 0, count = 9 | 117 234 239 0 
+============================================================
+ReuseSegment - Thread 9
+head = 0, count = 2 | 5 0 
+head = 5, count = 2 | 5 4 
+head = 0, count = 6 | 4 0 
+head = 4, count = 3 | 6 4 
+head = 6, count = 3 | 6 0 
+head = 4, count = 3 | 4 0 
+head = 0, count = 1 | 191 0 
+head = 191, count = 1 | 194 191 
+head = 0, count = 8 | 194 0 
+head = 4, count = 21 | 4 194 
+head = 4, count = 1 | 4 194 0 
+head = 0, count = 3 | 4 194 0 
+head = 194, count = 2 | 194 190 
+head = 194, count = 4 | 194 0 
+head = 190, count = 2 | 190 0 
+head = 0, count = 10 | 121 0 
+head = 121, count = 10 | 121 117 
+head = 0, count = 60 | 117 0 
+head = 194, count = 18 | 117 194 
+head = 117, count = 22 | 117 122 
+head = 0, count = 9 | 119 0 
+head = 122, count = 20 | 122 0 
+head = 117, count = 30 | 117 0 
+head = 0, count = 10 | 245 0 
+head = 0, count = 83 | 234 0 
+head = 245, count = 10 | 245 234 
+head = 117, count = 189 | 117 234 
+head = 194, count = 9 | 194 234 
+head = 194, count = 1 | 117 194 234 0 
+head = 0, count = 5 | 117 4 194 0 
+head = 4, count = 5 | 117 4 194 
+head = 4, count = 16 | 117 4 194 234 
+head = 0, count = 1 | 194 234 0 
+head = 0, count = 21 | 117 4 194 234 0 
+head = 0, count = 135 | 239 0 
+head = 234, count = 72 | 234 239 
+head = 239, count = 119 | 239 0 
+head = 234, count = 10 | 234 0 
+head = 239, count = 63 | 117 239 
+head = 0, count = 1 | 117 122 6 4 194 190 0 
+head = 234, count = 48 | 117 234 
+head = 186, count = 2 | 118 186 
+head = 194, count = 1 | 122 194 190 234 
+head = 190, count = 5 | 122 190 
+head = 239, count = 17 | 234 239 
+head = 234, count = 4 | 234 236 237 
+head = 0, count = 5 | 237 244 0 
+head = 234, count = 202 | 234 244 
+head = 0, count = 3 | 117 4 194 234 239 0 
+head = 194, count = 2 | 117 194 234 
+head = 0, count = 16 | 117 4 194 234 244 0 
+head = 4, count = 33 | 117 4 194 234 244 
+head = 234, count = 9 | 117 234 244 
+head = 244, count = 77 | 239 244 
+head = 0, count = 2 | 234 239 0 
+head = 239, count = 15 | 234 239 0 
+head = 0, count = 3 | 117 4 194 234 239 244 0 
+head = 244, count = 6 | 244 0 
+head = 117, count = 21 | 117 234 244 
+head = 244, count = 54 | 117 244 
+head = 191, count = 1 | 119 191 237 
+head = 249, count = 175 | 248 249 
+head = 118, count = 8 | 118 248 249 
+head = 194, count = 1 | 194 234 239 244 0 
+head = 244, count = 63 | 234 244 
+head = 248, count = 45 | 248 249 
+head = 0, count = 1 | 237 0 
+head = 244, count = 44 | 117 234 244 
+head = 194, count = 7 | 117 194 234 244 
+head = 234, count = 1 | 117 234 239 244 0 
+head = 0, count = 3 | 117 122 6 4 194 190 234 239 244 0 
+head = 244, count = 4 | 117 234 239 244 0 
+head = 0, count = 2 | 234 239 244 0 
+head = 119, count = 1 | 121 119 245 
+head = 118, count = 3 | 118 249 
+head = 0, count = 1 | 244 0 
+head = 249, count = 3 | 249 0 
+head = 118, count = 2 | 118 242 
+head = 4, count = 1 | 117 4 234 244 
+head = 0, count = 5 | 117 234 239 244 0 
+head = 0, count = 1 | 117 194 234 239 244 0 
+head = 5, count = 1 | 121 5 191 245 
+head = 4, count = 3 | 117 4 
+head = 237, count = 1 | 119 237 
+head = 234, count = 1 | 234 239 244 0 
+head = 242, count = 2 | 118 242 
+head = 234, count = 2 | 234 236 237 238 
+head = 238, count = 2 | 238 244 
+head = 7, count = 2 | 118 7 240 
+head = 239, count = 1 | 117 234 239 244 0 
+============================================================
+ReuseSegment - Thread 10
+head = 0, count = 1 | 5 0 
+head = 5, count = 1 | 4 5 
+head = 0, count = 9 | 4 0 
+head = 4, count = 3 | 4 6 
+head = 6, count = 3 | 6 0 
+head = 4, count = 2 | 4 0 
+head = 0, count = 1 | 191 0 
+head = 191, count = 1 | 191 194 
+head = 0, count = 7 | 194 0 
+head = 4, count = 22 | 4 194 
+head = 4, count = 1 | 4 194 0 
+head = 0, count = 2 | 4 194 0 
+head = 194, count = 2 | 194 190 
+head = 194, count = 3 | 194 0 
+head = 190, count = 2 | 190 0 
+head = 0, count = 10 | 121 0 
+head = 121, count = 10 | 117 121 
+head = 0, count = 50 | 117 0 
+head = 194, count = 23 | 117 194 
+head = 117, count = 21 | 117 122 
+head = 0, count = 10 | 119 0 
+head = 122, count = 20 | 122 0 
+head = 117, count = 20 | 117 0 
+head = 0, count = 10 | 245 0 
+head = 0, count = 73 | 234 0 
+head = 245, count = 10 | 245 234 
+head = 117, count = 195 | 117 234 
+head = 194, count = 9 | 194 234 
+head = 194, count = 1 | 117 194 234 0 
+head = 4, count = 4 | 117 4 194 
+head = 0, count = 2 | 117 4 194 0 
+head = 4, count = 9 | 117 4 194 234 
+head = 194, count = 1 | 122 194 190 234 
+head = 0, count = 19 | 117 4 194 234 0 
+head = 194, count = 2 | 117 194 234 
+head = 234, count = 10 | 234 0 
+head = 234, count = 6 | 234 236 237 238 
+head = 0, count = 6 | 237 244 0 
+head = 238, count = 6 | 238 244 
+head = 234, count = 213 | 234 244 
+head = 4, count = 23 | 117 4 194 234 244 
+head = 0, count = 102 | 239 0 
+head = 244, count = 81 | 244 239 
+head = 234, count = 76 | 234 239 
+head = 239, count = 10 | 239 328 
+head = 0, count = 1 | 117 122 4 6 194 190 244 239 0 
+head = 239, count = 108 | 239 0 
+head = 239, count = 10 | 239 328 0 
+head = 328, count = 10 | 239 328 
+head = 0, count = 6 | 234 239 0 
+head = 239, count = 72 | 117 239 
+head = 0, count = 1 | 117 122 4 6 194 190 0 
+head = 244, count = 57 | 117 244 
+head = 0, count = 14 | 117 4 194 234 244 0 
+head = 234, count = 59 | 117 234 
+head = 194, count = 4 | 117 194 234 244 
+head = 186, count = 2 | 118 186 
+head = 249, count = 193 | 249 248 
+head = 7, count = 2 | 118 7 
+head = 118, count = 1 | 118 249 
+head = 118, count = 9 | 118 249 248 
+head = 190, count = 2 | 122 190 
+head = 194, count = 1 | 194 234 244 239 0 
+head = 5, count = 1 | 245 5 191 121 
+head = 239, count = 19 | 234 239 
+head = 244, count = 43 | 234 244 
+head = 234, count = 18 | 117 234 244 
+head = 117, count = 15 | 117 234 244 
+head = 248, count = 42 | 249 248 
+head = 244, count = 9 | 117 234 244 239 0 
+head = 234, count = 1 | 117 234 244 239 0 
+head = 244, count = 4 | 244 0 
+head = 4, count = 1 | 117 4 234 244 
+head = 244, count = 10 | 117 234 244 
+head = 191, count = 1 | 119 191 237 
+head = 234, count = 1 | 122 234 
+head = 239, count = 8 | 234 239 0 
+head = 249, count = 3 | 249 0 
+head = 0, count = 1 | 234 244 239 0 
+head = 234, count = 1 | 234 244 239 0 
+head = 0, count = 1 | 117 4 194 234 244 239 0 
+head = 0, count = 1 | 117 122 4 6 194 190 234 244 239 0 
+head = 0, count = 1 | 244 0 
+head = 0, count = 2 | 117 122 234 244 239 0 
+head = 121, count = 1 | 245 121 
+============================================================
+ReuseSegment - Thread 11
+head = 0, count = 2 | 5 0 
+head = 5, count = 2 | 5 4 
+head = 0, count = 13 | 4 0 
+head = 4, count = 15 | 6 4 
+head = 0, count = 6 | 6 0 
+head = 0, count = 1 | 6 4 0 
+head = 6, count = 3 | 6 0 
+head = 4, count = 3 | 4 0 
+head = 0, count = 1 | 191 0 
+head = 191, count = 1 | 191 194 
+head = 0, count = 7 | 194 0 
+head = 6, count = 21 | 6 194 
+head = 6, count = 1 | 6 194 0 
+head = 4, count = 7 | 4 194 
+head = 194, count = 2 | 194 190 
+head = 194, count = 4 | 194 0 
+head = 190, count = 2 | 190 0 
+head = 0, count = 10 | 121 0 
+head = 121, count = 10 | 121 117 
+head = 0, count = 60 | 117 0 
+head = 194, count = 19 | 117 194 
+head = 117, count = 22 | 117 122 
+head = 0, count = 10 | 119 0 
+head = 122, count = 20 | 122 0 
+head = 117, count = 30 | 117 0 
+head = 0, count = 10 | 245 0 
+head = 0, count = 82 | 234 0 
+head = 245, count = 10 | 245 234 
+head = 117, count = 193 | 117 234 
+head = 194, count = 9 | 194 234 
+head = 194, count = 1 | 117 194 234 0 
+head = 0, count = 1 | 117 4 194 0 
+head = 0, count = 23 | 117 4 194 234 0 
+head = 4, count = 12 | 117 4 194 234 
+head = 234, count = 9 | 234 0 
+head = 234, count = 6 | 234 236 237 238 
+head = 0, count = 2 | 237 0 
+head = 238, count = 6 | 238 244 
+head = 234, count = 207 | 234 244 
+head = 4, count = 36 | 117 4 194 234 244 
+head = 244, count = 83 | 244 239 
+head = 0, count = 120 | 239 0 
+head = 234, count = 76 | 234 239 
+head = 0, count = 7 | 234 239 0 
+head = 0, count = 4 | 117 4 194 234 244 239 0 
+head = 239, count = 116 | 239 0 
+head = 244, count = 6 | 244 0 
+head = 239, count = 63 | 117 239 
+head = 0, count = 1 | 117 6 4 194 190 122 0 
+head = 244, count = 55 | 117 244 
+head = 0, count = 25 | 117 4 194 234 244 0 
+head = 234, count = 40 | 117 234 
+head = 4, count = 4 | 117 4 194 
+head = 194, count = 3 | 117 194 234 244 
+head = 194, count = 1 | 117 194 234 
+head = 191, count = 1 | 119 191 237 
+head = 186, count = 2 | 118 186 
+head = 249, count = 186 | 248 249 
+head = 118, count = 10 | 118 249 
+head = 190, count = 1 | 190 122 
+head = 194, count = 1 | 194 190 122 234 
+head = 194, count = 1 | 194 234 244 239 0 
+head = 239, count = 18 | 234 239 
+head = 244, count = 64 | 234 244 
+head = 248, count = 52 | 248 249 
+head = 249, count = 4 | 249 0 
+head = 0, count = 4 | 237 244 0 
+head = 0, count = 1 | 117 6 4 194 190 122 244 239 0 
+head = 0, count = 1 | 117 194 234 244 239 0 
+head = 234, count = 7 | 117 234 244 
+head = 239, count = 3 | 234 239 0 
+head = 0, count = 2 | 117 6 4 194 190 122 234 244 239 0 
+head = 244, count = 2 | 117 234 244 239 0 
+head = 244, count = 18 | 117 234 244 
+head = 0, count = 1 | 244 0 
+head = 0, count = 1 | 234 244 239 0 
+head = 5, count = 1 | 121 5 191 245 
+head = 117, count = 17 | 117 234 244 
+head = 118, count = 1 | 118 248 249 
+head = 118, count = 2 | 118 242 
+head = 4, count = 1 | 117 4 234 244 
+head = 4, count = 3 | 117 4 
+head = 234, count = 1 | 234 244 239 0 
+head = 234, count = 1 | 117 234 244 239 0 
+head = 242, count = 2 | 118 242 
+head = 0, count = 1 | 117 234 244 239 0 
+head = 121, count = 1 | 121 245 
+head = 237, count = 1 | 119 237 
+head = 239, count = 1 | 117 122 234 244 239 0 
+============================================================
+ReuseSegment - Thread 12
+head = 0, count = 2 | 5 0 
+head = 5, count = 2 | 5 4 
+head = 0, count = 16 | 4 0 
+head = 4, count = 4 | 4 6 
+head = 6, count = 3 | 6 0 
+head = 4, count = 3 | 4 0 
+head = 0, count = 1 | 191 0 
+head = 191, count = 1 | 194 191 
+head = 0, count = 7 | 194 0 
+head = 4, count = 39 | 194 4 
+head = 4, count = 1 | 194 4 0 
+head = 0, count = 3 | 194 4 0 
+head = 194, count = 2 | 194 190 
+head = 194, count = 4 | 194 0 
+head = 190, count = 2 | 190 0 
+head = 0, count = 10 | 121 0 
+head = 121, count = 10 | 121 117 
+head = 0, count = 53 | 117 0 
+head = 194, count = 18 | 194 117 
+head = 117, count = 20 | 117 122 
+head = 0, count = 10 | 119 0 
+head = 122, count = 20 | 122 0 
+head = 117, count = 27 | 117 0 
+head = 0, count = 10 | 245 0 
+head = 0, count = 78 | 234 0 
+head = 245, count = 10 | 245 234 
+head = 117, count = 168 | 117 234 
+head = 194, count = 9 | 194 234 
+head = 194, count = 1 | 194 117 234 0 
+head = 4, count = 8 | 194 4 234 
+head = 0, count = 1 | 194 4 117 0 
+head = 4, count = 4 | 194 4 117 
+head = 4, count = 10 | 194 4 117 234 
+head = 0, count = 8 | 194 4 117 234 0 
+head = 0, count = 100 | 239 0 
+head = 234, count = 173 | 234 239 
+head = 239, count = 10 | 239 328 
+head = 0, count = 2 | 234 239 0 
+head = 0, count = 1 | 194 4 6 190 117 122 234 239 0 
+head = 239, count = 117 | 239 0 
+head = 239, count = 10 | 239 328 0 
+head = 328, count = 10 | 239 328 
+head = 234, count = 9 | 234 0 
+head = 5, count = 1 | 5 191 121 245 
+head = 239, count = 75 | 117 239 
+head = 234, count = 93 | 117 234 
+head = 186, count = 2 | 186 118 
+head = 0, count = 1 | 122 0 
+head = 194, count = 1 | 194 190 122 234 239 
+head = 190, count = 1 | 190 122 
+head = 239, count = 23 | 234 239 
+head = 194, count = 2 | 194 117 234 
+head = 194, count = 1 | 194 234 239 0 
+head = 7, count = 1 | 7 118 
+head = 0, count = 3 | 117 122 234 239 0 
+============================================================
+ReuseSegment - Thread 13
+head = 0, count = 2 | 5 0 
+head = 5, count = 2 | 5 4 
+head = 0, count = 9 | 4 0 
+head = 4, count = 3 | 4 6 
+head = 6, count = 3 | 6 0 
+head = 4, count = 3 | 4 0 
+head = 0, count = 1 | 191 0 
+head = 191, count = 1 | 194 191 
+head = 0, count = 8 | 194 0 
+head = 4, count = 20 | 4 194 
+head = 4, count = 1 | 4 194 0 
+head = 194, count = 2 | 194 190 
+head = 194, count = 4 | 194 0 
+head = 190, count = 2 | 190 0 
+head = 0, count = 10 | 121 0 
+head = 121, count = 10 | 117 121 
+head = 0, count = 59 | 117 0 
+head = 194, count = 21 | 117 194 
+head = 117, count = 21 | 117 122 
+head = 0, count = 10 | 119 0 
+head = 122, count = 20 | 122 0 
+head = 117, count = 30 | 117 0 
+head = 0, count = 9 | 245 0 
+head = 0, count = 81 | 234 0 
+head = 245, count = 10 | 245 234 
+head = 117, count = 188 | 117 234 
+head = 194, count = 9 | 234 194 
+head = 194, count = 1 | 117 234 194 0 
+head = 0, count = 3 | 117 4 194 0 
+head = 4, count = 5 | 117 4 194 
+head = 4, count = 17 | 117 234 4 194 
+head = 194, count = 1 | 122 234 194 190 
+head = 194, count = 4 | 117 234 194 
+head = 0, count = 133 | 239 0 
+head = 234, count = 77 | 234 239 
+head = 0, count = 9 | 234 239 0 
+head = 239, count = 131 | 239 0 
+head = 234, count = 10 | 234 0 
+head = 5, count = 1 | 245 5 191 121 
+head = 239, count = 62 | 117 239 
+head = 0, count = 22 | 117 234 4 194 0 
+head = 234, count = 49 | 117 234 
+head = 0, count = 1 | 117 234 194 239 0 
+head = 186, count = 2 | 118 186 
+head = 7, count = 4 | 118 7 
+head = 190, count = 5 | 122 190 
+head = 239, count = 19 | 234 239 
+head = 234, count = 2 | 234 236 237 238 
+head = 0, count = 6 | 237 244 0 
+head = 238, count = 2 | 238 244 
+head = 234, count = 225 | 234 244 
+head = 0, count = 3 | 117 234 4 194 239 0 
+head = 0, count = 21 | 117 234 4 194 244 0 
+head = 4, count = 36 | 117 234 4 194 244 
+head = 0, count = 1 | 117 122 234 4 6 194 190 239 0 
+head = 244, count = 81 | 239 244 
+head = 0, count = 1 | 117 122 4 6 194 190 0 
+head = 244, count = 54 | 117 244 
+head = 117, count = 28 | 117 234 244 
+head = 234, count = 16 | 117 234 244 
+head = 0, count = 4 | 117 234 239 244 0 
+head = 118, count = 4 | 118 249 
+head = 194, count = 1 | 234 194 239 244 0 
+head = 244, count = 64 | 234 244 
+head = 249, count = 169 | 248 249 
+head = 248, count = 55 | 248 249 
+head = 0, count = 2 | 117 122 234 4 6 194 190 239 244 0 
+head = 0, count = 1 | 234 239 244 0 
+head = 244, count = 40 | 117 234 244 
+head = 194, count = 4 | 117 234 194 244 
+head = 244, count = 6 | 244 0 
+head = 191, count = 1 | 119 191 237 
+head = 118, count = 3 | 119 118 
+head = 118, count = 4 | 118 248 249 
+head = 234, count = 1 | 122 234 
+head = 234, count = 4 | 234 236 237 
+head = 244, count = 4 | 117 234 239 244 0 
+head = 0, count = 2 | 117 234 4 194 239 244 0 
+head = 249, count = 1 | 249 0 
+head = 121, count = 3 | 245 121 
+head = 239, count = 4 | 234 239 0 
+head = 0, count = 1 | 244 0 
+head = 4, count = 1 | 117 234 4 244 
+head = 234, count = 1 | 117 234 239 244 0 
+head = 239, count = 2 | 117 122 234 239 244 0 
+head = 0, count = 3 | 249 0 
+head = 0, count = 1 | 117 234 194 239 244 0 
+head = 119, count = 1 | 119 245 121 
+head = 4, count = 4 | 117 4 
+head = 234, count = 1 | 234 239 244 0 
+head = 239, count = 1 | 117 234 239 0 
+head = 237, count = 1 | 119 237 
+============================================================
+ReuseSegment - Thread 14
+head = 0, count = 1 | 5 0 
+head = 5, count = 1 | 4 5 
+head = 0, count = 7 | 4 0 
+head = 4, count = 16 | 4 6 
+head = 0, count = 1 | 6 0 
+head = 6, count = 3 | 6 0 
+head = 4, count = 2 | 4 0 
+head = 0, count = 1 | 191 0 
+head = 191, count = 1 | 191 194 
+head = 0, count = 6 | 194 0 
+head = 6, count = 22 | 6 194 
+head = 6, count = 1 | 6 194 0 
+head = 4, count = 8 | 4 194 
+head = 194, count = 2 | 194 190 
+head = 194, count = 3 | 194 0 
+head = 190, count = 2 | 190 0 
+head = 0, count = 10 | 121 0 
+head = 121, count = 10 | 117 121 
+head = 0, count = 50 | 117 0 
+head = 194, count = 20 | 117 194 
+head = 117, count = 22 | 117 122 
+head = 0, count = 10 | 119 0 
+head = 122, count = 20 | 122 0 
+head = 117, count = 20 | 117 0 
+head = 0, count = 10 | 245 0 
+head = 0, count = 73 | 234 0 
+head = 245, count = 10 | 245 234 
+head = 117, count = 202 | 117 234 
+head = 194, count = 9 | 194 234 
+head = 194, count = 1 | 117 194 234 0 
+head = 4, count = 5 | 117 4 194 
+head = 0, count = 1 | 117 4 194 0 
+head = 0, count = 15 | 117 4 194 234 0 
+head = 4, count = 8 | 117 4 194 234 
+head = 234, count = 9 | 234 0 
+head = 234, count = 7 | 234 236 237 238 
+head = 0, count = 8 | 237 244 0 
+head = 238, count = 7 | 238 244 
+head = 234, count = 258 | 234 244 
+head = 0, count = 32 | 117 4 194 234 244 0 
+head = 0, count = 136 | 239 0 
+head = 244, count = 112 | 244 239 
+head = 234, count = 45 | 234 239 
+head = 0, count = 3 | 117 4 194 234 244 239 0 
+head = 239, count = 10 | 239 328 
+head = 239, count = 132 | 239 0 
+head = 239, count = 7 | 239 328 0 
+head = 328, count = 10 | 239 328 
+head = 244, count = 9 | 244 0 
+head = 5, count = 1 | 5 191 121 245 
+head = 239, count = 72 | 117 239 
+head = 0, count = 1 | 117 122 4 6 194 190 0 
+head = 4, count = 40 | 117 4 194 234 244 
+head = 244, count = 61 | 117 244 
+head = 194, count = 6 | 117 194 234 244 
+head = 194, count = 1 | 117 194 234 
+head = 0, count = 1 | 117 122 4 6 194 190 244 239 0 
+head = 186, count = 2 | 118 186 
+head = 249, count = 234 | 249 248 
+head = 118, count = 15 | 118 249 248 
+head = 7, count = 3 | 118 7 
+head = 194, count = 1 | 122 194 190 234 
+head = 194, count = 1 | 194 234 244 239 0 
+head = 239, count = 19 | 234 239 
+head = 244, count = 93 | 234 244 
+head = 234, count = 14 | 117 234 244 
+head = 248, count = 67 | 249 248 
+head = 244, count = 4 | 117 234 244 239 0 
+head = 4, count = 1 | 117 4 234 244 
+head = 0, count = 2 | 234 239 0 
+head = 239, count = 13 | 234 239 0 
+head = 0, count = 1 | 234 244 239 0 
+head = 328, count = 3 | 328 0 
+head = 234, count = 16 | 117 234 
+head = 117, count = 36 | 117 234 244 
+head = 191, count = 1 | 119 191 237 
+head = 118, count = 3 | 118 249 
+head = 190, count = 1 | 122 190 
+head = 234, count = 1 | 234 236 237 
+head = 244, count = 35 | 117 234 244 
+head = 0, count = 1 | 244 0 
+head = 249, count = 1 | 249 0 
+head = 122, count = 1 | 117 122 244 239 0 
+head = 234, count = 4 | 117 234 244 239 0 
+head = 0, count = 1 | 117 122 4 6 194 190 234 244 239 0 
+head = 239, count = 1 | 120 239 
+head = 0, count = 1 | 117 122 234 244 239 0 
+head = 118, count = 1 | 118 119 240 
+head = 234, count = 1 | 234 244 239 0 
+head = 117, count = 1 | 117 234 244 239 0 
+head = 0, count = 1 | 249 0 
+head = 0, count = 4 | 117 122 244 239 0 
+head = 119, count = 1 | 119 121 245 
+head = 237, count = 2 | 119 237 
+head = 242, count = 1 | 242 0 
+head = 121, count = 1 | 121 245 
+head = 118, count = 1 | 118 119 
+head = 4, count = 1 | 117 4 
+============================================================
+ReuseSegment - Thread 15
+head = 0, count = 2 | 5 0 
+head = 5, count = 2 | 5 4 
+head = 0, count = 8 | 4 0 
+head = 4, count = 4 | 4 6 
+head = 6, count = 3 | 6 0 
+head = 4, count = 3 | 4 0 
+head = 0, count = 1 | 191 0 
+head = 191, count = 1 | 191 194 
+head = 0, count = 7 | 194 0 
+head = 4, count = 34 | 4 194 
+head = 4, count = 1 | 4 194 0 
+head = 0, count = 2 | 4 194 0 
+head = 194, count = 2 | 194 190 
+head = 194, count = 4 | 194 0 
+head = 190, count = 2 | 190 0 
+head = 0, count = 10 | 121 0 
+head = 121, count = 10 | 121 117 
+head = 0, count = 60 | 117 0 
+head = 194, count = 19 | 117 194 
+head = 4, count = 5 | 117 4 194 
+head = 117, count = 20 | 117 122 
+head = 0, count = 10 | 119 0 
+head = 122, count = 20 | 122 0 
+head = 117, count = 30 | 117 0 
+head = 0, count = 10 | 245 0 
+head = 0, count = 82 | 234 0 
+head = 245, count = 10 | 245 234 
+head = 117, count = 187 | 117 234 
+head = 194, count = 10 | 194 234 
+head = 194, count = 1 | 117 194 234 0 
+head = 0, count = 1 | 117 4 194 0 
+head = 4, count = 12 | 117 4 194 234 
+head = 194, count = 1 | 122 194 190 234 
+head = 234, count = 87 | 234 239 
+head = 0, count = 132 | 239 0 
+head = 239, count = 121 | 239 0 
+head = 234, count = 10 | 234 0 
+head = 5, count = 1 | 121 5 191 245 
+head = 239, count = 63 | 117 239 
+head = 0, count = 21 | 117 4 194 234 0 
+head = 234, count = 63 | 117 234 
+head = 186, count = 2 | 118 186 
+head = 7, count = 2 | 118 7 
+head = 239, count = 19 | 234 239 
+head = 239, count = 13 | 234 239 0 
+head = 234, count = 4 | 234 236 237 238 
+head = 0, count = 4 | 237 244 0 
+head = 238, count = 4 | 238 244 
+head = 234, count = 186 | 234 244 
+head = 0, count = 3 | 117 4 194 234 239 0 
+head = 0, count = 17 | 117 4 194 234 244 0 
+head = 4, count = 28 | 117 4 194 234 244 
+head = 244, count = 69 | 239 244 
+head = 0, count = 3 | 234 239 0 
+head = 0, count = 3 | 117 122 4 6 194 190 234 239 244 0 
+head = 0, count = 1 | 117 122 4 6 194 190 0 
+head = 244, count = 45 | 117 244 
+head = 194, count = 1 | 117 194 234 
+head = 249, count = 140 | 248 249 
+head = 118, count = 4 | 118 248 249 
+head = 194, count = 1 | 194 234 239 244 0 
+head = 244, count = 42 | 234 244 
+head = 234, count = 6 | 117 234 244 
+head = 117, count = 14 | 117 234 244 
+head = 248, count = 40 | 248 249 
+head = 118, count = 2 | 118 242 
+head = 0, count = 3 | 117 4 194 234 239 244 0 
+head = 244, count = 1 | 117 234 239 244 0 
+head = 0, count = 1 | 234 239 244 0 
+head = 244, count = 3 | 244 0 
+head = 244, count = 12 | 117 234 244 
+head = 118, count = 2 | 118 240 
+head = 7, count = 1 | 118 7 240 
+head = 0, count = 1 | 237 0 
+head = 234, count = 2 | 117 234 239 244 0 
+head = 0, count = 2 | 249 0 
+head = 191, count = 1 | 119 191 237 
+head = 242, count = 2 | 118 242 
+head = 190, count = 3 | 122 190 
+head = 234, count = 1 | 122 234 
+head = 0, count = 1 | 117 122 234 239 244 0 
+head = 121, count = 1 | 121 245 
+head = 234, count = 1 | 234 236 237 
+head = 4, count = 1 | 117 4 234 244 
+head = 194, count = 6 | 117 194 234 244 
+head = 0, count = 1 | 117 234 239 244 0 
+head = 4, count = 1 | 117 4 
+head = 240, count = 1 | 118 240 
+head = 234, count = 1 | 234 239 244 0 
+head = 0, count = 1 | 244 0 
+head = 239, count = 1 | 117 234 239 244 0 
+============================================================
+ReuseSegment - Thread 16
+head = 0, count = 2 | 5 0 
+head = 5, count = 2 | 5 4 
+head = 0, count = 13 | 4 0 
+head = 4, count = 3 | 4 6 
+head = 6, count = 3 | 6 0 
+head = 4, count = 3 | 4 0 
+head = 0, count = 1 | 191 0 
+head = 191, count = 1 | 191 194 
+head = 0, count = 7 | 194 0 
+head = 4, count = 25 | 4 194 
+head = 0, count = 1 | 4 194 0 
+head = 194, count = 2 | 194 190 
+head = 194, count = 4 | 194 0 
+head = 190, count = 2 | 190 0 
+head = 0, count = 10 | 121 0 
+head = 121, count = 10 | 121 117 
+head = 0, count = 60 | 117 0 
+head = 194, count = 18 | 194 117 
+head = 117, count = 20 | 117 122 
+head = 0, count = 10 | 119 0 
+head = 122, count = 20 | 122 0 
+head = 117, count = 28 | 117 0 
+head = 0, count = 10 | 245 0 
+head = 0, count = 81 | 234 0 
+head = 245, count = 10 | 234 245 
+head = 117, count = 195 | 234 117 
+head = 194, count = 1 | 234 194 
+head = 0, count = 1 | 4 194 117 0 
+head = 4, count = 1 | 4 194 117 
+head = 0, count = 15 | 234 4 194 117 0 
+head = 0, count = 1 | 234 4 6 194 190 117 122 0 
+head = 4, count = 7 | 234 4 194 117 
+head = 0, count = 1 | 4 6 194 190 117 122 0 
+head = 0, count = 94 | 239 0 
+head = 234, count = 160 | 234 239 
+head = 0, count = 1 | 234 194 117 239 0 
+head = 239, count = 10 | 239 328 
+head = 0, count = 1 | 234 239 0 
+head = 239, count = 110 | 239 0 
+head = 328, count = 1 | 328 0 
+head = 328, count = 10 | 239 328 
+head = 234, count = 9 | 234 0 
+head = 239, count = 63 | 117 239 
+head = 234, count = 97 | 234 117 
+head = 186, count = 2 | 186 118 
+head = 0, count = 1 | 122 0 
+head = 239, count = 18 | 234 239 
+head = 239, count = 9 | 234 239 0 
+head = 239, count = 9 | 239 328 0 
+============================================================
+ReuseSegment - Thread 17
+head = 0, count = 2 | 5 0 
+head = 5, count = 2 | 5 4 
+head = 0, count = 9 | 4 0 
+head = 4, count = 3 | 4 6 
+head = 6, count = 3 | 6 0 
+head = 4, count = 3 | 4 0 
+head = 0, count = 1 | 191 0 
+head = 191, count = 1 | 191 194 
+head = 0, count = 8 | 194 0 
+head = 4, count = 22 | 4 194 
+head = 4, count = 1 | 4 194 0 
+head = 194, count = 2 | 194 190 
+head = 194, count = 4 | 194 0 
+head = 190, count = 2 | 190 0 
+head = 0, count = 10 | 121 0 
+head = 121, count = 10 | 117 121 
+head = 0, count = 61 | 117 0 
+head = 194, count = 18 | 117 194 
+head = 117, count = 20 | 117 122 
+head = 0, count = 10 | 119 0 
+head = 122, count = 20 | 122 0 
+head = 117, count = 30 | 117 0 
+head = 0, count = 10 | 245 0 
+head = 0, count = 82 | 234 0 
+head = 245, count = 10 | 245 234 
+head = 117, count = 183 | 117 234 
+head = 194, count = 9 | 194 234 
+head = 194, count = 1 | 117 194 234 0 
+head = 0, count = 2 | 117 4 194 0 
+head = 4, count = 13 | 117 4 194 234 
+head = 194, count = 1 | 122 194 190 234 
+head = 0, count = 18 | 117 4 194 234 0 
+head = 0, count = 159 | 239 0 
+head = 234, count = 84 | 234 239 
+head = 0, count = 6 | 234 239 0 
+head = 239, count = 114 | 239 0 
+head = 234, count = 9 | 234 0 
+head = 239, count = 62 | 117 239 
+head = 234, count = 50 | 117 234 
+head = 4, count = 4 | 117 4 194 
+head = 186, count = 2 | 118 186 
+head = 190, count = 5 | 122 190 
+head = 0, count = 1 | 117 194 234 239 0 
+head = 239, count = 22 | 234 239 
+head = 234, count = 2 | 234 236 237 
+head = 0, count = 4 | 237 244 0 
+head = 234, count = 183 | 234 244 
+head = 194, count = 2 | 117 194 234 
+head = 0, count = 21 | 117 4 194 234 244 0 
+head = 4, count = 34 | 117 4 194 234 244 
+head = 244, count = 67 | 239 244 
+head = 0, count = 1 | 117 4 194 234 239 0 
+head = 239, count = 12 | 234 239 0 
+head = 239, count = 3 | 117 234 239 244 0 
+head = 244, count = 5 | 244 0 
+head = 5, count = 1 | 245 5 191 121 
+head = 244, count = 48 | 117 244 
+head = 194, count = 4 | 117 194 234 244 
+head = 249, count = 153 | 248 249 
+head = 118, count = 2 | 118 249 
+head = 118, count = 8 | 118 248 249 
+head = 194, count = 1 | 194 234 239 244 0 
+head = 244, count = 51 | 234 244 
+head = 234, count = 6 | 117 234 239 244 0 
+head = 234, count = 6 | 117 234 244 
+head = 239, count = 3 | 117 234 239 0 
+head = 234, count = 1 | 122 234 
+head = 248, count = 31 | 248 249 
+head = 234, count = 3 | 234 236 237 238 
+head = 0, count = 1 | 237 0 
+head = 238, count = 3 | 238 244 
+head = 0, count = 2 | 117 234 239 244 0 
+head = 0, count = 3 | 117 122 4 6 194 190 234 239 244 0 
+head = 4, count = 1 | 117 4 234 244 
+head = 0, count = 2 | 117 4 194 234 239 244 0 
+head = 244, count = 16 | 117 234 244 
+head = 0, count = 2 | 234 239 244 0 
+head = 0, count = 1 | 117 122 4 6 194 190 0 
+head = 117, count = 20 | 117 234 244 
+head = 4, count = 4 | 117 4 
+head = 191, count = 1 | 119 191 237 
+head = 7, count = 3 | 118 7 
+head = 0, count = 1 | 117 194 234 239 244 0 
+head = 249, count = 1 | 249 0 
+head = 121, count = 2 | 245 121 
+head = 244, count = 1 | 117 234 239 244 0 
+head = 234, count = 1 | 234 239 244 0 
+head = 244, count = 1 | 117 239 244 0 
+head = 234, count = 1 | 234 239 0 
+head = 7, count = 1 | 119 118 7 
+head = 0, count = 1 | 117 234 239 0 
+============================================================
+ReuseSegment - Thread 18
+head = 0, count = 2 | 5 0 
+head = 5, count = 2 | 5 4 
+head = 0, count = 18 | 4 0 
+head = 4, count = 3 | 6 4 
+head = 6, count = 3 | 6 0 
+head = 4, count = 2 | 4 0 
+head = 0, count = 1 | 191 0 
+head = 191, count = 1 | 191 194 
+head = 0, count = 7 | 194 0 
+head = 4, count = 23 | 4 194 
+head = 0, count = 4 | 4 194 0 
+head = 194, count = 2 | 194 190 
+head = 194, count = 3 | 194 0 
+head = 190, count = 2 | 190 0 
+head = 0, count = 10 | 121 0 
+head = 121, count = 10 | 117 121 
+head = 0, count = 50 | 117 0 
+head = 194, count = 21 | 117 194 
+head = 117, count = 20 | 117 122 
+head = 0, count = 10 | 119 0 
+head = 122, count = 20 | 122 0 
+head = 117, count = 20 | 117 0 
+head = 0, count = 10 | 245 0 
+head = 0, count = 72 | 234 0 
+head = 245, count = 10 | 245 234 
+head = 117, count = 204 | 117 234 
+head = 194, count = 9 | 194 234 
+head = 117, count = 1 | 117 234 0 
+head = 4, count = 5 | 117 4 194 
+head = 0, count = 1 | 117 4 194 0 
+head = 0, count = 26 | 117 4 194 234 0 
+head = 4, count = 11 | 117 4 194 234 
+head = 194, count = 1 | 122 194 190 234 
+head = 0, count = 1 | 194 234 0 
+head = 234, count = 10 | 234 0 
+head = 234, count = 7 | 238 234 236 237 
+head = 0, count = 7 | 237 244 0 
+head = 238, count = 7 | 238 244 
+head = 234, count = 253 | 234 244 
+head = 0, count = 21 | 117 4 194 234 244 0 
+head = 117, count = 26 | 117 234 244 
+head = 4, count = 35 | 117 4 194 234 244 
+head = 244, count = 97 | 244 239 
+head = 234, count = 62 | 234 239 
+head = 0, count = 5 | 234 239 0 
+head = 0, count = 110 | 239 0 
+head = 0, count = 1 | 117 122 6 4 194 190 244 239 0 
+head = 239, count = 115 | 239 0 
+head = 328, count = 1 | 328 0 
+head = 328, count = 10 | 239 328 
+head = 244, count = 8 | 244 0 
+head = 5, count = 1 | 5 191 121 245 
+head = 239, count = 72 | 117 239 
+head = 0, count = 1 | 117 122 6 4 194 190 0 
+head = 244, count = 58 | 117 244 
+head = 234, count = 42 | 117 234 
+head = 194, count = 10 | 117 194 234 244 
+head = 194, count = 1 | 117 194 234 
+head = 191, count = 1 | 119 191 237 
+head = 118, count = 4 | 118 240 
+head = 186, count = 2 | 118 186 
+head = 249, count = 237 | 248 249 
+head = 7, count = 4 | 118 7 
+head = 118, count = 7 | 118 248 249 
+head = 118, count = 5 | 118 249 
+head = 190, count = 5 | 122 190 
+head = 194, count = 1 | 194 234 244 239 0 
+head = 239, count = 19 | 234 239 
+head = 244, count = 76 | 234 244 
+head = 234, count = 11 | 117 234 244 
+head = 249, count = 4 | 249 0 
+head = 239, count = 8 | 239 328 
+head = 244, count = 10 | 117 234 244 239 0 
+head = 239, count = 9 | 239 328 0 
+head = 244, count = 43 | 117 234 244 
+head = 248, count = 57 | 248 249 
+head = 118, count = 4 | 118 242 
+head = 0, count = 2 | 117 122 6 4 194 190 234 244 239 0 
+head = 0, count = 2 | 117 4 194 234 244 239 0 
+head = 0, count = 1 | 244 0 
+head = 0, count = 2 | 234 244 239 0 
+head = 4, count = 1 | 117 4 234 244 
+head = 242, count = 4 | 118 242 
+head = 0, count = 1 | 117 122 234 244 239 0 
+head = 239, count = 6 | 234 239 0 
+head = 239, count = 4 | 117 234 244 239 0 
+head = 4, count = 3 | 117 4 
+head = 234, count = 2 | 234 244 239 0 
+head = 239, count = 1 | 117 234 239 0 
+head = 121, count = 1 | 121 245 
+head = 119, count = 1 | 119 237 
+head = 0, count = 1 | 117 194 234 244 239 0 
+head = 234, count = 1 | 122 234 
+head = 234, count = 1 | 117 234 244 239 0 
+head = 118, count = 1 | 118 119 237 240 
+head = 0, count = 1 | 249 0 
+============================================================
+ReuseSegment - Thread 19
+head = 0, count = 2 | 5 0 
+head = 5, count = 2 | 5 4 
+head = 0, count = 8 | 4 0 
+head = 4, count = 16 | 4 6 
+head = 0, count = 1 | 6 0 
+head = 6, count = 3 | 6 0 
+head = 4, count = 3 | 4 0 
+head = 0, count = 1 | 191 0 
+head = 191, count = 1 | 191 194 
+head = 0, count = 7 | 194 0 
+head = 6, count = 22 | 6 194 
+head = 6, count = 1 | 6 194 0 
+head = 4, count = 9 | 4 194 
+head = 194, count = 2 | 194 190 
+head = 194, count = 4 | 194 0 
+head = 190, count = 2 | 190 0 
+head = 0, count = 10 | 121 0 
+head = 121, count = 10 | 117 121 
+head = 0, count = 60 | 117 0 
+head = 194, count = 19 | 117 194 
+head = 0, count = 1 | 4 194 0 
+head = 117, count = 21 | 117 122 
+head = 0, count = 10 | 119 0 
+head = 122, count = 20 | 122 0 
+head = 117, count = 30 | 117 0 
+head = 0, count = 10 | 245 0 
+head = 0, count = 83 | 234 0 
+head = 245, count = 10 | 245 234 
+head = 117, count = 199 | 117 234 
+head = 194, count = 10 | 194 234 
+head = 194, count = 1 | 117 194 234 0 
+head = 4, count = 4 | 117 4 194 
+head = 0, count = 1 | 117 4 194 0 
+head = 0, count = 23 | 117 4 194 234 0 
+head = 4, count = 10 | 117 4 194 234 
+head = 194, count = 1 | 122 194 190 234 
+head = 6, count = 1 | 6 194 234 
+head = 194, count = 2 | 117 194 234 
+head = 234, count = 10 | 234 0 
+head = 234, count = 1 | 234 236 237 
+head = 0, count = 5 | 237 244 0 
+head = 234, count = 204 | 234 244 
+head = 0, count = 23 | 117 4 194 234 244 0 
+head = 4, count = 32 | 117 4 194 234 244 
+head = 0, count = 105 | 239 0 
+head = 244, count = 78 | 244 239 
+head = 234, count = 71 | 234 239 
+head = 0, count = 3 | 234 239 0 
+head = 239, count = 119 | 239 0 
+head = 244, count = 8 | 244 0 
+head = 5, count = 1 | 5 191 121 245 
+head = 239, count = 57 | 117 239 
+head = 0, count = 1 | 117 122 4 6 194 190 0 
+head = 244, count = 54 | 117 244 
+head = 234, count = 49 | 117 234 
+head = 194, count = 5 | 117 194 234 244 
+head = 191, count = 1 | 191 119 237 
+head = 186, count = 2 | 118 186 
+head = 248, count = 60 | 248 249 
+head = 7, count = 2 | 118 7 
+head = 118, count = 9 | 118 248 249 
+head = 190, count = 1 | 122 190 
+head = 194, count = 1 | 194 234 244 239 0 
+head = 239, count = 18 | 234 239 
+head = 244, count = 51 | 234 244 
+head = 117, count = 22 | 117 234 244 
+head = 234, count = 17 | 117 234 244 
+head = 239, count = 10 | 234 239 0 
+head = 234, count = 1 | 122 234 
+head = 249, count = 164 | 248 249 
+head = 234, count = 5 | 234 236 237 238 
+head = 238, count = 5 | 238 244 
+head = 244, count = 8 | 117 234 244 239 0 
+head = 0, count = 3 | 117 4 194 234 244 239 0 
+head = 0, count = 2 | 117 122 4 6 194 190 234 244 239 0 
+head = 244, count = 43 | 117 234 244 
+head = 234, count = 1 | 117 234 244 239 0 
+head = 0, count = 1 | 244 0 
+head = 0, count = 1 | 234 244 239 0 
+head = 121, count = 4 | 121 245 
+head = 118, count = 2 | 118 249 
+head = 249, count = 1 | 249 0 
+head = 119, count = 1 | 119 237 
+head = 234, count = 1 | 234 244 239 0 
+head = 0, count = 1 | 237 0 
+head = 4, count = 1 | 117 4 234 244 
+head = 0, count = 1 | 249 0 
+head = 239, count = 1 | 117 122 234 244 239 0 
+============================================================
+ReuseSegment - Thread 20
+head = 0, count = 2 | 5 0 
+head = 5, count = 2 | 5 4 
+head = 0, count = 14 | 4 0 
+head = 4, count = 3 | 4 6 
+head = 6, count = 3 | 6 0 
+head = 4, count = 3 | 4 0 
+head = 0, count = 1 | 191 0 
+head = 191, count = 1 | 191 194 
+head = 0, count = 8 | 194 0 
+head = 4, count = 21 | 4 194 
+head = 0, count = 6 | 4 194 0 
+head = 194, count = 2 | 194 190 
+head = 194, count = 3 | 194 0 
+head = 190, count = 2 | 190 0 
+head = 0, count = 10 | 121 0 
+head = 121, count = 10 | 121 117 
+head = 0, count = 52 | 117 0 
+head = 194, count = 20 | 194 117 
+head = 117, count = 20 | 117 122 
+head = 0, count = 10 | 119 0 
+head = 122, count = 20 | 122 0 
+head = 117, count = 26 | 117 0 
+head = 0, count = 10 | 245 0 
+head = 0, count = 77 | 234 0 
+head = 245, count = 10 | 245 234 
+head = 117, count = 185 | 117 234 
+head = 194, count = 9 | 194 234 
+head = 194, count = 1 | 194 117 234 0 
+head = 0, count = 2 | 4 194 117 0 
+head = 4, count = 4 | 4 194 117 
+head = 0, count = 2 | 4 6 194 190 117 122 0 
+head = 4, count = 11 | 4 194 117 234 
+head = 0, count = 20 | 4 194 117 234 0 
+head = 234, count = 9 | 234 0 
+head = 234, count = 1 | 234 236 237 238 
+head = 0, count = 1 | 237 244 0 
+head = 238, count = 1 | 238 244 
+head = 234, count = 36 | 234 244 
+head = 0, count = 4 | 4 194 117 234 244 0 
+head = 4, count = 11 | 4 194 117 234 244 
+head = 244, count = 14 | 244 239 
+head = 0, count = 82 | 239 0 
+head = 234, count = 146 | 234 239 
+head = 194, count = 1 | 194 234 244 0 
+head = 239, count = 10 | 239 328 
+head = 239, count = 103 | 239 0 
+head = 328, count = 10 | 328 0 
+head = 328, count = 10 | 239 328 
+head = 0, count = 1 | 234 239 0 
+head = 244, count = 1 | 244 0 
+head = 5, count = 1 | 5 191 121 245 
+head = 239, count = 66 | 117 239 
+head = 244, count = 10 | 117 244 
+head = 194, count = 3 | 194 117 234 244 
+head = 194, count = 1 | 194 117 234 
+head = 0, count = 1 | 4 6 194 190 117 122 244 239 0 
+head = 191, count = 1 | 191 119 237 
+head = 7, count = 1 | 7 119 118 
+head = 186, count = 2 | 186 118 
+head = 7, count = 2 | 7 118 
+head = 118, count = 2 | 118 248 249 
+head = 190, count = 3 | 190 122 
+head = 194, count = 1 | 194 190 122 234 
+head = 239, count = 18 | 234 239 
+head = 244, count = 11 | 234 244 
+head = 234, count = 1 | 117 234 244 
+head = 117, count = 1 | 117 234 244 
+head = 234, count = 100 | 117 234 
+head = 118, count = 2 | 119 118 
+============================================================
+ReuseSegment - Thread 21
+head = 0, count = 2 | 5 0 
+head = 5, count = 2 | 5 4 
+head = 0, count = 7 | 4 0 
+head = 4, count = 3 | 4 6 
+head = 6, count = 3 | 6 0 
+head = 4, count = 3 | 4 0 
+head = 0, count = 1 | 191 0 
+head = 191, count = 1 | 191 194 
+head = 0, count = 8 | 194 0 
+head = 4, count = 22 | 4 194 
+head = 4, count = 1 | 4 194 0 
+head = 194, count = 2 | 194 190 
+head = 194, count = 4 | 194 0 
+head = 190, count = 2 | 190 0 
+head = 0, count = 10 | 121 0 
+head = 121, count = 10 | 117 121 
+head = 0, count = 58 | 117 0 
+head = 194, count = 18 | 117 194 
+head = 4, count = 4 | 117 4 194 
+head = 117, count = 20 | 117 122 
+head = 0, count = 10 | 119 0 
+head = 122, count = 20 | 122 0 
+head = 117, count = 30 | 117 0 
+head = 0, count = 10 | 245 0 
+head = 0, count = 81 | 234 0 
+head = 245, count = 10 | 245 234 
+head = 117, count = 189 | 117 234 
+head = 194, count = 9 | 194 234 
+head = 194, count = 1 | 117 194 234 0 
+head = 0, count = 2 | 117 4 194 0 
+head = 4, count = 11 | 117 4 194 234 
+head = 0, count = 21 | 117 4 194 234 0 
+head = 0, count = 147 | 239 0 
+head = 234, count = 74 | 234 239 
+head = 0, count = 6 | 234 239 0 
+head = 239, count = 127 | 239 0 
+head = 0, count = 3 | 117 4 194 234 239 0 
+head = 234, count = 10 | 234 0 
+head = 5, count = 1 | 245 5 191 121 
+head = 239, count = 63 | 117 239 
+head = 234, count = 48 | 117 234 
+head = 7, count = 1 | 118 119 7 
+head = 186, count = 2 | 118 186 
+head = 7, count = 4 | 118 7 
+head = 194, count = 1 | 122 194 190 234 
+head = 239, count = 19 | 234 239 
+head = 239, count = 11 | 234 239 0 
+head = 234, count = 5 | 234 238 236 237 
+head = 0, count = 5 | 237 244 0 
+head = 238, count = 5 | 238 244 
+head = 234, count = 195 | 234 244 
+head = 194, count = 2 | 117 194 234 
+head = 0, count = 1 | 117 122 4 6 194 190 234 239 0 
+head = 244, count = 84 | 239 244 
+head = 0, count = 2 | 117 122 4 6 194 190 234 239 244 0 
+head = 244, count = 8 | 244 0 
+head = 0, count = 1 | 117 122 4 6 194 190 0 
+head = 4, count = 31 | 117 4 194 234 244 
+head = 244, count = 51 | 117 244 
+head = 117, count = 29 | 117 234 244 
+head = 118, count = 5 | 118 248 249 
+head = 244, count = 55 | 234 244 
+head = 249, count = 163 | 248 249 
+head = 248, count = 55 | 248 249 
+head = 0, count = 16 | 117 4 194 234 244 0 
+head = 234, count = 8 | 117 234 244 
+head = 0, count = 3 | 249 0 
+head = 234, count = 2 | 117 234 239 244 0 
+head = 0, count = 4 | 117 234 239 244 0 
+head = 194, count = 4 | 117 194 234 244 
+head = 191, count = 1 | 119 191 237 
+head = 118, count = 4 | 118 249 
+head = 190, count = 1 | 122 190 
+head = 194, count = 1 | 194 234 239 244 0 
+head = 121, count = 2 | 245 121 
+head = 244, count = 21 | 117 234 244 
+head = 0, count = 1 | 234 239 244 0 
+head = 118, count = 1 | 118 237 240 
+head = 234, count = 1 | 234 239 0 
+head = 118, count = 2 | 118 242 
+head = 0, count = 1 | 117 4 194 234 239 244 0 
+head = 239, count = 2 | 117 122 234 239 244 0 
+head = 117, count = 2 | 117 234 239 244 0 
+head = 118, count = 1 | 118 240 
+head = 118, count = 1 | 118 119 240 
+head = 242, count = 2 | 118 242 
+head = 0, count = 1 | 244 0 
+head = 234, count = 1 | 234 236 237 
+head = 0, count = 1 | 237 0 
+head = 4, count = 1 | 117 4 234 244 
+head = 119, count = 1 | 119 245 121 
+head = 4, count = 1 | 117 4 
+head = 119, count = 1 | 119 237 
+head = 234, count = 1 | 234 239 244 0 
+head = 242, count = 1 | 242 0 
+============================================================
+ReuseSegment - Thread 22
+head = 0, count = 1 | 5 0 
+head = 5, count = 1 | 5 4 
+head = 0, count = 4 | 4 0 
+head = 4, count = 3 | 4 6 
+head = 6, count = 3 | 6 0 
+head = 4, count = 2 | 4 0 
+head = 0, count = 1 | 191 0 
+head = 191, count = 1 | 194 191 
+head = 0, count = 7 | 194 0 
+head = 4, count = 22 | 194 4 
+head = 4, count = 1 | 194 4 0 
+head = 194, count = 2 | 194 190 
+head = 194, count = 3 | 194 0 
+head = 190, count = 2 | 190 0 
+head = 0, count = 10 | 121 0 
+head = 121, count = 10 | 121 117 
+head = 0, count = 50 | 117 0 
+head = 194, count = 19 | 194 117 
+head = 4, count = 6 | 194 4 117 
+head = 117, count = 21 | 122 117 
+head = 0, count = 10 | 119 0 
+head = 122, count = 20 | 122 0 
+head = 117, count = 20 | 117 0 
+head = 0, count = 10 | 245 0 
+head = 0, count = 71 | 234 0 
+head = 245, count = 10 | 245 234 
+head = 117, count = 200 | 117 234 
+head = 194, count = 9 | 194 234 
+head = 194, count = 1 | 194 117 234 0 
+head = 0, count = 1 | 194 4 117 0 
+head = 0, count = 24 | 194 4 117 234 0 
+head = 4, count = 13 | 194 4 117 234 
+head = 0, count = 1 | 194 234 0 
+head = 234, count = 10 | 234 0 
+head = 234, count = 7 | 234 236 237 238 
+head = 0, count = 7 | 237 244 0 
+head = 238, count = 7 | 238 244 
+head = 234, count = 236 | 234 244 
+head = 0, count = 24 | 194 4 117 234 244 0 
+head = 4, count = 39 | 194 4 117 234 244 
+head = 0, count = 124 | 239 0 
+head = 244, count = 96 | 244 239 
+head = 194, count = 1 | 194 234 244 0 
+head = 239, count = 3 | 239 328 
+head = 0, count = 5 | 234 239 0 
+head = 0, count = 1 | 194 122 4 6 190 117 244 239 0 
+head = 239, count = 109 | 239 0 
+head = 239, count = 9 | 239 328 0 
+head = 328, count = 10 | 239 328 
+head = 244, count = 9 | 244 0 
+head = 239, count = 70 | 117 239 
+head = 0, count = 1 | 194 122 4 6 190 117 0 
+head = 0, count = 4 | 194 4 117 234 244 239 0 
+head = 244, count = 52 | 117 244 
+head = 234, count = 41 | 117 234 
+head = 194, count = 5 | 194 117 234 244 
+head = 194, count = 1 | 194 117 234 
+head = 186, count = 2 | 118 186 
+head = 249, count = 205 | 248 249 
+head = 7, count = 4 | 118 7 
+head = 118, count = 9 | 118 248 249 
+head = 194, count = 1 | 194 122 190 234 
+head = 190, count = 5 | 122 190 
+head = 239, count = 20 | 234 239 
+head = 244, count = 66 | 234 244 
+head = 234, count = 13 | 117 234 244 
+head = 248, count = 63 | 248 249 
+head = 249, count = 3 | 249 0 
+head = 244, count = 6 | 117 234 244 239 0 
+head = 0, count = 3 | 234 244 239 0 
+head = 4, count = 1 | 4 117 234 244 
+head = 234, count = 1 | 117 234 244 239 0 
+head = 244, count = 49 | 117 234 244 
+head = 234, count = 55 | 234 239 
+head = 0, count = 3 | 234 244 0 
+head = 239, count = 12 | 234 239 0 
+head = 117, count = 35 | 117 234 244 
+head = 191, count = 1 | 119 191 237 
+head = 118, count = 2 | 118 249 
+head = 0, count = 2 | 194 122 4 6 190 117 234 244 239 0 
+head = 328, count = 1 | 328 0 
+head = 0, count = 1 | 194 117 234 244 239 0 
+head = 5, count = 1 | 5 191 121 245 
+head = 4, count = 4 | 4 117 
+head = 244, count = 2 | 234 244 239 0 
+head = 0, count = 1 | 244 0 
+head = 118, count = 1 | 118 119 
+head = 239, count = 1 | 117 234 239 0 
+head = 0, count = 1 | 122 117 234 244 239 0 
+head = 121, count = 1 | 121 245 
+============================================================
+ReuseSegment - Thread 23
+head = 0, count = 2 | 5 0 
+head = 5, count = 2 | 5 4 
+head = 0, count = 9 | 4 0 
+head = 4, count = 3 | 4 6 
+head = 6, count = 3 | 6 0 
+head = 4, count = 3 | 4 0 
+head = 0, count = 1 | 191 0 
+head = 191, count = 1 | 191 194 
+head = 0, count = 8 | 194 0 
+head = 4, count = 23 | 4 194 
+head = 194, count = 2 | 194 190 
+head = 194, count = 4 | 194 0 
+head = 190, count = 2 | 190 0 
+head = 0, count = 10 | 121 0 
+head = 121, count = 10 | 121 117 
+head = 0, count = 60 | 117 0 
+head = 194, count = 18 | 117 194 
+head = 117, count = 21 | 117 122 
+head = 0, count = 10 | 119 0 
+head = 122, count = 20 | 122 0 
+head = 117, count = 30 | 117 0 
+head = 0, count = 10 | 245 0 
+head = 0, count = 82 | 234 0 
+head = 245, count = 10 | 245 234 
+head = 117, count = 192 | 117 234 
+head = 194, count = 9 | 194 234 
+head = 194, count = 1 | 117 194 234 0 
+head = 4, count = 6 | 117 4 194 
+head = 0, count = 3 | 117 4 194 0 
+head = 4, count = 19 | 117 4 194 234 
+head = 0, count = 29 | 117 4 194 234 0 
+head = 0, count = 136 | 239 0 
+head = 234, count = 89 | 234 239 
+head = 239, count = 121 | 239 0 
+head = 234, count = 9 | 234 0 
+head = 239, count = 63 | 117 239 
+head = 234, count = 53 | 117 234 
+head = 186, count = 2 | 118 186 
+head = 194, count = 1 | 122 194 190 234 
+head = 190, count = 5 | 122 190 
+head = 239, count = 19 | 234 239 
+head = 239, count = 12 | 234 239 0 
+head = 234, count = 4 | 234 236 237 238 
+head = 0, count = 4 | 237 244 0 
+head = 238, count = 4 | 238 244 
+head = 234, count = 180 | 234 244 
+head = 234, count = 2 | 117 234 239 0 
+head = 0, count = 2 | 117 122 4 6 194 190 234 239 0 
+head = 0, count = 3 | 117 4 194 234 239 0 
+head = 194, count = 3 | 117 194 234 
+head = 0, count = 13 | 117 4 194 234 244 0 
+head = 4, count = 26 | 117 4 194 234 244 
+head = 244, count = 70 | 239 244 
+head = 0, count = 5 | 234 239 0 
+head = 244, count = 9 | 244 0 
+head = 0, count = 1 | 117 122 4 6 194 190 0 
+head = 194, count = 7 | 117 194 234 244 
+head = 244, count = 55 | 117 244 
+head = 117, count = 32 | 117 234 244 
+head = 191, count = 1 | 119 191 237 
+head = 7, count = 2 | 118 7 
+head = 118, count = 7 | 118 249 
+head = 118, count = 4 | 118 248 249 
+head = 194, count = 1 | 194 234 239 244 0 
+head = 234, count = 8 | 117 234 244 
+head = 244, count = 52 | 234 244 
+head = 249, count = 147 | 248 249 
+head = 248, count = 37 | 248 249 
+head = 118, count = 2 | 118 242 
+head = 0, count = 1 | 117 122 4 6 194 190 234 239 244 0 
+head = 244, count = 10 | 117 234 239 244 0 
+head = 234, count = 1 | 117 234 239 244 0 
+head = 244, count = 31 | 117 234 244 
+head = 0, count = 3 | 249 0 
+head = 0, count = 1 | 234 239 244 0 
+head = 5, count = 1 | 121 5 191 245 
+head = 4, count = 3 | 117 4 
+head = 0, count = 1 | 117 194 234 239 244 0 
+head = 242, count = 2 | 118 242 
+head = 0, count = 1 | 117 4 194 234 239 244 0 
+head = 4, count = 1 | 117 4 234 244 
+head = 118, count = 1 | 118 240 
+head = 234, count = 2 | 234 239 244 0 
+head = 0, count = 1 | 244 0 
+head = 0, count = 2 | 237 0 
+head = 234, count = 1 | 234 236 237 
+head = 239, count = 1 | 117 122 234 239 244 0 
+head = 0, count = 2 | 117 234 239 244 0 
+head = 237, count = 1 | 119 237 
+head = 118, count = 1 | 118 119 240 
+head = 7, count = 1 | 118 7 240 
+head = 7, count = 1 | 118 7 237 240 
+head = 242, count = 1 | 242 0 
+============================================================
+ReuseSegment - Thread 24
+head = 0, count = 2 | 5 0 
+head = 5, count = 2 | 5 4 
+head = 0, count = 9 | 4 0 
+head = 4, count = 3 | 4 6 
+head = 6, count = 3 | 6 0 
+head = 4, count = 3 | 4 0 
+head = 0, count = 1 | 191 0 
+head = 191, count = 1 | 194 191 
+head = 0, count = 8 | 194 0 
+head = 4, count = 20 | 4 194 
+head = 0, count = 3 | 4 194 0 
+head = 194, count = 2 | 194 190 
+head = 194, count = 3 | 194 0 
+head = 190, count = 2 | 190 0 
+head = 0, count = 10 | 121 0 
+head = 121, count = 10 | 117 121 
+head = 0, count = 50 | 117 0 
+head = 194, count = 19 | 194 117 
+head = 117, count = 20 | 117 122 
+head = 0, count = 10 | 119 0 
+head = 122, count = 20 | 122 0 
+head = 117, count = 27 | 117 0 
+head = 0, count = 10 | 245 0 
+head = 0, count = 78 | 234 0 
+head = 245, count = 10 | 245 234 
+head = 117, count = 183 | 117 234 
+head = 194, count = 9 | 194 234 
+head = 194, count = 1 | 194 117 234 0 
+head = 4, count = 3 | 4 194 117 
+head = 0, count = 1 | 4 194 117 0 
+head = 0, count = 12 | 4 194 117 234 0 
+head = 4, count = 5 | 4 194 117 234 
+head = 194, count = 1 | 194 190 122 234 
+head = 0, count = 1 | 194 234 0 
+head = 194, count = 2 | 194 117 234 
+head = 0, count = 83 | 239 0 
+head = 234, count = 160 | 234 239 
+head = 239, count = 10 | 239 328 
+head = 239, count = 103 | 239 0 
+head = 239, count = 10 | 239 328 0 
+head = 328, count = 10 | 239 328 
+head = 234, count = 9 | 234 0 
+head = 239, count = 72 | 117 239 
+head = 234, count = 108 | 117 234 
+head = 186, count = 2 | 186 118 
+head = 239, count = 18 | 234 239 
+head = 0, count = 1 | 4 6 194 117 190 122 234 239 0 
+============================================================
+ReuseSegment - Thread 25
+head = 0, count = 2 | 5 0 
+head = 5, count = 2 | 5 4 
+head = 0, count = 7 | 4 0 
+head = 4, count = 3 | 4 6 
+head = 6, count = 3 | 6 0 
+head = 4, count = 3 | 4 0 
+head = 0, count = 1 | 191 0 
+head = 191, count = 1 | 194 191 
+head = 0, count = 8 | 194 0 
+head = 4, count = 25 | 194 4 
+head = 4, count = 1 | 194 4 0 
+head = 194, count = 2 | 194 190 
+head = 194, count = 4 | 194 0 
+head = 190, count = 2 | 190 0 
+head = 0, count = 10 | 121 0 
+head = 121, count = 10 | 117 121 
+head = 0, count = 60 | 117 0 
+head = 194, count = 19 | 194 117 
+head = 117, count = 21 | 117 122 
+head = 0, count = 10 | 119 0 
+head = 122, count = 20 | 122 0 
+head = 117, count = 30 | 117 0 
+head = 0, count = 10 | 245 0 
+head = 0, count = 84 | 234 0 
+head = 245, count = 10 | 245 234 
+head = 117, count = 190 | 117 234 
+head = 194, count = 9 | 194 234 
+head = 194, count = 1 | 194 117 234 0 
+head = 4, count = 6 | 194 117 4 
+head = 0, count = 1 | 194 117 4 0 
+head = 0, count = 19 | 194 117 4 234 0 
+head = 4, count = 9 | 194 117 4 234 
+head = 234, count = 10 | 234 0 
+head = 234, count = 6 | 234 236 237 238 
+head = 0, count = 7 | 237 244 0 
+head = 238, count = 6 | 238 244 
+head = 234, count = 231 | 234 244 
+head = 0, count = 28 | 194 117 4 234 244 0 
+head = 4, count = 43 | 194 117 4 234 244 
+head = 0, count = 137 | 239 0 
+head = 244, count = 98 | 244 239 
+head = 234, count = 61 | 234 239 
+head = 239, count = 127 | 239 0 
+head = 239, count = 63 | 117 239 
+head = 0, count = 1 | 194 117 122 4 6 190 0 
+head = 0, count = 4 | 194 117 4 234 244 239 0 
+head = 244, count = 60 | 117 244 
+head = 234, count = 39 | 117 234 
+head = 194, count = 4 | 194 117 234 244 
+head = 194, count = 1 | 194 117 234 
+head = 186, count = 2 | 118 186 
+head = 7, count = 4 | 118 7 
+head = 118, count = 8 | 118 248 249 
+head = 194, count = 1 | 194 122 190 234 
+head = 190, count = 5 | 122 190 
+head = 0, count = 1 | 194 117 122 4 6 190 244 239 0 
+head = 194, count = 1 | 194 234 244 239 0 
+head = 239, count = 19 | 234 239 
+head = 244, count = 74 | 234 244 
+head = 249, count = 207 | 248 249 
+head = 248, count = 58 | 248 249 
+head = 244, count = 32 | 117 234 244 
+head = 244, count = 5 | 117 234 244 239 0 
+head = 0, count = 2 | 234 239 0 
+head = 239, count = 11 | 234 239 0 
+head = 0, count = 1 | 234 244 239 0 
+head = 244, count = 9 | 244 0 
+head = 5, count = 1 | 191 245 5 121 
+head = 4, count = 1 | 117 4 234 244 
+head = 117, count = 25 | 117 234 244 
+head = 118, count = 3 | 118 249 
+head = 234, count = 2 | 234 244 239 0 
+head = 234, count = 9 | 117 234 244 
+head = 0, count = 2 | 194 117 122 4 6 190 234 244 239 0 
+head = 191, count = 1 | 191 119 237 
+head = 234, count = 1 | 234 236 237 
+head = 234, count = 2 | 117 234 244 239 0 
+head = 0, count = 1 | 244 0 
+head = 249, count = 1 | 249 0 
+head = 0, count = 1 | 117 122 244 239 0 
+head = 117, count = 1 | 117 234 244 239 0 
+head = 242, count = 1 | 242 0 
+head = 7, count = 1 | 119 118 7 
+head = 0, count = 1 | 194 117 234 244 239 0 
+head = 0, count = 1 | 249 0 
+head = 239, count = 1 | 117 234 239 0 
+head = 121, count = 1 | 245 121 
+head = 119, count = 1 | 245 119 121 
+head = 4, count = 2 | 117 4 
+head = 237, count = 1 | 119 237 
+head = 0, count = 1 | 117 122 234 244 239 0 
+============================================================
+ReuseSegment - Thread 26
+head = 0, count = 1 | 5 0 
+head = 5, count = 1 | 5 4 
+head = 0, count = 6 | 4 0 
+head = 4, count = 3 | 4 6 
+head = 6, count = 3 | 6 0 
+head = 4, count = 2 | 4 0 
+head = 0, count = 1 | 191 0 
+head = 191, count = 1 | 191 194 
+head = 0, count = 7 | 194 0 
+head = 4, count = 22 | 4 194 
+head = 4, count = 1 | 4 194 0 
+head = 194, count = 2 | 194 190 
+head = 0, count = 1 | 4 194 0 
+head = 194, count = 3 | 194 0 
+head = 190, count = 2 | 190 0 
+head = 0, count = 10 | 121 0 
+head = 121, count = 10 | 117 121 
+head = 0, count = 50 | 117 0 
+head = 194, count = 20 | 117 194 
+head = 117, count = 22 | 117 122 
+head = 0, count = 10 | 119 0 
+head = 122, count = 20 | 122 0 
+head = 117, count = 20 | 117 0 
+head = 0, count = 10 | 245 0 
+head = 0, count = 71 | 234 0 
+head = 245, count = 10 | 245 234 
+head = 117, count = 199 | 117 234 
+head = 194, count = 9 | 194 234 
+head = 194, count = 1 | 117 194 234 0 
+head = 0, count = 1 | 117 4 194 0 
+head = 4, count = 7 | 117 4 194 
+head = 4, count = 12 | 117 4 194 234 
+head = 0, count = 28 | 117 4 194 234 0 
+head = 0, count = 135 | 239 0 
+head = 234, count = 73 | 234 239 
+head = 239, count = 10 | 239 328 
+head = 0, count = 6 | 234 239 0 
+head = 239, count = 105 | 239 0 
+head = 239, count = 10 | 239 328 0 
+head = 328, count = 10 | 239 328 
+head = 234, count = 10 | 234 0 
+head = 239, count = 72 | 117 239 
+head = 234, count = 46 | 117 234 
+head = 186, count = 2 | 118 186 
+head = 7, count = 3 | 118 7 
+head = 194, count = 1 | 122 194 190 234 
+head = 239, count = 19 | 234 239 
+head = 234, count = 5 | 234 236 237 238 
+head = 0, count = 6 | 237 244 0 
+head = 238, count = 5 | 238 244 
+head = 234, count = 193 | 234 244 
+head = 0, count = 2 | 117 4 194 234 239 0 
+head = 234, count = 9 | 117 234 244 
+head = 0, count = 1 | 117 122 4 6 194 190 234 239 0 
+head = 244, count = 84 | 239 244 
+head = 244, count = 8 | 244 0 
+head = 0, count = 1 | 117 122 4 6 194 190 0 
+head = 244, count = 63 | 117 244 
+head = 4, count = 19 | 117 4 194 234 244 
+head = 0, count = 12 | 117 4 194 234 244 0 
+head = 191, count = 1 | 119 191 237 
+head = 118, count = 2 | 119 118 
+head = 118, count = 6 | 118 249 
+head = 118, count = 4 | 118 248 249 
+head = 190, count = 1 | 122 190 
+head = 0, count = 3 | 117 234 239 244 0 
+head = 239, count = 4 | 234 239 0 
+head = 244, count = 54 | 234 244 
+head = 249, count = 153 | 248 249 
+head = 248, count = 56 | 248 249 
+head = 244, count = 25 | 117 234 244 
+head = 239, count = 1 | 117 122 234 239 0 
+head = 117, count = 22 | 117 234 244 
+head = 234, count = 1 | 234 236 237 
+head = 0, count = 2 | 117 4 194 234 239 244 0 
+head = 234, count = 2 | 117 234 239 244 0 
+head = 194, count = 4 | 117 194 234 244 
+head = 239, count = 1 | 117 122 239 0 
+head = 249, count = 2 | 249 0 
+head = 194, count = 1 | 117 194 234 
+head = 118, count = 1 | 119 118 240 
+head = 194, count = 1 | 194 234 239 244 0 
+head = 0, count = 4 | 244 0 
+head = 0, count = 1 | 249 0 
+head = 0, count = 1 | 234 239 244 0 
+head = 119, count = 1 | 119 121 245 
+head = 4, count = 1 | 117 4 234 244 
+head = 4, count = 1 | 117 4 
+head = 119, count = 1 | 119 237 
+head = 118, count = 2 | 118 242 
+head = 118, count = 1 | 118 240 
+head = 244, count = 2 | 117 234 239 244 0 
+head = 239, count = 1 | 117 122 234 239 244 0 
+head = 5, count = 1 | 5 191 121 245 
+head = 7, count = 1 | 118 7 240 
+head = 242, count = 2 | 118 242 
+head = 242, count = 1 | 242 0 
+============================================================
+ReuseSegment - Thread 27
+head = 0, count = 2 | 5 0 
+head = 5, count = 2 | 5 4 
+head = 0, count = 6 | 4 0 
+head = 4, count = 3 | 4 6 
+head = 6, count = 3 | 6 0 
+head = 4, count = 3 | 4 0 
+head = 0, count = 1 | 191 0 
+head = 191, count = 1 | 191 194 
+head = 0, count = 8 | 194 0 
+head = 4, count = 21 | 4 194 
+head = 4, count = 1 | 4 194 0 
+head = 194, count = 2 | 194 190 
+head = 194, count = 3 | 194 0 
+head = 190, count = 2 | 190 0 
+head = 0, count = 10 | 121 0 
+head = 121, count = 10 | 117 121 
+head = 0, count = 60 | 117 0 
+head = 194, count = 18 | 117 194 
+head = 117, count = 22 | 117 122 
+head = 0, count = 10 | 119 0 
+head = 122, count = 20 | 122 0 
+head = 117, count = 30 | 117 0 
+head = 0, count = 10 | 245 0 
+head = 0, count = 82 | 234 0 
+head = 245, count = 10 | 234 245 
+head = 117, count = 197 | 117 234 
+head = 194, count = 8 | 234 194 
+head = 194, count = 1 | 117 234 194 0 
+head = 4, count = 4 | 117 4 194 
+head = 0, count = 1 | 117 4 194 0 
+head = 0, count = 24 | 117 234 4 194 0 
+head = 4, count = 17 | 117 234 4 194 
+head = 194, count = 1 | 122 234 194 190 
+head = 0, count = 1 | 234 194 0 
+head = 0, count = 133 | 239 0 
+head = 234, count = 76 | 234 239 
+head = 239, count = 120 | 239 0 
+head = 234, count = 10 | 234 0 
+head = 239, count = 63 | 117 239 
+head = 234, count = 48 | 117 234 
+head = 186, count = 2 | 118 186 
+head = 190, count = 4 | 122 190 
+head = 239, count = 11 | 234 239 
+head = 239, count = 12 | 234 239 0 
+head = 234, count = 5 | 234 238 236 237 
+head = 0, count = 5 | 237 244 0 
+head = 238, count = 5 | 238 244 
+head = 234, count = 203 | 234 244 
+head = 0, count = 2 | 117 234 4 194 239 0 
+head = 0, count = 21 | 117 234 4 194 244 0 
+head = 194, count = 1 | 234 194 239 0 
+head = 4, count = 37 | 117 234 4 194 244 
+head = 244, count = 81 | 239 244 
+head = 0, count = 3 | 234 239 0 
+head = 244, count = 6 | 244 0 
+head = 5, count = 1 | 5 191 121 245 
+head = 0, count = 1 | 117 122 4 6 194 190 0 
+head = 244, count = 42 | 117 244 
+head = 117, count = 36 | 117 234 244 
+head = 194, count = 1 | 117 234 194 
+head = 249, count = 179 | 248 249 
+head = 118, count = 7 | 118 248 249 
+head = 244, count = 55 | 234 244 
+head = 234, count = 11 | 117 234 244 
+head = 234, count = 1 | 122 234 
+head = 248, count = 41 | 248 249 
+head = 234, count = 1 | 234 236 237 
+head = 0, count = 4 | 117 234 4 194 239 244 0 
+head = 0, count = 3 | 117 122 234 4 6 194 190 239 244 0 
+head = 0, count = 1 | 234 239 244 0 
+head = 4, count = 1 | 117 234 4 244 
+head = 244, count = 34 | 117 234 244 
+head = 239, count = 1 | 234 239 244 0 
+head = 0, count = 1 | 237 0 
+head = 234, count = 1 | 117 234 239 244 0 
+head = 4, count = 1 | 117 4 
+head = 191, count = 1 | 191 119 237 
+head = 118, count = 5 | 118 249 
+head = 0, count = 1 | 249 0 
+head = 121, count = 1 | 121 245 
+head = 194, count = 2 | 117 234 194 244 
+head = 7, count = 3 | 118 7 
+head = 234, count = 2 | 234 239 244 0 
+head = 0, count = 1 | 244 0 
+head = 244, count = 2 | 117 234 239 244 0 
+head = 244, count = 1 | 234 239 244 0 
+head = 119, count = 1 | 119 121 245 
+head = 239, count = 1 | 117 234 239 0 
+============================================================
+ReuseSegment - Thread 28
+head = 0, count = 2 | 5 0 
+head = 5, count = 2 | 4 5 
+head = 0, count = 13 | 4 0 
+head = 4, count = 3 | 4 6 
+head = 6, count = 3 | 6 0 
+head = 4, count = 3 | 4 0 
+head = 0, count = 1 | 191 0 
+head = 191, count = 1 | 191 194 
+head = 0, count = 8 | 194 0 
+head = 4, count = 23 | 4 194 
+head = 0, count = 4 | 4 194 0 
+head = 194, count = 2 | 194 190 
+head = 194, count = 3 | 194 0 
+head = 190, count = 2 | 190 0 
+head = 0, count = 10 | 121 0 
+head = 121, count = 10 | 121 117 
+head = 0, count = 50 | 117 0 
+head = 194, count = 20 | 194 117 
+head = 117, count = 20 | 117 122 
+head = 0, count = 10 | 119 0 
+head = 122, count = 20 | 122 0 
+head = 117, count = 27 | 117 0 
+head = 0, count = 10 | 245 0 
+head = 0, count = 79 | 234 0 
+head = 245, count = 10 | 245 234 
+head = 117, count = 185 | 117 234 
+head = 194, count = 9 | 194 234 
+head = 0, count = 1 | 117 234 0 
+head = 4, count = 5 | 4 194 117 
+head = 0, count = 1 | 4 194 117 0 
+head = 0, count = 17 | 4 194 117 234 0 
+head = 4, count = 11 | 4 194 117 234 
+head = 234, count = 9 | 234 0 
+head = 234, count = 1 | 234 236 237 238 
+head = 0, count = 1 | 237 244 0 
+head = 238, count = 1 | 238 244 
+head = 234, count = 32 | 234 244 
+head = 0, count = 6 | 4 194 117 234 244 0 
+head = 0, count = 2 | 4 6 194 190 117 122 0 
+head = 0, count = 91 | 239 0 
+head = 244, count = 11 | 244 239 
+head = 234, count = 145 | 234 239 
+head = 239, count = 10 | 239 328 
+head = 0, count = 2 | 234 239 0 
+head = 239, count = 112 | 239 0 
+head = 239, count = 10 | 239 328 0 
+head = 328, count = 10 | 239 328 
+head = 0, count = 1 | 4 194 117 234 244 239 0 
+head = 244, count = 1 | 244 0 
+head = 239, count = 72 | 117 239 
+head = 4, count = 6 | 4 194 117 234 244 
+head = 244, count = 6 | 117 244 
+head = 117, count = 1 | 117 234 244 
+head = 234, count = 89 | 117 234 
+head = 194, count = 2 | 194 117 234 244 
+head = 194, count = 1 | 194 117 234 
+head = 191, count = 1 | 191 119 237 
+head = 186, count = 2 | 186 118 
+head = 118, count = 3 | 118 249 248 
+head = 7, count = 3 | 7 118 
+head = 190, count = 1 | 190 122 
+head = 194, count = 1 | 194 190 122 234 
+head = 194, count = 1 | 194 234 244 239 0 
+head = 239, count = 18 | 234 239 
+head = 244, count = 7 | 234 244 
+head = 234, count = 2 | 117 234 244 
+============================================================
+ReuseSegment - Thread 29
+head = 0, count = 2 | 5 0 
+head = 5, count = 2 | 5 4 
+head = 0, count = 8 | 4 0 
+head = 4, count = 3 | 4 6 
+head = 6, count = 3 | 6 0 
+head = 4, count = 3 | 4 0 
+head = 0, count = 1 | 191 0 
+head = 191, count = 1 | 191 194 
+head = 0, count = 8 | 194 0 
+head = 4, count = 21 | 4 194 
+head = 4, count = 1 | 4 194 0 
+head = 0, count = 2 | 4 194 0 
+head = 194, count = 2 | 194 190 
+head = 194, count = 4 | 194 0 
+head = 190, count = 2 | 190 0 
+head = 0, count = 10 | 121 0 
+head = 121, count = 10 | 121 117 
+head = 0, count = 60 | 117 0 
+head = 194, count = 17 | 194 117 
+head = 117, count = 20 | 122 117 
+head = 0, count = 10 | 119 0 
+head = 122, count = 20 | 122 0 
+head = 117, count = 30 | 117 0 
+head = 0, count = 10 | 245 0 
+head = 0, count = 83 | 234 0 
+head = 245, count = 10 | 245 234 
+head = 117, count = 187 | 117 234 
+head = 194, count = 8 | 194 234 
+head = 194, count = 1 | 194 117 234 0 
+head = 0, count = 1 | 4 194 117 0 
+head = 4, count = 5 | 4 194 117 
+head = 194, count = 1 | 122 194 190 234 
+head = 4, count = 14 | 4 194 117 234 
+head = 0, count = 24 | 4 194 117 234 0 
+head = 0, count = 159 | 239 0 
+head = 234, count = 76 | 234 239 
+head = 239, count = 120 | 239 0 
+head = 234, count = 9 | 234 0 
+head = 5, count = 1 | 245 5 191 121 
+head = 239, count = 62 | 117 239 
+head = 234, count = 35 | 117 234 
+head = 186, count = 2 | 118 186 
+head = 190, count = 4 | 122 190 
+head = 239, count = 20 | 234 239 
+head = 234, count = 5 | 234 236 237 238 
+head = 0, count = 5 | 237 244 0 
+head = 238, count = 5 | 238 244 
+head = 234, count = 213 | 234 244 
+head = 0, count = 1 | 4 194 117 234 239 0 
+head = 234, count = 1 | 117 234 239 0 
+head = 117, count = 33 | 117 234 244 
+head = 244, count = 82 | 239 244 
+head = 239, count = 12 | 234 239 0 
+head = 244, count = 8 | 244 0 
+head = 0, count = 1 | 122 4 6 194 190 117 0 
+head = 244, count = 52 | 117 244 
+head = 4, count = 27 | 4 194 117 234 244 
+head = 194, count = 4 | 194 117 234 244 
+head = 194, count = 1 | 194 117 234 
+head = 7, count = 4 | 118 7 
+head = 118, count = 5 | 118 249 
+head = 194, count = 1 | 194 234 239 244 0 
+head = 0, count = 2 | 234 239 0 
+head = 244, count = 70 | 234 244 
+head = 121, count = 3 | 245 121 
+head = 249, count = 181 | 248 249 
+head = 248, count = 52 | 248 249 
+head = 0, count = 3 | 122 4 6 194 190 117 234 239 244 0 
+head = 244, count = 12 | 117 234 244 
+head = 249, count = 2 | 249 0 
+head = 118, count = 6 | 118 248 249 
+head = 234, count = 1 | 122 234 
+head = 234, count = 1 | 234 236 237 
+head = 0, count = 1 | 237 0 
+head = 0, count = 4 | 4 194 117 234 239 244 0 
+head = 0, count = 14 | 4 194 117 234 244 0 
+head = 234, count = 6 | 117 234 244 
+head = 0, count = 2 | 234 239 244 0 
+head = 191, count = 1 | 119 191 237 
+head = 7, count = 1 | 118 119 7 
+head = 234, count = 2 | 234 239 0 
+head = 234, count = 2 | 234 239 244 0 
+head = 0, count = 2 | 244 0 
+head = 4, count = 1 | 4 117 234 244 
+head = 239, count = 1 | 117 234 239 0 
+head = 244, count = 2 | 117 234 239 244 0 
+head = 0, count = 1 | 122 0 
+head = 242, count = 1 | 242 0 
+head = 194, count = 1 | 194 117 234 239 244 0 
+head = 239, count = 1 | 122 117 234 239 244 0 
+head = 117, count = 1 | 117 234 239 244 0 
+head = 4, count = 1 | 4 117 
+head = 0, count = 1 | 194 117 234 239 244 0 
+============================================================
+ReuseSegment - Thread 30
+head = 0, count = 1 | 5 0 
+head = 5, count = 1 | 5 4 
+head = 0, count = 5 | 4 0 
+head = 4, count = 3 | 4 6 
+head = 6, count = 3 | 6 0 
+head = 4, count = 2 | 4 0 
+head = 0, count = 1 | 191 0 
+head = 191, count = 1 | 191 194 
+head = 0, count = 8 | 194 0 
+head = 4, count = 23 | 4 194 
+head = 4, count = 1 | 4 194 0 
+head = 194, count = 2 | 194 190 
+head = 194, count = 3 | 194 0 
+head = 190, count = 2 | 190 0 
+head = 0, count = 10 | 121 0 
+head = 121, count = 10 | 117 121 
+head = 0, count = 50 | 117 0 
+head = 194, count = 19 | 117 194 
+head = 117, count = 21 | 117 122 
+head = 0, count = 10 | 119 0 
+head = 122, count = 20 | 122 0 
+head = 117, count = 20 | 117 0 
+head = 0, count = 10 | 245 0 
+head = 0, count = 72 | 234 0 
+head = 245, count = 10 | 245 234 
+head = 117, count = 208 | 117 234 
+head = 194, count = 9 | 194 234 
+head = 194, count = 1 | 117 194 234 0 
+head = 4, count = 5 | 117 4 194 
+head = 0, count = 1 | 117 4 194 0 
+head = 0, count = 28 | 117 4 194 234 0 
+head = 4, count = 18 | 117 4 194 234 
+head = 0, count = 134 | 239 0 
+head = 234, count = 60 | 234 239 
+head = 239, count = 8 | 239 328 
+head = 239, count = 107 | 239 0 
+head = 239, count = 9 | 239 328 0 
+head = 328, count = 10 | 239 328 
+head = 234, count = 10 | 234 0 
+head = 239, count = 77 | 117 239 
+head = 0, count = 2 | 117 4 194 234 239 0 
+head = 234, count = 25 | 117 234 
+head = 186, count = 2 | 118 186 
+head = 0, count = 1 | 122 0 
+head = 7, count = 1 | 118 7 
+head = 194, count = 1 | 122 194 190 234 239 
+head = 239, count = 25 | 234 239 
+head = 194, count = 2 | 117 194 234 
+head = 118, count = 2 | 118 242 
+head = 234, count = 8 | 234 236 237 238 
+head = 0, count = 7 | 237 244 0 
+head = 238, count = 8 | 238 244 
+head = 234, count = 275 | 234 244 
+head = 0, count = 1 | 117 122 4 6 194 190 234 239 0 
+head = 194, count = 6 | 117 194 234 244 
+head = 244, count = 112 | 239 244 
+head = 0, count = 2 | 234 239 0 
+head = 239, count = 11 | 234 239 0 
+head = 244, count = 9 | 244 0 
+head = 0, count = 1 | 117 122 4 6 194 190 0 
+head = 244, count = 67 | 117 244 
+head = 117, count = 40 | 117 234 244 
+head = 0, count = 17 | 117 4 194 234 244 0 
+head = 4, count = 25 | 117 4 194 234 244 
+head = 191, count = 1 | 191 119 237 
+head = 7, count = 3 | 118 7 240 
+head = 118, count = 11 | 118 249 248 
+head = 190, count = 2 | 122 190 
+head = 194, count = 1 | 194 234 239 244 0 
+head = 244, count = 75 | 234 244 
+head = 248, count = 94 | 249 248 
+head = 249, count = 209 | 249 248 
+head = 0, count = 2 | 117 122 4 6 194 190 234 239 244 0 
+head = 0, count = 3 | 117 4 194 234 239 244 0 
+head = 4, count = 1 | 117 4 
+head = 118, count = 1 | 119 118 237 240 
+head = 242, count = 2 | 118 242 
+head = 118, count = 3 | 118 249 
+head = 0, count = 2 | 244 0 
+head = 234, count = 8 | 117 234 244 
+head = 244, count = 21 | 117 234 244 
+head = 249, count = 1 | 249 0 
+head = 117, count = 1 | 117 234 239 244 0 
+head = 234, count = 1 | 117 234 239 244 0 
+head = 239, count = 3 | 117 234 239 244 0 
+head = 328, count = 1 | 328 0 
+head = 119, count = 1 | 119 245 121 
+head = 237, count = 1 | 119 237 
+head = 118, count = 1 | 118 240 
+head = 0, count = 1 | 234 239 244 0 
+head = 5, count = 1 | 191 5 245 121 
+head = 4, count = 1 | 117 4 234 244 
+head = 234, count = 1 | 234 239 244 0 
+head = 239, count = 1 | 117 122 234 239 244 0 
+head = 239, count = 1 | 117 234 239 0 
+head = 0, count = 1 | 117 194 234 239 244 0 
+head = 0, count = 1 | 237 0 
+head = 239, count = 1 | 234 239 244 0 
+============================================================
+ReuseSegment - Thread 31
+head = 0, count = 2 | 5 0 
+head = 5, count = 2 | 5 4 
+head = 0, count = 16 | 4 0 
+head = 4, count = 3 | 4 6 
+head = 6, count = 3 | 6 0 
+head = 4, count = 15 | 4 0 
+head = 0, count = 1 | 191 0 
+head = 191, count = 1 | 194 191 
+head = 0, count = 27 | 194 0 
+head = 4, count = 10 | 4 194 
+head = 0, count = 3 | 4 194 0 
+head = 194, count = 2 | 194 190 
+head = 194, count = 4 | 194 0 
+head = 190, count = 2 | 190 0 
+head = 0, count = 10 | 121 0 
+head = 121, count = 10 | 117 121 
+head = 0, count = 59 | 117 0 
+head = 194, count = 16 | 117 194 
+head = 117, count = 20 | 117 122 
+head = 0, count = 10 | 119 0 
+head = 122, count = 20 | 122 0 
+head = 117, count = 30 | 117 0 
+head = 0, count = 10 | 245 0 
+head = 0, count = 81 | 234 0 
+head = 245, count = 10 | 245 234 
+head = 117, count = 182 | 117 234 
+head = 194, count = 10 | 194 234 
+head = 194, count = 1 | 117 194 234 0 
+head = 0, count = 2 | 117 4 194 0 
+head = 0, count = 30 | 117 4 194 234 0 
+head = 4, count = 5 | 117 4 194 234 
+head = 234, count = 10 | 234 0 
+head = 234, count = 7 | 234 236 237 238 
+head = 0, count = 8 | 237 244 0 
+head = 238, count = 7 | 238 244 
+head = 234, count = 265 | 234 244 
+head = 0, count = 1 | 117 122 4 6 194 190 234 0 
+head = 194, count = 2 | 117 194 234 
+head = 0, count = 20 | 117 4 194 234 244 0 
+head = 244, count = 112 | 244 239 
+head = 0, count = 3 | 117 4 194 234 244 239 0 
+head = 234, count = 47 | 234 239 
+head = 194, count = 1 | 194 234 244 0 
+head = 0, count = 118 | 239 0 
+head = 0, count = 1 | 117 122 4 6 194 190 244 239 0 
+head = 239, count = 114 | 239 0 
+head = 244, count = 10 | 244 0 
+head = 5, count = 1 | 5 191 121 245 
+head = 239, count = 54 | 117 239 
+head = 0, count = 1 | 117 122 4 6 194 190 0 
+head = 244, count = 72 | 117 244 
+head = 234, count = 29 | 117 234 
+head = 4, count = 2 | 117 4 194 
+head = 117, count = 14 | 117 234 244 
+head = 4, count = 14 | 117 4 194 234 244 
+head = 194, count = 10 | 117 194 234 244 
+head = 186, count = 2 | 118 186 
+head = 248, count = 74 | 248 249 
+head = 7, count = 4 | 118 7 
+head = 118, count = 14 | 118 249 
+head = 190, count = 2 | 122 190 
+head = 194, count = 1 | 122 194 190 234 
+head = 239, count = 19 | 234 239 
+head = 244, count = 82 | 234 244 
+head = 249, count = 222 | 248 249 
+head = 234, count = 1 | 234 236 237 
+head = 0, count = 2 | 244 0 
+head = 0, count = 3 | 234 239 0 
+head = 239, count = 9 | 234 239 0 
+head = 191, count = 1 | 119 191 237 
+head = 234, count = 12 | 117 234 244 
+head = 244, count = 41 | 117 234 244 
+head = 249, count = 2 | 249 0 
+head = 239, count = 5 | 117 234 244 239 0 
+head = 0, count = 2 | 117 122 234 244 239 0 
+head = 121, count = 1 | 121 245 
+head = 0, count = 1 | 117 122 4 6 194 190 234 244 239 0 
+head = 0, count = 1 | 117 4 194 234 239 0 
+head = 0, count = 2 | 234 244 239 0 
+head = 4, count = 1 | 117 4 234 244 
+head = 244, count = 1 | 117 234 244 239 0 
+============================================================
+BBLSwitchCount - Thread 0
+from = 0 | 179:1 1:1 
+from = 179 | 0:1 
+from = 1 | 0:1 281:1 339:1 330:1 337:1 347:1 329:1 86:1 82:1 89:1 80:1 99:1 40:1 61:1 47:1 46:1 59:1 53:1 301:12 286:12 318:12 321:12 309:12 300:12 302:12 311:12 296:5 228:5 224:5 221:5 231:5 223:5 222:5 220:5 229:5 232:5 295:5 293:12 31:1 44:1 65:1 42:1 54:1 27:1 299:8 317:8 292:8 285:8 303:8 287:8 290:8 288:8 289:8 297:8 316:8 284:8 225:15 230:15 227:15 226:4 52:1 48:1 38:1 25:1 50:1 49:1 314:8 310:8 298:8 313:8 308:8 315:8 307:8 291:8 294:8 305:8 306:8 304:8 51:1 56:1 45:1 28:1 33:1 55:1 320:7 319:7 312:7 43:1 35:1 30:1 58:1 37:1 64:1 62:1 26:1 39:1 32:1 66:1 36:1 168:4 170:4 169:4 171:4 41:1 29:1 60:1 63:1 57:1 34:1 73:1 76:1 72:1 100:1 87:1 77:1 74:1 90:1 79:1 103:1 104:1 88:1 92:1 91:1 85:1 78:1 84:1 83:1 94:1 102:1 96:1 105:1 81:1 97:1 75:1 98:1 95:1 93:1 101:1 349:1 331:1 332:1 341:1 344:1 340:1 343:1 338:1 335:1 345:1 334:1 336:1 342:1 333:1 346:1 348:1 271:1 279:1 181:1 182:1 185:2 184:1 183:1 180:1 250:1 266:1 132:1 148:1 146:1 155:1 152:1 159:1 138:1 145:1 137:1 135:1 153:1 158:1 126:1 125:1 157:1 129:1 144:1 150:1 123:1 147:1 139:1 130:1 134:1 143:1 108:1 112:1 110:1 109:1 106:1 107:1 111:1 156:1 124:1 154:1 141:1 199:1 210:1 198:1 203:1 206:1 219:1 197:1 213:1 200:1 209:1 207:1 204:1 5:1 4:1 2:1 7:33 6:1 3:1 215:1 212:1 218:1 202:1 174:2 175:2 178:2 173:2 172:2 176:2 177:2 214:1 217:1 211:1 208:1 201:1 205:1 216:1 131:1 136:1 142:1 151:1 149:1 140:1 133:1 128:1 127:1 255:1 323:1 324:1 326:1 325:1 322:1 327:1 270:1 273:1 259:1 164:1 191:1 194:1 189:1 187:1 193:1 195:1 186:2 192:1 196:1 190:1 188:1 160:1 165:1 162:1 167:10 161:1 166:1 163:1 267:1 257:1 275:1 283:1 265:1 262:1 278:1 268:1 269:1 251:1 261:1 276:1 277:1 258:1 256:1 260:12 252:12 264:12 254:1 263:1 253:1 274:1 272:1 280:1 282:1 
+from = 281 | 1:1 
+from = 339 | 1:1 
+from = 330 | 1:1 
+from = 337 | 1:1 
+from = 347 | 1:1 
+from = 329 | 1:1 
+from = 86 | 1:1 
+from = 82 | 1:1 
+from = 89 | 1:1 
+from = 80 | 1:1 
+from = 99 | 1:1 
+from = 40 | 1:1 
+from = 61 | 1:1 
+from = 47 | 1:1 
+from = 46 | 1:1 
+from = 59 | 1:1 
+from = 53 | 1:1 
+from = 301 | 1:12 
+from = 286 | 1:12 
+from = 318 | 1:12 
+from = 321 | 1:12 
+from = 309 | 1:12 
+from = 300 | 1:12 
+from = 302 | 1:12 
+from = 311 | 1:12 
+from = 296 | 1:5 
+from = 228 | 1:5 
+from = 224 | 1:5 
+from = 221 | 1:5 
+from = 231 | 1:5 
+from = 223 | 1:5 
+from = 222 | 1:5 
+from = 220 | 1:5 
+from = 229 | 1:5 
+from = 232 | 1:5 
+from = 295 | 1:5 
+from = 293 | 1:12 
+from = 31 | 1:1 
+from = 44 | 1:1 
+from = 65 | 1:1 
+from = 42 | 1:1 
+from = 54 | 1:1 
+from = 27 | 1:1 
+from = 299 | 1:8 71:8 70:8 67:8 69:8 68:8 
+from = 71 | 299:8 314:8 
+from = 70 | 299:8 314:8 
+from = 67 | 299:8 314:8 
+from = 69 | 299:8 314:8 
+from = 68 | 299:8 314:8 
+from = 317 | 1:8 
+from = 292 | 1:8 
+from = 285 | 1:8 
+from = 303 | 1:8 
+from = 287 | 1:8 
+from = 290 | 1:8 
+from = 288 | 1:8 
+from = 289 | 1:8 
+from = 297 | 1:8 
+from = 316 | 1:8 
+from = 284 | 1:8 
+from = 225 | 1:15 
+from = 230 | 1:15 
+from = 227 | 1:15 
+from = 226 | 1:4 
+from = 52 | 1:1 
+from = 48 | 1:1 
+from = 38 | 1:1 
+from = 25 | 1:1 
+from = 50 | 1:1 
+from = 49 | 1:1 
+from = 314 | 1:8 71:8 70:8 67:8 69:8 68:8 
+from = 310 | 1:8 
+from = 298 | 1:8 
+from = 313 | 1:8 
+from = 308 | 1:8 
+from = 315 | 1:8 
+from = 307 | 1:8 
+from = 291 | 1:8 
+from = 294 | 1:8 
+from = 305 | 1:8 
+from = 306 | 1:8 
+from = 304 | 1:8 
+from = 51 | 1:1 
+from = 56 | 1:1 
+from = 45 | 1:1 
+from = 28 | 1:1 
+from = 33 | 1:1 
+from = 55 | 1:1 
+from = 320 | 1:7 
+from = 319 | 1:7 
+from = 312 | 1:7 
+from = 43 | 1:1 
+from = 35 | 1:1 
+from = 30 | 1:1 
+from = 58 | 1:1 
+from = 37 | 1:1 
+from = 64 | 1:1 
+from = 62 | 1:1 
+from = 26 | 1:1 
+from = 39 | 1:1 
+from = 32 | 1:1 
+from = 66 | 1:1 
+from = 36 | 1:1 
+from = 168 | 1:4 
+from = 170 | 1:4 
+from = 169 | 1:4 
+from = 171 | 1:4 
+from = 41 | 1:1 
+from = 29 | 1:1 
+from = 60 | 1:1 
+from = 63 | 1:1 
+from = 57 | 1:1 
+from = 34 | 1:1 
+from = 73 | 1:1 
+from = 76 | 1:1 
+from = 72 | 1:1 
+from = 100 | 1:1 
+from = 87 | 1:1 
+from = 77 | 1:1 
+from = 74 | 1:1 
+from = 90 | 1:1 
+from = 79 | 1:1 
+from = 103 | 1:1 
+from = 104 | 1:1 
+from = 88 | 1:1 
+from = 92 | 1:1 
+from = 91 | 1:1 
+from = 85 | 1:1 
+from = 78 | 1:1 
+from = 84 | 1:1 
+from = 83 | 1:1 
+from = 94 | 1:1 
+from = 102 | 1:1 
+from = 96 | 1:1 
+from = 105 | 1:1 
+from = 81 | 1:1 
+from = 97 | 1:1 
+from = 75 | 1:1 
+from = 98 | 1:1 
+from = 95 | 1:1 
+from = 93 | 1:1 
+from = 101 | 1:1 
+from = 349 | 1:1 
+from = 331 | 1:1 
+from = 332 | 1:1 
+from = 341 | 1:1 
+from = 344 | 1:1 
+from = 340 | 1:1 
+from = 343 | 1:1 
+from = 338 | 1:1 
+from = 335 | 1:1 
+from = 345 | 1:1 
+from = 334 | 1:1 
+from = 336 | 1:1 
+from = 342 | 1:1 
+from = 333 | 1:1 
+from = 346 | 1:1 
+from = 348 | 1:1 
+from = 271 | 1:1 
+from = 279 | 1:1 
+from = 181 | 1:1 
+from = 182 | 1:1 
+from = 185 | 1:2 22:2 24:2 23:2 
+from = 22 | 185:2 
+from = 24 | 185:2 116:2 115:1 113:2 114:1 
+from = 116 | 24:2 
+from = 115 | 24:1 15:1 9:1 12:1 8:1 17:1 18:1 14:1 19:1 13:1 10:1 21:1 16:1 20:1 11:1 
+from = 15 | 115:1 
+from = 9 | 115:1 
+from = 12 | 115:1 
+from = 8 | 115:1 
+from = 17 | 115:1 
+from = 18 | 115:1 
+from = 14 | 115:1 
+from = 19 | 115:1 
+from = 13 | 115:1 
+from = 10 | 115:1 
+from = 21 | 115:1 
+from = 16 | 115:1 
+from = 20 | 115:1 
+from = 11 | 115:1 
+from = 113 | 24:2 
+from = 23 | 185:2 
+from = 114 | 24:1 
+from = 184 | 1:1 
+from = 183 | 1:1 
+from = 180 | 1:1 
+from = 250 | 1:1 
+from = 266 | 1:1 
+from = 132 | 1:1 
+from = 148 | 1:1 
+from = 146 | 1:1 
+from = 155 | 1:1 
+from = 152 | 1:1 
+from = 159 | 1:1 
+from = 138 | 1:1 
+from = 145 | 1:1 
+from = 137 | 1:1 
+from = 135 | 1:1 
+from = 153 | 1:1 
+from = 158 | 1:1 
+from = 126 | 1:1 
+from = 125 | 1:1 
+from = 157 | 1:1 
+from = 129 | 1:1 
+from = 144 | 1:1 
+from = 150 | 1:1 
+from = 123 | 1:1 
+from = 147 | 1:1 
+from = 139 | 1:1 
+from = 130 | 1:1 
+from = 134 | 1:1 
+from = 143 | 1:1 
+from = 108 | 1:1 199:1 
+from = 112 | 1:1 199:1 
+from = 110 | 1:1 199:1 
+from = 109 | 1:1 199:1 
+from = 106 | 1:1 199:1 
+from = 107 | 1:1 199:1 
+from = 111 | 1:1 199:1 
+from = 156 | 1:1 
+from = 124 | 1:1 
+from = 154 | 1:1 
+from = 141 | 1:1 
+from = 199 | 1:1 108:1 112:1 110:1 109:1 106:1 107:1 111:1 
+from = 210 | 1:1 
+from = 198 | 1:1 
+from = 203 | 1:1 
+from = 206 | 1:1 
+from = 219 | 1:1 
+from = 197 | 1:1 
+from = 213 | 1:1 
+from = 200 | 1:1 
+from = 209 | 1:1 
+from = 207 | 1:1 
+from = 204 | 1:1 
+from = 5 | 1:1 
+from = 4 | 1:1 
+from = 2 | 1:1 
+from = 7 | 1:33 
+from = 6 | 1:1 
+from = 3 | 1:1 
+from = 215 | 1:1 
+from = 212 | 1:1 
+from = 218 | 1:1 
+from = 202 | 1:1 
+from = 174 | 1:2 
+from = 175 | 1:2 
+from = 178 | 1:2 
+from = 173 | 1:2 
+from = 172 | 1:2 
+from = 176 | 1:2 
+from = 177 | 1:2 
+from = 214 | 1:1 
+from = 217 | 1:1 
+from = 211 | 1:1 
+from = 208 | 1:1 
+from = 201 | 1:1 
+from = 205 | 1:1 
+from = 216 | 1:1 
+from = 131 | 1:1 
+from = 136 | 1:1 
+from = 142 | 1:1 
+from = 151 | 1:1 
+from = 149 | 1:1 
+from = 140 | 1:1 
+from = 133 | 1:1 
+from = 128 | 1:1 
+from = 127 | 1:1 
+from = 255 | 1:1 
+from = 323 | 1:1 
+from = 324 | 1:1 
+from = 326 | 1:1 
+from = 325 | 1:1 
+from = 322 | 1:1 
+from = 327 | 1:1 
+from = 270 | 1:1 
+from = 273 | 1:1 
+from = 259 | 1:1 
+from = 164 | 1:1 
+from = 191 | 1:1 
+from = 194 | 1:1 
+from = 189 | 1:1 
+from = 187 | 1:1 
+from = 193 | 1:1 
+from = 195 | 1:1 
+from = 186 | 1:2 
+from = 192 | 1:1 
+from = 196 | 1:1 
+from = 190 | 1:1 
+from = 188 | 1:1 
+from = 160 | 1:1 
+from = 165 | 1:1 
+from = 162 | 1:1 
+from = 167 | 1:10 121:10 117:10 119:10 118:320 122:10 120:10 245:10 234:10 239:10 246:10 247:10 243:10 
+from = 121 | 167:10 
+from = 117 | 167:10 
+from = 119 | 167:10 
+from = 118 | 167:320 
+from = 122 | 167:10 
+from = 120 | 167:10 
+from = 245 | 167:10 
+from = 234 | 167:10 
+from = 239 | 167:10 328:50 
+from = 328 | 239:50 
+from = 246 | 167:10 
+from = 247 | 167:10 
+from = 243 | 167:10 
+from = 161 | 1:1 
+from = 166 | 1:1 
+from = 163 | 1:1 
+from = 267 | 1:1 
+from = 257 | 1:1 
+from = 275 | 1:1 
+from = 283 | 1:1 
+from = 265 | 1:1 
+from = 262 | 1:1 
+from = 278 | 1:1 
+from = 268 | 1:1 
+from = 269 | 1:1 
+from = 251 | 1:1 
+from = 261 | 1:1 
+from = 276 | 1:1 
+from = 277 | 1:1 
+from = 258 | 1:1 
+from = 256 | 1:1 
+from = 260 | 1:12 
+from = 252 | 1:12 
+from = 264 | 1:12 
+from = 254 | 1:1 
+from = 263 | 1:1 
+from = 253 | 1:1 
+from = 274 | 1:1 
+from = 272 | 1:1 
+from = 280 | 1:1 
+from = 282 | 1:1 
+============================================================
+BBLSwitchCount - Thread 1
+from = 0 | 5:1 4:1 2:1 7:32 6:1 3:1 191:1 194:1 189:1 187:1 193:1 195:1 186:2 192:1 196:1 190:1 188:1 121:10 117:10 119:10 118:320 122:10 120:10 245:10 234:10 235:7 236:7 237:7 240:448 241:397 248:1240 233:397 249:1080 242:448 238:7 244:7 239:10 247:10 243:10 
+from = 5 | 0:1 
+from = 4 | 0:1 
+from = 2 | 0:1 
+from = 7 | 0:32 
+from = 6 | 0:1 
+from = 3 | 0:1 
+from = 191 | 0:1 
+from = 194 | 0:1 
+from = 189 | 0:1 
+from = 187 | 0:1 
+from = 193 | 0:1 
+from = 195 | 0:1 
+from = 186 | 0:2 
+from = 192 | 0:1 
+from = 196 | 0:1 
+from = 190 | 0:1 
+from = 188 | 0:1 
+from = 121 | 0:10 
+from = 117 | 0:10 
+from = 119 | 0:10 
+from = 118 | 0:320 
+from = 122 | 0:10 
+from = 120 | 0:10 
+from = 245 | 0:10 
+from = 234 | 0:10 
+from = 235 | 0:7 
+from = 236 | 0:7 
+from = 237 | 0:7 
+from = 240 | 0:448 
+from = 241 | 0:397 
+from = 248 | 0:1240 
+from = 233 | 0:397 
+from = 249 | 0:1080 
+from = 242 | 0:448 
+from = 238 | 0:7 
+from = 244 | 0:7 
+from = 239 | 0:10 
+from = 247 | 0:10 
+from = 243 | 0:10 
+============================================================
+BBLSwitchCount - Thread 2
+from = 0 | 5:1 4:1 2:1 7:32 6:1 3:1 191:1 194:1 189:1 187:1 193:1 195:1 186:2 192:1 196:1 190:1 188:1 121:10 117:10 119:10 118:320 122:10 120:10 245:10 234:10 235:7 236:7 237:7 240:448 241:396 248:1237 233:396 242:448 249:835 238:7 244:7 239:10 247:10 243:10 
+from = 5 | 0:1 
+from = 4 | 0:1 
+from = 2 | 0:1 
+from = 7 | 0:32 
+from = 6 | 0:1 
+from = 3 | 0:1 
+from = 191 | 0:1 
+from = 194 | 0:1 
+from = 189 | 0:1 
+from = 187 | 0:1 
+from = 193 | 0:1 
+from = 195 | 0:1 
+from = 186 | 0:2 
+from = 192 | 0:1 
+from = 196 | 0:1 
+from = 190 | 0:1 
+from = 188 | 0:1 
+from = 121 | 0:10 
+from = 117 | 0:10 
+from = 119 | 0:10 
+from = 118 | 0:320 
+from = 122 | 0:10 
+from = 120 | 0:10 
+from = 245 | 0:10 
+from = 234 | 0:10 
+from = 235 | 0:7 
+from = 236 | 0:7 
+from = 237 | 0:7 
+from = 240 | 0:448 
+from = 241 | 0:396 
+from = 248 | 0:1237 
+from = 233 | 0:396 
+from = 242 | 0:448 
+from = 249 | 0:835 
+from = 238 | 0:7 
+from = 244 | 0:7 
+from = 239 | 0:10 328:10 
+from = 328 | 239:10 
+from = 247 | 0:10 
+from = 243 | 0:10 
+============================================================
+BBLSwitchCount - Thread 3
+from = 0 | 5:1 4:1 2:1 7:32 6:1 3:1 191:1 194:1 189:1 187:1 193:1 195:1 186:2 192:1 196:1 190:1 188:1 121:10 117:10 119:10 118:320 122:10 120:10 245:10 234:10 235:9 236:9 237:9 240:576 241:509 248:1573 233:509 242:576 249:1052 238:9 244:9 239:10 247:10 243:10 
+from = 5 | 0:1 
+from = 4 | 0:1 
+from = 2 | 0:1 
+from = 7 | 0:32 
+from = 6 | 0:1 
+from = 3 | 0:1 
+from = 191 | 0:1 
+from = 194 | 0:1 
+from = 189 | 0:1 
+from = 187 | 0:1 
+from = 193 | 0:1 
+from = 195 | 0:1 
+from = 186 | 0:2 
+from = 192 | 0:1 
+from = 196 | 0:1 
+from = 190 | 0:1 
+from = 188 | 0:1 
+from = 121 | 0:10 
+from = 117 | 0:10 
+from = 119 | 0:10 
+from = 118 | 0:320 
+from = 122 | 0:10 
+from = 120 | 0:10 
+from = 245 | 0:10 
+from = 234 | 0:10 
+from = 235 | 0:9 
+from = 236 | 0:9 
+from = 237 | 0:9 
+from = 240 | 0:576 
+from = 241 | 0:509 
+from = 248 | 0:1573 
+from = 233 | 0:509 
+from = 242 | 0:576 
+from = 249 | 0:1052 
+from = 238 | 0:9 
+from = 244 | 0:9 
+from = 239 | 0:10 
+from = 247 | 0:10 
+from = 243 | 0:10 
+============================================================
+BBLSwitchCount - Thread 4
+from = 0 | 5:1 4:1 2:1 7:32 6:1 3:1 191:1 194:1 189:1 187:1 193:1 195:1 186:2 192:1 196:1 190:1 188:1 121:10 117:10 119:10 118:320 122:10 120:10 245:10 234:10 235:1 236:1 237:1 240:64 241:56 248:191 233:56 249:111 242:64 238:1 244:1 239:10 247:10 243:10 
+from = 5 | 0:1 
+from = 4 | 0:1 
+from = 2 | 0:1 
+from = 7 | 0:32 
+from = 6 | 0:1 
+from = 3 | 0:1 
+from = 191 | 0:1 
+from = 194 | 0:1 
+from = 189 | 0:1 
+from = 187 | 0:1 
+from = 193 | 0:1 
+from = 195 | 0:1 
+from = 186 | 0:2 
+from = 192 | 0:1 
+from = 196 | 0:1 
+from = 190 | 0:1 
+from = 188 | 0:1 
+from = 121 | 0:10 
+from = 117 | 0:10 
+from = 119 | 0:10 
+from = 118 | 0:320 
+from = 122 | 0:10 
+from = 120 | 0:10 
+from = 245 | 0:10 
+from = 234 | 0:10 
+from = 235 | 0:1 
+from = 236 | 0:1 
+from = 237 | 0:1 
+from = 240 | 0:64 
+from = 241 | 0:56 
+from = 248 | 0:191 
+from = 233 | 0:56 
+from = 249 | 0:111 
+from = 242 | 0:64 
+from = 238 | 0:1 
+from = 244 | 0:1 
+from = 239 | 0:10 328:20 
+from = 328 | 239:20 
+from = 247 | 0:10 
+from = 243 | 0:10 
+============================================================
+BBLSwitchCount - Thread 5
+from = 0 | 5:1 4:1 2:1 7:32 6:1 3:1 191:1 194:1 189:1 187:1 193:1 195:1 186:2 192:1 196:1 190:1 188:1 121:10 117:10 119:10 118:320 122:10 120:10 245:10 234:10 239:10 247:10 243:10 235:7 236:7 237:7 240:448 241:399 248:1263 233:399 249:980 242:448 238:7 244:7 
+from = 5 | 0:1 
+from = 4 | 0:1 
+from = 2 | 0:1 
+from = 7 | 0:32 
+from = 6 | 0:1 
+from = 3 | 0:1 
+from = 191 | 0:1 
+from = 194 | 0:1 
+from = 189 | 0:1 
+from = 187 | 0:1 
+from = 193 | 0:1 
+from = 195 | 0:1 
+from = 186 | 0:2 
+from = 192 | 0:1 
+from = 196 | 0:1 
+from = 190 | 0:1 
+from = 188 | 0:1 
+from = 121 | 0:10 
+from = 117 | 0:10 
+from = 119 | 0:10 
+from = 118 | 0:320 
+from = 122 | 0:10 
+from = 120 | 0:10 
+from = 245 | 0:10 
+from = 234 | 0:10 
+from = 239 | 0:10 
+from = 247 | 0:10 
+from = 243 | 0:10 
+from = 235 | 0:7 
+from = 236 | 0:7 
+from = 237 | 0:7 
+from = 240 | 0:448 
+from = 241 | 0:399 
+from = 248 | 0:1263 
+from = 233 | 0:399 
+from = 249 | 0:980 
+from = 242 | 0:448 
+from = 238 | 0:7 
+from = 244 | 0:7 
+============================================================
+BBLSwitchCount - Thread 6
+from = 0 | 5:1 4:1 2:1 7:32 6:1 3:1 191:1 194:1 189:1 187:1 193:1 195:1 186:2 192:1 196:1 190:1 188:1 121:10 117:10 119:10 118:320 122:10 120:10 245:10 234:10 235:6 236:6 237:6 240:384 242:384 241:335 248:1065 233:335 249:761 238:6 244:6 239:10 247:10 243:10 
+from = 5 | 0:1 
+from = 4 | 0:1 
+from = 2 | 0:1 
+from = 7 | 0:32 
+from = 6 | 0:1 
+from = 3 | 0:1 
+from = 191 | 0:1 
+from = 194 | 0:1 
+from = 189 | 0:1 
+from = 187 | 0:1 
+from = 193 | 0:1 
+from = 195 | 0:1 
+from = 186 | 0:2 
+from = 192 | 0:1 
+from = 196 | 0:1 
+from = 190 | 0:1 
+from = 188 | 0:1 
+from = 121 | 0:10 
+from = 117 | 0:10 
+from = 119 | 0:10 
+from = 118 | 0:320 
+from = 122 | 0:10 
+from = 120 | 0:10 
+from = 245 | 0:10 
+from = 234 | 0:10 
+from = 235 | 0:6 
+from = 236 | 0:6 
+from = 237 | 0:6 
+from = 240 | 0:384 
+from = 242 | 0:384 
+from = 241 | 0:335 
+from = 248 | 0:1065 
+from = 233 | 0:335 
+from = 249 | 0:761 
+from = 238 | 0:6 
+from = 244 | 0:6 
+from = 239 | 0:10 328:10 
+from = 328 | 239:10 
+from = 247 | 0:10 
+from = 243 | 0:10 
+============================================================
+BBLSwitchCount - Thread 7
+from = 0 | 5:1 4:1 2:1 7:32 6:1 3:1 191:1 194:1 189:1 187:1 193:1 195:1 186:2 192:1 196:1 190:1 188:1 121:10 117:10 119:10 118:320 122:10 120:10 245:10 234:10 239:10 247:10 243:10 235:6 236:6 237:6 240:384 241:337 248:1046 233:337 249:1055 242:384 238:6 244:6 
+from = 5 | 0:1 
+from = 4 | 0:1 
+from = 2 | 0:1 
+from = 7 | 0:32 
+from = 6 | 0:1 
+from = 3 | 0:1 
+from = 191 | 0:1 
+from = 194 | 0:1 
+from = 189 | 0:1 
+from = 187 | 0:1 
+from = 193 | 0:1 
+from = 195 | 0:1 
+from = 186 | 0:2 
+from = 192 | 0:1 
+from = 196 | 0:1 
+from = 190 | 0:1 
+from = 188 | 0:1 
+from = 121 | 0:10 
+from = 117 | 0:10 
+from = 119 | 0:10 
+from = 118 | 0:320 
+from = 122 | 0:10 
+from = 120 | 0:10 
+from = 245 | 0:10 
+from = 234 | 0:10 
+from = 239 | 0:10 
+from = 247 | 0:10 
+from = 243 | 0:10 
+from = 235 | 0:6 
+from = 236 | 0:6 
+from = 237 | 0:6 
+from = 240 | 0:384 
+from = 241 | 0:337 
+from = 248 | 0:1046 
+from = 233 | 0:337 
+from = 249 | 0:1055 
+from = 242 | 0:384 
+from = 238 | 0:6 
+from = 244 | 0:6 
+============================================================
+BBLSwitchCount - Thread 8
+from = 0 | 5:1 4:1 2:1 7:32 6:1 3:1 191:1 194:1 189:1 187:1 193:1 195:1 186:2 192:1 196:1 190:1 188:1 121:10 117:10 119:10 118:320 122:10 120:10 245:10 234:10 235:1 236:1 237:1 240:64 241:56 248:165 233:56 249:163 242:64 238:1 244:1 239:10 247:10 243:10 
+from = 5 | 0:1 
+from = 4 | 0:1 
+from = 2 | 0:1 
+from = 7 | 0:32 
+from = 6 | 0:1 
+from = 3 | 0:1 
+from = 191 | 0:1 
+from = 194 | 0:1 
+from = 189 | 0:1 
+from = 187 | 0:1 
+from = 193 | 0:1 
+from = 195 | 0:1 
+from = 186 | 0:2 
+from = 192 | 0:1 
+from = 196 | 0:1 
+from = 190 | 0:1 
+from = 188 | 0:1 
+from = 121 | 0:10 
+from = 117 | 0:10 
+from = 119 | 0:10 
+from = 118 | 0:320 
+from = 122 | 0:10 
+from = 120 | 0:10 
+from = 245 | 0:10 
+from = 234 | 0:10 
+from = 235 | 0:1 
+from = 236 | 0:1 
+from = 237 | 0:1 
+from = 240 | 0:64 
+from = 241 | 0:56 
+from = 248 | 0:165 
+from = 233 | 0:56 
+from = 249 | 0:163 
+from = 242 | 0:64 
+from = 238 | 0:1 
+from = 244 | 0:1 
+from = 239 | 0:10 328:30 
+from = 328 | 239:30 
+from = 247 | 0:10 
+from = 243 | 0:10 
+============================================================
+BBLSwitchCount - Thread 9
+from = 0 | 5:1 4:1 2:1 7:32 6:1 3:1 191:1 194:1 189:1 187:1 193:1 195:1 186:2 192:1 196:1 190:1 188:1 121:10 117:10 119:10 118:320 122:10 120:10 245:10 234:10 239:10 247:10 243:10 235:6 236:6 237:6 240:384 241:336 248:1034 233:336 249:1013 242:384 238:6 244:6 
+from = 5 | 0:1 
+from = 4 | 0:1 
+from = 2 | 0:1 
+from = 7 | 0:32 
+from = 6 | 0:1 
+from = 3 | 0:1 
+from = 191 | 0:1 
+from = 194 | 0:1 
+from = 189 | 0:1 
+from = 187 | 0:1 
+from = 193 | 0:1 
+from = 195 | 0:1 
+from = 186 | 0:2 
+from = 192 | 0:1 
+from = 196 | 0:1 
+from = 190 | 0:1 
+from = 188 | 0:1 
+from = 121 | 0:10 
+from = 117 | 0:10 
+from = 119 | 0:10 
+from = 118 | 0:320 
+from = 122 | 0:10 
+from = 120 | 0:10 
+from = 245 | 0:10 
+from = 234 | 0:10 
+from = 239 | 0:10 
+from = 247 | 0:10 
+from = 243 | 0:10 
+from = 235 | 0:6 
+from = 236 | 0:6 
+from = 237 | 0:6 
+from = 240 | 0:384 
+from = 241 | 0:336 
+from = 248 | 0:1034 
+from = 233 | 0:336 
+from = 249 | 0:1013 
+from = 242 | 0:384 
+from = 238 | 0:6 
+from = 244 | 0:6 
+============================================================
+BBLSwitchCount - Thread 10
+from = 0 | 5:1 4:1 2:1 7:32 6:1 3:1 191:1 194:1 189:1 187:1 193:1 195:1 186:2 192:1 196:1 190:1 188:1 121:10 117:10 119:10 118:320 122:10 120:10 245:10 234:10 235:6 236:6 237:6 240:384 241:333 248:1058 233:333 242:384 249:779 238:6 244:6 239:10 247:10 243:10 
+from = 5 | 0:1 
+from = 4 | 0:1 
+from = 2 | 0:1 
+from = 7 | 0:32 
+from = 6 | 0:1 
+from = 3 | 0:1 
+from = 191 | 0:1 
+from = 194 | 0:1 
+from = 189 | 0:1 
+from = 187 | 0:1 
+from = 193 | 0:1 
+from = 195 | 0:1 
+from = 186 | 0:2 
+from = 192 | 0:1 
+from = 196 | 0:1 
+from = 190 | 0:1 
+from = 188 | 0:1 
+from = 121 | 0:10 
+from = 117 | 0:10 
+from = 119 | 0:10 
+from = 118 | 0:320 
+from = 122 | 0:10 
+from = 120 | 0:10 
+from = 245 | 0:10 
+from = 234 | 0:10 
+from = 235 | 0:6 
+from = 236 | 0:6 
+from = 237 | 0:6 
+from = 240 | 0:384 
+from = 241 | 0:333 
+from = 248 | 0:1058 
+from = 233 | 0:333 
+from = 242 | 0:384 
+from = 249 | 0:779 
+from = 238 | 0:6 
+from = 244 | 0:6 
+from = 239 | 0:10 328:10 
+from = 328 | 239:10 
+from = 247 | 0:10 
+from = 243 | 0:10 
+============================================================
+BBLSwitchCount - Thread 11
+from = 0 | 5:1 4:1 2:1 7:32 6:1 3:1 191:1 194:1 189:1 187:1 193:1 195:1 186:2 192:1 196:1 190:1 188:1 121:10 117:10 119:10 118:320 122:10 120:10 245:10 234:10 235:6 236:6 237:6 240:384 241:330 248:1039 233:330 242:384 249:730 238:6 244:6 239:10 247:10 243:10 
+from = 5 | 0:1 
+from = 4 | 0:1 
+from = 2 | 0:1 
+from = 7 | 0:32 
+from = 6 | 0:1 
+from = 3 | 0:1 
+from = 191 | 0:1 
+from = 194 | 0:1 
+from = 189 | 0:1 
+from = 187 | 0:1 
+from = 193 | 0:1 
+from = 195 | 0:1 
+from = 186 | 0:2 
+from = 192 | 0:1 
+from = 196 | 0:1 
+from = 190 | 0:1 
+from = 188 | 0:1 
+from = 121 | 0:10 
+from = 117 | 0:10 
+from = 119 | 0:10 
+from = 118 | 0:320 
+from = 122 | 0:10 
+from = 120 | 0:10 
+from = 245 | 0:10 
+from = 234 | 0:10 
+from = 235 | 0:6 
+from = 236 | 0:6 
+from = 237 | 0:6 
+from = 240 | 0:384 
+from = 241 | 0:330 
+from = 248 | 0:1039 
+from = 233 | 0:330 
+from = 242 | 0:384 
+from = 249 | 0:730 
+from = 238 | 0:6 
+from = 244 | 0:6 
+from = 239 | 0:10 
+from = 247 | 0:10 
+from = 243 | 0:10 
+============================================================
+BBLSwitchCount - Thread 12
+from = 0 | 5:1 4:1 2:1 7:32 6:1 3:1 191:1 194:1 189:1 187:1 193:1 195:1 186:2 192:1 196:1 190:1 188:1 121:10 117:10 119:10 118:320 122:10 120:10 245:10 234:10 239:10 247:10 243:10 
+from = 5 | 0:1 
+from = 4 | 0:1 
+from = 2 | 0:1 
+from = 7 | 0:32 
+from = 6 | 0:1 
+from = 3 | 0:1 
+from = 191 | 0:1 
+from = 194 | 0:1 
+from = 189 | 0:1 
+from = 187 | 0:1 
+from = 193 | 0:1 
+from = 195 | 0:1 
+from = 186 | 0:2 
+from = 192 | 0:1 
+from = 196 | 0:1 
+from = 190 | 0:1 
+from = 188 | 0:1 
+from = 121 | 0:10 
+from = 117 | 0:10 
+from = 119 | 0:10 
+from = 118 | 0:320 
+from = 122 | 0:10 
+from = 120 | 0:10 
+from = 245 | 0:10 
+from = 234 | 0:10 
+from = 239 | 0:10 328:20 
+from = 328 | 239:20 
+from = 247 | 0:10 
+from = 243 | 0:10 
+============================================================
+BBLSwitchCount - Thread 13
+from = 0 | 5:1 4:1 2:1 7:32 6:1 3:1 191:1 194:1 189:1 187:1 193:1 195:1 186:2 192:1 196:1 190:1 188:1 121:10 117:10 119:10 118:320 122:10 120:10 245:10 234:10 239:10 247:10 243:10 235:6 236:6 237:6 240:384 241:337 248:1054 233:337 249:963 242:384 238:6 244:6 
+from = 5 | 0:1 
+from = 4 | 0:1 
+from = 2 | 0:1 
+from = 7 | 0:32 
+from = 6 | 0:1 
+from = 3 | 0:1 
+from = 191 | 0:1 
+from = 194 | 0:1 
+from = 189 | 0:1 
+from = 187 | 0:1 
+from = 193 | 0:1 
+from = 195 | 0:1 
+from = 186 | 0:2 
+from = 192 | 0:1 
+from = 196 | 0:1 
+from = 190 | 0:1 
+from = 188 | 0:1 
+from = 121 | 0:10 
+from = 117 | 0:10 
+from = 119 | 0:10 
+from = 118 | 0:320 
+from = 122 | 0:10 
+from = 120 | 0:10 
+from = 245 | 0:10 
+from = 234 | 0:10 
+from = 239 | 0:10 
+from = 247 | 0:10 
+from = 243 | 0:10 
+from = 235 | 0:6 
+from = 236 | 0:6 
+from = 237 | 0:6 
+from = 240 | 0:384 
+from = 241 | 0:337 
+from = 248 | 0:1054 
+from = 233 | 0:337 
+from = 249 | 0:963 
+from = 242 | 0:384 
+from = 238 | 0:6 
+from = 244 | 0:6 
+============================================================
+BBLSwitchCount - Thread 14
+from = 0 | 5:1 4:1 2:1 7:32 6:1 3:1 191:1 194:1 189:1 187:1 193:1 195:1 186:2 192:1 196:1 190:1 188:1 121:10 117:10 119:10 118:320 122:10 120:10 245:10 234:10 235:8 236:8 237:8 240:512 241:449 248:1387 233:449 242:512 249:1016 238:8 244:8 239:10 247:10 243:10 
+from = 5 | 0:1 
+from = 4 | 0:1 
+from = 2 | 0:1 
+from = 7 | 0:32 
+from = 6 | 0:1 
+from = 3 | 0:1 
+from = 191 | 0:1 
+from = 194 | 0:1 
+from = 189 | 0:1 
+from = 187 | 0:1 
+from = 193 | 0:1 
+from = 195 | 0:1 
+from = 186 | 0:2 
+from = 192 | 0:1 
+from = 196 | 0:1 
+from = 190 | 0:1 
+from = 188 | 0:1 
+from = 121 | 0:10 
+from = 117 | 0:10 
+from = 119 | 0:10 
+from = 118 | 0:320 
+from = 122 | 0:10 
+from = 120 | 0:10 
+from = 245 | 0:10 
+from = 234 | 0:10 
+from = 235 | 0:8 
+from = 236 | 0:8 
+from = 237 | 0:8 
+from = 240 | 0:512 
+from = 241 | 0:449 
+from = 248 | 0:1387 
+from = 233 | 0:449 
+from = 242 | 0:512 
+from = 249 | 0:1016 
+from = 238 | 0:8 
+from = 244 | 0:8 
+from = 239 | 0:10 328:10 
+from = 328 | 239:10 
+from = 247 | 0:10 
+from = 243 | 0:10 
+============================================================
+BBLSwitchCount - Thread 15
+from = 0 | 5:1 4:1 2:1 7:32 6:1 3:1 191:1 194:1 189:1 187:1 193:1 195:1 186:2 192:1 196:1 190:1 188:1 121:10 117:10 119:10 118:320 122:10 120:10 245:10 234:10 239:10 247:10 243:10 235:5 236:5 237:5 240:320 241:285 233:285 249:730 242:320 248:941 238:5 244:5 
+from = 5 | 0:1 
+from = 4 | 0:1 
+from = 2 | 0:1 
+from = 7 | 0:32 
+from = 6 | 0:1 
+from = 3 | 0:1 
+from = 191 | 0:1 
+from = 194 | 0:1 
+from = 189 | 0:1 
+from = 187 | 0:1 
+from = 193 | 0:1 
+from = 195 | 0:1 
+from = 186 | 0:2 
+from = 192 | 0:1 
+from = 196 | 0:1 
+from = 190 | 0:1 
+from = 188 | 0:1 
+from = 121 | 0:10 
+from = 117 | 0:10 
+from = 119 | 0:10 
+from = 118 | 0:320 
+from = 122 | 0:10 
+from = 120 | 0:10 
+from = 245 | 0:10 
+from = 234 | 0:10 
+from = 239 | 0:10 
+from = 247 | 0:10 
+from = 243 | 0:10 
+from = 235 | 0:5 
+from = 236 | 0:5 
+from = 237 | 0:5 
+from = 240 | 0:320 
+from = 241 | 0:285 
+from = 233 | 0:285 
+from = 249 | 0:730 
+from = 242 | 0:320 
+from = 248 | 0:941 
+from = 238 | 0:5 
+from = 244 | 0:5 
+============================================================
+BBLSwitchCount - Thread 16
+from = 0 | 5:1 4:1 2:1 7:32 6:1 3:1 191:1 194:1 189:1 187:1 193:1 195:1 186:2 192:1 196:1 190:1 188:1 121:10 117:10 119:10 118:320 122:10 120:10 245:10 234:10 239:10 247:10 243:10 
+from = 5 | 0:1 
+from = 4 | 0:1 
+from = 2 | 0:1 
+from = 7 | 0:32 
+from = 6 | 0:1 
+from = 3 | 0:1 
+from = 191 | 0:1 
+from = 194 | 0:1 
+from = 189 | 0:1 
+from = 187 | 0:1 
+from = 193 | 0:1 
+from = 195 | 0:1 
+from = 186 | 0:2 
+from = 192 | 0:1 
+from = 196 | 0:1 
+from = 190 | 0:1 
+from = 188 | 0:1 
+from = 121 | 0:10 
+from = 117 | 0:10 
+from = 119 | 0:10 
+from = 118 | 0:320 
+from = 122 | 0:10 
+from = 120 | 0:10 
+from = 245 | 0:10 
+from = 234 | 0:10 
+from = 239 | 0:10 328:40 
+from = 328 | 239:40 
+from = 247 | 0:10 
+from = 243 | 0:10 
+============================================================
+BBLSwitchCount - Thread 17
+from = 0 | 5:1 4:1 2:1 7:32 6:1 3:1 191:1 194:1 189:1 187:1 193:1 195:1 186:2 192:1 196:1 190:1 188:1 121:10 117:10 119:10 118:320 122:10 120:10 245:10 234:10 239:10 247:10 243:10 235:5 236:5 237:5 240:320 241:281 248:922 233:281 242:320 249:705 238:5 244:5 
+from = 5 | 0:1 
+from = 4 | 0:1 
+from = 2 | 0:1 
+from = 7 | 0:32 
+from = 6 | 0:1 
+from = 3 | 0:1 
+from = 191 | 0:1 
+from = 194 | 0:1 
+from = 189 | 0:1 
+from = 187 | 0:1 
+from = 193 | 0:1 
+from = 195 | 0:1 
+from = 186 | 0:2 
+from = 192 | 0:1 
+from = 196 | 0:1 
+from = 190 | 0:1 
+from = 188 | 0:1 
+from = 121 | 0:10 
+from = 117 | 0:10 
+from = 119 | 0:10 
+from = 118 | 0:320 
+from = 122 | 0:10 
+from = 120 | 0:10 
+from = 245 | 0:10 
+from = 234 | 0:10 
+from = 239 | 0:10 
+from = 247 | 0:10 
+from = 243 | 0:10 
+from = 235 | 0:5 
+from = 236 | 0:5 
+from = 237 | 0:5 
+from = 240 | 0:320 
+from = 241 | 0:281 
+from = 248 | 0:922 
+from = 233 | 0:281 
+from = 242 | 0:320 
+from = 249 | 0:705 
+from = 238 | 0:5 
+from = 244 | 0:5 
+============================================================
+BBLSwitchCount - Thread 18
+from = 0 | 5:1 4:1 2:1 7:32 6:1 3:1 191:1 194:1 189:1 187:1 193:1 195:1 186:2 192:1 196:1 190:1 188:1 121:10 117:10 119:10 118:320 122:10 120:10 245:10 234:10 235:7 236:7 237:7 240:448 241:389 248:1242 233:389 249:1124 242:448 238:7 244:7 239:10 247:10 243:10 
+from = 5 | 0:1 
+from = 4 | 0:1 
+from = 2 | 0:1 
+from = 7 | 0:32 
+from = 6 | 0:1 
+from = 3 | 0:1 
+from = 191 | 0:1 
+from = 194 | 0:1 
+from = 189 | 0:1 
+from = 187 | 0:1 
+from = 193 | 0:1 
+from = 195 | 0:1 
+from = 186 | 0:2 
+from = 192 | 0:1 
+from = 196 | 0:1 
+from = 190 | 0:1 
+from = 188 | 0:1 
+from = 121 | 0:10 
+from = 117 | 0:10 
+from = 119 | 0:10 
+from = 118 | 0:320 
+from = 122 | 0:10 
+from = 120 | 0:10 
+from = 245 | 0:10 
+from = 234 | 0:10 
+from = 235 | 0:7 
+from = 236 | 0:7 
+from = 237 | 0:7 
+from = 240 | 0:448 
+from = 241 | 0:389 
+from = 248 | 0:1242 
+from = 233 | 0:389 
+from = 249 | 0:1124 
+from = 242 | 0:448 
+from = 238 | 0:7 
+from = 244 | 0:7 
+from = 239 | 0:10 328:10 
+from = 328 | 239:10 
+from = 247 | 0:10 
+from = 243 | 0:10 
+============================================================
+BBLSwitchCount - Thread 19
+from = 0 | 5:1 4:1 2:1 7:32 6:1 3:1 191:1 194:1 189:1 187:1 193:1 195:1 186:2 192:1 196:1 190:1 188:1 121:10 117:10 119:10 118:320 122:10 120:10 245:10 234:10 235:6 236:6 237:6 240:384 241:338 248:1056 233:338 249:766 242:384 238:6 244:6 239:10 247:10 243:10 
+from = 5 | 0:1 
+from = 4 | 0:1 
+from = 2 | 0:1 
+from = 7 | 0:32 
+from = 6 | 0:1 
+from = 3 | 0:1 
+from = 191 | 0:1 
+from = 194 | 0:1 
+from = 189 | 0:1 
+from = 187 | 0:1 
+from = 193 | 0:1 
+from = 195 | 0:1 
+from = 186 | 0:2 
+from = 192 | 0:1 
+from = 196 | 0:1 
+from = 190 | 0:1 
+from = 188 | 0:1 
+from = 121 | 0:10 
+from = 117 | 0:10 
+from = 119 | 0:10 
+from = 118 | 0:320 
+from = 122 | 0:10 
+from = 120 | 0:10 
+from = 245 | 0:10 
+from = 234 | 0:10 
+from = 235 | 0:6 
+from = 236 | 0:6 
+from = 237 | 0:6 
+from = 240 | 0:384 
+from = 241 | 0:338 
+from = 248 | 0:1056 
+from = 233 | 0:338 
+from = 249 | 0:766 
+from = 242 | 0:384 
+from = 238 | 0:6 
+from = 244 | 0:6 
+from = 239 | 0:10 
+from = 247 | 0:10 
+from = 243 | 0:10 
+============================================================
+BBLSwitchCount - Thread 20
+from = 0 | 5:1 4:1 2:1 7:32 6:1 3:1 191:1 194:1 189:1 187:1 193:1 195:1 186:2 192:1 196:1 190:1 188:1 121:10 117:10 119:10 118:320 122:10 120:10 245:10 234:10 235:1 236:1 237:1 240:64 241:58 248:175 233:58 242:64 249:115 238:1 244:1 239:10 247:10 243:10 
+from = 5 | 0:1 
+from = 4 | 0:1 
+from = 2 | 0:1 
+from = 7 | 0:32 
+from = 6 | 0:1 
+from = 3 | 0:1 
+from = 191 | 0:1 
+from = 194 | 0:1 
+from = 189 | 0:1 
+from = 187 | 0:1 
+from = 193 | 0:1 
+from = 195 | 0:1 
+from = 186 | 0:2 
+from = 192 | 0:1 
+from = 196 | 0:1 
+from = 190 | 0:1 
+from = 188 | 0:1 
+from = 121 | 0:10 
+from = 117 | 0:10 
+from = 119 | 0:10 
+from = 118 | 0:320 
+from = 122 | 0:10 
+from = 120 | 0:10 
+from = 245 | 0:10 
+from = 234 | 0:10 
+from = 235 | 0:1 
+from = 236 | 0:1 
+from = 237 | 0:1 
+from = 240 | 0:64 
+from = 241 | 0:58 
+from = 248 | 0:175 
+from = 233 | 0:58 
+from = 242 | 0:64 
+from = 249 | 0:115 
+from = 238 | 0:1 
+from = 244 | 0:1 
+from = 239 | 0:10 328:20 
+from = 328 | 239:20 
+from = 247 | 0:10 
+from = 243 | 0:10 
+============================================================
+BBLSwitchCount - Thread 21
+from = 0 | 5:1 4:1 2:1 7:32 6:1 3:1 191:1 194:1 189:1 187:1 193:1 195:1 186:2 192:1 196:1 190:1 188:1 121:10 117:10 119:10 118:320 122:10 120:10 245:10 234:10 239:10 247:10 243:10 235:6 236:6 237:6 240:384 241:339 248:1089 233:339 249:856 242:384 238:6 244:6 
+from = 5 | 0:1 
+from = 4 | 0:1 
+from = 2 | 0:1 
+from = 7 | 0:32 
+from = 6 | 0:1 
+from = 3 | 0:1 
+from = 191 | 0:1 
+from = 194 | 0:1 
+from = 189 | 0:1 
+from = 187 | 0:1 
+from = 193 | 0:1 
+from = 195 | 0:1 
+from = 186 | 0:2 
+from = 192 | 0:1 
+from = 196 | 0:1 
+from = 190 | 0:1 
+from = 188 | 0:1 
+from = 121 | 0:10 
+from = 117 | 0:10 
+from = 119 | 0:10 
+from = 118 | 0:320 
+from = 122 | 0:10 
+from = 120 | 0:10 
+from = 245 | 0:10 
+from = 234 | 0:10 
+from = 239 | 0:10 
+from = 247 | 0:10 
+from = 243 | 0:10 
+from = 235 | 0:6 
+from = 236 | 0:6 
+from = 237 | 0:6 
+from = 240 | 0:384 
+from = 241 | 0:339 
+from = 248 | 0:1089 
+from = 233 | 0:339 
+from = 249 | 0:856 
+from = 242 | 0:384 
+from = 238 | 0:6 
+from = 244 | 0:6 
+============================================================
+BBLSwitchCount - Thread 22
+from = 0 | 5:1 4:1 2:1 7:32 6:1 3:1 191:1 194:1 189:1 187:1 193:1 195:1 186:2 192:1 196:1 190:1 188:1 121:10 117:10 119:10 118:320 122:10 120:10 245:10 234:10 235:7 236:7 237:7 240:448 241:391 248:1224 233:391 249:1026 242:448 238:7 244:7 239:10 247:10 243:10 
+from = 5 | 0:1 
+from = 4 | 0:1 
+from = 2 | 0:1 
+from = 7 | 0:32 
+from = 6 | 0:1 
+from = 3 | 0:1 
+from = 191 | 0:1 
+from = 194 | 0:1 
+from = 189 | 0:1 
+from = 187 | 0:1 
+from = 193 | 0:1 
+from = 195 | 0:1 
+from = 186 | 0:2 
+from = 192 | 0:1 
+from = 196 | 0:1 
+from = 190 | 0:1 
+from = 188 | 0:1 
+from = 121 | 0:10 
+from = 117 | 0:10 
+from = 119 | 0:10 
+from = 118 | 0:320 
+from = 122 | 0:10 
+from = 120 | 0:10 
+from = 245 | 0:10 
+from = 234 | 0:10 
+from = 235 | 0:7 
+from = 236 | 0:7 
+from = 237 | 0:7 
+from = 240 | 0:448 
+from = 241 | 0:391 
+from = 248 | 0:1224 
+from = 233 | 0:391 
+from = 249 | 0:1026 
+from = 242 | 0:448 
+from = 238 | 0:7 
+from = 244 | 0:7 
+from = 239 | 0:10 328:10 
+from = 328 | 239:10 
+from = 247 | 0:10 
+from = 243 | 0:10 
+============================================================
+BBLSwitchCount - Thread 23
+from = 0 | 5:1 4:1 2:1 7:32 6:1 3:1 191:1 194:1 189:1 187:1 193:1 195:1 186:2 192:1 196:1 190:1 188:1 121:10 117:10 119:10 118:320 122:10 120:10 245:10 234:10 239:10 247:10 243:10 235:5 236:5 237:5 240:320 241:280 248:917 233:280 249:1032 242:320 238:5 244:5 
+from = 5 | 0:1 
+from = 4 | 0:1 
+from = 2 | 0:1 
+from = 7 | 0:32 
+from = 6 | 0:1 
+from = 3 | 0:1 
+from = 191 | 0:1 
+from = 194 | 0:1 
+from = 189 | 0:1 
+from = 187 | 0:1 
+from = 193 | 0:1 
+from = 195 | 0:1 
+from = 186 | 0:2 
+from = 192 | 0:1 
+from = 196 | 0:1 
+from = 190 | 0:1 
+from = 188 | 0:1 
+from = 121 | 0:10 
+from = 117 | 0:10 
+from = 119 | 0:10 
+from = 118 | 0:320 
+from = 122 | 0:10 
+from = 120 | 0:10 
+from = 245 | 0:10 
+from = 234 | 0:10 
+from = 239 | 0:10 
+from = 247 | 0:10 
+from = 243 | 0:10 
+from = 235 | 0:5 
+from = 236 | 0:5 
+from = 237 | 0:5 
+from = 240 | 0:320 
+from = 241 | 0:280 
+from = 248 | 0:917 
+from = 233 | 0:280 
+from = 249 | 0:1032 
+from = 242 | 0:320 
+from = 238 | 0:5 
+from = 244 | 0:5 
+============================================================
+BBLSwitchCount - Thread 24
+from = 0 | 5:1 4:1 2:1 7:32 6:1 3:1 191:1 194:1 189:1 187:1 193:1 195:1 186:2 192:1 196:1 190:1 188:1 121:10 117:10 119:10 118:320 122:10 120:10 245:10 234:10 239:10 247:10 243:10 
+from = 5 | 0:1 
+from = 4 | 0:1 
+from = 2 | 0:1 
+from = 7 | 0:32 
+from = 6 | 0:1 
+from = 3 | 0:1 
+from = 191 | 0:1 
+from = 194 | 0:1 
+from = 189 | 0:1 
+from = 187 | 0:1 
+from = 193 | 0:1 
+from = 195 | 0:1 
+from = 186 | 0:2 
+from = 192 | 0:1 
+from = 196 | 0:1 
+from = 190 | 0:1 
+from = 188 | 0:1 
+from = 121 | 0:10 
+from = 117 | 0:10 
+from = 119 | 0:10 
+from = 118 | 0:320 
+from = 122 | 0:10 
+from = 120 | 0:10 
+from = 245 | 0:10 
+from = 234 | 0:10 
+from = 239 | 0:10 328:30 
+from = 328 | 239:30 
+from = 247 | 0:10 
+from = 243 | 0:10 
+============================================================
+BBLSwitchCount - Thread 25
+from = 0 | 5:1 4:1 2:1 7:32 6:1 3:1 191:1 194:1 189:1 187:1 193:1 195:1 186:2 192:1 196:1 190:1 188:1 121:10 117:10 119:10 118:320 122:10 120:10 245:10 234:10 235:7 236:7 237:7 240:448 241:392 248:1254 233:392 249:971 242:448 238:7 244:7 239:10 247:10 243:10 
+from = 5 | 0:1 
+from = 4 | 0:1 
+from = 2 | 0:1 
+from = 7 | 0:32 
+from = 6 | 0:1 
+from = 3 | 0:1 
+from = 191 | 0:1 
+from = 194 | 0:1 
+from = 189 | 0:1 
+from = 187 | 0:1 
+from = 193 | 0:1 
+from = 195 | 0:1 
+from = 186 | 0:2 
+from = 192 | 0:1 
+from = 196 | 0:1 
+from = 190 | 0:1 
+from = 188 | 0:1 
+from = 121 | 0:10 
+from = 117 | 0:10 
+from = 119 | 0:10 
+from = 118 | 0:320 
+from = 122 | 0:10 
+from = 120 | 0:10 
+from = 245 | 0:10 
+from = 234 | 0:10 
+from = 235 | 0:7 
+from = 236 | 0:7 
+from = 237 | 0:7 
+from = 240 | 0:448 
+from = 241 | 0:392 
+from = 248 | 0:1254 
+from = 233 | 0:392 
+from = 249 | 0:971 
+from = 242 | 0:448 
+from = 238 | 0:7 
+from = 244 | 0:7 
+from = 239 | 0:10 
+from = 247 | 0:10 
+from = 243 | 0:10 
+============================================================
+BBLSwitchCount - Thread 26
+from = 0 | 5:1 4:1 2:1 7:32 6:1 3:1 191:1 194:1 189:1 187:1 193:1 195:1 186:2 192:1 196:1 190:1 188:1 121:10 117:10 119:10 118:320 122:10 120:10 245:10 234:10 239:10 247:10 243:10 235:6 236:6 237:6 240:384 241:330 248:1003 233:330 249:884 242:384 238:6 244:6 
+from = 5 | 0:1 
+from = 4 | 0:1 
+from = 2 | 0:1 
+from = 7 | 0:32 
+from = 6 | 0:1 
+from = 3 | 0:1 
+from = 191 | 0:1 
+from = 194 | 0:1 
+from = 189 | 0:1 
+from = 187 | 0:1 
+from = 193 | 0:1 
+from = 195 | 0:1 
+from = 186 | 0:2 
+from = 192 | 0:1 
+from = 196 | 0:1 
+from = 190 | 0:1 
+from = 188 | 0:1 
+from = 121 | 0:10 
+from = 117 | 0:10 
+from = 119 | 0:10 
+from = 118 | 0:320 
+from = 122 | 0:10 
+from = 120 | 0:10 
+from = 245 | 0:10 
+from = 234 | 0:10 
+from = 239 | 0:10 328:10 
+from = 328 | 239:10 
+from = 247 | 0:10 
+from = 243 | 0:10 
+from = 235 | 0:6 
+from = 236 | 0:6 
+from = 237 | 0:6 
+from = 240 | 0:384 
+from = 241 | 0:330 
+from = 248 | 0:1003 
+from = 233 | 0:330 
+from = 249 | 0:884 
+from = 242 | 0:384 
+from = 238 | 0:6 
+from = 244 | 0:6 
+============================================================
+BBLSwitchCount - Thread 27
+from = 0 | 5:1 4:1 2:1 7:32 6:1 3:1 191:1 194:1 189:1 187:1 193:1 195:1 186:2 192:1 196:1 190:1 188:1 121:10 117:10 119:10 118:320 122:10 120:10 245:10 234:10 239:10 247:10 243:10 235:6 236:6 237:6 240:384 241:335 248:1050 233:335 242:384 249:839 238:6 244:6 
+from = 5 | 0:1 
+from = 4 | 0:1 
+from = 2 | 0:1 
+from = 7 | 0:32 
+from = 6 | 0:1 
+from = 3 | 0:1 
+from = 191 | 0:1 
+from = 194 | 0:1 
+from = 189 | 0:1 
+from = 187 | 0:1 
+from = 193 | 0:1 
+from = 195 | 0:1 
+from = 186 | 0:2 
+from = 192 | 0:1 
+from = 196 | 0:1 
+from = 190 | 0:1 
+from = 188 | 0:1 
+from = 121 | 0:10 
+from = 117 | 0:10 
+from = 119 | 0:10 
+from = 118 | 0:320 
+from = 122 | 0:10 
+from = 120 | 0:10 
+from = 245 | 0:10 
+from = 234 | 0:10 
+from = 239 | 0:10 
+from = 247 | 0:10 
+from = 243 | 0:10 
+from = 235 | 0:6 
+from = 236 | 0:6 
+from = 237 | 0:6 
+from = 240 | 0:384 
+from = 241 | 0:335 
+from = 248 | 0:1050 
+from = 233 | 0:335 
+from = 242 | 0:384 
+from = 249 | 0:839 
+from = 238 | 0:6 
+from = 244 | 0:6 
+============================================================
+BBLSwitchCount - Thread 28
+from = 0 | 5:1 4:1 2:1 7:32 6:1 3:1 191:1 194:1 189:1 187:1 193:1 195:1 186:2 192:1 196:1 190:1 188:1 121:10 117:10 119:10 118:320 122:10 120:10 245:10 234:10 235:1 236:1 237:1 240:64 241:59 233:59 249:112 242:64 248:182 238:1 244:1 239:10 247:10 243:10 
+from = 5 | 0:1 
+from = 4 | 0:1 
+from = 2 | 0:1 
+from = 7 | 0:32 
+from = 6 | 0:1 
+from = 3 | 0:1 
+from = 191 | 0:1 
+from = 194 | 0:1 
+from = 189 | 0:1 
+from = 187 | 0:1 
+from = 193 | 0:1 
+from = 195 | 0:1 
+from = 186 | 0:2 
+from = 192 | 0:1 
+from = 196 | 0:1 
+from = 190 | 0:1 
+from = 188 | 0:1 
+from = 121 | 0:10 
+from = 117 | 0:10 
+from = 119 | 0:10 
+from = 118 | 0:320 
+from = 122 | 0:10 
+from = 120 | 0:10 
+from = 245 | 0:10 
+from = 234 | 0:10 
+from = 235 | 0:1 
+from = 236 | 0:1 
+from = 237 | 0:1 
+from = 240 | 0:64 
+from = 241 | 0:59 
+from = 233 | 0:59 
+from = 249 | 0:112 
+from = 242 | 0:64 
+from = 248 | 0:182 
+from = 238 | 0:1 
+from = 244 | 0:1 
+from = 239 | 0:10 328:20 
+from = 328 | 239:20 
+from = 247 | 0:10 
+from = 243 | 0:10 
+============================================================
+BBLSwitchCount - Thread 29
+from = 0 | 5:1 4:1 2:1 7:32 6:1 3:1 191:1 194:1 189:1 187:1 193:1 195:1 186:2 192:1 196:1 190:1 188:1 121:10 117:10 119:10 118:320 122:10 120:10 245:10 234:10 239:10 247:10 243:10 235:6 236:6 237:6 240:384 242:384 241:340 248:1111 233:340 249:730 238:6 244:6 
+from = 5 | 0:1 
+from = 4 | 0:1 
+from = 2 | 0:1 
+from = 7 | 0:32 
+from = 6 | 0:1 
+from = 3 | 0:1 
+from = 191 | 0:1 
+from = 194 | 0:1 
+from = 189 | 0:1 
+from = 187 | 0:1 
+from = 193 | 0:1 
+from = 195 | 0:1 
+from = 186 | 0:2 
+from = 192 | 0:1 
+from = 196 | 0:1 
+from = 190 | 0:1 
+from = 188 | 0:1 
+from = 121 | 0:10 
+from = 117 | 0:10 
+from = 119 | 0:10 
+from = 118 | 0:320 
+from = 122 | 0:10 
+from = 120 | 0:10 
+from = 245 | 0:10 
+from = 234 | 0:10 
+from = 239 | 0:10 
+from = 247 | 0:10 
+from = 243 | 0:10 
+from = 235 | 0:6 
+from = 236 | 0:6 
+from = 237 | 0:6 
+from = 240 | 0:384 
+from = 242 | 0:384 
+from = 241 | 0:340 
+from = 248 | 0:1111 
+from = 233 | 0:340 
+from = 249 | 0:730 
+from = 238 | 0:6 
+from = 244 | 0:6 
+============================================================
+BBLSwitchCount - Thread 30
+from = 0 | 5:1 4:1 2:1 7:32 6:1 3:1 191:1 194:1 189:1 187:1 193:1 195:1 186:2 192:1 196:1 190:1 188:1 121:10 117:10 119:10 118:320 122:10 120:10 245:10 234:10 239:10 247:10 243:10 235:8 236:8 237:8 240:512 241:452 248:1419 233:452 242:512 249:932 238:8 244:8 
+from = 5 | 0:1 
+from = 4 | 0:1 
+from = 2 | 0:1 
+from = 7 | 0:32 
+from = 6 | 0:1 
+from = 3 | 0:1 
+from = 191 | 0:1 
+from = 194 | 0:1 
+from = 189 | 0:1 
+from = 187 | 0:1 
+from = 193 | 0:1 
+from = 195 | 0:1 
+from = 186 | 0:2 
+from = 192 | 0:1 
+from = 196 | 0:1 
+from = 190 | 0:1 
+from = 188 | 0:1 
+from = 121 | 0:10 
+from = 117 | 0:10 
+from = 119 | 0:10 
+from = 118 | 0:320 
+from = 122 | 0:10 
+from = 120 | 0:10 
+from = 245 | 0:10 
+from = 234 | 0:10 
+from = 239 | 0:10 328:10 
+from = 328 | 239:10 
+from = 247 | 0:10 
+from = 243 | 0:10 
+from = 235 | 0:8 
+from = 236 | 0:8 
+from = 237 | 0:8 
+from = 240 | 0:512 
+from = 241 | 0:452 
+from = 248 | 0:1419 
+from = 233 | 0:452 
+from = 242 | 0:512 
+from = 249 | 0:932 
+from = 238 | 0:8 
+from = 244 | 0:8 
+============================================================
+BBLSwitchCount - Thread 31
+from = 0 | 5:1 4:1 2:1 7:32 6:1 3:1 191:1 194:1 189:1 187:1 193:1 195:1 186:2 192:1 196:1 190:1 188:1 121:10 117:10 119:10 118:320 122:10 120:10 245:10 234:10 235:8 236:8 237:8 240:512 241:441 248:1383 233:441 249:1340 242:512 238:8 244:8 239:10 247:10 243:10 
+from = 5 | 0:1 
+from = 4 | 0:1 
+from = 2 | 0:1 
+from = 7 | 0:32 
+from = 6 | 0:1 
+from = 3 | 0:1 
+from = 191 | 0:1 
+from = 194 | 0:1 
+from = 189 | 0:1 
+from = 187 | 0:1 
+from = 193 | 0:1 
+from = 195 | 0:1 
+from = 186 | 0:2 
+from = 192 | 0:1 
+from = 196 | 0:1 
+from = 190 | 0:1 
+from = 188 | 0:1 
+from = 121 | 0:10 
+from = 117 | 0:10 
+from = 119 | 0:10 
+from = 118 | 0:320 
+from = 122 | 0:10 
+from = 120 | 0:10 
+from = 245 | 0:10 
+from = 234 | 0:10 
+from = 235 | 0:8 
+from = 236 | 0:8 
+from = 237 | 0:8 
+from = 240 | 0:512 
+from = 241 | 0:441 
+from = 248 | 0:1383 
+from = 233 | 0:441 
+from = 249 | 0:1340 
+from = 242 | 0:512 
+from = 238 | 0:8 
+from = 244 | 0:8 
+from = 239 | 0:10 
+from = 247 | 0:10 
+from = 243 | 0:10 

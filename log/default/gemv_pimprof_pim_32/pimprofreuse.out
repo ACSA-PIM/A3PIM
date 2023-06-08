@@ -1,0 +1,116 @@
+============================================================
+ReuseSegment - Thread 0
+head = 3, count = 2 | 3 2 
+head = 2, count = 1 | 2 4 
+head = 4, count = 1 | 4 20 
+head = 20, count = 1 | 20 22 
+head = 4, count = 74 | 4 22 
+head = 23, count = 2 | 23 4 
+head = 4, count = 5 | 32 4 
+head = 21, count = 1 | 21 18 
+head = 32, count = 62 | 32 27 
+head = 4, count = 5 | 32 27 4 
+head = 4, count = 18 | 27 4 
+head = 27, count = 52 | 27 33 
+head = 33, count = 8 | 33 28 
+head = 27, count = 22 | 27 28 
+head = 4, count = 9 | 28 4 
+head = 28, count = 24 | 28 4 
+head = 4, count = 4 | 32 27 28 4 
+head = 33, count = 1 | 33 4 
+head = 4, count = 36 | 27 28 4 
+head = 4, count = 2 | 43 4 
+head = 43, count = 1 | 43 39 
+head = 4, count = 9 | 39 4 
+head = 28, count = 9 | 28 39 
+head = 27, count = 7 | 27 39 
+head = 33, count = 4 | 33 39 
+head = 33, count = 1 | 33 45 44 
+head = 31, count = 24 | 31 44 
+head = 44, count = 559 | 45 44 
+head = 32, count = 2 | 32 27 28 39 
+head = 28, count = 2 | 28 39 4 
+head = 4, count = 6 | 32 27 28 39 4 
+head = 27, count = 1 | 27 28 39 4 
+head = 27, count = 29 | 27 28 4 
+head = 4, count = 1 | 43 38 4 
+head = 4, count = 1 | 38 40 4 
+head = 33, count = 1 | 33 28 39 4 
+head = 37, count = 1 | 37 4 
+head = 32, count = 81 | 32 27 39 
+head = 32, count = 1 | 32 27 33 39 
+head = 4, count = 3 | 11 4 
+head = 11, count = 2 | 11 7 
+head = 4, count = 35 | 7 4 
+head = 7, count = 2 | 7 8 
+head = 8, count = 2 | 8 6 
+head = 7, count = 27 | 7 6 
+head = 4, count = 40 | 6 4 
+head = 4, count = 9 | 7 6 4 
+head = 6, count = 2 | 6 13 
+head = 4, count = 1 | 11 12 4 
+head = 6, count = 24 | 6 12 
+head = 4, count = 1 | 6 12 4 
+head = 12, count = 3 | 12 4 
+head = 6, count = 5 | 6 12 4 
+head = 6, count = 27 | 6 4 
+head = 4, count = 1 | 10 4 
+head = 6, count = 2 | 6 13 4 
+head = 13, count = 1 | 13 12 4 
+head = 12, count = 12 | 7 12 
+head = 6, count = 3 | 7 6 
+head = 4, count = 2 | 7 6 12 4 
+head = 12, count = 1 | 6 12 
+head = 7, count = 6 | 7 4 
+============================================================
+ReuseSegment - Thread 1
+head = 0, count = 1 | 20 0 
+head = 20, count = 1 | 20 22 
+head = 0, count = 64 | 22 0 
+head = 23, count = 2 | 23 0 
+head = 0, count = 7 | 32 0 
+head = 21, count = 1 | 21 18 
+head = 32, count = 29 | 32 27 
+head = 0, count = 7 | 27 0 
+head = 27, count = 2 | 33 27 
+head = 27, count = 24 | 28 27 
+head = 33, count = 1 | 33 28 
+head = 0, count = 2 | 32 27 0 
+head = 0, count = 27 | 28 27 0 
+head = 28, count = 13 | 28 0 
+head = 27, count = 4 | 27 0 
+head = 0, count = 1 | 43 0 
+head = 43, count = 1 | 43 39 
+head = 0, count = 7 | 39 0 
+head = 28, count = 8 | 28 39 
+head = 27, count = 14 | 39 27 
+head = 44, count = 558 | 45 44 
+head = 31, count = 29 | 31 44 
+head = 32, count = 2 | 32 28 39 27 
+head = 0, count = 9 | 32 28 39 27 0 
+head = 28, count = 1 | 28 39 0 
+head = 32, count = 2 | 32 28 39 27 0 
+head = 27, count = 48 | 28 27 0 
+head = 37, count = 1 | 37 0 
+head = 27, count = 1 | 28 39 27 0 
+head = 0, count = 2 | 28 0 
+head = 0, count = 2 | 11 0 
+head = 11, count = 2 | 7 11 
+head = 0, count = 10 | 7 0 
+head = 32, count = 111 | 32 39 27 
+head = 7, count = 2 | 8 7 
+head = 8, count = 2 | 8 6 
+head = 7, count = 25 | 6 7 
+head = 0, count = 17 | 6 0 
+head = 6, count = 23 | 6 0 
+head = 0, count = 1 | 6 7 0 
+head = 6, count = 8 | 6 7 
+============================================================
+ReuseSegment - Thread 2
+head = 20, count = 1 | 20 22 
+head = 0, count = 63 | 22 0 
+head = 23, count = 2 | 23 0 
+head = 0, count = 6 | 32 0 
+head = 21, count = 1 | 21 18 
+head = 32, count = 32 | 32 27 
+head = 0, count = 7 | 27 0 

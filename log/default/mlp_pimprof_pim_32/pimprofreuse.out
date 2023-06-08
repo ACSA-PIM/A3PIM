@@ -1,0 +1,141 @@
+============================================================
+ReuseSegment - Thread 0
+head = 32, count = 65 | 13 32 
+head = 13, count = 1 | 13 30 
+head = 23, count = 1677721 | 14 23 
+head = 14, count = 1258291 | 14 23 
+head = 25, count = 1 | 22 25 11 
+head = 25, count = 1 | 22 25 16 
+head = 22, count = 6 | 22 9 
+head = 9, count = 6 | 9 4 
+head = 22, count = 104 | 22 4 
+head = 22, count = 3 | 22 9 5 2 
+head = 2, count = 768 | 2 7 
+head = 7, count = 717 | 5 2 7 
+head = 2, count = 765 | 5 2 
+head = 22, count = 765 | 22 3 
+head = 2, count = 3 | 22 2 31 
+head = 31, count = 3 | 29 31 
+head = 7, count = 3 | 7 31 
+head = 18, count = 2 | 16 18 
+head = 16, count = 2 | 22 16 
+head = 16, count = 2 | 16 5 2 
+head = 26, count = 1 | 28 26 
+============================================================
+ReuseSegment - Thread 1
+head = 0, count = 6 | 9 0 
+head = 9, count = 6 | 9 4 
+head = 0, count = 93 | 4 0 
+head = 5, count = 3 | 5 2 
+head = 2, count = 768 | 2 7 
+head = 7, count = 717 | 5 2 7 
+head = 0, count = 767 | 3 0 
+head = 2, count = 765 | 5 2 
+head = 6, count = 3 | 6 0 
+============================================================
+ReuseSegment - Thread 2
+head = 0, count = 5 | 9 0 
+head = 9, count = 5 | 9 4 
+head = 0, count = 95 | 4 0 
+head = 5, count = 3 | 5 2 
+head = 2, count = 768 | 2 7 
+head = 7, count = 713 | 5 2 7 
+head = 0, count = 767 | 3 0 
+head = 2, count = 765 | 5 2 
+head = 6, count = 3 | 6 0 
+============================================================
+ReuseSegment - Thread 3
+head = 0, count = 6 | 9 0 
+head = 9, count = 6 | 9 4 
+head = 0, count = 97 | 4 0 
+head = 5, count = 3 | 5 2 
+head = 2, count = 768 | 2 7 
+head = 7, count = 717 | 5 2 7 
+head = 2, count = 765 | 5 2 
+head = 0, count = 767 | 3 0 
+head = 6, count = 3 | 6 0 
+============================================================
+ReuseSegment - Thread 4
+head = 0, count = 6 | 9 0 
+head = 9, count = 6 | 9 4 
+head = 0, count = 116 | 4 0 
+head = 5, count = 26 | 5 2 
+head = 2, count = 745 | 2 7 
+head = 7, count = 685 | 5 2 7 
+head = 0, count = 767 | 3 0 
+head = 2, count = 765 | 5 2 
+head = 7, count = 6 | 5 7 
+head = 6, count = 3 | 6 0 
+============================================================
+ReuseSegment - Thread 5
+head = 0, count = 6 | 9 0 
+head = 9, count = 6 | 9 4 
+head = 0, count = 97 | 4 0 
+head = 5, count = 3 | 5 2 
+head = 2, count = 768 | 2 7 
+head = 7, count = 717 | 5 2 7 
+head = 0, count = 767 | 3 0 
+head = 2, count = 765 | 5 2 
+head = 6, count = 3 | 6 0 
+============================================================
+ReuseSegment - Thread 6
+head = 0, count = 5 | 9 0 
+head = 9, count = 5 | 9 4 
+head = 0, count = 95 | 4 0 
+head = 5, count = 3 | 5 2 
+head = 2, count = 768 | 2 7 
+head = 7, count = 708 | 5 2 7 
+head = 2, count = 765 | 5 2 
+head = 0, count = 767 | 3 0 
+head = 6, count = 3 | 6 0 
+============================================================
+ReuseSegment - Thread 7
+head = 0, count = 6 | 9 0 
+head = 9, count = 6 | 9 4 
+head = 0, count = 110 | 4 0 
+head = 5, count = 3 | 5 2 
+head = 2, count = 768 | 2 7 
+head = 7, count = 717 | 5 2 7 
+head = 2, count = 765 | 5 2 
+head = 0, count = 767 | 3 0 
+head = 6, count = 3 | 6 0 
+============================================================
+ReuseSegment - Thread 8
+head = 0, count = 6 | 9 0 
+head = 9, count = 6 | 9 4 
+head = 0, count = 104 | 4 0 
+head = 5, count = 3 | 5 2 
+head = 2, count = 768 | 2 7 
+head = 7, count = 717 | 5 2 7 
+head = 0, count = 767 | 3 0 
+head = 2, count = 765 | 5 2 
+head = 6, count = 3 | 6 0 
+============================================================
+ReuseSegment - Thread 9
+head = 0, count = 6 | 9 0 
+head = 9, count = 6 | 9 4 
+head = 0, count = 97 | 4 0 
+head = 5, count = 3 | 5 2 
+head = 2, count = 768 | 2 7 
+head = 7, count = 717 | 5 2 7 
+head = 2, count = 765 | 5 2 
+head = 0, count = 767 | 3 0 
+head = 6, count = 3 | 6 0 
+============================================================
+ReuseSegment - Thread 10
+head = 0, count = 5 | 9 0 
+head = 9, count = 5 | 9 4 
+head = 0, count = 95 | 4 0 
+head = 5, count = 3 | 5 2 
+head = 2, count = 768 | 2 7 
+head = 7, count = 716 | 5 2 7 
+head = 0, count = 767 | 3 0 
+head = 2, count = 765 | 5 2 
+head = 7, count = 1 | 5 7 
+head = 6, count = 3 | 6 0 
+============================================================
+ReuseSegment - Thread 11
+head = 0, count = 6 | 9 0 
+head = 9, count = 6 | 9 4 
+head = 0, count = 97 | 4 0 
+head = 5, count = 3 | 5 2 

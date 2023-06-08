@@ -1,0 +1,111 @@
+============================================================
+ReuseSegment - Thread 0
+head = 0, count = 39 | 0 102 
+head = 102, count = 2 | 0 102 
+head = 102, count = 3 | 102 47 
+head = 0, count = 4 | 0 102 47 
+head = 47, count = 2 | 1 47 
+head = 102, count = 53 | 102 1 
+head = 1, count = 3 | 1 25 
+head = 47, count = 21 | 47 25 
+head = 102, count = 2 | 102 25 
+head = 36, count = 1 | 36 27 
+head = 25, count = 2 | 25 27 
+head = 27, count = 1 | 27 39 
+head = 1, count = 1 | 1 36 27 39 
+head = 39, count = 1 | 1 39 
+head = 25, count = 1 | 1 25 
+head = 27, count = 1 | 1 27 
+head = 1, count = 1 | 1 29 
+head = 29, count = 1 | 29 24 
+head = 1, count = 1 | 1 24 
+head = 24, count = 2 | 24 56 
+head = 27, count = 1 | 27 56 
+head = 56, count = 1 | 56 42 
+head = 39, count = 1 | 1 39 29 56 42 
+head = 42, count = 1 | 42 31 
+head = 56, count = 1 | 56 31 
+head = 31, count = 2 | 31 55 
+head = 1, count = 2 | 1 55 
+head = 25, count = 21 | 25 55 
+head = 102, count = 1 | 102 47 25 
+head = 0, count = 1 | 0 102 47 25 
+head = 55, count = 24 | 1 55 
+head = 102, count = 8 | 102 47 25 55 
+head = 42, count = 1 | 1 42 55 
+head = 102, count = 11 | 102 1 47 25 55 
+head = 0, count = 3 | 0 102 1 47 25 55 
+head = 0, count = 1 | 0 102 47 25 55 
+head = 102, count = 1 | 102 47 55 
+head = 0, count = 10 | 0 102 1 
+head = 1, count = 39 | 1 22 
+head = 47, count = 1 | 47 39 42 
+head = 25, count = 21 | 1 25 55 22 
+head = 25, count = 2 | 1 25 22 
+head = 39, count = 2 | 39 42 
+head = 47, count = 14 | 1 47 25 55 22 
+head = 22, count = 38 | 1 22 
+head = 102, count = 14 | 102 1 47 25 55 22 
+head = 102, count = 2 | 102 1 47 25 22 
+head = 1, count = 2 | 1 49 
+head = 0, count = 5 | 0 102 1 47 25 55 22 
+head = 0, count = 2 | 0 1 
+head = 1, count = 2 | 1 32 
+head = 55, count = 4 | 1 55 22 
+head = 39, count = 1 | 39 42 22 
+head = 32, count = 4 | 32 33 
+head = 33, count = 1 | 33 54 
+head = 54, count = 1 | 1 54 
+head = 33, count = 1 | 1 33 
+head = 1, count = 1 | 1 40 48 
+head = 24, count = 1 | 24 31 
+head = 25, count = 1 | 25 24 31 
+head = 1, count = 2 | 1 40 
+head = 48, count = 1 | 48 44 
+head = 40, count = 1 | 40 44 
+head = 40, count = 1 | 40 44 37 
+head = 37, count = 1 | 1 37 
+head = 44, count = 1 | 44 52 
+head = 1, count = 1 | 1 52 43 
+head = 1, count = 2 | 1 43 
+head = 52, count = 1 | 52 34 
+head = 43, count = 1 | 43 34 
+head = 43, count = 1 | 1 43 34 
+head = 1, count = 3 | 1 12 
+head = 12, count = 3 | 1 12 
+head = 102, count = 1 | 102 1 55 
+head = 102, count = 5 | 102 1 22 
+head = 14, count = 1 | 1 14 
+head = 1, count = 1 | 1 10 
+head = 10, count = 1 | 1 10 
+head = 12, count = 2 | 12 18 
+head = 1, count = 2 | 1 18 
+head = 34, count = 1 | 1 34 
+head = 18, count = 1 | 1 18 
+head = 47, count = 1 | 47 25 22 
+head = 24, count = 2 | 1 24 31 40 43 
+head = 47, count = 2 | 1 47 55 22 
+head = 43, count = 1 | 1 43 
+head = 1, count = 1 | 1 20 
+head = 1, count = 1 | 1 21 
+head = 1, count = 1 | 1 141 
+head = 1, count = 1 | 1 136 
+head = 136, count = 1 | 136 127 
+head = 1, count = 12 | 1 127 
+head = 141, count = 1 | 141 127 
+head = 127, count = 2 | 1 127 
+head = 1, count = 1 | 1 142 
+head = 127, count = 2 | 127 142 
+head = 127, count = 1 | 127 144 
+head = 142, count = 1 | 142 144 
+head = 142, count = 1 | 1 142 144 
+head = 127, count = 7 | 127 155 
+head = 1, count = 37 | 1 155 
+head = 144, count = 1 | 144 155 
+head = 25, count = 2 | 1 25 55 22 155 
+head = 102, count = 1 | 102 47 22 
+head = 0, count = 1 | 0 1 47 25 22 
+head = 155, count = 2 | 155 152 
+head = 1, count = 2 | 1 147 
+head = 152, count = 2 | 152 146 
+head = 146, count = 2 | 146 150 

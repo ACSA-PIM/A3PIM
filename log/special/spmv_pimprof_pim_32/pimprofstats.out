@@ -1,0 +1,230 @@
+============================================================
+Thread 0
+  BBLID       Time(ns)    Instruction  Memory Access          Hash(hi)          Hash(lo)
+      0           4865              3              0  0000000000000000  0000000000000000
+      1    2.34586e+07       23411790           7663  0000000000000001  0000000000000001
+      2             50              6              1  11800da8c7d7c67d  01b5049143c0debb
+      3              4              4              0  11800da8c7d7c67d  02dd6912d6a6c0f9
+      4              4              4              0  11800da8c7d7c67d  088b92a44a4f8ed4
+      5    1.43618e+09      837360103          53489  11800da8c7d7c67d  0d6e7a9475b06aee
+      6          13913           1979             43  11800da8c7d7c67d  0e2c5e294f44582b
+      7             63             12              2  11800da8c7d7c67d  120fb9bb42db832a
+      8           4228            561            143  11800da8c7d7c67d  15399f6c3106a313
+      9             55              4              2  11800da8c7d7c67d  19d9fec3fcb67070
+     10             48              4              2  11800da8c7d7c67d  1ebd1632dca1271b
+     11             55              4              2  11800da8c7d7c67d  2b91031ef4679f79
+     12           6758           1442              0  11800da8c7d7c67d  2ff91333601ba3f0
+     13             94             42              8  11800da8c7d7c67d  385701a91146e8f7
+     14              6              6              0  11800da8c7d7c67d  3e8fc1361e7fc071
+     15             75             24              4  11800da8c7d7c67d  43b034d4fe864f10
+     16             55              4              1  11800da8c7d7c67d  443e8c99b203e33c
+     17         295471         122927           2616  11800da8c7d7c67d  451fe2d2c5828350
+     18              6              6              0  11800da8c7d7c67d  46fdc023c4633d36
+     19          13464           1309            213  11800da8c7d7c67d  4752dfbfeee5ec96
+     20              8              5              0  11800da8c7d7c67d  509c13ab7c1c11d5
+     21    1.48742e+07        3367676          71314  11800da8c7d7c67d  524ae4ff7fb4d7fe
+     22              4              4              0  11800da8c7d7c67d  556aefe2e2c8fb82
+     23              6              6              0  11800da8c7d7c67d  5b8d69d3ea14f200
+     24           9793           9471           3552  11800da8c7d7c67d  5e5d1fc3d7b59caf
+     25            110              8              4  11800da8c7d7c67d  6165f5ec8302b994
+     26              8              5              0  11800da8c7d7c67d  6a778d00a04e392f
+     27         214532          76797           1712  11800da8c7d7c67d  6d4e363d93bdf91b
+     28             55              4              1  11800da8c7d7c67d  6df6cba1b3d250b8
+     29    2.76718e+07        8807768         517350  11800da8c7d7c67d  6ff4a5c43e4fdfa3
+     30           1620            825              1  11800da8c7d7c67d  74264065df65c967
+     31             81             21              2  11800da8c7d7c67d  79401150b08da5a8
+     32             58              7              1  11800da8c7d7c67d  80dcecf2af027111
+     33              5              5              0  11800da8c7d7c67d  824134ef511da03f
+     34         310039         137370           2978  11800da8c7d7c67d  843d914e92a4e15b
+     35    1.46204e+09      840703831         173873  11800da8c7d7c67d  901c7fe344ad7bcb
+     36             61             10              1  11800da8c7d7c67d  9ae128a3937d4228
+     37           1599            924              0  11800da8c7d7c67d  9cdc27dd9d50476c
+     38    2.07471e+07       11398288         228071  11800da8c7d7c67d  9ee6ff843a29b355
+     39              4              4              0  11800da8c7d7c67d  b04f4f3bf7ad2e0f
+     40              4              4              0  11800da8c7d7c67d  b22906673ca92bf6
+     41            371            118              2  11800da8c7d7c67d  b579862d7b9c6295
+     42    4.18583e+06        2138046          20077  11800da8c7d7c67d  b79c3aca8e6374bf
+     43              5              5              0  11800da8c7d7c67d  b82d2284f1ddb446
+     44           8643            819            291  11800da8c7d7c67d  bb8586da14671068
+     45             55              4              2  11800da8c7d7c67d  bf815a96a399574c
+     46             55              4              2  11800da8c7d7c67d  c70a9a4eb35a4133
+     47             55              4              2  11800da8c7d7c67d  cbc5396cebbb9769
+     48         241861         116892           3518  11800da8c7d7c67d  d580c52b716c4f9e
+     49           7335           1626            153  11800da8c7d7c67d  db544f9fc2faf382
+     50             55              4              1  11800da8c7d7c67d  def6ede815462248
+     51              4              4              0  11800da8c7d7c67d  dfa2550f36d0e6ed
+     52              4              4              0  11800da8c7d7c67d  e0cd89409f135d13
+     53             55              4              2  11800da8c7d7c67d  ec1c50d268f7b61d
+     54             55              4              1  11800da8c7d7c67d  f131c77f52ff765e
+     55              4              4              0  11800da8c7d7c67d  f246b5ebedc2d7bf
+     56              4              4              0  11800da8c7d7c67d  f773a17562c01e51
+     57          18157           3342            236  11800da8c7d7c67d  fe2c76ae8390b89c
+     58           3745           1246             30  11800da8c7d7c67d  ff140a4ae4831743
+     59          28924          28924            196  787d33b1db2c1ebc  23f353f088f82f54
+     60              4              4              0  787d33b1db2c1ebc  61fae25bf93cf04e
+     61            193             10              0  787d33b1db2c1ebc  6ad1ac7769b57f8d
+     62         332875          97929           1087  787d33b1db2c1ebc  7304e79bd97d3031
+     63          73908          72310            330  787d33b1db2c1ebc  853f8dce00317211
+     64           7290            797             35  787d33b1db2c1ebc  90d8aba93557c538
+     65          17973           6027            111  787d33b1db2c1ebc  a8edeb4c37800bbb
+     66          87072          43386            506  787d33b1db2c1ebc  ae3fe09d57025b9c
+     67          43319          36155            463  787d33b1db2c1ebc  dc9f05de5a84c862
+     68            226              9              5  787d33b1db2c1ebc  e07ce6b913adbba7
+     69    5.58287e+06        1179087          23927  787d33b1db2c1ebc  f439f0b3b7a90aa6
+============================================================
+Thread 1
+  BBLID       Time(ns)    Instruction  Memory Access          Hash(hi)          Hash(lo)
+      0    2.15664e+06        1274631            868  0000000000000000  0000000000000000
+     59          28924          28924              0  787d33b1db2c1ebc  23f353f088f82f54
+     60              4              4              0  787d33b1db2c1ebc  61fae25bf93cf04e
+     61            199             10              3  787d33b1db2c1ebc  6ad1ac7769b57f8d
+     62         335510          98550           1476  787d33b1db2c1ebc  7304e79bd97d3031
+     63          73863          72310             30  787d33b1db2c1ebc  853f8dce00317211
+     64            643             27              6  787d33b1db2c1ebc  90d8aba93557c538
+     65          15200           6195             93  787d33b1db2c1ebc  a8edeb4c37800bbb
+     66          87137          43386            453  787d33b1db2c1ebc  ae3fe09d57025b9c
+     67          43322          36155            453  787d33b1db2c1ebc  dc9f05de5a84c862
+     68            280              9              4  787d33b1db2c1ebc  e07ce6b913adbba7
+     69    5.62527e+06        1189419          29609  787d33b1db2c1ebc  f439f0b3b7a90aa6
+============================================================
+Thread 2
+  BBLID       Time(ns)    Instruction  Memory Access          Hash(hi)          Hash(lo)
+      0         876161         720467            371  0000000000000000  0000000000000000
+     59          28924          28924              0  787d33b1db2c1ebc  23f353f088f82f54
+     60              4              4              0  787d33b1db2c1ebc  61fae25bf93cf04e
+     61            112             10              0  787d33b1db2c1ebc  6ad1ac7769b57f8d
+     62         333731          99387              0  787d33b1db2c1ebc  7304e79bd97d3031
+     63          74194          72310              0  787d33b1db2c1ebc  853f8dce00317211
+     64            807             27              0  787d33b1db2c1ebc  90d8aba93557c538
+     65          15735           6195              0  787d33b1db2c1ebc  a8edeb4c37800bbb
+     66          86640          43386              0  787d33b1db2c1ebc  ae3fe09d57025b9c
+     67          43346          36155              0  787d33b1db2c1ebc  dc9f05de5a84c862
+     68            220              9              0  787d33b1db2c1ebc  e07ce6b913adbba7
+     69    6.88376e+06        1459899              0  787d33b1db2c1ebc  f439f0b3b7a90aa6
+============================================================
+Thread 3
+  BBLID       Time(ns)    Instruction  Memory Access          Hash(hi)          Hash(lo)
+      0    1.21639e+06         869436            905  0000000000000000  0000000000000000
+     59          28924          28924              0  787d33b1db2c1ebc  23f353f088f82f54
+     60              4              4              0  787d33b1db2c1ebc  61fae25bf93cf04e
+     61            214             10              3  787d33b1db2c1ebc  6ad1ac7769b57f8d
+     62         334418          98694           1446  787d33b1db2c1ebc  7304e79bd97d3031
+     63          74097          72310             35  787d33b1db2c1ebc  853f8dce00317211
+     64            776             27             14  787d33b1db2c1ebc  90d8aba93557c538
+     65          21018           7017            159  787d33b1db2c1ebc  a8edeb4c37800bbb
+     66          87067          43386            453  787d33b1db2c1ebc  ae3fe09d57025b9c
+     67          43344          36155            453  787d33b1db2c1ebc  dc9f05de5a84c862
+     68            280              9              4  787d33b1db2c1ebc  e07ce6b913adbba7
+     69    6.53567e+06        1381527          34367  787d33b1db2c1ebc  f439f0b3b7a90aa6
+============================================================
+Thread 4
+  BBLID       Time(ns)    Instruction  Memory Access          Hash(hi)          Hash(lo)
+      0              0              0             97  0000000000000000  0000000000000000
+============================================================
+Thread 5
+  BBLID       Time(ns)    Instruction  Memory Access          Hash(hi)          Hash(lo)
+      0              0              0             97  0000000000000000  0000000000000000
+============================================================
+Thread 6
+  BBLID       Time(ns)    Instruction  Memory Access          Hash(hi)          Hash(lo)
+      0              0              0             97  0000000000000000  0000000000000000
+============================================================
+Thread 7
+  BBLID       Time(ns)    Instruction  Memory Access          Hash(hi)          Hash(lo)
+      0              0              0             97  0000000000000000  0000000000000000
+============================================================
+Thread 8
+  BBLID       Time(ns)    Instruction  Memory Access          Hash(hi)          Hash(lo)
+      0              0              0             97  0000000000000000  0000000000000000
+============================================================
+Thread 9
+  BBLID       Time(ns)    Instruction  Memory Access          Hash(hi)          Hash(lo)
+      0              0              0             97  0000000000000000  0000000000000000
+============================================================
+Thread 10
+  BBLID       Time(ns)    Instruction  Memory Access          Hash(hi)          Hash(lo)
+      0              0              0             97  0000000000000000  0000000000000000
+============================================================
+Thread 11
+  BBLID       Time(ns)    Instruction  Memory Access          Hash(hi)          Hash(lo)
+      0              0              0             97  0000000000000000  0000000000000000
+============================================================
+Thread 12
+  BBLID       Time(ns)    Instruction  Memory Access          Hash(hi)          Hash(lo)
+      0              0              0             97  0000000000000000  0000000000000000
+============================================================
+Thread 13
+  BBLID       Time(ns)    Instruction  Memory Access          Hash(hi)          Hash(lo)
+      0              0              0             97  0000000000000000  0000000000000000
+============================================================
+Thread 14
+  BBLID       Time(ns)    Instruction  Memory Access          Hash(hi)          Hash(lo)
+      0              0              0             97  0000000000000000  0000000000000000
+============================================================
+Thread 15
+  BBLID       Time(ns)    Instruction  Memory Access          Hash(hi)          Hash(lo)
+      0              0              0             97  0000000000000000  0000000000000000
+============================================================
+Thread 16
+  BBLID       Time(ns)    Instruction  Memory Access          Hash(hi)          Hash(lo)
+      0              0              0             97  0000000000000000  0000000000000000
+============================================================
+Thread 17
+  BBLID       Time(ns)    Instruction  Memory Access          Hash(hi)          Hash(lo)
+      0              0              0             97  0000000000000000  0000000000000000
+============================================================
+Thread 18
+  BBLID       Time(ns)    Instruction  Memory Access          Hash(hi)          Hash(lo)
+      0              0              0             97  0000000000000000  0000000000000000
+============================================================
+Thread 19
+  BBLID       Time(ns)    Instruction  Memory Access          Hash(hi)          Hash(lo)
+      0              0              0             97  0000000000000000  0000000000000000
+============================================================
+Thread 20
+  BBLID       Time(ns)    Instruction  Memory Access          Hash(hi)          Hash(lo)
+      0              0              0             97  0000000000000000  0000000000000000
+============================================================
+Thread 21
+  BBLID       Time(ns)    Instruction  Memory Access          Hash(hi)          Hash(lo)
+      0              0              0             97  0000000000000000  0000000000000000
+============================================================
+Thread 22
+  BBLID       Time(ns)    Instruction  Memory Access          Hash(hi)          Hash(lo)
+      0              0              0             97  0000000000000000  0000000000000000
+============================================================
+Thread 23
+  BBLID       Time(ns)    Instruction  Memory Access          Hash(hi)          Hash(lo)
+      0              0              0             97  0000000000000000  0000000000000000
+============================================================
+Thread 24
+  BBLID       Time(ns)    Instruction  Memory Access          Hash(hi)          Hash(lo)
+      0              0              0             97  0000000000000000  0000000000000000
+============================================================
+Thread 25
+  BBLID       Time(ns)    Instruction  Memory Access          Hash(hi)          Hash(lo)
+      0              0              0             97  0000000000000000  0000000000000000
+============================================================
+Thread 26
+  BBLID       Time(ns)    Instruction  Memory Access          Hash(hi)          Hash(lo)
+      0              0              0             97  0000000000000000  0000000000000000
+============================================================
+Thread 27
+  BBLID       Time(ns)    Instruction  Memory Access          Hash(hi)          Hash(lo)
+      0              0              0             97  0000000000000000  0000000000000000
+============================================================
+Thread 28
+  BBLID       Time(ns)    Instruction  Memory Access          Hash(hi)          Hash(lo)
+      0              0              0             97  0000000000000000  0000000000000000
+============================================================
+Thread 29
+  BBLID       Time(ns)    Instruction  Memory Access          Hash(hi)          Hash(lo)
+      0              0              0             97  0000000000000000  0000000000000000
+============================================================
+Thread 30
+  BBLID       Time(ns)    Instruction  Memory Access          Hash(hi)          Hash(lo)
+      0              0              0             97  0000000000000000  0000000000000000
+============================================================
+Thread 31
+  BBLID       Time(ns)    Instruction  Memory Access          Hash(hi)          Hash(lo)
+      0              0              0          35393  0000000000000000  0000000000000000
