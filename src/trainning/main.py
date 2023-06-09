@@ -13,6 +13,8 @@ from graph import *
 from SCA import OffloadBySCA
 import numpy as np
 from xgboost import XGBClassifier
+from xgboost import plot_tree
+import matplotlib.pyplot as plt
 from sklearn.linear_model import LinearRegression
 from sklearn.linear_model import LogisticRegression
 from sklearn.compose import make_column_transformer
@@ -99,6 +101,9 @@ def XGBClassifierFunc(bbhashXDict, bbhashYDict):
                 format(key, flag, y_true, y_pred[0]))
     print("accuracy:", TrueCount/index)
 
+    plot_tree(model)
+    plt.savefig('./src/trainning/xgb_model.png')
+    
     # 保存模型参数到文件
     with open('./src/trainning/xgb_model.pkl', 'wb') as f:
         pickle.dump(model.get_params(), f)
