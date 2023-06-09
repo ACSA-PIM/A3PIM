@@ -44,3 +44,11 @@ python3 preParallelPimMode.py
 source curPy/bin/active
 python3 preAnalyse.py
 ```
+
+## Trainning coefficients
+
+```bash
+python src/trainning/main.py
+```
+
+大失败： 线性和逻辑回归，完全找不到规律。

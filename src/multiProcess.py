@@ -17,6 +17,7 @@ from tsjPython.tsjCommonFunc import *
 from disassembly import abstractBBLfromAssembly
 import traceback
 import time
+import json
 
 FollowStatus = -1
 
@@ -340,6 +341,12 @@ def parallelGetBBL(taskName, bblHashDict, bblDecisionFile, bblSCAFile):
     for key, value in bblDict.dataDict.items():
         globals()[key]=value
         
+
+    with open('./src/trainning/Coefficients.txt','r') as f:
+        coefficients = json.load(f)
+    # 打印模型参数
+    print("Coefficients:", coefficients)
+    
     # bblDecisionFile, bblSCAFile save to file
     with open(bblSCAFile, 'w') as fsca:
             with open(bblDecisionFile, 'w') as f:
@@ -349,17 +356,26 @@ def parallelGetBBL(taskName, bblHashDict, bblDecisionFile, bblSCAFile):
                     resourcePressure = llvmResourcePressure[bblHashStr] 
                     registerPressure = llvmRegisterPressure[bblHashStr] 
                     memoryPressure = llvmMemoryPressure[bblHashStr]   
+                    
+                    Affinity = coefficients[0]*portUsage + coefficients[1]*cycles +\
+                                coefficients[2]*resourcePressure + coefficients[3]*registerPressure +\
+                                coefficients[4]*memoryPressure
                     if pressure == FollowStatus:
                         decision = "Follower"
-                    elif portUsage > 0 and pressure*6 + cycles > 306: #enough big 2 PIM
-                        decision = "PIM"
-                    elif pressure >= 50:
+                    elif Affinity > 0: # log(CPU/PIM) > 0
                         decision = "PIM"
                     else:
                         decision = "CPU"
+                    
+                    # elif portUsage > 0 and pressure*6 + cycles > 306: #enough big 2 PIM
+                    #     decision = "PIM"
+                    # elif pressure >= 50:
+                    #     decision = "PIM"
+                    # else:
+                    #     decision = "CPU"
                     f.write(bblHashStr + " " + decision + \
                             " " + str(cycles) + '\n')   
-                    fsca.write("{:36} {:10} portUsage: {:5} cycles: {:5} pressure:{:5} resourcePressure:{:5} registerPressure:{:5} memoryPressure:{:5}\n".format(
+                    fsca.write("{:36} {:10} portUsage: {:5} cycles: {:5} pressure: {:5} resourcePressure: {:5} registerPressure: {:5} memoryPressure: {:5}\n".format(
                                 bblHashStr, decision,
                                 str(portUsage),
                                 str(cycles),
