@@ -28,6 +28,7 @@ import json
 import numpy as np
 import pickle
 
+
 def sigmoid(x):
     return 1 / (1 + np.exp(-x))
 
@@ -50,21 +51,30 @@ taskList = {
         }
 
 def XGBClassifierFunc(bbhashXDict, bbhashYDict):
-    normalizedXDict = dict()
-    data = np.array([value for _ , value in bbhashXDict.items()])
-    scaler = MinMaxScaler()
-    # normalize
-    X = scaler.fit_transform(data)
+    # XGB no need to normalize
+    X = np.array([value for _ , value in bbhashXDict.items()])
 
     y = np.array([1 if bbhashYDict[key][0] > bbhashYDict[key][1] else 0 for key , _ in bbhashXDict.items()])
     
-    model = XGBClassifier()
+    # default n_estimators = 100 max_depth = 5
+    n_estimators = 5
+    max_depth = 10
+    model = XGBClassifier(n_estimators=n_estimators, max_depth=max_depth)
     model.fit(X, y)
+    
+    # 获取模型的决策树列表
+    # trees = model.get_booster().get_dump()
+    # 打印每个决策树的参数
+    # for i, tree in enumerate(trees):
+    #     print(f"决策树 {i+1} 参数:")
+    #     print(tree)
+    #     print()
     
     # 获取模型参数
     coefficients = model.get_params()
     
     y_pred = model.predict(X)
+    ic(len(y_pred))
     ic(y_pred)
 
     # 将预测结果转换为二分类问题的类别（0或1）
@@ -86,12 +96,14 @@ def XGBClassifierFunc(bbhashXDict, bbhashYDict):
 
     TrueCount = 0
     index = 0
-    with open('./src/trainning/detailsXGB.txt','w') as f:
+    with open(f"./src/trainning/detailsXGB_{n_estimators}.txt",'w') as f:
         for key , _ in bbhashXDict.items():
             value = X[index]
             y_pred = model.predict([value])
             index += 1
             y_true = bbhashYDict[key][0] > bbhashYDict[key][1]
+            # y_pred_proba = model.predict_proba([value])
+            # ic(y_true, y_pred,y_pred_proba)
             if y_pred ^ y_true:
                 flag = "F"
             else:
@@ -101,19 +113,16 @@ def XGBClassifierFunc(bbhashXDict, bbhashYDict):
                 format(key, flag, y_true, y_pred[0]))
     print("accuracy:", TrueCount/index)
 
-    plot_tree(model)
-    plt.savefig('./src/trainning/xgb_model.png')
+    mkdir("./src/trainning/xgb/")
+    for i in range(model.n_estimators):
+        # 绘制第 i 棵决策树的图像
+        plot_tree(model, num_trees=i)
+        plt.savefig(f"./src/trainning/xgb/xgb_model_{i}.png", dpi=300)
+        plt.close()
     
     # 保存模型参数到文件
-    with open('./src/trainning/xgb_model.pkl', 'wb') as f:
-        pickle.dump(model.get_params(), f)
+    model.save_model(f"./src/trainning/xgb_model_{n_estimators}.bin")
 
-    # 加载模型参数
-    # with open('./src/trainning/xgb_model.pkl', 'rb') as f:
-    #     params = pickle.load(f)
-
-    # # 创建新的XGBClassifier模型，并设置加载的参数
-    # new_model = XGBClassifier(**params)
         
 def LogisticRegressionFunc(bbhashXDict, bbhashYDict):
     normalizedXDict = dict()
@@ -166,7 +175,7 @@ def LogisticRegressionFunc(bbhashXDict, bbhashYDict):
                 flag = "T"
                 TrueCount += 1
             f.writelines("{:20} {}: y_true {:>5f} \ty_pred {:<5f} \t {} sigmoid {:<5f} \t y_calculate {:<5f}\n".\
-                format(key, flag, y_true, y_pred[0],(y_calculate>0.5)==y_pred ,sigmoid(y_calculate),y_calculate))
+                format(key, flag, y_true, y_pred[0],(y_calculate>0)==y_pred ,sigmoid(y_calculate),y_calculate))
     print("accuracy:", TrueCount/index)
 
     # 打印模型参数

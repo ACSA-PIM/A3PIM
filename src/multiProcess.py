@@ -18,6 +18,9 @@ from disassembly import abstractBBLfromAssembly
 import traceback
 import time
 import json
+import pickle
+from xgboost import XGBClassifier
+from logPrint import *
 
 FollowStatus = -1
 
@@ -337,15 +340,59 @@ def parallelGetBBL(taskName, bblHashDict, bblDecisionFile, bblSCAFile):
     
     for i in range(ProcessNum):
         bblDict=mergeQueue2dataDict(queueDict,bblDict)
-        
+               
+    # decisionByLogisticRegression(bblDict, bblSCAFile, bblDecisionFile)
+    decisionByXGB(bblDict, bblSCAFile, bblDecisionFile)
+    
+    return bblDict
+
+def decisionByXGB(bblDict, bblSCAFile, bblDecisionFile):
     for key, value in bblDict.dataDict.items():
         globals()[key]=value
-        
+    n_estimators = 5
+    trained_model = XGBClassifier() 
+    trained_model.load_model(f"./src/trainning/xgb_model_{n_estimators}.bin")
 
+    # 创建新的XGBClassifier模型，并设置加载的参数
+   
+    # bblDecisionFile, bblSCAFile save to file
+    with open(bblSCAFile, 'w') as fsca:
+            with open(bblDecisionFile, 'w') as f:
+                for [bblHashStr, cycles] in  tqdm(llvmCycles.items()) :
+                    pressure = llvmPressure[bblHashStr]
+                    portUsage = llvmPortUsage[bblHashStr]
+                    resourcePressure = llvmResourcePressure[bblHashStr] 
+                    registerPressure = llvmRegisterPressure[bblHashStr] 
+                    memoryPressure = llvmMemoryPressure[bblHashStr]   
+                        
+                    if pressure == FollowStatus:
+                        decision = "Follower"
+                    else:
+                        value = [portUsage, cycles, resourcePressure, registerPressure, memoryPressure]
+                        y_pred = trained_model.predict([value])
+                        if y_pred == 1:
+                            decision = "PIM"
+                        else:
+                            decision = "CPU"
+
+                    f.write(bblHashStr + " " + decision + \
+                            " " + str(cycles) + '\n')   
+                    fsca.write("{:36} {:10} portUsage: {:5} cycles: {:5} pressure: {:5} resourcePressure: {:5} registerPressure: {:5} memoryPressure: {:5}\n".format(
+                                bblHashStr, decision,
+                                str(portUsage),
+                                str(cycles),
+                                str(pressure), str(resourcePressure), str(registerPressure), str(memoryPressure)
+                            )) 
+    
+def decisionByLogisticRegression(bblDict, bblSCAFile, bblDecisionFile):
+    for key, value in bblDict.dataDict.items():
+        globals()[key]=value
     with open('./src/trainning/Coefficients.txt','r') as f:
-        coefficients = json.load(f)
+        data = json.load(f)
+    coefficients = data["coefficients"]
+    intercept = data["intercept"]
     # 打印模型参数
-    print("Coefficients:", coefficients)
+    ic(intercept, coefficients)
     
     # bblDecisionFile, bblSCAFile save to file
     with open(bblSCAFile, 'w') as fsca:
@@ -359,7 +406,7 @@ def parallelGetBBL(taskName, bblHashDict, bblDecisionFile, bblSCAFile):
                     
                     Affinity = coefficients[0]*portUsage + coefficients[1]*cycles +\
                                 coefficients[2]*resourcePressure + coefficients[3]*registerPressure +\
-                                coefficients[4]*memoryPressure
+                                coefficients[4]*memoryPressure + intercept
                     if pressure == FollowStatus:
                         decision = "Follower"
                     elif Affinity > 0: # log(CPU/PIM) > 0
@@ -381,4 +428,3 @@ def parallelGetBBL(taskName, bblHashDict, bblDecisionFile, bblSCAFile):
                                 str(cycles),
                                 str(pressure), str(resourcePressure), str(registerPressure), str(memoryPressure)
                             )) 
-    return bblDict
