@@ -144,8 +144,8 @@ def SpeedUpGraph(species,dictData):
 		multiplier += 1
 
 	# Add some text for labels, title and custom x-axis tick labels, etc.
-	ax.set_ylabel('Normalized Execution Time')
-	ax.set_title('Execution time breakdown of GAP and PARSEC workloads using different offloading decisions')
+	ax.set_ylabel('Acceleration Relative to CPU Execution Time')
+	ax.set_title('SpeedUp Analysis of GAP and PARSEC workloads using different offloading decisions')
 	ax.set_xticks(x + 2 * width, species)
 	ax.legend(loc='upper left', ncols=3)
 	if(maxVal > 15):
@@ -215,7 +215,7 @@ def BreakdownGraph(species,dictData, maxVal):
 
 	# Add some text for labels, title and custom x-axis tick labels, etc.
 	ax.set_ylabel('Normalized Execution Time')
-	ax.set_title('Execution time breakdown of GAP and PARSEC workloads using different offloading decisions')
+	ax.set_title('Execution time of GAP and PARSEC workloads using different offloading decisions')
 	ax.set_xticks(x + 2 * width, species)
 	ax.legend(loc='upper left', ncols=3)
 	if(maxVal > 15):
