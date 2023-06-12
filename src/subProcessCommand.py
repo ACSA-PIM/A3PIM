@@ -42,8 +42,13 @@ def specialInput(taskPath, taskName, mode, coreNums):
     specialLogPath = glv._get("logPath")+"special"+\
     				"/"+taskName+"_pimprof_"+mode+"_"+ str(coreNums)
         
-    if taskName == "spmv":
+    if taskName == "spmv0":
         dataPath = glv._get("taskfilePath") + "spmv/data/bcsstk30.mtx"
+        command = glv._get("run-sniperPath") +" --roi -n " + str(coreNums)+\
+		 " -c pimprof_"+mode+" -d "+specialLogPath+\
+		 " -- "+ taskPath + " -f " + dataPath
+    elif taskName == "spmv":
+        dataPath = glv._get("taskfilePath") + "spmv/data/bcsstk30.mtx.16.mtx"
         command = glv._get("run-sniperPath") +" --roi -n " + str(coreNums)+\
 		 " -c pimprof_"+mode+" -d "+specialLogPath+\
 		 " -- "+ taskPath + " -f " + dataPath

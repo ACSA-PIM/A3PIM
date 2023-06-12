@@ -21,6 +21,7 @@ import json
 import pickle
 from xgboost import XGBClassifier
 from logPrint import *
+from tqdm import tqdm
 
 FollowStatus = -1
 

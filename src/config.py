@@ -9,6 +9,7 @@ glv._set("logPath", working_fold+"log/")
 glv._set("resultPath", working_fold+"Summary/")
 
 glv._set("specialInputList", [
+    "spmv0",
     "spmv",
     "hashjoin",
     "svm"
@@ -35,7 +36,8 @@ glv._set("taskList",
              gapbsTaskfilePath+"bfs.inj": "bfs",
              gapbsTaskfilePath+"pr.inj": "pr",
              taskfilePath+"gemv/gemv.inj": "gemv", 
-             taskfilePath+"spmv/spmv.inj": "spmv", #./spmv -f ./data/bcsstk30.mtx 
+             taskfilePath+"spmv/spmv.inj": "spmv0", #./spmv -f ./data/bcsstk30.mtx && omp=4
+             taskfilePath+"spmv/spmv.inj": "spmv", #./spmv -f ./data/bcsstk30.mtx.16.mtx 
              taskfilePath+"select/select.inj": "select", # ./sel -i 1258291200 -t 4
              taskfilePath+"unique/unique.inj": "unique", # first default
              taskfilePath+"hashJoin/hashjoin.inj": "hashjoin", # ./hashjoin.inj checker/R.file checker/S.file hash 40
@@ -58,6 +60,7 @@ glv._set("ProcessNum",40)
 # glv._set("failedSleepTime",1)
 glv._set("timeout",3600*120)
 glv._set("debug","yes")
+glv._set("custom_font_dir", f"{working_fold}font/times.ttf")
 
 
 def pasteFullFileName(taskfilenameWithoutPath):

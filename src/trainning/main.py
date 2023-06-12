@@ -41,12 +41,12 @@ taskList = {
             gapbsTaskfilePath+"cc.inj": "cc",
             gapbsTaskfilePath+"bfs.inj": "bfs",
             gapbsTaskfilePath+"pr.inj": "pr",
-        # #  taskfilePath+"gemv/gemv.inj": "gemv", 
+            taskfilePath+"gemv/gemv.inj": "gemv", 
             taskfilePath+"spmv/spmv.inj": "spmv", #./spmv -f ./data/bcsstk30.mtx 
             taskfilePath+"select/select.inj": "select", # ./sel -i 1258291200 -t 4
-            taskfilePath+"unique/unique.inj": "unique" # first default
+            taskfilePath+"unique/unique.inj": "unique", # first default
         # #  taskfilePath+"hashJoin/hashjoin.inj": "hashjoin", # ./hashjoin.inj checker/R.file checker/S.file hash 40
-        # #  taskfilePath+"mlp/mlp.inj": "mlp", # 3.9s
+         taskfilePath+"mlp/mlp.inj": "mlp", # 3.9s
         #  taskfilePath+"svm/svm.inj": "svm" # 2.7s ./svm.inj ./SVM-RFE/outData.txt 253 15154 4
         }
 
@@ -113,15 +113,20 @@ def XGBClassifierFunc(bbhashXDict, bbhashYDict):
                 format(key, flag, y_true, y_pred[0]))
     print("accuracy:", TrueCount/index)
 
+    ic("saving model")
+    # 保存模型参数到文件
+    model.save_model(f"./src/trainning/xgb_model_{n_estimators}.bin")
+    
     mkdir("./src/trainning/xgb/")
     for i in range(model.n_estimators):
         # 绘制第 i 棵决策树的图像
+        ic(i)
         plot_tree(model, num_trees=i)
+        ic(i)
         plt.savefig(f"./src/trainning/xgb/xgb_model_{i}.png", dpi=300)
         plt.close()
     
-    # 保存模型参数到文件
-    model.save_model(f"./src/trainning/xgb_model_{n_estimators}.bin")
+    
 
         
 def LogisticRegressionFunc(bbhashXDict, bbhashYDict):

@@ -3,10 +3,19 @@
 
 ## Installation
 
+You need have installed `python3-venv` with sudo permissions
 ```bash
-pip -m venv curPy
+python3 -m venv curPy
 source curPy/bin/active
 pip install -r requirements.txt
+```
+
+### Installation without sudo
+
+```bash
+pip install virtualenv
+virtualenv myenv
+source myenv/bin/activate
 ```
 
 ## Configuration
@@ -62,3 +71,16 @@ If you wish to train your own XGB parameters, you can utilize the following comm
 ```bash
 python src/trainning/main.py
 ```
+
+## Common Installation Issue: 
+
+
+### Missing Font Files
+
+```bash
+ raise FileNotFoundError(
+FileNotFoundError: Matplotlib's TeX implementation searched for a file named 'cmr10.tfm' in your texmf tree, but could not find it 
+```
+
+<!-- 1. `wget http://mirrors.ctan.org/fonts/cm/tfm/cmr10.tfm`
+2. Matplotlib set front search path  -->

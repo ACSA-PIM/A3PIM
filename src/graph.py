@@ -1,6 +1,7 @@
 import numpy as np
 import matplotlib.pyplot as plt
 import matplotlib.colors as colors
+from matplotlib.font_manager import FontProperties
 import matplotlib
 import global_variable as glv
 from tsjPython.tsjCommonFunc import *
@@ -75,11 +76,11 @@ def generateAppStackedBarPlotly(maxY):
   
     
 def generateAppComparisonGraph():
-    [species,dictData, maxVal] = normalizedGraphAppDict()
+    [species,dictData, maxVal, scaMaxVal] = normalizedGraphAppDict()
     ic(dictData)
-    BreakdownGraph(species,dictData, maxVal)
+    BreakdownGraph(species,dictData, scaMaxVal)
     SpeedUpGraph(species,dictData)
-    return maxVal
+    return scaMaxVal
 
 
 def SpeedUpGraph(species,dictData):
@@ -127,6 +128,16 @@ def SpeedUpGraph(species,dictData):
 def BreakdownGraph(species,dictData, maxVal):
     # matplotlib.use("pgf")
 	ic("BreakdownGraph")
+ 
+
+	# # 创建FontProperties对象，并设置字体搜索路径
+	# custom_font_prop = FontProperties()
+	# custom_font_prop.set_file(glv._get("custom_font_dir"))  # 设置自定义字体搜索路径
+
+	# # 修改Matplotlib的字体设置
+	# plt.rcParams.update({
+	# 	'font.family': custom_font_prop.get_name()  # 设置自定义字体
+	# })
 	matplotlib.rcParams.update({
         "pgf.texsystem": "pdflatex",
         'font.family': 'serif',
@@ -181,17 +192,20 @@ def normalizedGraphAppDict():
     result1 = []
     result2 = {}
     maxVal = 0
+    scaMaxVal = 0
     ic(dictData)
     for key, List in dictData.items():
         ic(key, List)
         result1.append(key)
+        scaMaxVal = max(scaMaxVal,List[len(entryList)-1])
         for i in range(min(len(List),len(entryList))):
             maxVal = max(List[i], maxVal)
             if entryList[i] not in result2:
                 result2[entryList[i]] = [List[i]]  
             else:
                 result2[entryList[i]].append(List[i])   
-    return [result1, result2, maxVal]
+    ic(scaMaxVal)
+    return [result1, result2, maxVal, scaMaxVal]
 
 def detailNormalizedGraphAppDict():
     x = []

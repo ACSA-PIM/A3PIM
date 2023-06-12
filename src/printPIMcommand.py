@@ -22,13 +22,13 @@ def main():
             #  gapbsTaskfilePath+"cc.inj": "cc",
             #  gapbsTaskfilePath+"bfs.inj": "bfs",
             #  gapbsTaskfilePath+"pr.inj": "pr",
-            # #  taskfilePath+"gemv/gemv.inj": "gemv", 
-            #  taskfilePath+"spmv/spmv.inj": "spmv", #./spmv -f ./data/bcsstk30.mtx 
+             taskfilePath+"gemv/gemv.inj": "gemv", 
+             taskfilePath+"spmv/spmv.inj": "spmv", #./spmv -f ./data/bcsstk30.mtx 
             #  taskfilePath+"select/select.inj": "select", # ./sel -i 1258291200 -t 4
             #  taskfilePath+"unique/unique.inj": "unique" # first default
-            # #  taskfilePath+"hashJoin/hashjoin.inj": "hashjoin", # ./hashjoin.inj checker/R.file checker/S.file hash 40
+             taskfilePath+"hashJoin/hashjoin.inj": "hashjoin", # ./hashjoin.inj checker/R.file checker/S.file hash 40
             # #  taskfilePath+"mlp/mlp.inj": "mlp", # 3.9s
-             taskfilePath+"svm/svm.inj": "svm" # 2.7s ./svm.inj ./SVM-RFE/outData.txt 253 15154 4
+            #  taskfilePath+"svm/svm.inj": "svm" # 2.7s ./svm.inj ./SVM-RFE/outData.txt 253 15154 4
          }
     processBeginTime=timeBeginPrint("multiple taskList")
 
@@ -37,14 +37,24 @@ def main():
         # parallelTask( taskList, singlePIMMode, coreCount=32 )
         coreNums = 32
         for taskKey, taskName in taskList.items():
+            passPrint("cpu 1\n")
+            if taskName in glv._get("gapbsList"):
+                [core, command,targetFile] = gapbsInput(taskKey, taskName, "cpu", 1)
+            elif taskName in glv._get("specialInputList"):
+                [core, command,targetFile] = specialInput(taskKey, taskName, "cpu", 1)
+            else:
+                [core, command,targetFile] = defaultInput(taskKey, taskName, "cpu", 1)
+            print(command)
+            print(targetFile)
+            passPrint(f"pim {coreNums}\n")
             if taskName in glv._get("gapbsList"):
                 [core, command,targetFile] = gapbsInput(taskKey, taskName, "pim", coreNums)
             elif taskName in glv._get("specialInputList"):
                 [core, command,targetFile] = specialInput(taskKey, taskName, "pim", coreNums)
             else:
                 [core, command,targetFile] = defaultInput(taskKey, taskName, "pim", coreNums)
-        print(command)
-        print(targetFile)
+            print(command)
+            print(targetFile)
         
     timeEndPrint("multiple taskList",processBeginTime)
 
