@@ -98,7 +98,7 @@ def SpeedUpGraph(species,dictData):
 	multiplier = 0
 
 	fig, ax = plt.subplots(layout='constrained')
-	fig.set_size_inches(w=10.1413, h=5.75) #(8, 6.5)
+	fig.set_size_inches(w=10.1413*2.5, h=5.75) #(8, 6.5)
 
 	maxVal = 0
 	for attribute, measurement in dictData.items():
@@ -108,7 +108,7 @@ def SpeedUpGraph(species,dictData):
 		maxVal = max(maxVal, max(measurement))
 		offset = width * multiplier
 		rects = ax.bar(x + offset, measurement, width, label=attribute)
-		ax.bar_label(rects, padding=3) # Distance of label from the end of the bar, in points.
+		ax.bar_label(rects, padding=3, fontsize=8) # Distance of label from the end of the bar, in points.
 		multiplier += 1
 
 	# Add some text for labels, title and custom x-axis tick labels, etc.
@@ -123,7 +123,7 @@ def SpeedUpGraph(species,dictData):
 		plt.yscale('linear')
 		ax.set_ylim(0, maxVal+2) # 2
 	ic(maxVal)
-	plt.savefig(glv._get("graphlOutPathTest1"))
+	plt.savefig(glv._get("graphlOutPathTest1"), dpi=300)
 
 def BreakdownGraph(species,dictData, maxVal):
     # matplotlib.use("pgf")
@@ -155,15 +155,29 @@ def BreakdownGraph(species,dictData, maxVal):
 	fig, ax = plt.subplots()
 	ic("BreakdownGraph why stucked 0.5")
  
-	fig.set_size_inches(w=10.1413, h=5.75) #(8, 6.5)
+	fig.set_size_inches(w=10.1413*2.5, h=5.75) #(8, 6.5)
 
+	if(maxVal > 15):
+		max_value =  maxVal+100
+	else:
+		max_value = maxVal+2
+  
 	ic("BreakdownGraph why stucked 1")
 	for attribute, measurement in dictData.items():
 		ic(measurement)
 		offset = width * multiplier
 		rects = ax.bar(x + offset, measurement, width, label=attribute)
-		ax.bar_label(rects, padding=3) # Distance of label from the end of the bar, in points.
+		ax.bar_label(rects, padding=3, fontsize=8) # Distance of label from the end of the bar, in points.
 		multiplier += 1
+  
+		ic(measurement,rects)
+		# 判断柱子是否超出最大范围
+		for rect, value in zip(rects, measurement):
+			if value > max_value:
+				# 添加波浪线和标注
+				ax.annotate(f'{value}', xy=(rect.get_x() + rect.get_width() / 2, max_value), xytext=(0, -20),
+							textcoords='offset points', ha='center', va='bottom',
+							arrowprops=dict(arrowstyle='fancy'))
 
 	ic("BreakdownGraph why stucked 2")
 
@@ -179,7 +193,7 @@ def BreakdownGraph(species,dictData, maxVal):
 		plt.yscale('linear')
 		ax.set_ylim(0, maxVal+2) # 2
 	ic(maxVal)
-	plt.savefig(glv._get("graphlOutPath"))
+	plt.savefig(glv._get("graphlOutPath"), dpi=300)
  
 def normalizedGraphAppDict():
     entryList = glv._get("graphEntryList")
