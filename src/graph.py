@@ -9,6 +9,7 @@ from logPrint import *
 import sys
 import plotly.graph_objects as go
 import plotly
+import plotly.io as pio
 
 
 def generateAppStackedBar():
@@ -38,7 +39,9 @@ def generateAppStackedBar():
 	plt.savefig(glv._get("graphlOutPathTest1"))
 
 def generateAppStackedBarPlotly(maxY):
+	maxY = max(1.2, maxY)
 	[x, barDict] = detailNormalizedGraphAppDict()
+	ic(x)
 	# x = [
 	# 	["bc", "bc", "bc", "sssp", "sssp", "sssp"],
 	# 	["CPU-ONLY", "PIM_ONLY", "PIMProf", "CPU-ONLY", "PIM_ONLY", "PIMProf",]
@@ -50,17 +53,44 @@ def generateAppStackedBarPlotly(maxY):
             	'rgb(56, 166, 165)', \
 				'rgb(15, 133, 84)',\
         		'rgb(95, 70, 144)']
+	sumList = [0 for i in range(len(x[0]))]
 	for i, entry in enumerate( barDict.items()):
 		barName=entry[0]
 		yList = entry[1]
-		fig.add_bar(x=x,y=yList, name=barName, marker=dict(color=color_list[i]))
+		ic(sumList,yList)
+		sumList = [x + y for x, y in zip(yList, sumList)]
+		fig.add_bar(x=x,y=yList, name=barName, text =[f'{val:.2f}' for val in yList], marker=dict(color=color_list[i]))
+
+	for i, entry in enumerate(sumList):
+		if entry > maxY+0.01:
+			ic(x[0][i],x[1][i])
+			# 添加 "bc" 列的注释
+			fig.add_annotation(
+				x=[x[0][i],x[1][i]],  # 注释的 x 坐标为 "bc"
+				y=maxY,  # 注释的 y 坐标为该列的最大值
+				text=f'{entry:.2f}',  # 注释的文本内容
+				showarrow=True,  # 显示箭头
+				arrowhead=1,  # 箭头样式
+				ax=0,  # 箭头 x 偏移量
+				ay=-10,  # 箭头 y 偏移量，负值表示向下偏移
+				# bgcolor="rgba(255, 255, 255, 0.8)",  # 注释框背景颜色
+				font=dict(size=8)  # 注释文本字体大小
+			)
+ 
+
 	# fig.add_bar(x=x,y=[10,2,3,4,5,6], name="CPU")
 	# fig.add_bar(x=x,y=[6,5,4,3,2,1], name="DataMove")
 	# fig.add_bar(x=x,y=[6,5,4,3,2,1], name="PIM")
 	ic(maxY)
+	width=1200
+	height=400
 	fig.update_layout(barmode="relative", 
-					title="Execution time breakdown of GAP and PARSEC workloads using different offloading decisions",
-					xaxis_title="GAP and PARSEC workloads",
+					title={
+						"text": "Execution time breakdown of GAP and PARSEC workloads using different offloading decisions",
+						"x": 0.5,  # Set the title's x position to 0.5 for center alignment
+						"pad": {"t": 30}  # Adjust the padding of the title
+					},
+     				xaxis_title="GAP and PARSEC workloads",
 					yaxis_title="Normalized Execution Time",
 					yaxis_range=[0,maxY],
 					legend_title="Legend Title",
@@ -69,10 +99,12 @@ def generateAppStackedBarPlotly(maxY):
 						size=12,
 						color="Black"
 					),
-					height=600, width=1200, # 图片的长宽
+					height=height, width=width, # 图片的长宽
 					template = "plotly_white", # https://plotly.com/python/templates/
-					margin=dict(b=60, t=20, l=20, r=20))
-	fig.write_image(glv._get("graphlOutPathTest2"))
+					margin=dict(b=60, t=40, l=20, r=20),
+					bargap=0.2
+     )
+	pio.write_image(fig, glv._get("graphlOutPathTest2"), format="png", scale=3)
   
     
 def generateAppComparisonGraph():
