@@ -59,7 +59,13 @@ def generateAppStackedBarPlotly(maxY):
 		yList = entry[1]
 		ic(sumList,yList)
 		sumList = [x + y for x, y in zip(yList, sumList)]
-		fig.add_bar(x=x,y=yList, name=barName, text =[f'{val:.2f}' for val in yList], marker=dict(color=color_list[i]))
+		fig.add_bar(x=x,y=yList, 
+              name=barName, 
+              text =[f'{val:.2f}' for val in yList], 
+              textposition='inside',
+              marker=dict(color=color_list[i]),
+              textfont=dict(size=8)
+		)
 
 	for i, entry in enumerate(sumList):
 		if entry > maxY+0.01:
@@ -75,6 +81,15 @@ def generateAppStackedBarPlotly(maxY):
 				ay=-10,  # 箭头 y 偏移量，负值表示向下偏移
 				# bgcolor="rgba(255, 255, 255, 0.8)",  # 注释框背景颜色
 				font=dict(size=8)  # 注释文本字体大小
+			)
+		else:
+			fig.add_annotation(
+				x=[x[0][i],x[1][i]],  # 注释的 x 坐标为 "bc"
+				y=entry+maxY/25,  # 注释的 y 坐标为该列的最大值
+				text=f'{entry:.2f}',  # 注释的文本内容
+				showarrow=False,  # 显示箭头
+				# bgcolor="rgba(255, 255, 255, 0.8)",  # 注释框背景颜色
+				font=dict(size=6)  # 注释文本字体大小
 			)
  
 
