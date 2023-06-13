@@ -42,7 +42,7 @@ taskList = {
             gapbsTaskfilePath+"bfs.inj": "bfs",
             gapbsTaskfilePath+"pr.inj": "pr",
             taskfilePath+"gemv/gemv.inj": "gemv", 
-            taskfilePath+"spmv/spmv.inj": "spmv", #./spmv -f ./data/bcsstk30.mtx 
+            taskfilePath+"spmv/spmv.inj": "spmv0", #./spmv -f ./data/bcsstk30.mtx 
             taskfilePath+"select/select.inj": "select", # ./sel -i 1258291200 -t 4
             taskfilePath+"unique/unique.inj": "unique", # first default
         # #  taskfilePath+"hashJoin/hashjoin.inj": "hashjoin", # ./hashjoin.inj checker/R.file checker/S.file hash 40
@@ -55,12 +55,13 @@ def XGBClassifierFunc(bbhashXDict, bbhashYDict):
     X = np.array([value for _ , value in bbhashXDict.items()])
 
     y = np.array([1 if bbhashYDict[key][0] > bbhashYDict[key][1] else 0 for key , _ in bbhashXDict.items()])
+    weights = [abs(bbhashYDict[key][0] - bbhashYDict[key][1]) for key , _ in bbhashXDict.items()]
     
     # default n_estimators = 100 max_depth = 5
     n_estimators = 5
     max_depth = 10
     model = XGBClassifier(n_estimators=n_estimators, max_depth=max_depth)
-    model.fit(X, y)
+    model.fit(X, y, sample_weight=weights)
     
     # 获取模型的决策树列表
     # trees = model.get_booster().get_dump()
@@ -89,6 +90,7 @@ def XGBClassifierFunc(bbhashXDict, bbhashYDict):
     false_positive_rate = fp / (fp + tn)
 
     # 打印指标值
+    passPrint("XGB Classifier\n")
     print("accuracy:", accuracy)
     print("recall:", recall)
     print("f1_score:", f1)
@@ -160,6 +162,7 @@ def LogisticRegressionFunc(bbhashXDict, bbhashYDict):
     false_positive_rate = fp / (fp + tn)
 
     # 打印指标值
+    passPrint("Logistic RegressionModel\n")
     print("accuracy:", accuracy)
     print("recall:", recall)
     print("f1_score:", f1)
@@ -223,6 +226,7 @@ def LinearRegressionFunc(bbhashXDict, bbhashYDict):
     false_positive_rate = fp / (fp + tn)
 
     # 打印指标值
+    passPrint("Linear Regression Model\n")
     print("accuracy:", accuracy)
     print("recall:", recall)
     print("f1_score:", f1)
