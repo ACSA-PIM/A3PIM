@@ -42,11 +42,11 @@ taskList = {
             gapbsTaskfilePath+"bfs.inj": "bfs",
             gapbsTaskfilePath+"pr.inj": "pr",
             taskfilePath+"gemv/gemv.inj": "gemv", 
-            taskfilePath+"spmv/spmv.inj": "spmv0", #./spmv -f ./data/bcsstk30.mtx 
+            # taskfilePath+"spmv/spmv.inj": "spmv0", #./spmv -f ./data/bcsstk30.mtx 
             taskfilePath+"select/select.inj": "select", # ./sel -i 1258291200 -t 4
             taskfilePath+"unique/unique.inj": "unique", # first default
-        # #  taskfilePath+"hashJoin/hashjoin.inj": "hashjoin", # ./hashjoin.inj checker/R.file checker/S.file hash 40
-         taskfilePath+"mlp/mlp.inj": "mlp", # 3.9s
+            taskfilePath+"hashJoin/hashjoin.inj": "hashjoin", # ./hashjoin.inj checker/R.file checker/S.file hash 40
+            taskfilePath+"mlp/mlp.inj": "mlp", # 3.9s
         #  taskfilePath+"svm/svm.inj": "svm" # 2.7s ./svm.inj ./SVM-RFE/outData.txt 253 15154 4
         }
 
@@ -58,9 +58,9 @@ def XGBClassifierFunc(bbhashXDict, bbhashYDict):
     weights = [abs(bbhashYDict[key][0] - bbhashYDict[key][1]) for key , _ in bbhashXDict.items()]
     
     # default n_estimators = 100 max_depth = 5
-    n_estimators = 5
-    max_depth = 10
-    model = XGBClassifier(n_estimators=n_estimators, max_depth=max_depth)
+    n_estimators = 100
+    max_depth = 5
+    model = XGBClassifier(n_estimators=n_estimators, max_depth=max_depth, objective='binary:logistic')
     model.fit(X, y, sample_weight=weights)
     
     # 获取模型的决策树列表
@@ -121,8 +121,10 @@ def XGBClassifierFunc(bbhashXDict, bbhashYDict):
     
     mkdir("./src/trainning/xgb/")
     for i in range(model.n_estimators):
-        # 绘制第 i 棵决策树的图像
+        # 绘制前 5 棵决策树的图像
         ic(i)
+        if i > 3:
+            return 0
         plot_tree(model, num_trees=i)
         ic(i)
         plt.savefig(f"./src/trainning/xgb/xgb_model_{i}.png", dpi=300)

@@ -350,7 +350,7 @@ def parallelGetBBL(taskName, bblHashDict, bblDecisionFile, bblSCAFile):
 def decisionByXGB(bblDict, bblSCAFile, bblDecisionFile):
     for key, value in bblDict.dataDict.items():
         globals()[key]=value
-    n_estimators = 5
+    n_estimators = 100
     trained_model = XGBClassifier() 
     trained_model.load_model(f"./src/trainning/xgb_model_{n_estimators}.bin")
 
@@ -370,6 +370,7 @@ def decisionByXGB(bblDict, bblSCAFile, bblDecisionFile):
                         decision = "Follower"
                     else:
                         value = [portUsage, cycles, resourcePressure, registerPressure, memoryPressure]
+                        value = [max(0,float(i)) for i in value]
                         y_pred = trained_model.predict([value])
                         if y_pred == 1:
                             decision = "PIM"
