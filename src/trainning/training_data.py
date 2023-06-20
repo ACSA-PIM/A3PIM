@@ -36,17 +36,33 @@ def resultFromPIMProf(taskKey, taskName):
     return bbhashYDict
         
     
-    
-    
-def resultFromSCA(taskKey, taskName, curBBhashYDict):
-    targetFile = glv._get("logPath") + "assembly/" + taskName + "_bbl.sca"
+def resultFromSCAFile(targetFile):
     ic(targetFile)
-    scaIndex = [4, 6, 10, 12, 14]
+    xgb_train_metrix = glv._get("xgb_train_metrix")
+    xgbInputIndex = glv._get("xgb_sca_dataIndex")
+    scaIndex = [xgbInputIndex[i] for i in xgb_train_metrix]
+    ic(scaIndex)
     bbhashXDict = dict()
     with open(targetFile, 'r') as file:
         for line in file:
             fields = line.split()
-            if fields[1] in curBBhashYDict and fields[2]!='Follower':
-                # ic(fields[0],fields[1],[fields[i] for i in scaIndex])
+            if fields[xgbInputIndex["instrNums"]]!=-1:
+                ic(fields[0],fields[1],[fields[i] for i in scaIndex])
+                bbhashXDict[fields[1]] = [max(0,float(fields[i])) for i in scaIndex]
+    return bbhashXDict
+    
+def resultFromSCA(taskKey, taskName, curBBhashYDict):
+    targetFile = glv._get("logPath") + "assembly/" + taskName + "_bbl.sca"
+    ic(targetFile)
+    xgb_train_metrix = glv._get("xgb_train_metrix")
+    xgbInputIndex = glv._get("xgb_sca_dataIndex")
+    scaIndex = [xgbInputIndex[i] for i in xgb_train_metrix]
+    ic(scaIndex)
+    bbhashXDict = dict()
+    with open(targetFile, 'r') as file:
+        for line in file:
+            fields = line.split()
+            if fields[1] in curBBhashYDict and fields[xgbInputIndex["instrNums"]]!=-1:
+                ic(fields[0],fields[1],[fields[i] for i in scaIndex])
                 bbhashXDict[fields[1]] = [max(0,float(fields[i])) for i in scaIndex]
     return bbhashXDict

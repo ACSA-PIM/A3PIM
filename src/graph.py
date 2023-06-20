@@ -124,11 +124,11 @@ def generateAppStackedBarPlotly(maxY):
   
     
 def generateAppComparisonGraph():
-    [species,dictData, maxVal, scaMaxVal] = normalizedGraphAppDict()
+    [species,dictData, maxVal, scaMaxVal, scaAvgTime] = normalizedGraphAppDict()
     ic(dictData)
     BreakdownGraph(species,dictData, scaMaxVal)
     SpeedUpGraph(species,dictData)
-    return scaMaxVal
+    return [scaMaxVal, scaAvgTime]
 
 
 def SpeedUpGraph(species,dictData):
@@ -275,7 +275,7 @@ def normalizedGraphAppDict():
             else:
                 graphData[entryList[i]].append(List[i])   
     ic(scaMaxVal)
-    return [species, graphData, maxVal, scaMaxVal] 
+    return [species, graphData, maxVal, scaMaxVal, dictData['AVG'][len(entryList)-1]] 
 
 def detailNormalizedGraphAppDict():
     x = []

@@ -60,6 +60,22 @@ glv._set("ProcessNum",40)
 # glv._set("failedSleepTime",1)
 glv._set("timeout",3600*120)
 glv._set("debug","yes")
+glv._set("xgb_n_estimators",1)
+glv._set("xgb_train_metrix",["MayLoad", "MayStore"]) 
+glv._set("xgb_sca_dataIndex", 
+         {
+             "instrNums": 3,
+             "MayLoad": 5,
+             "MayStore": 7,
+             "loadPressure": 9,
+             "storePressure": 11,
+             "portUsage": 13,
+             "cycles": 15,
+             "pressure": 17,
+             "resourcePressure": 19,
+             "registerPressure": 21,
+             "memoryPressure": 23,
+         })
 glv._set("custom_font_dir", f"{working_fold}font/times.ttf")
 
 

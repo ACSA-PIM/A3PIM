@@ -7,6 +7,7 @@ import re
 from tqdm import tqdm
 from multiProcess import parallelGetSCAResult, llvmCommand, decisionByXGB
 from tsjPython.tsjCommonFunc import *
+from trainning.training_data import resultFromSCAFile
 
 def loadStoreDataMove(bblHashDict, targetFile):
     with open(targetFile, 'w') as f:
@@ -73,10 +74,11 @@ def OffloadBySCA(taskList):
         assemblyPath = glv._get("logPath")+ "assembly/"
         targetAssembly = assemblyPath + taskName + ".s"
         bblDecisionFile = targetAssembly[:-2] + "_bbl.decision"
+        bblSCAFile = targetAssembly[:-2] + "_bbl.sca"
         bblSCAPickleFile = targetAssembly[:-2] + "_bbl_sca.pickle"
         with open(bblSCAPickleFile, 'rb') as f:
             bblDict = pickle.load(f)
-        decisionByXGB(bblDict,bblDecisionFile)
+        decisionByXGB(bblDict, resultFromSCAFile(bblSCAFile),bblDecisionFile)
             
 def llvmResult(bblList):
     command = llvmCommand(bblList)

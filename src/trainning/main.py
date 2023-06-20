@@ -58,7 +58,7 @@ def XGBClassifierFunc(bbhashXDict, bbhashYDict):
     weights = [abs(bbhashYDict[key][0] - bbhashYDict[key][1]) for key , _ in bbhashXDict.items()]
     
     # default n_estimators = 100 max_depth = 5
-    n_estimators = 100
+    n_estimators = glv._get("xgb_n_estimators")
     max_depth = 5
     model = XGBClassifier(n_estimators=n_estimators, max_depth=max_depth, objective='binary:logistic')
     model.fit(X, y, sample_weight=weights)

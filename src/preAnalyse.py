@@ -48,9 +48,12 @@ def main():
         
         errorPrint("-----------------------------------STEP4.2: Normalized data & Visualization ----------------------------------------")
         
-        maxValue = generateAppComparisonGraph()   
+        [maxValue, scaAvgTime] = generateAppComparisonGraph()   
         # generateAppStackedBar()
         generateAppStackedBarPlotly(maxValue)
+        
+        passPrint(f"SCA AVG Time is {scaAvgTime}\n")
+        passPrint(f"SCA AVG SpeedUp is {round(1/scaAvgTime,2)}\n")
         
         passPrint("-----------------------------------{}----------------------------------------".format(diffGraph))
 

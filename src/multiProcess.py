@@ -400,29 +400,25 @@ def save2File(bblDict, bblSCAFile, bblSCAPickleFile):
                     str(resourcePressure), str(registerPressure), str(memoryPressure)
                 )) 
         
-def decisionByXGB(bblDict, bblDecisionFile):
+def decisionByXGB(bblDict, bbhashXDict, bblDecisionFile):
     for key, value in bblDict.dataDict.items():
         globals()[key]=value
+    
     n_estimators = glv._get("xgb_n_estimators")
     trained_model = XGBClassifier() 
     trained_model.load_model(f"./src/trainning/xgb_model_{n_estimators}.bin")
+    
 
     # 创建新的XGBClassifier模型，并设置加载的参数
    
     # bblDecisionFile save to file
     with open(bblDecisionFile, 'w') as f:
         for [bblHashStr, cycles] in  tqdm(llvmCycles.items()) :
-            pressure = llvmPressure[bblHashStr]
-            portUsage = llvmPortUsage[bblHashStr]
-            resourcePressure = llvmResourcePressure[bblHashStr] 
-            registerPressure = llvmRegisterPressure[bblHashStr] 
-            memoryPressure = llvmMemoryPressure[bblHashStr]   
-                
+            pressure = llvmPressure[bblHashStr]       
             if pressure == FollowStatus:
                 decision = "Follower"
             else:
-                value = [portUsage, cycles, resourcePressure, registerPressure, memoryPressure]
-                value = [max(0,float(i)) for i in value]
+                value = bbhashXDict[bblHashStr.split(" ")[-1]]
                 y_pred = trained_model.predict([value])
                 if y_pred == 1:
                     decision = "PIM"
