@@ -181,7 +181,9 @@ def parallelTask(taskList, SubFunc,  **kwargs):
     yellowPrint("Reducing parallel processes result...")
 
         
-def llvmCommand(bblList):
+def llvmCommand(to_filtered_list):
+    bblList = [item for item in to_filtered_list if not item.startswith('callq')]
+    # ic(bblList)
     bbl = '\n'.join(bblList)
     bbl = bbl.replace('$', '\\$')
     command = 'echo "'+ bbl + '" |'+" llvm-mca -march=x86 -mcpu=x86-64 -timeline --bottleneck-analysis --resource-pressure --iterations=100"
@@ -208,6 +210,11 @@ def mergeQueue2dataDict(queueDict,dataDict):
 
 def getBBLFunc(bblHashDict, sendPipe,rank,queueDict):
     llvmCycles = defaultdict(int)
+    llvmInstrNums = defaultdict(int)
+    llvmMayLoad = defaultdict(int)
+    llvmMayStore = defaultdict(int)
+    llvmLoadPressure = defaultdict(float)
+    llvmStorePressure = defaultdict(float)
     llvmPressure = defaultdict(float)
     llvmPortUsage = defaultdict(float)
     llvmResourcePressure = defaultdict(float)
@@ -226,8 +233,13 @@ def getBBLFunc(bblHashDict, sendPipe,rank,queueDict):
             command = llvmCommand(bblList)
             [list, errList]=TIMEOUT_severalCOMMAND(command, glv._get("timeout"))
             # ic(errList)
+            MayLoad = 0
+            MayStore = 0
+            MayLoadPostition = 3*7+1
+            MayStorePostition = 4*7+1
             if errList and errList[-1]=="error: no assembly instructions found.\n":
                 cycles = FollowStatus
+                instrNums = FollowStatus
                 pressure = FollowStatus
                 loadPortUsage = FollowStatus
                 resourcePressure = FollowStatus
@@ -236,6 +248,7 @@ def getBBLFunc(bblHashDict, sendPipe,rank,queueDict):
             else:
                 # ic(list[2])
                 # ic(list[11])
+                instrNums = int(re.match(r"Instructions:(\s*)([0-9]*)(\s*)",list[1]).group(2))/100
                 cycles = int(re.match(r"Total Cycles:(\s*)([0-9]*)(\s*)",list[2]).group(2))
                 if list[11]=="No resource or data dependency bottlenecks discovered.\n":
                     pressure = 0
@@ -247,6 +260,10 @@ def getBBLFunc(bblHashDict, sendPipe,rank,queueDict):
                 memoryPressure = 0.0
                 for i in range(len(list)):
                     # ic(list[i])
+                    if re.match(r".{"+str(MayLoadPostition)+r"}\*.*$",list[i]):
+                        MayLoad += 1
+                    if re.match(r".{"+str(MayStorePostition)+r"}\*.*$",list[i]):
+                        MayStore += 1
                     if list[i].startswith('  Resource Pressure       '):
                         matchPressure = re.match(r".*\[ ([0-9\.]*)% \](\s*)$",list[i])
                         if not matchPressure:
@@ -272,6 +289,11 @@ def getBBLFunc(bblHashDict, sendPipe,rank,queueDict):
                         else:
                             loadPortUsage = float(matchPort.group(2))
             llvmCycles[bblHashStr]=cycles
+            llvmInstrNums[bblHashStr]=instrNums
+            llvmMayLoad[bblHashStr]=MayLoad
+            llvmMayStore[bblHashStr]=MayStore
+            llvmLoadPressure[bblHashStr]=max(0, MayLoad/instrNums)
+            llvmStorePressure[bblHashStr]=max(0, MayStore/instrNums)
             llvmPressure[bblHashStr]=pressure      
             llvmPortUsage[bblHashStr]=loadPortUsage   
             llvmResourcePressure[bblHashStr] = resourcePressure
@@ -282,6 +304,11 @@ def getBBLFunc(bblHashDict, sendPipe,rank,queueDict):
         errorPrint("error = {}".format(e))
         raise TypeError("paralleReadProcess = {}".format(e))
     queueDict.get("llvmCycles").put(llvmCycles)
+    queueDict.get("llvmInstrNums").put(llvmInstrNums)
+    queueDict.get("llvmMayLoad").put(llvmMayLoad)
+    queueDict.get("llvmMayStore").put(llvmMayStore)
+    queueDict.get("llvmLoadPressure").put(llvmLoadPressure)
+    queueDict.get("llvmStorePressure").put(llvmStorePressure)
     queueDict.get("llvmPressure").put(llvmPressure)
     queueDict.get("llvmPortUsage").put(llvmPortUsage)
     queueDict.get("llvmResourcePressure").put(llvmResourcePressure)
@@ -363,17 +390,20 @@ def save2File(bblDict, bblSCAFile, bblSCAPickleFile):
             resourcePressure = llvmResourcePressure[bblHashStr] 
             registerPressure = llvmRegisterPressure[bblHashStr] 
             memoryPressure = llvmMemoryPressure[bblHashStr] 
-            fsca.write("{:36} portUsage: {:5} cycles: {:5} pressure: {:5} resourcePressure: {:5} registerPressure: {:5} memoryPressure: {:5}\n".format(
-                    bblHashStr,
-                    str(portUsage),
-                    str(cycles),
-                    str(pressure), str(resourcePressure), str(registerPressure), str(memoryPressure)
+            fsca.write("{:36} instrNums: {:5} MayLoad: {:5} MayStore: {:5} "
+                        "loadPressure: {:5} storePressure: {:5} "
+                        "portUsage: {:5} cycles: {:5} pressure: {:5} "
+                       "resourcePressure: {:5} registerPressure: {:5} memoryPressure: {:5}\n".format(
+                    bblHashStr, str(llvmInstrNums[bblHashStr]), str(llvmMayLoad[bblHashStr]), str(llvmMayStore[bblHashStr]), 
+                    str(round(llvmLoadPressure[bblHashStr],3)), str(round(llvmStorePressure[bblHashStr],3)), 
+                    str(portUsage), str(cycles),str(pressure), 
+                    str(resourcePressure), str(registerPressure), str(memoryPressure)
                 )) 
         
 def decisionByXGB(bblDict, bblDecisionFile):
     for key, value in bblDict.dataDict.items():
         globals()[key]=value
-    n_estimators = 100
+    n_estimators = glv._get("xgb_n_estimators")
     trained_model = XGBClassifier() 
     trained_model.load_model(f"./src/trainning/xgb_model_{n_estimators}.bin")
 

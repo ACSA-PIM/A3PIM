@@ -30,6 +30,11 @@ def bblDictInit():
 
     dataDict.set("finishedSubTask",set())
     dataDict.set("llvmCycles" , defaultdict(int))
+    dataDict.set("llvmInstrNums" , defaultdict(int))
+    dataDict.set("llvmMayLoad" , defaultdict(int))
+    dataDict.set("llvmMayStore" , defaultdict(int))
+    dataDict.set("llvmLoadPressure" , defaultdict(float))
+    dataDict.set("llvmStorePressure" , defaultdict(float))
     dataDict.set("llvmPressure" , defaultdict(float))
     dataDict.set("llvmPortUsage" , defaultdict(float))
     dataDict.set("llvmResourcePressure" , defaultdict(float))

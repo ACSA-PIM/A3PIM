@@ -60,6 +60,12 @@ def llvmAnalysis(taskList):
             parallelGetSCAResult(taskName, bblHashDict, bblSCAFile, bblSCAPickleFile)
         else:
             yellowPrint("{} bblSCAPickleFile already existed".format(taskName))
+        # bblHashDict = dict()
+        # with open(bblJsonFile, 'r') as f:
+        #     bblHashDict = json.load(f)
+        # for bblHashStr, bblList in bblHashDict.items():
+        #     [decision, cycles, pressure] = llvmResult(bblList)
+        # exit(0)
         
 def OffloadBySCA(taskList):
     for taskKey, taskName in taskList.items():
@@ -74,6 +80,9 @@ def OffloadBySCA(taskList):
             
 def llvmResult(bblList):
     command = llvmCommand(bblList)
+    if not bblList: return [0,0,0]
+    ic(bblList)
+    print(command)
     [list, errList]=TIMEOUT_severalCOMMAND(command, glv._get("timeout"))
     # ic(errList)
     if errList and errList[-1]=="error: no assembly instructions found.\n":
@@ -85,24 +94,35 @@ def llvmResult(bblList):
     resourcePressure = 0.0
     registerPressure = 0.0
     memoryPressure = 0.0
+    MayLoad = 0
+    MayStore = 0
+    MayLoadPostition = 3*7+1
+    MayStorePostition = 4*7+1
     for i in range(len(list)):
         # ic(list[i])
+# [1]    [2]    [3]    [4]    [5]    [6]    Instructions:
+#  2      7     0.50    *                   paddq 3084(%rip), %xmm1
+#  1      1     1.00           *            movdqu        %xmm2, (%r8,%rdx,8)
+        if re.match(r".{"+str(MayLoadPostition)+r"}\*.*$",list[i]):
+            MayLoad += 1
+        if re.match(r".{"+str(MayStorePostition)+r"}\*.*$",list[i]):
+            MayStore += 1
         if list[i].startswith('  Resource Pressure       '):
-            ic(list[i])
+            # ic(list[i])
             matchPressure = re.match(r".*\[ ([0-9\.]*)% \](\s*)$",list[i])
             if not matchPressure:
                 resourcePressure = -2
             else:
                 resourcePressure = float(matchPressure.group(1))
-            ic(resourcePressure)
+            # ic(resourcePressure)
         if list[i].startswith('  - Register Dependencies ['):
-            ic(list[i])
+            # ic(list[i])
             registerPressure = float(re.match(r".*\[ ([0-9\.]*)% \](\s*)$",list[i]).group(1))
-            ic(registerPressure)
+            # ic(registerPressure)
         if list[i].startswith('  - Memory Dependencies   ['):
-            ic(list[i])
+            # ic(list[i])
             memoryPressure = float(re.match(r".*\[ ([0-9\.]*)% \](\s*)$",list[i]).group(1))
-            ic(memoryPressure)
+            # ic(memoryPressure)
         # if list[i].startswith('Resource pressure per iteration'):
         #     ic(list[i])
         #     ic(list[i+1])
@@ -119,6 +139,8 @@ def llvmResult(bblList):
         #     ic(loadPortUsage)
     # ic(list[2])
     # ic(list[11])
+    instrNums = int(re.match(r"Instructions:(\s*)([0-9]*)(\s*)",list[1]).group(2))/100
+    ic(instrNums, MayLoad, MayStore)
     cycles = int(re.match(r"Total Cycles:(\s*)([0-9]*)(\s*)",list[2]).group(2))
     if list[11]=="No resource or data dependency bottlenecks discovered.\n":
         pressure = 0
