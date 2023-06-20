@@ -48,7 +48,7 @@ def readDataFromOutputFile(taskName, pimCoreCount):
     
     
     if not checkFileExists(targetFile):
-        errorPrint("Could not find decision file!!!")
+        errorPrint("Could not find pimprof result file!!!")
         exit(1)
     else:
         glvGraphDict = glv._get("graphAppDetailDict")

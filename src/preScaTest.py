@@ -41,13 +41,16 @@ def main():
         errorPrint("-----------------------------------STEP1----------------------------------------")
         
         
-        errorPrint("-----------------------------------STEP SCA BB abstract----------------------------------------")
         # disassembly to get the instructions of BBLs
+        errorPrint("-----------------------------------STEP 1.1 disassembly----------------------------------------")
+        
         parallelTask(taskList, singleDisassembly)
         
+        errorPrint("-----------------------------------STEP 1.2 llvm-mca result of BBLs----------------------------------------")
         # get the llvm-mca result of BBLs
         llvmAnalysis(taskList)
 
+        errorPrint("-----------------------------------STEP 1.3 static decision based on llvm-mca result ----------------------------------------")
         # get the static decision from the llvm-mca result
         OffloadBySCA(taskList)
         

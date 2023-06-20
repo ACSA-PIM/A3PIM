@@ -10,6 +10,7 @@ import sys
 import plotly.graph_objects as go
 import plotly
 import plotly.io as pio
+from itertools import zip_longest
 
 
 def generateAppStackedBar():
@@ -245,28 +246,36 @@ def BreakdownGraph(species,dictData, maxVal):
 def normalizedGraphAppDict():
     entryList = glv._get("graphEntryList")
     dictData = glv._get("graphAppDict")
+    tmpTotalList = []
     for key, List in dictData.items():
         baseline = List[0]
         for i in range(len(List)):
             List[i] = round(List[i]/baseline,2)
         dictData[key] = List
-    result1 = []
-    result2 = {}
+        tmpTotalList = [x + y for x, y in zip_longest(tmpTotalList, List, fillvalue=0)]
+    # add avg application
+    applicationNum = len(dictData)
+    dictData['AVG'] = [round(i/applicationNum,2) for i in tmpTotalList]
+	
+    # Application Name
+    species = []
+    # graph data . eg: graphData["PIMProf"] = [i in all application]
+    graphData = {}
     maxVal = 0
     scaMaxVal = 0
     ic(dictData)
     for key, List in dictData.items():
         ic(key, List)
-        result1.append(key)
+        species.append(key)
         scaMaxVal = max(scaMaxVal,List[len(entryList)-1])
         for i in range(min(len(List),len(entryList))):
             maxVal = max(List[i], maxVal)
-            if entryList[i] not in result2:
-                result2[entryList[i]] = [List[i]]  
+            if entryList[i] not in graphData:
+                graphData[entryList[i]] = [List[i]]  
             else:
-                result2[entryList[i]].append(List[i])   
+                graphData[entryList[i]].append(List[i])   
     ic(scaMaxVal)
-    return [result1, result2, maxVal, scaMaxVal]
+    return [species, graphData, maxVal, scaMaxVal] 
 
 def detailNormalizedGraphAppDict():
     x = []
@@ -276,6 +285,7 @@ def detailNormalizedGraphAppDict():
     entryListSize = len(entryList)
     detailAppDictData = glv._get("graphAppDetailDict")
     ic(detailAppDictData)
+    tmpTotalList = []
     for appName, appDataDict in detailAppDictData.items():
         xClass1 += [appName] * entryListSize
         xClass2 += entryList
@@ -286,6 +296,18 @@ def detailNormalizedGraphAppDict():
             for j, entry in enumerate(line):
                 appDataDict[i][j] = round(entry/baseline, 7)
         ic(appDataDict)
+        tmpTotalList = addList(tmpTotalList,appDataDict)
+        ic(tmpTotalList)
+	# add avg application
+    applicationNum = len(detailAppDictData)
+    detailAppDictData['AVG'] = [[round(i/applicationNum,2) for i in row]for row in tmpTotalList]
+    xClass1 += ['AVG'] * entryListSize
+    xClass2 += entryList
+    
+    # x = [
+	# 	["bc", "bc", "bc", "sssp", "sssp", "sssp"],
+	# 	["CPU-ONLY", "PIM_ONLY", "PIMProf", "CPU-ONLY", "PIM_ONLY", "PIMProf",]
+	# ]
     x.append(xClass1)
     x.append(xClass2)
     ic(x)
@@ -300,3 +322,18 @@ def detailNormalizedGraphAppDict():
         # ic(tmp)
         barDict[detailName]=tmp
     return [x, barDict]
+
+def addList(list1,list2):
+	rows = max(len(list1), len(list2))
+	cols = max(len(row) for row in list1 + list2)
+
+	result = [[0] * cols for _ in range(rows)]
+
+	for i in range(rows):
+		for j in range(cols):
+			if i < len(list1) and j < len(list1[i]):
+				result[i][j] += list1[i][j]
+			if i < len(list2) and j < len(list2[i]):
+				result[i][j] += list2[i][j]
+
+	return result
