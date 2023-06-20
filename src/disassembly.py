@@ -91,6 +91,8 @@ def abstractBBLfromAssembly(assembly):
     # 因为无法完全处理输入的数据。通常情况下，使用元组作为字典键值是一种不常见的做法，因为字典的键值必须是可散列对象，也即是说必须是不可变的对象。
     with open(bblJsonFile, 'w') as f:
         json.dump(bblHashDict, f)
+    
+    return bblHashDict
 
     # # 加载 dict
     # with open('data.json', 'r') as f:

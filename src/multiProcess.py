@@ -145,7 +145,8 @@ def singleDisassembly(queueDict, taskKey, taskName, countId, totolCount, **kwarg
         assert len(list)!=0
     else:
         yellowPrint("[   {}/{}   ] Disassembly-1 Task {} already finished".format( countId, totolCount, taskName))
-    abstractBBLfromAssembly(targetFile)
+    bblHashDict = abstractBBLfromAssembly(targetFile)
+    # loadStoreDataMove(bblHashDict, targetFile[:-2] + "_bbl.sl_data")
     passPrint("[   {}/{}   ] Disassembly-1 Task {} finished successfully".format( countId, totolCount, taskName))
     queueDict.get("finishedSubTask").put(taskName)
     
@@ -291,7 +292,7 @@ def getBBLFunc(bblHashDict, sendPipe,rank,queueDict):
     sendPipe.send(i+sendSkipNum)
     sendPipe.close()
     
-def parallelGetBBL(taskName, bblHashDict, bblDecisionFile, bblSCAFile):
+def parallelGetSCAResult(taskName, bblHashDict, bblSCAFile, bblSCAPickleFile):
     bblDict = bblDictInit()
     ProcessNum=glv._get("ProcessNum")
     DivideNum = ProcessNum-1
@@ -342,12 +343,34 @@ def parallelGetBBL(taskName, bblHashDict, bblDecisionFile, bblSCAFile):
     for i in range(ProcessNum):
         bblDict=mergeQueue2dataDict(queueDict,bblDict)
                
+    save2File(bblDict, bblSCAFile, bblSCAPickleFile)
     # decisionByLogisticRegression(bblDict, bblSCAFile, bblDecisionFile)
-    decisionByXGB(bblDict, bblSCAFile, bblDecisionFile)
+    # decisionByXGB(bblDict, bblSCAFile, bblDecisionFile)
     
     return bblDict
 
-def decisionByXGB(bblDict, bblSCAFile, bblDecisionFile):
+def save2File(bblDict, bblSCAFile, bblSCAPickleFile):
+    with open(bblSCAPickleFile, 'wb') as f:
+        pickle.dump(bblDict, f)
+    
+    for key, value in bblDict.dataDict.items():
+        globals()[key]=value
+
+    with open(bblSCAFile, 'w') as fsca:
+        for [bblHashStr, cycles] in  llvmCycles.items():
+            pressure = llvmPressure[bblHashStr]
+            portUsage = llvmPortUsage[bblHashStr]
+            resourcePressure = llvmResourcePressure[bblHashStr] 
+            registerPressure = llvmRegisterPressure[bblHashStr] 
+            memoryPressure = llvmMemoryPressure[bblHashStr] 
+            fsca.write("{:36} portUsage: {:5} cycles: {:5} pressure: {:5} resourcePressure: {:5} registerPressure: {:5} memoryPressure: {:5}\n".format(
+                    bblHashStr,
+                    str(portUsage),
+                    str(cycles),
+                    str(pressure), str(resourcePressure), str(registerPressure), str(memoryPressure)
+                )) 
+        
+def decisionByXGB(bblDict, bblDecisionFile):
     for key, value in bblDict.dataDict.items():
         globals()[key]=value
     n_estimators = 100
@@ -356,35 +379,28 @@ def decisionByXGB(bblDict, bblSCAFile, bblDecisionFile):
 
     # 创建新的XGBClassifier模型，并设置加载的参数
    
-    # bblDecisionFile, bblSCAFile save to file
-    with open(bblSCAFile, 'w') as fsca:
-            with open(bblDecisionFile, 'w') as f:
-                for [bblHashStr, cycles] in  tqdm(llvmCycles.items()) :
-                    pressure = llvmPressure[bblHashStr]
-                    portUsage = llvmPortUsage[bblHashStr]
-                    resourcePressure = llvmResourcePressure[bblHashStr] 
-                    registerPressure = llvmRegisterPressure[bblHashStr] 
-                    memoryPressure = llvmMemoryPressure[bblHashStr]   
-                        
-                    if pressure == FollowStatus:
-                        decision = "Follower"
-                    else:
-                        value = [portUsage, cycles, resourcePressure, registerPressure, memoryPressure]
-                        value = [max(0,float(i)) for i in value]
-                        y_pred = trained_model.predict([value])
-                        if y_pred == 1:
-                            decision = "PIM"
-                        else:
-                            decision = "CPU"
+    # bblDecisionFile save to file
+    with open(bblDecisionFile, 'w') as f:
+        for [bblHashStr, cycles] in  tqdm(llvmCycles.items()) :
+            pressure = llvmPressure[bblHashStr]
+            portUsage = llvmPortUsage[bblHashStr]
+            resourcePressure = llvmResourcePressure[bblHashStr] 
+            registerPressure = llvmRegisterPressure[bblHashStr] 
+            memoryPressure = llvmMemoryPressure[bblHashStr]   
+                
+            if pressure == FollowStatus:
+                decision = "Follower"
+            else:
+                value = [portUsage, cycles, resourcePressure, registerPressure, memoryPressure]
+                value = [max(0,float(i)) for i in value]
+                y_pred = trained_model.predict([value])
+                if y_pred == 1:
+                    decision = "PIM"
+                else:
+                    decision = "CPU"
 
-                    f.write(bblHashStr + " " + decision + \
-                            " " + str(cycles) + '\n')   
-                    fsca.write("{:36} {:10} portUsage: {:5} cycles: {:5} pressure: {:5} resourcePressure: {:5} registerPressure: {:5} memoryPressure: {:5}\n".format(
-                                bblHashStr, decision,
-                                str(portUsage),
-                                str(cycles),
-                                str(pressure), str(resourcePressure), str(registerPressure), str(memoryPressure)
-                            )) 
+            f.write(bblHashStr + " " + decision + \
+                    " " + str(cycles) + '\n')   
     
 def decisionByLogisticRegression(bblDict, bblSCAFile, bblDecisionFile):
     for key, value in bblDict.dataDict.items():

@@ -7,7 +7,7 @@ from input_process import inputParameters, isIceEnable
 from logPrint import *
 # from excel import *
 from multiProcess import *
-from SCA import OffloadBySCA
+from SCA import OffloadBySCA, llvmAnalysis
 
 
 def main():
@@ -42,9 +42,13 @@ def main():
         
         
         errorPrint("-----------------------------------STEP SCA BB abstract----------------------------------------")
+        # disassembly to get the instructions of BBLs
         parallelTask(taskList, singleDisassembly)
         
+        # get the llvm-mca result of BBLs
+        llvmAnalysis(taskList)
 
+        # get the static decision from the llvm-mca result
         OffloadBySCA(taskList)
         
 

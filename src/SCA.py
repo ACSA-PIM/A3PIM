@@ -1,34 +1,76 @@
 # satic code analyzer for offload decision algorithms
+import pickle
 import json
 import global_variable as glv
 from terminal_command import *
 import re
 from tqdm import tqdm
-from multiProcess import parallelGetBBL, llvmCommand
+from multiProcess import parallelGetSCAResult, llvmCommand, decisionByXGB
 from tsjPython.tsjCommonFunc import *
 
-def OffloadBySCA(taskList):
+def loadStoreDataMove(bblHashDict, targetFile):
+    with open(targetFile, 'w') as f:
+        for bblHash, bbl in bblHashDict.items():
+            loadSet = set()
+            storeSet = set()
+            f.write(bblHash+'\n')
+            for command in bbl:
+                ic(command)
+                if re.match(r".*(\(.*\)).*$",command):
+                    ic("Get load store")
+                    if re.match(r".*(,.*\(.*\)).*$",command):
+                        ic("Get store")
+                        ic(re.match(r".*(,.*\(.*\)).*$",command).group(1))
+                    elif re.match(r".*(\(.*\).*,).*$",command):
+                        ic("Get load")
+                        ic(re.match(r".*(\(.*\).*,).*$",command).group(1))
+                    else:
+                        assert("Not match load store command")
+                    
+    
+def regDataMovement(taskList):
     for taskKey, taskName in taskList.items():
         ic(taskKey, taskName)
         assemblyPath = glv._get("logPath")+ "assembly/"
         targetAssembly = assemblyPath + taskName + ".s"
         bblJsonFile = targetAssembly[:-2] + "_bbl.json"
-        bblDecisionFile = targetAssembly[:-2] + "_bbl.decision"
-        bblSCAFile = targetAssembly[:-2] + "_bbl.sca"
+        bblRegInfo
         if not checkFileExists(bblDecisionFile):
             bblHashDict = dict()
             with open(bblJsonFile, 'r') as f:
                 bblHashDict = json.load(f)
-            parallelGetBBL(taskName, bblHashDict, bblDecisionFile, bblSCAFile)
+            for bblHashStr, bblList in bblHashDict.items():
+                ic(bblHashStr)
+                # No need to collect for now
         else:
             yellowPrint("{} bblDecisionFile already existed".format(taskName))
-    
-        # bblHashDict = dict()
-        # with open(bblJsonFile, 'r') as f:
-        #     bblHashDict = json.load(f)
-        # for bblHashStr, bblList in tqdm(bblHashDict.items()):
-        #     [decision, cycles, pressure] = llvmResult(bblList)
-        # exit(0)
+
+def llvmAnalysis(taskList):
+    for taskKey, taskName in taskList.items():
+        ic(taskKey, taskName)
+        assemblyPath = glv._get("logPath")+ "assembly/"
+        targetAssembly = assemblyPath + taskName + ".s"
+        bblJsonFile = targetAssembly[:-2] + "_bbl.json"
+        bblSCAFile = targetAssembly[:-2] + "_bbl.sca"
+        bblSCAPickleFile = targetAssembly[:-2] + "_bbl_sca.pickle"
+        if not checkFileExists(bblSCAPickleFile):
+            bblHashDict = dict()
+            with open(bblJsonFile, 'r') as f:
+                bblHashDict = json.load(f)
+            parallelGetSCAResult(taskName, bblHashDict, bblSCAFile, bblSCAPickleFile)
+        else:
+            yellowPrint("{} bblSCAPickleFile already existed".format(taskName))
+        
+def OffloadBySCA(taskList):
+    for taskKey, taskName in taskList.items():
+        ic(taskKey, taskName)
+        assemblyPath = glv._get("logPath")+ "assembly/"
+        targetAssembly = assemblyPath + taskName + ".s"
+        bblDecisionFile = targetAssembly[:-2] + "_bbl.decision"
+        bblSCAPickleFile = targetAssembly[:-2] + "_bbl_sca.pickle"
+        with open(bblSCAPickleFile, 'rb') as f:
+            bblDict = pickle.load(f)
+        decisionByXGB(bblDict,bblDecisionFile)
             
 def llvmResult(bblList):
     command = llvmCommand(bblList)
