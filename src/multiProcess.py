@@ -217,6 +217,7 @@ def getBBLFunc(bblHashDict, sendPipe,rank,queueDict):
     llvmStorePressure = defaultdict(float)
     llvmPressure = defaultdict(float)
     llvmPortUsage = defaultdict(float)
+    llvmSBPort23Pressure = defaultdict(float)
     llvmResourcePressure = defaultdict(float)
     llvmRegisterPressure = defaultdict(float)
     llvmMemoryPressure = defaultdict(float)
@@ -242,6 +243,7 @@ def getBBLFunc(bblHashDict, sendPipe,rank,queueDict):
                 instrNums = FollowStatus
                 pressure = FollowStatus
                 loadPortUsage = FollowStatus
+                SBPort23Pressure = FollowStatus
                 resourcePressure = FollowStatus
                 registerPressure = FollowStatus
                 memoryPressure = FollowStatus
@@ -255,6 +257,7 @@ def getBBLFunc(bblHashDict, sendPipe,rank,queueDict):
                 else:
                     pressure = float(re.match(r"Cycles with backend pressure increase(\s*)\[ ([0-9\.]*)% \](\s*)",list[11]).group(2))              
                 loadPortUsage = 0.0
+                SBPort23Pressure = 0.0
                 resourcePressure = 0.0
                 registerPressure = 0.0
                 memoryPressure = 0.0
@@ -264,6 +267,12 @@ def getBBLFunc(bblHashDict, sendPipe,rank,queueDict):
                         MayLoad += 1
                     if re.match(r".{"+str(MayStorePostition)+r"}\*.*$",list[i]):
                         MayStore += 1
+                    if list[i].startswith('  - SBPort23 '):
+                        matchPressure = re.match(r".*\[ ([0-9\.]*)% \](\s*)$",list[i])
+                        if not matchPressure:
+                            SBPort23Pressure = -2
+                        else:
+                            SBPort23Pressure = float(matchPressure.group(1))
                     if list[i].startswith('  Resource Pressure       '):
                         matchPressure = re.match(r".*\[ ([0-9\.]*)% \](\s*)$",list[i])
                         if not matchPressure:
@@ -296,6 +305,7 @@ def getBBLFunc(bblHashDict, sendPipe,rank,queueDict):
             llvmStorePressure[bblHashStr]=max(0, MayStore/instrNums)
             llvmPressure[bblHashStr]=pressure      
             llvmPortUsage[bblHashStr]=loadPortUsage   
+            llvmSBPort23Pressure[bblHashStr] = SBPort23Pressure
             llvmResourcePressure[bblHashStr] = resourcePressure
             llvmRegisterPressure[bblHashStr] = registerPressure
             llvmMemoryPressure[bblHashStr] = memoryPressure         
@@ -311,6 +321,7 @@ def getBBLFunc(bblHashDict, sendPipe,rank,queueDict):
     queueDict.get("llvmStorePressure").put(llvmStorePressure)
     queueDict.get("llvmPressure").put(llvmPressure)
     queueDict.get("llvmPortUsage").put(llvmPortUsage)
+    queueDict.get("llvmSBPort23Pressure").put(llvmSBPort23Pressure)
     queueDict.get("llvmResourcePressure").put(llvmResourcePressure)
     queueDict.get("llvmRegisterPressure").put(llvmRegisterPressure)
     queueDict.get("llvmMemoryPressure").put(llvmMemoryPressure)
@@ -392,10 +403,12 @@ def save2File(bblDict, bblSCAFile, bblSCAPickleFile):
             memoryPressure = llvmMemoryPressure[bblHashStr] 
             fsca.write("{:36} instrNums: {:5} MayLoad: {:5} MayStore: {:5} "
                         "loadPressure: {:5} storePressure: {:5} "
+                        "SBPort23Pressure: {:5} "
                         "portUsage: {:5} cycles: {:5} pressure: {:5} "
                        "resourcePressure: {:5} registerPressure: {:5} memoryPressure: {:5}\n".format(
                     bblHashStr, str(llvmInstrNums[bblHashStr]), str(llvmMayLoad[bblHashStr]), str(llvmMayStore[bblHashStr]), 
                     str(round(llvmLoadPressure[bblHashStr],3)), str(round(llvmStorePressure[bblHashStr],3)), 
+                    str(round(llvmSBPort23Pressure[bblHashStr],3)), 
                     str(portUsage), str(cycles),str(pressure), 
                     str(resourcePressure), str(registerPressure), str(memoryPressure)
                 )) 
@@ -428,6 +441,7 @@ def decisionByXGB(bblDict, bbhashXDict, bblDecisionFile):
             f.write(bblHashStr + " " + decision + \
                     " " + str(cycles) + '\n')   
     
+# discarded function
 def decisionByLogisticRegression(bblDict, bblSCAFile, bblDecisionFile):
     for key, value in bblDict.dataDict.items():
         globals()[key]=value

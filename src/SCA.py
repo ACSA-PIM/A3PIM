@@ -84,7 +84,7 @@ def llvmResult(bblList):
     command = llvmCommand(bblList)
     if not bblList: return [0,0,0]
     ic(bblList)
-    print(command)
+    # print(command)
     [list, errList]=TIMEOUT_severalCOMMAND(command, glv._get("timeout"))
     # ic(errList)
     if errList and errList[-1]=="error: no assembly instructions found.\n":
@@ -109,6 +109,15 @@ def llvmResult(bblList):
             MayLoad += 1
         if re.match(r".{"+str(MayStorePostition)+r"}\*.*$",list[i]):
             MayStore += 1
+        if list[i].startswith('  - SBPort23 '):
+            ic(list[i])
+            matchPressure = re.match(r".*\[ ([0-9\.]*)% \](\s*)$",list[i])
+            if not matchPressure:
+                lsportPressure = -2
+            else:
+                lsportPressure = float(matchPressure.group(1))
+            print(command)
+            print(lsportPressure)
         if list[i].startswith('  Resource Pressure       '):
             # ic(list[i])
             matchPressure = re.match(r".*\[ ([0-9\.]*)% \](\s*)$",list[i])
@@ -142,7 +151,7 @@ def llvmResult(bblList):
     # ic(list[2])
     # ic(list[11])
     instrNums = int(re.match(r"Instructions:(\s*)([0-9]*)(\s*)",list[1]).group(2))/100
-    ic(instrNums, MayLoad, MayStore)
+    # ic(instrNums, MayLoad, MayStore)
     cycles = int(re.match(r"Total Cycles:(\s*)([0-9]*)(\s*)",list[2]).group(2))
     if list[11]=="No resource or data dependency bottlenecks discovered.\n":
         pressure = 0

@@ -6,7 +6,7 @@
 cd /staff/shaojiemike/github/sniper-pim
 source ./pyEnv/bin/activate
 
-k=3  # loop times
+k=2  # loop times
 
 for ((i=1; i<=k; i++))
 do

@@ -37,6 +37,7 @@ def bblDictInit():
     dataDict.set("llvmStorePressure" , defaultdict(float))
     dataDict.set("llvmPressure" , defaultdict(float))
     dataDict.set("llvmPortUsage" , defaultdict(float))
+    dataDict.set("llvmSBPort23Pressure" , defaultdict(float))
     dataDict.set("llvmResourcePressure" , defaultdict(float))
     dataDict.set("llvmRegisterPressure" , defaultdict(float))
     dataDict.set("llvmMemoryPressure" , defaultdict(float))

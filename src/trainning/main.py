@@ -59,8 +59,12 @@ def XGBClassifierFunc(bbhashXDict, bbhashYDict):
     
     # default n_estimators = 100 max_depth = 5
     n_estimators = glv._get("xgb_n_estimators")
-    max_depth = 5
-    model = XGBClassifier(n_estimators=n_estimators, max_depth=max_depth, objective='binary:logistic')
+    max_depth = 1
+    model = XGBClassifier(learning_rate = 0.000001, 
+                          subsample = 1,
+                          colsample_bytree = 1,
+                          colsample_bynode = 1,
+                          n_estimators=n_estimators, max_depth=max_depth, objective='binary:logistic')
     model.fit(X, y, sample_weight=weights)
     
     # 获取模型的决策树列表
