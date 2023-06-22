@@ -5,7 +5,7 @@ import global_variable as glv
 from terminal_command import *
 import re
 from tqdm import tqdm
-from multiProcess import parallelGetSCAResult, llvmCommand, decisionByXGB
+from multiProcess import parallelGetSCAResult, llvmCommand, decisionByXGB, decisionByManual
 from tsjPython.tsjCommonFunc import *
 from trainning.training_data import resultFromSCAFile
 
@@ -78,7 +78,8 @@ def OffloadBySCA(taskList):
         bblSCAPickleFile = targetAssembly[:-2] + "_bbl_sca.pickle"
         with open(bblSCAPickleFile, 'rb') as f:
             bblDict = pickle.load(f)
-        decisionByXGB(bblDict, resultFromSCAFile(bblSCAFile),bblDecisionFile)
+        # decisionByXGB(bblDict, resultFromSCAFile(bblSCAFile),bblDecisionFile)
+        decisionByManual(bblDict,bblDecisionFile)
             
 def llvmResult(bblList):
     command = llvmCommand(bblList)

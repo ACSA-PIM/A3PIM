@@ -59,7 +59,7 @@ def XGBClassifierFunc(bbhashXDict, bbhashYDict):
     
     # default n_estimators = 100 max_depth = 5
     n_estimators = glv._get("xgb_n_estimators")
-    max_depth = 1
+    max_depth = glv._get("xgb_max_depth")
     model = XGBClassifier(learning_rate = 0.000001, 
                           subsample = 1,
                           colsample_bytree = 1,

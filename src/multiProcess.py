@@ -412,7 +412,28 @@ def save2File(bblDict, bblSCAFile, bblSCAPickleFile):
                     str(portUsage), str(cycles),str(pressure), 
                     str(resourcePressure), str(registerPressure), str(memoryPressure)
                 )) 
-        
+
+def decisionByManual(bblDict, bblDecisionFile):
+    for key, value in bblDict.dataDict.items():
+        globals()[key]=value
+    
+     # bblDecisionFile save to file
+    with open(bblDecisionFile, 'w') as f:
+        for [bblHashStr, cycles] in  tqdm(llvmCycles.items()) :
+            pressure = llvmPressure[bblHashStr]      
+            portPressure = llvmSBPort23Pressure[bblHashStr]  
+            portUsage = llvmPortUsage[bblHashStr]
+            if pressure == FollowStatus:
+                decision = "Follower"
+            else:
+                if portPressure > glv._get("tuning_lspressure"):
+                    decision = "PIM"
+                else:
+                    decision = "CPU"
+
+            f.write(bblHashStr + " " + decision + \
+                    " " + str(cycles) + '\n')   
+            
 def decisionByXGB(bblDict, bbhashXDict, bblDecisionFile):
     for key, value in bblDict.dataDict.items():
         globals()[key]=value

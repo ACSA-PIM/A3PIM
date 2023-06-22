@@ -33,6 +33,8 @@ def analyseResults(taskList, **kwargs):
         write2ExcelList.append(Instructions) 
         write2ExcelList += resultList
         excelGraphAdd(wb, write2ExcelList)
+    
+    return pimprofResultPath
 
 def readDataFromOutputFile(taskName, pimCoreCount):
     cpucore = 1

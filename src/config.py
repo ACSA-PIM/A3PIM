@@ -50,7 +50,7 @@ glv._set("PIMProfSolverPath", "/staff/shaojiemike/github/PIMProf/debug/PIMProfSo
 # glv._set("graphEntryList",["CPU-ONLY","PIM-ONLY", 'MPKI-based',\
 #                 "Architecture-Suitability/Greedy","PIMProf", "SCAFromfile", "SCA"])
 glv._set("graphEntryList",["CPU-ONLY","PIM-ONLY", 'MPKI-based',\
-                "Architecture-Suitability/Greedy","PIMProf", "SCAFromfile"])
+                "Arch-Suity/Greedy","PIMProf", "SCAFromfile"])
 glv._set("graphAppDict",{})
 glv._set("graphAppDetailDict",{})
 glv._set("graphDetailList",["CPU-Time","PIM-Time", 'DataMove',\
@@ -61,6 +61,7 @@ glv._set("ProcessNum",40)
 glv._set("timeout",3600*120)
 glv._set("debug","yes")
 glv._set("xgb_n_estimators",1)
+glv._set("xgb_max_depth",1)
 glv._set("xgb_train_metrix",
          [
             #  "instrNums",
@@ -92,6 +93,8 @@ glv._set("xgb_sca_dataIndex",
              "registerPressure": 23,
              "memoryPressure": 25
          })
+
+glv._set("tuning_lspressure",0)
 glv._set("custom_font_dir", f"{working_fold}font/times.ttf")
 
 
