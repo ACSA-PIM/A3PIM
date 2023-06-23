@@ -58,7 +58,7 @@ def multiCorePIMMode(taskList, coreNums):
     countId = 0
     for taskKey, taskName in taskList.items():
         countId = countId + 1
-        yellowPrint("[   {}/{}   ] PIM-{} Task {} is running……".format( countId, totolCount,coreNums, taskName))
+        yellowPrint("[   {:2}/{:2}   ] PIM-{:<10} Task {} is running……".format( countId, totolCount,coreNums, taskName))
         if taskName in glv._get("gapbsList"):
             [core, command,targetFile] = gapbsInput(taskKey, taskName, "pim", coreNums)
         elif taskName in glv._get("specialInputList"):
@@ -73,30 +73,30 @@ def multiCorePIMMode(taskList, coreNums):
                 yellowPrint("Falied command {}".format(command))
                 exit(1)
         else:
-            yellowPrint("[   {}/{}   ] PIM-{} Task {} already finished".format( countId, totolCount,coreNums, taskName))
-        passPrint("[   {}/{}   ] PIM-{} Task {} finished successfully".format( countId, totolCount,coreNums, taskName))
+            yellowPrint("[   {}/{}   ] PIM-{:<10} Task {} already finished".format( countId, totolCount,coreNums, taskName))
+        passPrint("[   {}/{}   ] PIM-{:<10} Task {} finished successfully".format( countId, totolCount,coreNums, taskName))
 
 def pimprof(queueDict, taskKey, taskName, countId, totolCount, coreCount):
-    yellowPrint("[   {}/{}   ] PIMProf {} is running……".format( countId, totolCount, taskName))
+    yellowPrint("[   {:2}/{:2}   ] PIMProf {:<10} is running……".format( countId, totolCount, taskName))
     if taskName in glv._get("gapbsList"):
         [command,targetFile, redirect2log] = pimprofInput(taskKey, taskName, coreCount, glv._get("gapbsGraphName"))
     elif taskName in glv._get("specialInputList"):
         [command,targetFile, redirect2log] = pimprofInput(taskKey, taskName, coreCount, "special")
     else:
         [command,targetFile, redirect2log] = pimprofInput(taskKey, taskName, coreCount, "default")
-    print(command)
+    # print(command)
     if not checkFileExists(targetFile):
         list=TIMEOUT_COMMAND_2FILE(1, command, redirect2log, glv._get("timeout"))
         ic(list)
         assert len(list)!=0
     else:
-        yellowPrint("[   {}/{}   ] PIMProf {} already finished".format( countId, totolCount, taskName))
-    passPrint("[   {}/{}   ] PIMProf {} finished successfully".format( countId, totolCount, taskName))
+        yellowPrint("[   {:2}/{:2}   ] PIMProf {:<10} already finished".format( countId, totolCount, taskName))
+    passPrint("[   {:2}/{:2}   ] PIMProf {:<10} finished successfully".format( countId, totolCount, taskName))
     queueDict.get("finishedSubTask").put(taskName)
     
 def singleCpuMode(queueDict, taskKey, taskName, countId, totolCount, **kwargs):
     sys.stdout.flush()
-    yellowPrint("[   {}/{}   ] CPU-1 Task {} is running……".format( countId, totolCount, taskName))
+    yellowPrint("[   {}/{}   ] CPU-1 Task {:<10} is running……".format( countId, totolCount, taskName))
     if taskName in glv._get("gapbsList"):
         [core, command,targetFile] = gapbsInput(taskKey, taskName, "cpu", 1)
     elif taskName in glv._get("specialInputList"):
@@ -108,12 +108,12 @@ def singleCpuMode(queueDict, taskKey, taskName, countId, totolCount, **kwargs):
         ic(list)
         assert len(list)!=0
     else:
-        yellowPrint("[   {}/{}   ] CPU-1 Task {} already finished".format( countId, totolCount, taskName))
-    passPrint("[   {}/{}   ] CPU-1 Task {} finished successfully".format( countId, totolCount, taskName))
+        yellowPrint("[   {}/{}   ] CPU-1 Task {:<10} already finished".format( countId, totolCount, taskName))
+    passPrint("[   {}/{}   ] CPU-1 Task {:<10} finished successfully".format( countId, totolCount, taskName))
     queueDict.get("finishedSubTask").put(taskName)
     
 def singlePIMMode(queueDict, taskKey, taskName, countId, totolCount, coreNums):
-    yellowPrint("[   {}/{}   ] PIM-{} Task {} is running……".format( countId, totolCount,coreNums, taskName))
+    yellowPrint("[   {}/{}   ] PIM-{:<10} Task {} is running……".format( countId, totolCount,coreNums, taskName))
     if taskName in glv._get("gapbsList"):
         [core, command,targetFile] = gapbsInput(taskKey, taskName, "pim", coreNums)
     elif taskName in glv._get("specialInputList"):
@@ -128,14 +128,14 @@ def singlePIMMode(queueDict, taskKey, taskName, countId, totolCount, coreNums):
             yellowPrint("Falied command {}".format(command))
             exit(1)
     else:
-        yellowPrint("[   {}/{}   ] PIM-{} Task {} already finished".format( countId, totolCount,coreNums, taskName))
-    passPrint("[   {}/{}   ] PIM-{} Task {} finished successfully".format( countId, totolCount,coreNums, taskName))
+        yellowPrint("[   {}/{}   ] PIM-{:<10} Task {} already finished".format( countId, totolCount,coreNums, taskName))
+    passPrint("[   {}/{}   ] PIM-{:<10} Task {} finished successfully".format( countId, totolCount,coreNums, taskName))
     queueDict.get("finishedSubTask").put(taskName)
 
 
 def singleDisassembly(queueDict, taskKey, taskName, countId, totolCount, **kwargs):
     sys.stdout.flush()
-    yellowPrint("[   {}/{}   ] Disassembly-1 Task {} is running……".format( countId, totolCount, taskName))
+    yellowPrint("[   {:2}/{:2}   ] Disassembly-1 Task {:<10} is running……".format( countId, totolCount, taskName))
     # if taskName in glv._get("gapbsList"):
     [command,targetFile] = disassemblyInput(taskKey, taskName)
     if not checkFileExists(targetFile):
@@ -144,10 +144,10 @@ def singleDisassembly(queueDict, taskKey, taskName, countId, totolCount, **kwarg
         ic(list)
         assert len(list)!=0
     else:
-        yellowPrint("[   {}/{}   ] Disassembly-1 Task {} already finished".format( countId, totolCount, taskName))
+        yellowPrint("[   {:2}/{:2}   ] Disassembly-1 Task {:<10} already finished".format( countId, totolCount, taskName))
     bblHashDict = abstractBBLfromAssembly(targetFile)
     # loadStoreDataMove(bblHashDict, targetFile[:-2] + "_bbl.sl_data")
-    passPrint("[   {}/{}   ] Disassembly-1 Task {} finished successfully".format( countId, totolCount, taskName))
+    passPrint("[   {:2}/{:2}   ] Disassembly-1 Task {:<10} finished successfully".format( countId, totolCount, taskName))
     queueDict.get("finishedSubTask").put(taskName)
     
     

@@ -60,7 +60,7 @@ def llvmAnalysis(taskList):
                 bblHashDict = json.load(f)
             parallelGetSCAResult(taskName, bblHashDict, bblSCAFile, bblSCAPickleFile)
         else:
-            yellowPrint("{} bblSCAPickleFile already existed".format(taskName))
+            yellowPrint("{:<10} bblSCAPickleFile already existed".format(taskName))
         # bblHashDict = dict()
         # with open(bblJsonFile, 'r') as f:
         #     bblHashDict = json.load(f)
