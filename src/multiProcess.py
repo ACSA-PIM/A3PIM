@@ -84,7 +84,7 @@ def pimprof(queueDict, taskKey, taskName, countId, totolCount, coreCount):
         [command,targetFile, redirect2log] = pimprofInput(taskKey, taskName, coreCount, "special")
     else:
         [command,targetFile, redirect2log] = pimprofInput(taskKey, taskName, coreCount, "default")
-    # print(command)
+    print(command)
     if not checkFileExists(targetFile):
         list=TIMEOUT_COMMAND_2FILE(1, command, redirect2log, glv._get("timeout"))
         ic(list)
@@ -421,8 +421,8 @@ def decisionByManual(bblDict, bblDecisionFile):
     with open(bblDecisionFile, 'w') as f:
         for [bblHashStr, cycles] in  tqdm(llvmCycles.items()) :
             pressure = llvmPressure[bblHashStr]      
-            portPressure = llvmSBPort23Pressure[bblHashStr]  
-            portUsage = llvmPortUsage[bblHashStr]
+            portPressure = max(0,llvmSBPort23Pressure[bblHashStr])
+            portUsage = max(0,llvmPortUsage[bblHashStr])
             if pressure == FollowStatus:
                 decision = "Follower"
             else:

@@ -88,7 +88,8 @@ def pimprofInput(taskPath, taskName, coreNums, class1):
                 " -p " + pimprofstatsPath + \
                 " -r " + pimprofreusePath + \
                 " -o " + pimprofResultFile +\
-                " -s " + bblDecisionFile
+                " -s " + bblDecisionFile +\
+                " -d " + str(glv._get("tuning_dataThreshold"))
     # print("command : {}".format(command))
     ic(command)
     return [command, pimprofResultFile, redirect2log]

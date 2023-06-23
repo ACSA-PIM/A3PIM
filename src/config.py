@@ -95,6 +95,7 @@ glv._set("xgb_sca_dataIndex",
          })
 
 glv._set("tuning_lspressure",0)
+glv._set("tuning_dataThreshold",0.01)
 glv._set("custom_font_dir", f"{working_fold}font/times.ttf")
 
 
