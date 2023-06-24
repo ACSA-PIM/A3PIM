@@ -42,14 +42,12 @@ def main():
     isIceEnable(args.debug)
     tuningLabel = "Withhashjoin"
     # tuningLabel = "nohashjoin"
-    StartEndStep = [0,100,5]
-    # StartEndStep = [65,85,2.5]
-    # StartEndStep = [5,20,5]
+    # StartEndStep = [0,100,5]
+    StartEndStep = [65,85,2.5]
     tuningLabel += f"_{StartEndStep[0]}_{StartEndStep[1]}_{StartEndStep[2]}"
     tuningLSpressure(tuningLabel, StartEndStep)
-    StartEndStep2 = [0.000001,1,10]
-    # StartEndStep2 = [0.0001,0.01,2]
-    # StartEndStep2 = [0.000001,0.00001,10]
+    # StartEndStep2 = [0.000001,1,10]
+    StartEndStep2 = [0.0001,0.01,2]
     tuningLabel += f"_{StartEndStep2[0]}_{StartEndStep2[1]}_{StartEndStep2[2]}"
     tuning2D(tuningLabel, StartEndStep, StartEndStep2)
      
@@ -57,6 +55,8 @@ def LoopCore(i, j):
     # change tuning parameters
     glv._set("tuning_lspressure",i)
     glv._set("tuning_dataThreshold",j)
+    glv._set("graphAppDict",{})
+    glv._set("graphAppDetailDict",{})
     
     # delete other result tmp file
     if checkFileExists(glv._get("resultPath")+"default_cpu_1_pim_32"):
