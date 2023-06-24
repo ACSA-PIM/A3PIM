@@ -253,9 +253,12 @@ def normalizedGraphAppDict():
             List[i] = round(List[i]/baseline,2)
         dictData[key] = List
         tmpTotalList = [x + y for x, y in zip_longest(tmpTotalList, List, fillvalue=0)]
+        ic(key, List, tmpTotalList)
     # add avg application
     applicationNum = len(dictData)
     dictData['AVG'] = [round(i/applicationNum,2) for i in tmpTotalList]
+    ic(dictData)
+    # exit(0)
 	
     # Application Name
     species = []

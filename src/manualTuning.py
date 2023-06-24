@@ -43,9 +43,13 @@ def main():
     tuningLabel = "Withhashjoin"
     # tuningLabel = "nohashjoin"
     StartEndStep = [0,100,5]
+    # StartEndStep = [65,85,2.5]
+    # StartEndStep = [5,20,5]
     tuningLabel += f"_{StartEndStep[0]}_{StartEndStep[1]}_{StartEndStep[2]}"
-    # tuningLSpressure(tuningLabel, tuningStart, tuningEnd, tuningStep)
+    tuningLSpressure(tuningLabel, StartEndStep)
     StartEndStep2 = [0.000001,1,10]
+    # StartEndStep2 = [0.0001,0.01,2]
+    # StartEndStep2 = [0.000001,0.00001,10]
     tuningLabel += f"_{StartEndStep2[0]}_{StartEndStep2[1]}_{StartEndStep2[2]}"
     tuning2D(tuningLabel, StartEndStep, StartEndStep2)
      
@@ -68,11 +72,11 @@ def LoopCore(i, j):
     # disassembly to get the instructions of BBLs
     errorPrint("-----------------------------------STEP 1.1 disassembly----------------------------------------")
     
-    parallelTask(taskList, singleDisassembly)
+    # parallelTask(taskList, singleDisassembly)
     
     errorPrint("-----------------------------------STEP 1.2 llvm-mca result of BBLs----------------------------------------")
     # get the llvm-mca result of BBLs
-    llvmAnalysis(taskList)
+    # llvmAnalysis(taskList)
 
     errorPrint("-----------------------------------STEP 1.3 static decision based on llvm-mca result ----------------------------------------")
     # get the static decision from the llvm-mca result
@@ -103,6 +107,9 @@ def tuning2D(tuningLabel, StartEndStep, StartEndStep2):
     processBeginTime=timeBeginPrint("multiple taskList")
     [tuningStart, tuningEnd, tuningStep] = StartEndStep
     [tuningStart2, tuningEnd2, tuningStep2] = StartEndStep2
+    bestX = 0
+    bestY = 0
+    bestZ = 100
     for diffGraph in glv._get("gapbsGraphNameList"):
         glv._set("gapbsGraphName", diffGraph)
         errorPrint("-----------------------------------{}----------------------------------------".format(diffGraph))
@@ -123,6 +130,10 @@ def tuning2D(tuningLabel, StartEndStep, StartEndStep2):
                     X.append(i)
                     Y.append(j)
                     Z.append(scaAvgTime)
+                    if scaAvgTime < bestZ:
+                        bestX = i
+                        bestY = j
+                        bestZ = scaAvgTime
                     passPrint(f"-----------------------------------already get tuning {i} {j} Result {scaAvgTime}----------------------------------------")
                     j *= tuningStep2
                     continue
@@ -132,6 +143,10 @@ def tuning2D(tuningLabel, StartEndStep, StartEndStep2):
                 X.append(i)
                 Y.append(j)
                 Z.append(scaAvgTime)
+                if scaAvgTime < bestZ:
+                    bestX = i
+                    bestY = j
+                    bestZ = scaAvgTime
                 errorPrint(f"-----------------------------------Finished tuning {i} {j}----------------------------------------")
                 
                 # save result file
@@ -146,9 +161,11 @@ def tuning2D(tuningLabel, StartEndStep, StartEndStep2):
         
         passPrint("-----------------------------------{}----------------------------------------".format(diffGraph))
     timeEndPrint("multiple taskList",processBeginTime)
+    print(f"bestX {bestX} bestY {bestY} bestZ {bestZ} ")
             
-def tuningLSpressure(tuningLabel, tuningStart, tuningEnd, tuningStep):
+def tuningLSpressure(tuningLabel, StartEndStep):
     processBeginTime=timeBeginPrint("multiple taskList")
+    [tuningStart, tuningEnd, tuningStep] = StartEndStep
     metricValue = []    
     accuracyResult = []
     for diffGraph in glv._get("gapbsGraphNameList"):
@@ -171,7 +188,7 @@ def tuningLSpressure(tuningLabel, tuningStart, tuningEnd, tuningStep):
                 passPrint(f"-----------------------------------already get tuning {i} Result {scaAvgTime}----------------------------------------")
                 continue
             
-            scaAvgTime = LoopCore(i, 0.01)
+            [source_folder,scaAvgTime] = LoopCore(i, 0.01)
             
             metricValue.append(i)
             accuracyResult.append(scaAvgTime)
@@ -212,6 +229,11 @@ if __name__ == "__main__":
                     color=Z,
                     # size=x, size_max=20,
                     title="3D Scatter Plot")
+    
+    fig.update_layout(scene=dict(
+        yaxis=dict(type="log"),
+        zaxis=dict(type="log")
+    ))
 
     # dash to show
     app = Dash(__name__)
@@ -222,5 +244,6 @@ if __name__ == "__main__":
             style = {'height': '100vh'}
         )
     ])
+    
     app.run_server(debug=True)
     
