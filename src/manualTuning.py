@@ -14,6 +14,9 @@ import numpy as np
 from dash import Dash, html, dcc
 import pandas as pd
 import plotly.express as px
+import plotly.graph_objects as go
+from scipy.interpolate import griddata
+from mpl_toolkits.mplot3d.axes3d import get_test_data
 
 gapbsTaskfilePath = "/staff/shaojiemike/github/sniper_PIMProf/PIMProf/gapbs/"
 taskfilePath = "/staff/shaojiemike/github/sniper_PIMProf/PIMProf/"
@@ -43,14 +46,27 @@ def main():
     tuningLabel = "Withhashjoin"
     # tuningLabel = "nohashjoin"
     # StartEndStep = [0,100,5]
-    StartEndStep = [65,85,2.5]
+    # StartEndStep = [65,85,2.5]
+    StartEndStep = [72,80,1]
     tuningLabel += f"_{StartEndStep[0]}_{StartEndStep[1]}_{StartEndStep[2]}"
     tuningLSpressure(tuningLabel, StartEndStep)
     # StartEndStep2 = [0.000001,1,10]
-    StartEndStep2 = [0.0001,0.01,2]
+    # StartEndStep2 = [0.0001,0.01,2]
+    StartEndStep2 = [0.000005,0.001,2]
     tuningLabel += f"_{StartEndStep2[0]}_{StartEndStep2[1]}_{StartEndStep2[2]}"
     tuning2D(tuningLabel, StartEndStep, StartEndStep2)
-     
+
+def plot_wireframe(xx, yy, z, color='#0066FF', linewidth=1):
+    line_marker = dict(color=color, width=linewidth)
+    lines = []
+    for i, j, k in zip(xx, yy, z):
+        lines.append(go.Scatter3d(x=i, y=j, z=k, mode='lines', line=line_marker))
+    for i, j, k in zip(list(zip(*xx)), list(zip(*yy)), list(zip(*z))):
+        lines.append(go.Scatter3d(x=i, y=j, z=k, mode='lines', line=line_marker))
+        
+    layout = go.Layout(showlegend=False)
+    return go.Figure(data=lines, layout=layout)
+
 def LoopCore(i, j):
     # change tuning parameters
     glv._set("tuning_lspressure",i)
@@ -225,19 +241,64 @@ def tuningLSpressure(tuningLabel, StartEndStep):
 
 if __name__ == "__main__": 
     main()
-    fig = px.scatter_3d(x=X, y=Y, z=Z,
+    fig0 = px.scatter_3d(x=X, y=Y, z=Z,
                     color=Z,
                     # size=x, size_max=20,
-                    title="3D Scatter Plot")
+                    title="3D Scatter Plot"
+                    )
     
-    fig.update_layout(scene=dict(
+    fig0.update_layout(scene=dict(
         yaxis=dict(type="log"),
         zaxis=dict(type="log")
+    ))
+
+    
+    # surface diagram
+    x = np.array(X)
+    y = np.array(Y)
+    z = np.array(Z)
+
+    # Generate a one-dimensional array xi with 100 elements, 
+    # ranging from the minimum value of the x array to the maximum value.
+    xi = np.linspace(x.min(), x.max(), 100)
+    yi = np.linspace(y.min(), y.max(), 100)
+
+    # Create a two-dimensional grid X and Y based on the values of xi and yi. 
+    # Both X and Y have a shape of (100, 100).
+    X1,Y1 = np.meshgrid(xi,yi)
+
+    # Perform interpolation using the 'cubic' method on the given data points (x, y) 
+    # and their corresponding values z, over the two-dimensional grid (X, Y). 
+    # The interpolated result is stored in Z.
+    Z1 = griddata((x,y),z,(X1,Y1), method='linear')
+
+
+    fig = go.Figure(go.Surface(x=xi,y=yi,z=Z1))
+    
+    fig.update_layout(scene=dict(
+        yaxis=dict(type="log")
+    ))
+    
+    # Curve graph
+    ic(X1,Y1,Z1)
+    fig1 = plot_wireframe(X1, Y1, Z1)
+    fig1.update_layout(scene=dict(
+        yaxis=dict(type="log")
     ))
 
     # dash to show
     app = Dash(__name__)
     app.layout = html.Div(children=[
+        dcc.Graph(
+            id='example-graph',
+            figure=fig1,
+            style = {'height': '100vh'}
+        ),
+        dcc.Graph(
+            id='example-graph',
+            figure=fig0,
+            style = {'height': '100vh'}
+        ),
         dcc.Graph(
             id='example-graph',
             figure=fig,
