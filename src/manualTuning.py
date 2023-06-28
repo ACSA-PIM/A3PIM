@@ -44,21 +44,29 @@ def main():
     ## icecream & input
     args=inputParameters()
     isIceEnable(args.debug)
-    tuningLabel = "Withhashjoin"
+    # tuningLabel = "Withhashjoin"
+    # tuningLabel = "ReAIParallWithhash"
+    tuningLabel = "ls_DA_sssp"
     # tuningLabel = "nohashjoin"
     # tuningLabel = "nohashjoinMlp"
-    StartEndStep = [0,100,5] # both
+    StartEndStep = [0,30,10] # both
     # StartEndStep = [65,85,2.5] # withhash
     # StartEndStep = [72,80,1] # withhash
     # StartEndStep = [0,5,0.5] # nohash
     # StartEndStep = [0,2,0.1] # nohash
+    # StartEndStep = [0,100,50] # ReAI
+    # StartEndStep = [0,1,0.05] # consider AI and DATA relation
     tuningLabel += f"_{StartEndStep[0]}_{StartEndStep[1]}_{StartEndStep[2]}"
     tuningLSpressure(tuningLabel, StartEndStep)
-    StartEndStep2 = [0.000001,1,10] # both
+    # StartEndStep2 = [0.000001,0.01,3.2] # both
     # StartEndStep2 = [0.0001,0.01,2] # withhash
     # StartEndStep2 = [0.000005,0.001,2] # withhash
     # StartEndStep2 = [0.0001,0.01,2] # nohash
     # StartEndStep2 = [0.00002,0.001,1.5] # nohash
+    # StartEndStep2 = [0.0001,0.01,1.5] # ReAI
+    # StartEndStep2 = [0.0001,0.00022,1.1] # ReAI
+    # StartEndStep2 = [0.0001,0.00017,1.1] # consider AI and DATA relation
+    StartEndStep2 = [0.00001,0.0001,1.05] # fine-tune sssp
     tuningLabel += f"_{StartEndStep2[0]}_{StartEndStep2[1]}_{StartEndStep2[2]}"
     tuning2D(tuningLabel, StartEndStep, StartEndStep2)
 
@@ -74,11 +82,16 @@ def plot_wireframe(xx, yy, z, color='#0066FF', linewidth=1):
     return go.Figure(data=lines, layout=layout)
 
 def LoopCore(i, j):
-    # change tuning parameters
-    glv._set("tuning_lspressure",i)
-    glv._set("tuning_dataThreshold",j)
+    # set default tuning parameters
+    glv._set("tuning_lspressure",5)
+    glv._set("tuning_reAI",0.5)
+    glv._set("tuning_dataThreshold",1e-3)
     glv._set("graphAppDict",{})
     glv._set("graphAppDetailDict",{})
+    
+    # change tuning parameters
+    glv._set("tuning_lspressure",i)
+    glv._set("tuning_dataThreshold",j)  
     
     # delete other result tmp file
     if checkFileExists(glv._get("resultPath")+"default_cpu_1_pim_32"):

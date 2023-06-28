@@ -99,9 +99,10 @@ glv._set("xgb_sca_dataIndex",
              "memoryPressure": 25
          })
 
-glv._set("tuning_lspressure",0)
+glv._set("tuning_lspressure",5)
 glv._set("tuning_reAI",0.5)
-glv._set("tuning_dataThreshold", 0.01)
+glv._set("tuning_bblNum",27)
+glv._set("tuning_dataThreshold", 1.7e-5)
 # glv._set("tuning_lspressure",10)
 # glv._set("tuning_dataThreshold",1e-06)
 glv._set("custom_font_dir", f"{working_fold}font/times.ttf")

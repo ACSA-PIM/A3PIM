@@ -420,6 +420,7 @@ def decisionByManual(bblDict, bblDecisionFile,prioriKnowDecision):
      # bblDecisionFile save to file
     with open(bblDecisionFile, 'w') as f:
         for [bblHashStr, cycles] in  tqdm(llvmCycles.items()) :
+            instrNums = llvmInstrNums[bblHashStr]
             pressure = llvmPressure[bblHashStr]   
             # reverse of Arithmetic Intensity (AI) 
             reAI = max(0,llvmLoadPressure[bblHashStr]) + max(0,llvmStorePressure[bblHashStr])   
@@ -431,7 +432,8 @@ def decisionByManual(bblDict, bblDecisionFile,prioriKnowDecision):
                 # priori knowledge
                 if prioriKnowDecision == "Full-CPU":
                     decision = "CPU"
-                elif portPressure > glv._get("tuning_lspressure") or reAI > glv._get("tuning_reAI"):
+                elif portPressure > glv._get("tuning_lspressure") or reAI > glv._get("tuning_reAI")\
+                    or instrNums >= glv._get("tuning_bblNum"):
                     decision = "PIM"
                 else:
                     decision = "CPU"
