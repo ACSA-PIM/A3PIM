@@ -48,7 +48,7 @@ def main():
         
         errorPrint("-----------------------------------STEP4.2: Normalized data & Visualization ----------------------------------------")
         
-        [maxValue, scaAvgTime] = generateAppComparisonGraph()   
+        [maxValue, scaAvgTime,availAppCount] = generateAppComparisonGraph()   
         # generateAppStackedBar()
         generateAppStackedBarPlotly(maxValue)
         

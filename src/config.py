@@ -21,6 +21,11 @@ glv._set("gapbsList", [
     "pr",
     "sssp"
 ])  # abbreviation of applications in gapbs benchmark
+
+# speacial priori knowledge of application
+glv._set("prioriKnow", {
+    "hashjoin":{"parallelism":1}
+})
 gapbsTaskfilePath = "/staff/shaojiemike/github/sniper_PIMProf/PIMProf/gapbs/"
 taskfilePath = "/staff/shaojiemike/github/sniper_PIMProf/PIMProf/"
 glv._set("taskfilePath", taskfilePath)
@@ -95,7 +100,8 @@ glv._set("xgb_sca_dataIndex",
          })
 
 glv._set("tuning_lspressure",0)
-glv._set("tuning_dataThreshold",0.01)
+glv._set("tuning_reAI",0.5)
+glv._set("tuning_dataThreshold", 0.01)
 # glv._set("tuning_lspressure",10)
 # glv._set("tuning_dataThreshold",1e-06)
 glv._set("custom_font_dir", f"{working_fold}font/times.ttf")

@@ -79,7 +79,12 @@ def OffloadBySCA(taskList):
         with open(bblSCAPickleFile, 'rb') as f:
             bblDict = pickle.load(f)
         # decisionByXGB(bblDict, resultFromSCAFile(bblSCAFile),bblDecisionFile)
-        decisionByManual(bblDict,bblDecisionFile)
+        prioriKnowDict = glv._get("prioriKnow")
+        if taskName in prioriKnowDict and prioriKnowDict[taskName]["parallelism"] < 16:
+            prioriKnowDecision = "Full-CPU"
+        else:
+            prioriKnowDecision = "No influence"
+        decisionByManual(bblDict,bblDecisionFile, prioriKnowDecision)
             
 def llvmResult(bblList):
     command = llvmCommand(bblList)

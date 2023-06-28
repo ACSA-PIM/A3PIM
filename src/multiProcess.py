@@ -413,20 +413,25 @@ def save2File(bblDict, bblSCAFile, bblSCAPickleFile):
                     str(resourcePressure), str(registerPressure), str(memoryPressure)
                 )) 
 
-def decisionByManual(bblDict, bblDecisionFile):
+def decisionByManual(bblDict, bblDecisionFile,prioriKnowDecision):
     for key, value in bblDict.dataDict.items():
         globals()[key]=value
-    
+     
      # bblDecisionFile save to file
     with open(bblDecisionFile, 'w') as f:
         for [bblHashStr, cycles] in  tqdm(llvmCycles.items()) :
-            pressure = llvmPressure[bblHashStr]      
+            pressure = llvmPressure[bblHashStr]   
+            # reverse of Arithmetic Intensity (AI) 
+            reAI = max(0,llvmLoadPressure[bblHashStr]) + max(0,llvmStorePressure[bblHashStr])   
             portPressure = max(0,llvmSBPort23Pressure[bblHashStr])
             portUsage = max(0,llvmPortUsage[bblHashStr])
             if pressure == FollowStatus:
                 decision = "Follower"
             else:
-                if portPressure > glv._get("tuning_lspressure"):
+                # priori knowledge
+                if prioriKnowDecision == "Full-CPU":
+                    decision = "CPU"
+                elif portPressure > glv._get("tuning_lspressure") or reAI > glv._get("tuning_reAI"):
                     decision = "PIM"
                 else:
                     decision = "CPU"
