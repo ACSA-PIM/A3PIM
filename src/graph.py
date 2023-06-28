@@ -124,11 +124,11 @@ def generateAppStackedBarPlotly(maxY):
   
     
 def generateAppComparisonGraph():
-    [species,dictData, maxVal, scaMaxVal, scaAvgTime] = normalizedGraphAppDict()
+    [species,dictData, maxVal, scaMaxVal, scaAvgTime, availAppCount] = normalizedGraphAppDict()
     ic(dictData)
     BreakdownGraph(species,dictData, scaMaxVal)
     SpeedUpGraph(species,dictData)
-    return [scaMaxVal, scaAvgTime]
+    return [scaMaxVal, scaAvgTime, availAppCount]
 
 
 def SpeedUpGraph(species,dictData):
@@ -247,13 +247,33 @@ def normalizedGraphAppDict():
     entryList = glv._get("graphEntryList")
     dictData = glv._get("graphAppDict")
     tmpTotalList = []
+    # count available application: sca better than others except PIMProf
+    availAppCount = 0
+    # First, get the sca & PIMProf index
+    scaEntryIndex = 0
+    pimprofEntryIndex = 0
+    for i in range(len(entryList)):
+        if entryList[i] == "PIMProf":
+            pimprofEntryIndex = i
+        if entryList[i] == "SCAFromfile":
+            scaEntryIndex = i
     for key, List in dictData.items():
         baseline = List[0]
         for i in range(len(List)):
-            List[i] = round(List[i]/baseline,2)
+            List[i] = round(List[i]/baseline,2)  
         dictData[key] = List
         tmpTotalList = [x + y for x, y in zip_longest(tmpTotalList, List, fillvalue=0)]
         ic(key, List, tmpTotalList)
+        # check if app avail
+        flag = 0
+        for i in range(min(len(List),len(entryList))):
+            if i == scaEntryIndex or i == pimprofEntryIndex:
+                continue
+            if List[i] < List[scaEntryIndex]:
+                flag = -1
+                break
+        if flag == 0:
+            availAppCount += 1
     # add avg application
     applicationNum = len(dictData)
     dictData['AVG'] = [round(i/applicationNum,2) for i in tmpTotalList]
@@ -278,7 +298,7 @@ def normalizedGraphAppDict():
             else:
                 graphData[entryList[i]].append(List[i])   
     ic(scaMaxVal)
-    return [species, graphData, maxVal, scaMaxVal, dictData['AVG'][len(entryList)-1]] 
+    return [species, graphData, maxVal, scaMaxVal, dictData['AVG'][len(entryList)-1], availAppCount] 
 
 def detailNormalizedGraphAppDict():
     x = []

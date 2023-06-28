@@ -37,7 +37,8 @@ taskList = {
         }
 X = []    
 Y = []
-Z = []
+Z = []  # avgTime
+Z2 = [] # availAppCount
 
 def main():
     ## icecream & input
@@ -45,14 +46,19 @@ def main():
     isIceEnable(args.debug)
     tuningLabel = "Withhashjoin"
     # tuningLabel = "nohashjoin"
-    # StartEndStep = [0,100,5]
-    # StartEndStep = [65,85,2.5]
-    StartEndStep = [72,80,1]
+    # tuningLabel = "nohashjoinMlp"
+    StartEndStep = [0,100,5] # both
+    # StartEndStep = [65,85,2.5] # withhash
+    # StartEndStep = [72,80,1] # withhash
+    # StartEndStep = [0,5,0.5] # nohash
+    # StartEndStep = [0,2,0.1] # nohash
     tuningLabel += f"_{StartEndStep[0]}_{StartEndStep[1]}_{StartEndStep[2]}"
     tuningLSpressure(tuningLabel, StartEndStep)
-    # StartEndStep2 = [0.000001,1,10]
-    # StartEndStep2 = [0.0001,0.01,2]
-    StartEndStep2 = [0.000005,0.001,2]
+    StartEndStep2 = [0.000001,1,10] # both
+    # StartEndStep2 = [0.0001,0.01,2] # withhash
+    # StartEndStep2 = [0.000005,0.001,2] # withhash
+    # StartEndStep2 = [0.0001,0.01,2] # nohash
+    # StartEndStep2 = [0.00002,0.001,1.5] # nohash
     tuningLabel += f"_{StartEndStep2[0]}_{StartEndStep2[1]}_{StartEndStep2[2]}"
     tuning2D(tuningLabel, StartEndStep, StartEndStep2)
 
@@ -110,22 +116,22 @@ def LoopCore(i, j):
     
     errorPrint("-----------------------------------STEP4.2: Normalized data & Visualization ----------------------------------------")
     
-    [maxValue, scaAvgTime] = generateAppComparisonGraph()   
+    [maxValue, scaAvgTime, availAppCount] = generateAppComparisonGraph()   
     # generateAppStackedBar()
     generateAppStackedBarPlotly(maxValue)
     
     passPrint(f"SCA AVG Time is {scaAvgTime}\n")
     passPrint(f"SCA AVG SpeedUp is {round(1/scaAvgTime,2)}\n")
+    passPrint(f"availAppCount is {availAppCount}\n")
     
-    return [source_folder,scaAvgTime]
+    return [source_folder,scaAvgTime, availAppCount]
 
 def tuning2D(tuningLabel, StartEndStep, StartEndStep2):
     processBeginTime=timeBeginPrint("multiple taskList")
     [tuningStart, tuningEnd, tuningStep] = StartEndStep
     [tuningStart2, tuningEnd2, tuningStep2] = StartEndStep2
-    bestX = 0
-    bestY = 0
-    bestZ = 100
+    bestAvgTimeAndPos = [100,0,0]
+    bestAppcountAndPos = [0,0,0]
     for diffGraph in glv._get("gapbsGraphNameList"):
         glv._set("gapbsGraphName", diffGraph)
         errorPrint("-----------------------------------{}----------------------------------------".format(diffGraph))
@@ -142,27 +148,31 @@ def tuning2D(tuningLabel, StartEndStep, StartEndStep2):
                 # skip if already have result
                 if checkFileExists(target_folder):
                     with open(result_file, "r") as f:
-                        scaAvgTime = json.load(f)
+                        data = json.load(f)
+                    scaAvgTime = data["scaAvgTime"]
+                    availAppCount = data["availAppCount"]
                     X.append(i)
                     Y.append(j)
                     Z.append(scaAvgTime)
-                    if scaAvgTime < bestZ:
-                        bestX = i
-                        bestY = j
-                        bestZ = scaAvgTime
+                    Z2.append(availAppCount)
+                    if scaAvgTime < bestAvgTimeAndPos[0]:
+                        bestAvgTimeAndPos = [scaAvgTime, i, j]
+                    if availAppCount > bestAppcountAndPos[0]:
+                        bestAppcountAndPos = [availAppCount, i, j]
                     passPrint(f"-----------------------------------already get tuning {i} {j} Result {scaAvgTime}----------------------------------------")
                     j *= tuningStep2
                     continue
                 
-                [source_folder,scaAvgTime] = LoopCore(i, j)
+                [source_folder,scaAvgTime, availAppCount] = LoopCore(i, j)
                 
                 X.append(i)
                 Y.append(j)
                 Z.append(scaAvgTime)
-                if scaAvgTime < bestZ:
-                    bestX = i
-                    bestY = j
-                    bestZ = scaAvgTime
+                Z2.append(availAppCount)
+                if scaAvgTime < bestAvgTimeAndPos[0]:
+                    bestAvgTimeAndPos = [scaAvgTime, i, j]
+                if availAppCount > bestAppcountAndPos[0]:
+                    bestAppcountAndPos = [availAppCount, i, j]
                 errorPrint(f"-----------------------------------Finished tuning {i} {j}----------------------------------------")
                 
                 # save result file
@@ -170,20 +180,26 @@ def tuning2D(tuningLabel, StartEndStep, StartEndStep2):
                 shutil.rmtree(target_folder)
                 shutil.move(source_folder, target_folder)
                 
+                data = {
+                    "scaAvgTime":scaAvgTime,
+                    "availAppCount":availAppCount
+                }
                 # save result to file
                 with open(result_file, "w") as f:
-                    json.dump(scaAvgTime, f)
+                    json.dump(data, f)
                 j *= tuningStep2
         
         passPrint("-----------------------------------{}----------------------------------------".format(diffGraph))
     timeEndPrint("multiple taskList",processBeginTime)
-    print(f"bestX {bestX} bestY {bestY} bestZ {bestZ} ")
+    print(f"bestX {bestAvgTimeAndPos[1]} bestY {bestAvgTimeAndPos[2]} bestAvgTime {bestAvgTimeAndPos[0]} ")
+    print(f"bestX {bestAppcountAndPos[1]} bestY {bestAppcountAndPos[2]} bestAvailAppCount {bestAppcountAndPos[0]} ")
             
 def tuningLSpressure(tuningLabel, StartEndStep):
     processBeginTime=timeBeginPrint("multiple taskList")
     [tuningStart, tuningEnd, tuningStep] = StartEndStep
-    metricValue = []    
-    accuracyResult = []
+    iList = []    
+    scaAvgTimeList = []
+    availAppCountList = []
     for diffGraph in glv._get("gapbsGraphNameList"):
         glv._set("gapbsGraphName", diffGraph)
         errorPrint("-----------------------------------{}----------------------------------------".format(diffGraph))
@@ -198,16 +214,21 @@ def tuningLSpressure(tuningLabel, StartEndStep):
             # skip if already have result
             if checkFileExists(target_folder):
                 with open(result_file, "r") as f:
-                    scaAvgTime = json.load(f)
-                metricValue.append(i)
-                accuracyResult.append(scaAvgTime)
+                    data = json.load(f)
+                scaAvgTime = data["scaAvgTime"]
+                availAppCount = data["availAppCount"]
+                iList.append(i)
+                scaAvgTimeList.append(scaAvgTime)
+                availAppCountList.append(availAppCount)
                 passPrint(f"-----------------------------------already get tuning {i} Result {scaAvgTime}----------------------------------------")
                 continue
             
-            [source_folder,scaAvgTime] = LoopCore(i, 0.01)
+            [source_folder,scaAvgTime, availAppCount] = LoopCore(i, 0.0001)
             
-            metricValue.append(i)
-            accuracyResult.append(scaAvgTime)
+            iList.append(i)
+            scaAvgTimeList.append(scaAvgTime)
+            availAppCountList.append(availAppCount)
+            
             errorPrint(f"-----------------------------------Finished tuning {i}----------------------------------------")
             
             # save result file
@@ -216,12 +237,19 @@ def tuningLSpressure(tuningLabel, StartEndStep):
             shutil.move(source_folder, target_folder)
             
             # save result to file
+            data = {
+                    "scaAvgTime":scaAvgTime,
+                    "availAppCount":availAppCount
+                }
+            # save result to file
             with open(result_file, "w") as f:
-                json.dump(scaAvgTime, f)
+                json.dump(data, f)
                  
         passPrint("-----------------------------------{}----------------------------------------".format(diffGraph))
-        X = [str(i) for i in metricValue]
-        Y = accuracyResult
+        X = [str(i) for i in iList]
+        
+        # loadStorePressure
+        Y = scaAvgTimeList
         print(X)
         print(Y)
         fig, ax = plt.subplots(figsize=(10, 6))
@@ -235,33 +263,48 @@ def tuningLSpressure(tuningLabel, StartEndStep):
             plt.text(X[i], Y[i], Y[i], ha='center', va='bottom')
         
         plt.savefig(glv._get("resultPath")+f"tuning/{tuningLabel}/loadStorePressure.png", dpi=300)
+        plt.close()
+        
+        # availAppCount
+        Y = availAppCountList
+        fig, ax = plt.subplots(figsize=(10, 6))
+        
+        plt.plot(X, Y, marker='o')
+        plt.xlabel('Threshold Percentage(\%)', fontsize=12)
+        plt.ylabel('Avail App Count', fontsize=12)
+        plt.title('Tuning load store pressure', fontsize=14)
+        
+        for i in range(len(X)):
+            plt.text(X[i], Y[i], Y[i], ha='center', va='bottom')
+        
+        plt.savefig(glv._get("resultPath")+f"tuning/{tuningLabel}/availAppCount.png", dpi=300)
+        plt.close()
 
 
     timeEndPrint("multiple taskList",processBeginTime)
 
-if __name__ == "__main__": 
-    main()
-    fig0 = px.scatter_3d(x=X, y=Y, z=Z,
-                    color=Z,
+def scatterGraph(inputZ):
+    fig = px.scatter_3d(x=X, y=Y, z=inputZ,
+                    color=inputZ,
                     # size=x, size_max=20,
                     title="3D Scatter Plot"
                     )
-    
-    fig0.update_layout(scene=dict(
+    fig.update_layout(scene=dict(
         yaxis=dict(type="log"),
         zaxis=dict(type="log")
     ))
+    return fig
 
-    
+def gridGraph(inputZ):
     # surface diagram
     x = np.array(X)
     y = np.array(Y)
-    z = np.array(Z)
+    z = np.array(inputZ)
 
     # Generate a one-dimensional array xi with 100 elements, 
     # ranging from the minimum value of the x array to the maximum value.
     xi = np.linspace(x.min(), x.max(), 100)
-    yi = np.linspace(y.min(), y.max(), 100)
+    yi = np.logspace(np.log10(y.min()), np.log10(y.max()), 100)
 
     # Create a two-dimensional grid X and Y based on the values of xi and yi. 
     # Both X and Y have a shape of (100, 100).
@@ -271,37 +314,63 @@ if __name__ == "__main__":
     # and their corresponding values z, over the two-dimensional grid (X, Y). 
     # The interpolated result is stored in Z.
     Z1 = griddata((x,y),z,(X1,Y1), method='linear')
-
-
-    fig = go.Figure(go.Surface(x=xi,y=yi,z=Z1))
     
+    fig = go.Figure(go.Surface(x=xi,y=yi,z=Z1))
     fig.update_layout(scene=dict(
-        yaxis=dict(type="log")
+        yaxis=dict(type="log"),
+        zaxis=dict(type="log")
     ))
     
     # Curve graph
     ic(X1,Y1,Z1)
     fig1 = plot_wireframe(X1, Y1, Z1)
     fig1.update_layout(scene=dict(
-        yaxis=dict(type="log")
+        yaxis=dict(type="log"),
+        zaxis=dict(type="log")
     ))
+    return [fig,fig1]
+    
+if __name__ == "__main__": 
+    main()
+
+    fig0 = scatterGraph(Z)
+    cfig0 = scatterGraph(Z2)
+    
+    [fig,fig1] = gridGraph(Z)
+    [cfig,cfig1] = gridGraph(Z2)
+    
 
     # dash to show
     app = Dash(__name__)
     app.layout = html.Div(children=[
         dcc.Graph(
-            id='example-graph',
+            id='grid',
             figure=fig1,
             style = {'height': '100vh'}
         ),
         dcc.Graph(
-            id='example-graph',
+            id='scatter',
             figure=fig0,
             style = {'height': '100vh'}
         ),
         dcc.Graph(
-            id='example-graph',
+            id='Curve',
             figure=fig,
+            style = {'height': '100vh'}
+        ),
+        dcc.Graph(
+            id='grid1',
+            figure=cfig1,
+            style = {'height': '100vh'}
+        ),
+        dcc.Graph(
+            id='scatter1',
+            figure=cfig0,
+            style = {'height': '100vh'}
+        ),
+        dcc.Graph(
+            id='Curve1',
+            figure=cfig,
             style = {'height': '100vh'}
         )
     ])
