@@ -298,4 +298,5 @@ def main():
     timeEndPrint("multiple taskList",processBeginTime)
 
 if __name__ == "__main__":
+    # The entire XGBoost training method has been deprecated and is currently in an incompatible state that cannot be executed.
     main()

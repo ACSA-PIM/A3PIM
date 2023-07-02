@@ -66,7 +66,7 @@ python3 preAnalyse.py
 
 ## Additional Step: Trainning XGB coefficients
 
-If you wish to train your own XGB parameters, you can utilize the following command. Reviewing the `./training.sh` file will assist in understanding the file dependencies for the training process.
+If you wish to train your own XGB parameters, you can utilize the following command. Reviewing the `./training.sh` file will assist in understanding the file dependencies for the training process.(The entire XGBoost training method has been deprecated and is currently in an incompatible state that cannot be executed.)
 
 ```bash
 python src/trainning/main.py
