@@ -16,5 +16,5 @@ do
     # delete exist inter files 
     rm -rf ./Summary/default_cpu_1_pim_32 ./Summary/kron-20_cpu_1_pim_32 ./Summary/special_cpu_1_pim_32
 
-    python ./src/preAnalyse.py -d no
+    python ./src/preAnalyse.py 
 done

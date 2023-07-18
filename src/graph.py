@@ -40,7 +40,8 @@ def generateAppStackedBar():
 	plt.savefig(glv._get("graphlOutPathTest1"))
 
 def generateAppStackedBarPlotly(maxY):
-	maxY = max(1.2, maxY)
+	# maxY = max(1.2, maxY)
+	maxY = 2
 	[x, barDict] = detailNormalizedGraphAppDict()
 	ic(x)
 	# x = [
@@ -81,6 +82,7 @@ def generateAppStackedBarPlotly(maxY):
 				ax=0,  # 箭头 x 偏移量
 				ay=-10,  # 箭头 y 偏移量，负值表示向下偏移
 				# bgcolor="rgba(255, 255, 255, 0.8)",  # 注释框背景颜色
+				# font=dict(size=4)  # 注释文本字体大小
 				font=dict(size=8)  # 注释文本字体大小
 			)
 		else:
@@ -102,11 +104,11 @@ def generateAppStackedBarPlotly(maxY):
 	height=400
 	fig.update_layout(barmode="relative", 
 					title={
-						"text": "Execution time breakdown of GAP and PARSEC workloads using different offloading decisions",
+						"text": "Execution time breakdown of GAP and PrIM workloads using different offloading decisions",
 						"x": 0.5,  # Set the title's x position to 0.5 for center alignment
 						"pad": {"t": 30}  # Adjust the padding of the title
 					},
-     				xaxis_title="GAP and PARSEC workloads",
+     				xaxis_title="GAP and PrIM workloads",
 					yaxis_title="Normalized Execution Time",
 					yaxis_range=[0,maxY],
 					legend_title="Legend Title",
@@ -161,7 +163,7 @@ def SpeedUpGraph(species,dictData):
 
 	# Add some text for labels, title and custom x-axis tick labels, etc.
 	ax.set_ylabel('Acceleration Relative to CPU Execution Time')
-	ax.set_title('SpeedUp Analysis of GAP and PARSEC workloads using different offloading decisions')
+	ax.set_title('SpeedUp Analysis of GAP and PrIM workloads using different offloading decisions')
 	ax.set_xticks(x + 2 * width, species)
 	ax.legend(loc='upper left', ncols=3)
 	if(maxVal > 15):
@@ -231,7 +233,7 @@ def BreakdownGraph(species,dictData, maxVal):
 
 	# Add some text for labels, title and custom x-axis tick labels, etc.
 	ax.set_ylabel('Normalized Execution Time')
-	ax.set_title('Execution time of GAP and PARSEC workloads using different offloading decisions')
+	ax.set_title('Execution time of GAP and PrIM workloads using different offloading decisions')
 	ax.set_xticks(x + 2 * width, species)
 	ax.legend(loc='upper left', ncols=3)
 	if(maxVal > 15):
@@ -309,6 +311,12 @@ def detailNormalizedGraphAppDict():
     detailAppDictData = glv._get("graphAppDetailDict")
     ic(detailAppDictData)
     tmpTotalList = []
+    count = 0
+    exe_time_sum = 0
+    data_movement_sum = 0
+    CL_DM_sum = 0
+    REG_DM_sum = 0
+    skip_list = ["cc", "gemv", "hashjoin", "mlp"]
     for appName, appDataDict in detailAppDictData.items():
         xClass1 += [appName] * entryListSize
         xClass2 += entryList
@@ -319,8 +327,23 @@ def detailNormalizedGraphAppDict():
             for j, entry in enumerate(line):
                 appDataDict[i][j] = round(entry/baseline, 7)
         ic(appDataDict)
+        if appName not in skip_list:
+            count += 1
+            tmptotal = sum(tmp for tmp in appDataDict[3]) 
+            tmp_exe_time = appDataDict[3][0] + appDataDict[3][1]
+            tmp_data_movement = appDataDict[3][2] + appDataDict[3][3]
+            print(f"{appName} &{round(tmp_exe_time*100/tmptotal,2)}\\% \
+                    &{round(appDataDict[3][2]*100/tmptotal,2)}\\% \
+                    &{round(appDataDict[3][3]*100/tmptotal,2)}\\% \
+                        \\\\  ")
+            exe_time_sum += tmp_exe_time*100/tmptotal
+            data_movement_sum += tmp_data_movement*100/tmptotal
+            CL_DM_sum += appDataDict[3][2]*100/tmptotal
+            REG_DM_sum += appDataDict[3][3]*100/tmptotal
         tmpTotalList = addList(tmpTotalList,appDataDict)
         ic(tmpTotalList)
+    print(f"AVERAGE &{round(exe_time_sum/count,2)}\\% &{round(CL_DM_sum/count,2)}\\% &{round(REG_DM_sum/count,2)}\\% \\\\")
+    print(f"AVERAGE &{round(exe_time_sum/count,2)}\\% &{round(data_movement_sum/count,2)}\\% \\\\")
 	# add avg application
     applicationNum = len(detailAppDictData)
     detailAppDictData['AVG'] = [[round(i/applicationNum,2) for i in row]for row in tmpTotalList]

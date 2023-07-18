@@ -54,12 +54,18 @@ glv._set("run-sniperPath", "/staff/shaojiemike/github/sniper_PIMProf/run-sniper"
 glv._set("PIMProfSolverPath", "/staff/shaojiemike/github/PIMProf/debug/PIMProfSolver/Solver.exe")
 # glv._set("graphEntryList",["CPU-ONLY","PIM-ONLY", 'MPKI-based',\
 #                 "Architecture-Suitability/Greedy","PIMProf", "SCAFromfile", "SCA"])
+# glv._set("graphEntryList",["CPU-ONLY","PIM-ONLY", 'MPKI-based',\
+#                 "Arch-Suity/Greedy","PIMProf", "SCAFromfile"])
+# glv._set("graphEntryList",["CPU-ONLY","PIM-ONLY", 'MPKI-based',\
+#                 "Arch-Suity/Greedy","TUB", "CTS"]) # theoretical upper bound
 glv._set("graphEntryList",["CPU-ONLY","PIM-ONLY", 'MPKI-based',\
-                "Arch-Suity/Greedy","PIMProf", "SCAFromfile"])
+                "Arch-Suity/Greedy"]) # theoretical upper bound
 glv._set("graphAppDict",{})
 glv._set("graphAppDetailDict",{})
-glv._set("graphDetailList",["CPU-Time","PIM-Time", 'DataMove',\
-                "Context Switch Time"])
+# glv._set("graphDetailList",["CPU-Time","PIM-Time", 'DataMove',\
+#                 "Context Switch Time"])
+glv._set("graphDetailList",["CPU-Time","PIM-Time", 'REG-DM',\
+                "CL-DM"])
 glv._set("ProcessNum",40)
 # glv._set("failedRetryTimes",3)
 # glv._set("failedSleepTime",1)
