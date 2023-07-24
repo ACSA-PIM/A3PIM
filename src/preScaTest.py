@@ -7,7 +7,7 @@ from input_process import inputParameters, isIceEnable
 from logPrint import *
 # from excel import *
 from multiProcess import *
-from SCA import OffloadBySCA, llvmAnalysis
+from SCA import *
 
 
 def main():
@@ -48,11 +48,16 @@ def main():
         
         errorPrint("-----------------------------------STEP 1.2 llvm-mca result of BBLs----------------------------------------")
         # get the llvm-mca result of BBLs
-        llvmAnalysis(taskList)
+        all_for_one = CTS(taskList)
+        errorPrint("-----------------------------------TEST 1.2.1 cluster based on compile time info (without bbl flow info)----------------------------------------")
+        all_for_one = cluster_apps(all_for_one)
+        llvmAnalysis(all_for_one)
+
+        
 
         errorPrint("-----------------------------------STEP 1.3 static decision based on llvm-mca result ----------------------------------------")
         # get the static decision from the llvm-mca result
-        OffloadBySCA(taskList)
+        OffloadBySCA(all_for_one)
         
 
     timeEndPrint("multiple taskList",processBeginTime)

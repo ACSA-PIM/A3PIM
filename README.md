@@ -36,6 +36,7 @@ The dependencies among steps are as follows: `STEP3` and `STEP4` require the com
 source curPy/bin/active
 python3 preScaTest.py
 ```
+
 ### Step 2 : Obtain Real Baseline Results Using Sniper
 
 Parallel execution can be attempted; however, employing a single command for each application proves to be a more manageable approach. 
@@ -62,6 +63,12 @@ python3 preParallelPimMode.py
 ```bash
 source curPy/bin/active
 python3 preAnalyse.py
+```
+
+We are developing and testing a truly compile-time-scheduling framework using the following scripts:
+
+```bash
+python3 CTS.py 
 ```
 
 ## Additional Step: Trainning XGB coefficients

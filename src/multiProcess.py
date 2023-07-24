@@ -330,7 +330,12 @@ def getBBLFunc(bblHashDict, sendPipe,rank,queueDict):
     sendPipe.send(i+sendSkipNum)
     sendPipe.close()
     
-def parallelGetSCAResult(taskName, bblHashDict, bblSCAFile, bblSCAPickleFile):
+def parallelGetSCAResult(app_info, bblHashDict):
+    
+    taskName = app_info.name
+    bblSCAFile = app_info.bblSCAFile
+    bblSCAPickleFile = app_info.bblSCAPickleFile
+    
     bblDict = bblDictInit()
     ProcessNum=glv._get("ProcessNum")
     DivideNum = ProcessNum-1

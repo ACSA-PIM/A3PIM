@@ -56,10 +56,10 @@ glv._set("PIMProfSolverPath", "/staff/shaojiemike/github/PIMProf/debug/PIMProfSo
 #                 "Architecture-Suitability/Greedy","PIMProf", "SCAFromfile", "SCA"])
 # glv._set("graphEntryList",["CPU-ONLY","PIM-ONLY", 'MPKI-based',\
 #                 "Arch-Suity/Greedy","PIMProf", "SCAFromfile"])
-# glv._set("graphEntryList",["CPU-ONLY","PIM-ONLY", 'MPKI-based',\
-#                 "Arch-Suity/Greedy","TUB", "CTS"]) # theoretical upper bound
 glv._set("graphEntryList",["CPU-ONLY","PIM-ONLY", 'MPKI-based',\
-                "Arch-Suity/Greedy"]) # theoretical upper bound
+                "Arch-Suity/Greedy","TUB", "CTS"]) # theoretical upper bound
+# glv._set("graphEntryList",["CPU-ONLY","PIM-ONLY", 'MPKI-based',\
+#                 "Arch-Suity/Greedy"]) # theoretical upper bound
 glv._set("graphAppDict",{})
 glv._set("graphAppDetailDict",{})
 # glv._set("graphDetailList",["CPU-Time","PIM-Time", 'DataMove',\
