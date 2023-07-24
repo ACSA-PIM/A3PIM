@@ -417,7 +417,7 @@ def save2File(bblDict, bblSCAFile, bblSCAPickleFile):
                     str(portUsage), str(cycles),str(pressure), 
                     str(resourcePressure), str(registerPressure), str(memoryPressure)
                 )) 
-
+            
 def decisionByManual(bblDict, bblDecisionFile,prioriKnowDecision):
     for key, value in bblDict.dataDict.items():
         globals()[key]=value

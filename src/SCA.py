@@ -15,17 +15,26 @@ class CTS:
     mem_cost = 60 + 30
     reg_cost = 30 #  value
     cluster_threshold = 0.05
+    parallelism_threshlod = 16
+    reAI_threshold = 0.5
+    IC_threshold = 27
+    ppressure_threshold = 5 
     
     def __init__(self,taskList):
         self.app_info_list = {}
         for path, name in taskList.items():
-            self.app_info_list[name] = application_info(name,path)
+            prioriKnowDict = glv._get("prioriKnow")
+            if name in prioriKnowDict and prioriKnowDict[name]["parallelism"] < 16:
+                prioriKnowDecision = "Full-CPU"
+            else:
+                prioriKnowDecision = "No influence"
+            self.app_info_list[name] = application_info(name,path,prioriKnowDecision)
     
     def update_app_info(self,name,app_info):
         self.app_info_list[name] = app_info
         
 class application_info(CTS):
-    def __init__(self, name, path):
+    def __init__(self, name, path,prioriKnowDecision):
         self.name = name
         self.path = path
         prefix_name = self.assemblyPath + name
@@ -34,12 +43,20 @@ class application_info(CTS):
         self.bblSCAFile = prefix_name + '_bbl.sca'
         self.bblSCAPickleFile = prefix_name + '_bbl_sca.pickle'
         self.bblDecisionFile = prefix_name + '_bbl.decision'
+        self.ctsDecisionFile = prefix_name + '_bbl_cts.decision'
         self.cluster_list = []
+        self.prioriKnowDecision = prioriKnowDecision
         
     def append(self, cluster):
         self.cluster_list.append(cluster)
+    
         
-        
+    def cluster_decision(self):
+        with open(self.ctsDecisionFile,"w") as f:
+            for cluster in self.cluster_list:
+                cluster.decision2file(f,self.prioriKnowDecision)
+                
+           
 
 class cluster(application_info):
     
@@ -99,10 +116,35 @@ class cluster(application_info):
                 result_union.update(i.read_address)
             else:
                 assert False, "Unknown type"
-        return result_union        
+        return result_union   
+    
+    def print(self):
+        print(f"cluster size is {len(self.bbls)}")     
+        for bbl in self.bbls:
+            bbl.print()
+            
+    def decision2file(self, f,prioriKnowDecision):
+        if prioriKnowDecision == "Full-CPU":
+            cluster_decsion = "CPU"
+        else:
+            vote_pim = 0 
+            vote_cpu = 0
+            for bbl in self.bbls:
+                if bbl.decision() == "CPU":
+                    vote_cpu+=1
+                else:
+                    vote_pim+=1
+            if vote_pim > vote_cpu:
+                cluster_decsion = "PIM"
+            else:
+                cluster_decsion = "CPU"
         
-
-class basic_block:
+        # write 2 file
+        for bbl in self.bbls:
+            f.write(bbl.hash + " " + cluster_decsion + "\n")
+            
+    
+class basic_block(cluster):
     
     # self.instruction_count = 0
     # self.read_register = set()
@@ -110,10 +152,12 @@ class basic_block:
     # self.read_address = set()
     # self.write_address = set()
     
-    def __init__(self, hash, bbl_assembly):
+    def __init__(self, hash, bbl_assembly, sca_result):
         self.hash = hash
         self.analyse_block(bbl_assembly)
         # get sca_result
+        self.reAI = sca_result[0]
+        self.port_pressure = sca_result[1]
         
     def analyse_block(self, bbl_assembly):
         # analyze
@@ -147,6 +191,18 @@ class basic_block:
         self.write_register = tmp_write_reg
         self.read_address = tmp_read_addr
         self.write_address = tmp_write_addr
+    
+    def decision(self):
+        if self.port_pressure > self.ppressure_threshold\
+            or self.reAI > self.reAI_threshold\
+            or self.instruction_count > self.IC_threshold:
+                return "PIM"
+        else:
+            return "CPU"
+    
+    def print(self):
+        print(f"    hash: {self.hash}")
+        ic(self.read_address,self.write_address,self.read_register,self.write_register)
     
 def loadStoreDataMove(bblHashDict, targetFile):
     with open(targetFile, 'w') as f:
@@ -201,36 +257,53 @@ def cluster_apps(all_for_one):
         bblHashDict = dict()
         with open(app_info.bblJsonFile, 'r') as f:
             bblHashDict = json.load(f)
+            
+        with open(app_info.bblSCAPickleFile, 'rb') as f:
+            bblDict = pickle.load(f)
+        
         # init the cluster
         bbl2cluster = []
         for hash, assembly in bblHashDict.items():
-            bbl2cluster.append(cluster(basic_block(hash,assembly)))
+            reAI = max(0,bblDict.dataDict["llvmLoadPressure"][hash]) +\
+                max(0,bblDict.dataDict['llvmStorePressure'][hash])       
+            port_pressure = max(0,bblDict.dataDict['llvmSBPort23Pressure'][hash])
+            sca_result = [reAI, port_pressure]
+            bbl2cluster.append(cluster(basic_block(hash,assembly,sca_result)))
         
         # loop to cluster without bbl flow
         length = len(bbl2cluster)
         ic(length)
         tag = [0] * length
         i = 0
+        pbar = tqdm(total=length) 
         while i < length:
+            pbar.update(1)
             if tag[i] == 0:
                 j = i + 1
                 while j < length:
                     if tag[j]==0 and bbl2cluster[i].connectivity(bbl2cluster[j]):
-                        bbl2cluster[i] = bbl2cluster[j]
+                        bbl2cluster[i] += bbl2cluster[j]
                         tag[j] = 1
                     j += 1
             i += 1
+        pbar.close()
             
         # count remain clusters num
         count_clusters = 0
         for i in range(length):
             if tag[i] == 0:
                 count_clusters += 1
+                app_info.append(bbl2cluster[i])
         ic(count_clusters)
-        exit(0)
-            
+         
+        # print
+        ic(app_info.cluster_list[0].print())
+        
+        #decision 2 file
+        app_info.cluster_decision()
         
         all_for_one.update_app_info(name,app_info)
+    return all_for_one
     
     
 def OffloadBySCA(all_for_one:CTS):
