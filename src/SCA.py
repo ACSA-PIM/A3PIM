@@ -14,7 +14,7 @@ class CTS:
     assemblyPath = glv._get("logPath")+ "assembly/"
     mem_cost = 60 + 30
     reg_cost = 30 #  value
-    cluster_threshold = 0.05
+    cluster_threshold = 0.0001
     parallelism_threshlod = 16
     reAI_threshold = 0.5
     IC_threshold = 27

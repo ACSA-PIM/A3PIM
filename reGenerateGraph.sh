@@ -15,4 +15,4 @@ rm -rf ./Summary/default_cpu_1_pim_32 ./Summary/kron-20_cpu_1_pim_32 ./Summary/s
 
 # data test
 # python ./src/preScaTest.py -d no
-python ./src/preAnalyse.py -d no
+python ./src/preAnalyse.py 

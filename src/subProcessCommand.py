@@ -84,11 +84,13 @@ def pimprofInput(taskPath, taskName, coreNums, class1):
     pimprofreusePath = cpulogPath + "/pimprofreuse.out"
     redirect2log = pimprofResultPath +"/output_"+taskName+"_cpu_"+ str(cpucore)+"_pim_"+ str(coreNums)+".log"
     bblDecisionFile = glv._get("logPath")+ "assembly/" + taskName + "_bbl.decision"
+    ctsDecisionFile = glv._get("logPath")+ "assembly/" + taskName + "_bbl_cts.decision"
     command = glv._get("PIMProfSolverPath")+" reuse -c "+cpuprofstatsPath+\
                 " -p " + pimprofstatsPath + \
                 " -r " + pimprofreusePath + \
                 " -o " + pimprofResultFile +\
                 " -s " + bblDecisionFile +\
+                " -t " + ctsDecisionFile +\
                 " -d " + str(glv._get("tuning_dataThreshold"))
     # print("command : {}".format(command))
     ic(command)

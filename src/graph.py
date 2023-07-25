@@ -40,8 +40,8 @@ def generateAppStackedBar():
 	plt.savefig(glv._get("graphlOutPathTest1"))
 
 def generateAppStackedBarPlotly(maxY):
-	# maxY = max(1.2, maxY)
-	maxY = 2
+	maxY = max(1.2, maxY)
+	# maxY = 2
 	[x, barDict] = detailNormalizedGraphAppDict()
 	ic(x)
 	# x = [
