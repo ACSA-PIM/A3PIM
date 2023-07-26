@@ -91,3 +91,11 @@ FileNotFoundError: Matplotlib's TeX implementation searched for a file named 'cm
 
 <!-- 1. `wget http://mirrors.ctan.org/fonts/cm/tfm/cmr10.tfm`
 2. Matplotlib set front search path  -->
+
+### explaination
+
+```bash
+  BBLID  Decision ctsDecision scaDecision   Parallelism       bbCount            CPU            PIM     Difference             Hash(hi)             Hash(lo)
+      0         C           C           C            32             2          11007    6.30947e+07   -6.30837e+07                      0                      0
+      1         P           C           C             1       1312156    1.13788e+06    4.01082e+06   -2.87294e+06                      1                      1
+```

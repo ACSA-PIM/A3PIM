@@ -12,9 +12,11 @@ from trainning.training_data import resultFromSCAFile
 class CTS:
     
     assemblyPath = glv._get("logPath")+ "assembly/"
+    log_path = glv._get("logPath")
+    graph = "kron-20"
     mem_cost = 60 + 30
     reg_cost = 30 #  value
-    cluster_threshold = 0.0001
+    cluster_threshold = -0.0001
     parallelism_threshlod = 16
     reAI_threshold = 0.5
     IC_threshold = 27
@@ -44,17 +46,98 @@ class application_info(CTS):
         self.bblSCAPickleFile = prefix_name + '_bbl_sca.pickle'
         self.bblDecisionFile = prefix_name + '_bbl.decision'
         self.ctsDecisionFile = prefix_name + '_bbl_cts.decision'
+        self.cts_cluster_file = prefix_name + '_bbl_cts.cluster'
+        self.cpu_log_path = self.log_path + self.classify(name)
+        self.app_log_path = self.cpu_log_path + "/" + name + "_pimprof_cpu_" + "1"
+        self.bbl_flow_file =  self.app_log_path + "/pimprofreuse.out"
+        self.id_hash_map_file =  self.app_log_path + "/pimprofstats.out"
         self.cluster_list = []
         self.prioriKnowDecision = prioriKnowDecision
         
+    def classify(self,name):
+        if name in glv._get("gapbsList"):
+            return self.graph
+        elif name in glv._get("specialInputList"):
+            return "special"
+        else:
+            return "default"
+        
     def append(self, cluster):
         self.cluster_list.append(cluster)
-    
+                
         
     def cluster_decision(self):
+        self.decision = {}
         with open(self.ctsDecisionFile,"w") as f:
             for cluster in self.cluster_list:
-                cluster.decision2file(f,self.prioriKnowDecision)
+                self.decision[cluster] = cluster.decision2file(f,self.prioriKnowDecision)
+       
+    def read_id_hash_map(self):
+        ic(self.id_hash_map_file)
+        self.id_hash_map = {}
+        with open(self.id_hash_map_file, 'r') as f:
+            while True:
+                line = f.readline()
+                if line.startswith("  BBLID  "):
+                    break
+            
+            for line in f:
+                parts = line.split()
+                id = int(parts[0])
+                
+                hash_first = parts[-2]
+                hash_second = parts[-1]
+                
+                hash_value = re.sub(r'^0+','',hash_first) + '  ' + \
+                            re.sub(r'^0+','',hash_second)
+                            
+                self.id_hash_map[hash_value] = id 
+        ic(self.id_hash_map)
+                
+    def read_bbl_flow(self):
+        self.graph = {}
+        with open(self.bbl_flow_file, 'r') as f:
+            while True:
+                line = f.readline()
+                if line.startswith("BBLSwitchCount -"):
+                    break
+            
+            for line in f:
+                from_node, to_nodes = line.split("|")
+                from_node = int(from_node.split("=")[1])
+                for item in to_nodes.split():
+                    to_node, weight = item.split(":")
+                    to_node = int(to_node)
+                    weight = int(weight)
+                    
+                    if from_node not in self.graph:
+                        self.graph[from_node] = {}
+                        
+                    self.graph[from_node][to_node] = weight
+        
+    def check_connectivity(self, hashlist1, hashlist2):
+        # ic(self.id_hash_map)
+        idlist1 = [self.id_hash_map[hash1] for hash1 in hashlist1 if hash1 in self.id_hash_map]
+        idlist2 = [self.id_hash_map[hash2] for hash2 in hashlist2 if hash2 in self.id_hash_map]
+        adj = [neighbor for id2 in idlist2 if id2 in self.graph for neighbor in self.graph[id2] ]
+        for id1 in idlist1:
+            if id1 in adj:
+                return True
+        return False
+
+    def print_cluster(self):
+        with open(self.cts_cluster_file, 'w') as f:
+            for cluster in self.cluster_list:
+                f.write(f"cluster decision is {self.decision[cluster]}\n")
+                for bbl in cluster.bbls:
+                    if bbl.hash in self.id_hash_map:
+                        f.write(f"{bbl.hash} {self.id_hash_map[bbl.hash]}\n")
+                    else:
+                        f.write(f"{bbl.hash}\n")
+                f.write("\n")
+                        
+                 
+    
                 
            
 
@@ -142,6 +225,11 @@ class cluster(application_info):
         # write 2 file
         for bbl in self.bbls:
             f.write(bbl.hash + " " + cluster_decsion + "\n")
+        return cluster_decsion
+    
+    def hashlist(self):
+        return [bbl.hash for bbl in self.bbls]
+        
             
     
 class basic_block(cluster):
@@ -203,7 +291,33 @@ class basic_block(cluster):
     def print(self):
         print(f"    hash: {self.hash}")
         ic(self.read_address,self.write_address,self.read_register,self.write_register)
+
+class  DisjointSet:
     
+    def __init__(self,size) -> None:
+        self.parent = [i for i in range(size)]
+        self.rank = [0 for i in range(size)]
+        
+    def find(self, i):
+        if self.parent[i] == i:
+            return i
+        else:
+            result = self.find(self.parent[i])
+            self.parent[i] = result
+            return result
+    
+    def union(self, x, y):
+        rootx = self.find(x)
+        rooty = self.find(y)
+        if rootx != rooty:
+            if self.rank[rootx] > self.rank[rooty]:
+                self.parent[rooty] = rootx
+            elif self.rank[rootx] < self.rank[rooty]:
+                self.parent[rootx] = rooty
+            else:
+                self.parent[rooty] = rootx
+                self.rank[rootx]+=1          
+        
 def loadStoreDataMove(bblHashDict, targetFile):
     with open(targetFile, 'w') as f:
         for bblHash, bbl in bblHashDict.items():
@@ -270,41 +384,81 @@ def cluster_apps(all_for_one):
             sca_result = [reAI, port_pressure]
             bbl2cluster.append(cluster(basic_block(hash,assembly,sca_result)))
         
-        # loop to cluster without bbl flow
-        length = len(bbl2cluster)
-        ic(length)
-        tag = [0] * length
-        i = 0
-        pbar = tqdm(total=length) 
-        while i < length:
-            pbar.update(1)
-            if tag[i] == 0:
-                j = i + 1
-                while j < length:
-                    if tag[j]==0 and bbl2cluster[i].connectivity(bbl2cluster[j]):
-                        bbl2cluster[i] += bbl2cluster[j]
-                        tag[j] = 1
-                    j += 1
-            i += 1
-        pbar.close()
-            
-        # count remain clusters num
-        count_clusters = 0
-        for i in range(length):
-            if tag[i] == 0:
-                count_clusters += 1
-                app_info.append(bbl2cluster[i])
-        ic(count_clusters)
-         
-        # print
-        ic(app_info.cluster_list[0].print())
-        
+        app_info.read_id_hash_map()
+        app_info.read_bbl_flow()
+        # cluster_without_bblflow(bbl2cluster,app_info)
+        cluster_with_bblflow(bbl2cluster,app_info)
         #decision 2 file
         app_info.cluster_decision()
+        app_info.print_cluster()
         
         all_for_one.update_app_info(name,app_info)
     return all_for_one
+
+def cluster_with_bblflow(bbl2cluster, app_info):
+    length = len(bbl2cluster)
+    ic(length)
+    dj = DisjointSet(length)
+    i = 0
+    pbar = tqdm(total=length) 
+    while i < length:
+        pbar.update(1)
+        j = i + 1
+        while j < length:
+            if app_info.check_connectivity(bbl2cluster[i].hashlist(),bbl2cluster[j].hashlist()) \
+                and bbl2cluster[i].connectivity(bbl2cluster[j]):
+                dj.union(i,j)
+            j += 1
+        i += 1
+    pbar.close()
+        
+    # count remain clusters num
+    unique_cluster = set()
+    for i in range(length):
+        root = dj.find(i) 
+        if root != i:
+            bbl2cluster[root]+=bbl2cluster[i]
+        unique_cluster.add(root)
+    ic(len(unique_cluster))
+    for i in unique_cluster:
+        app_info.append(bbl2cluster[i])
     
+    # print
+    # ic(app_info.cluster_list[0].print())
+    
+    
+    return app_info
+      
+def cluster_without_bblflow(bbl2cluster, app_info):
+    # loop to cluster without bbl flow
+    length = len(bbl2cluster)
+    ic(length)
+    tag = [0] * length
+    i = 0
+    pbar = tqdm(total=length) 
+    while i < length:
+        pbar.update(1)
+        if tag[i] == 0:
+            j = i + 1
+            while j < length:
+                if tag[j]==0 and bbl2cluster[i].connectivity(bbl2cluster[j]):
+                    bbl2cluster[i] += bbl2cluster[j]
+                    tag[j] = 1
+                j += 1
+        i += 1
+    pbar.close()
+        
+    # count remain clusters num
+    count_clusters = 0
+    for i in range(length):
+        if tag[i] == 0:
+            count_clusters += 1
+            app_info.append(bbl2cluster[i])
+    ic(count_clusters)
+        
+    # print
+    ic(app_info.cluster_list[0].print())
+    return app_info
     
 def OffloadBySCA(all_for_one:CTS):
     for _,app_info in all_for_one.app_info_list.items():
