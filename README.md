@@ -94,6 +94,8 @@ FileNotFoundError: Matplotlib's TeX implementation searched for a file named 'cm
 
 ### explaination
 
+0 is global
+1 is main 
 ```bash
   BBLID  Decision ctsDecision scaDecision   Parallelism       bbCount            CPU            PIM     Difference             Hash(hi)             Hash(lo)
       0         C           C           C            32             2          11007    6.30947e+07   -6.30837e+07                      0                      0

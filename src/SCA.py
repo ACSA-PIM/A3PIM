@@ -119,9 +119,13 @@ class application_info(CTS):
         # ic(self.id_hash_map)
         idlist1 = [self.id_hash_map[hash1] for hash1 in hashlist1 if hash1 in self.id_hash_map]
         idlist2 = [self.id_hash_map[hash2] for hash2 in hashlist2 if hash2 in self.id_hash_map]
-        adj = [neighbor for id2 in idlist2 if id2 in self.graph for neighbor in self.graph[id2] ]
+        adj1 = [neighbor for id1 in idlist1 if id1 in self.graph for neighbor in self.graph[id1] ]
+        adj2 = [neighbor for id2 in idlist2 if id2 in self.graph for neighbor in self.graph[id2] ]
         for id1 in idlist1:
-            if id1 in adj:
+            if id1 in adj2:
+                return True
+        for id2 in idlist2:
+            if id2 in adj1:
                 return True
         return False
 
