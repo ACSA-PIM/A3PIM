@@ -45,11 +45,15 @@ def main():
         errorPrint("-----------------------------------STEP 1.1 disassembly----------------------------------------")
         
         parallelTask(taskList, singleDisassembly)
-        
-        errorPrint("-----------------------------------STEP 1.2 llvm-mca result of BBLs----------------------------------------")
+     
         # get the llvm-mca result of BBLs
         all_for_one = CTS(taskList)
+        errorPrint("-----------------------------------STEP 1.1.2 disassembly function degree----------------------------------------")
+        all_for_one.delete_func_file()
+        all_for_one.compile_func_degree()
+        all_for_one.disassembly_func_degree()
         
+        errorPrint("-----------------------------------STEP 1.2 llvm-mca result of BBLs----------------------------------------")
         llvmAnalysis(all_for_one)
 
         errorPrint("-----------------------------------TEST 1.2.1 cluster based on compile time info (without bbl flow info)----------------------------------------")

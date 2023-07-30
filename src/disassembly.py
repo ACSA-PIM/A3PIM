@@ -2,10 +2,10 @@
 import re
 import json
 
-def abstractBBLfromAssembly(assembly):
-    bblFile = assembly[:-2] + ".bbl"
-    bblJsonFile = assembly[:-2] + "_bbl.json"
-    tmpbblFile = assembly[:-2] + ".tmp"
+def abstractBBLfromAssembly(assembly,bblFile,bblJsonFile,tmpbblFile):
+    # bblFile = assembly[:-2] + ".bbl"
+    # bblJsonFile = assembly[:-2] + "_bbl.json"
+    # tmpbblFile = assembly[:-2] + ".tmp"
     ic(bblFile)
     
     # 打开x86汇编代码文件

@@ -19,6 +19,41 @@ def mkdir(path):
 	else:
 		ic("---  There is this folder!  ---")
 
+def delete_path(path):
+    import shutil
+    if checkFileExists(path):
+        shutil.rmtree(path)
+        
+def delete_file(file):
+    if checkFileExists(file):
+        os.remove(file)
+    
+    
+def COMMAND_LIST(command_list):
+    # useless
+    import subprocess
+    cmd = command_list.split(" ")
+    p = subprocess.Popen(cmd, 
+                     stdout=subprocess.PIPE,
+                     stderr=subprocess.PIPE,
+                     shell=True)
+    ic(p.stderr.readlines())
+    ic(p.stdout.readlines())
+    out, err = p.communicate()
+    ic(out.decode('utf-8'))
+    ic(err.decode('utf-8'))
+    
+def CMD_PATH(command, path):
+    import subprocess
+    # command is list not string
+    p = subprocess.Popen(command, 
+                     stdout=subprocess.PIPE,
+                     stderr=subprocess.PIPE,
+                     cwd = path,
+                     shell=True)
+    ic(p.stderr.readlines())
+    ic(p.stdout.readlines())
+    
 def TIMEOUT_COMMAND(core, command, timeout=30):
     """call shell-command and either return its output or kill it
     if it doesn't normally exit within timeout seconds and return None"""

@@ -145,7 +145,10 @@ def singleDisassembly(queueDict, taskKey, taskName, countId, totolCount, **kwarg
         assert len(list)!=0
     else:
         yellowPrint("[   {:2}/{:2}   ] Disassembly-1 Task {:<10} already finished".format( countId, totolCount, taskName))
-    bblHashDict = abstractBBLfromAssembly(targetFile)
+    bblFile = targetFile[:-2] + ".bbl"
+    bblJsonFile = targetFile[:-2] + "_bbl.json"
+    tmpbblFile = targetFile[:-2] + ".tmp"
+    bblHashDict = abstractBBLfromAssembly(targetFile,bblFile,bblJsonFile,tmpbblFile)
     # loadStoreDataMove(bblHashDict, targetFile[:-2] + "_bbl.sl_data")
     passPrint("[   {:2}/{:2}   ] Disassembly-1 Task {:<10} finished successfully".format( countId, totolCount, taskName))
     queueDict.get("finishedSubTask").put(taskName)

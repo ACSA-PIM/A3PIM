@@ -38,16 +38,16 @@ def inputParameters():
         choices=["yes", "no"],
         default="yes",
     )
-    # parser.add_argument(
-    #     "-hB",
-    #     "--historyBhive",
-    #     help="是否使用HistoryDataFile的excel里的Bhive历史数据 is use history Bhive data",
-    #     dest="useBhiveHistoryData",
-    #     type=str,
-    #     required=True,
-    #     choices=["yes", "no"],
-    #     default="yes",
-    # )
+    parser.add_argument(
+        "-m",
+        "--mode",
+        help="choice to generate sniper result in basic block degree(bbls) or function degree(func)",
+        dest="mode",
+        type=str,
+        required=True,
+        choices=["bbls", "func"],
+        default="bbls",
+    )
     # parser.add_argument(
     #     "-hl",
     #     "--historyLLVM",
@@ -102,6 +102,7 @@ def inputParameters():
     # glv._set("ProcessNum",args.ProcessNum)
     # glv._set("timeout",args.timeout)
     glv._set("debug",args.debug)
+    glv._set("mode",args.mode)
     # glv._set("useBhiveHistoryData",args.useBhiveHistoryData)
     # glv._set("useLLVMHistoryData",args.useLLVMHistoryData)
     # glv._set("KendallIndex",args.KendallIndex)
@@ -113,6 +114,7 @@ def inputParameters():
     # passPrint("parameter ProcessNum is : %s" % args.ProcessNum)
     # passPrint("parameter timeout is : %d " % args.timeout)
     passPrint("parameter debug is : %s " % args.debug)
+    passPrint("parameter mode is : %s " % args.mode)
     # passPrint("parameter useBhiveHistoryData is : %s " % args.useBhiveHistoryData)
     # passPrint("parameter useLLVMHistoryData is : %s " % args.useLLVMHistoryData)
     # passPrint("parameter KendallIndex is : %s " % args.KendallIndex)

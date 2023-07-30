@@ -7,7 +7,7 @@ from input_process import inputParameters, isIceEnable
 from logPrint import *
 # from excel import *
 from multiProcess import *
-from SCA import OffloadBySCA, llvmAnalysis
+from SCA import OffloadBySCA, llvmAnalysis, cluster_apps,CTS
 import shutil
 import matplotlib.pyplot as plt
 import numpy as np
@@ -46,10 +46,12 @@ def main():
     isIceEnable(args.debug)
     # tuningLabel = "Withhashjoin"
     # tuningLabel = "ReAIParallWithhash"
-    tuningLabel = "ls_DA_sssp"
+    # tuningLabel = "ls_DA_sssp"
     # tuningLabel = "nohashjoin"
     # tuningLabel = "nohashjoinMlp"
-    StartEndStep = [0,30,10] # both
+    tuningLabel = "cts_cluster"
+    
+    StartEndStep = [-0.01,0.1,0.005] # both
     # StartEndStep = [65,85,2.5] # withhash
     # StartEndStep = [72,80,1] # withhash
     # StartEndStep = [0,5,0.5] # nohash
@@ -57,7 +59,7 @@ def main():
     # StartEndStep = [0,100,50] # ReAI
     # StartEndStep = [0,1,0.05] # consider AI and DATA relation
     tuningLabel += f"_{StartEndStep[0]}_{StartEndStep[1]}_{StartEndStep[2]}"
-    tuningLSpressure(tuningLabel, StartEndStep)
+    tuning1D(tuningLabel, StartEndStep, "tuning_cluster_threshold")
     # StartEndStep2 = [0.000001,0.01,3.2] # both
     # StartEndStep2 = [0.0001,0.01,2] # withhash
     # StartEndStep2 = [0.000005,0.001,2] # withhash
@@ -68,7 +70,7 @@ def main():
     # StartEndStep2 = [0.0001,0.00017,1.1] # consider AI and DATA relation
     StartEndStep2 = [0.00001,0.0001,1.05] # fine-tune sssp
     tuningLabel += f"_{StartEndStep2[0]}_{StartEndStep2[1]}_{StartEndStep2[2]}"
-    tuning2D(tuningLabel, StartEndStep, StartEndStep2)
+    # tuning2D(tuningLabel, StartEndStep, StartEndStep2, "tuning_lspressure" , "tuning_dataThreshold")
 
 def plot_wireframe(xx, yy, z, color='#0066FF', linewidth=1):
     line_marker = dict(color=color, width=linewidth)
@@ -81,7 +83,7 @@ def plot_wireframe(xx, yy, z, color='#0066FF', linewidth=1):
     layout = go.Layout(showlegend=False)
     return go.Figure(data=lines, layout=layout)
 
-def LoopCore(i, j):
+def LoopCore(i, i_label, j, j_label):
     # set default tuning parameters
     glv._set("tuning_lspressure",5)
     glv._set("tuning_reAI",0.5)
@@ -90,8 +92,10 @@ def LoopCore(i, j):
     glv._set("graphAppDetailDict",{})
     
     # change tuning parameters
-    glv._set("tuning_lspressure",i)
-    glv._set("tuning_dataThreshold",j)  
+    "tuning_lspressure"
+    "tuning_dataThreshold"
+    glv._set(i_label,i)
+    glv._set(j_label,j)  
     
     # delete other result tmp file
     if checkFileExists(glv._get("resultPath")+"default_cpu_1_pim_32"):
@@ -111,11 +115,16 @@ def LoopCore(i, j):
     
     errorPrint("-----------------------------------STEP 1.2 llvm-mca result of BBLs----------------------------------------")
     # get the llvm-mca result of BBLs
-    # llvmAnalysis(taskList)
+    all_for_one = CTS(taskList)
+        
+    # llvmAnalysis(all_for_one)
+
+    errorPrint("-----------------------------------TEST 1.2.1 cluster based on compile time info (without bbl flow info)----------------------------------------")
+    all_for_one = cluster_apps(all_for_one)
 
     errorPrint("-----------------------------------STEP 1.3 static decision based on llvm-mca result ----------------------------------------")
     # get the static decision from the llvm-mca result
-    OffloadBySCA(taskList)
+    # OffloadBySCA(taskList)
     
     errorPrint("-----------------------------------STEP3: Get the real time base one different ways----------------------------------------")
     # Step3: run modified PIMProf result
@@ -139,7 +148,7 @@ def LoopCore(i, j):
     
     return [source_folder,scaAvgTime, availAppCount]
 
-def tuning2D(tuningLabel, StartEndStep, StartEndStep2):
+def tuning2D(tuningLabel, StartEndStep, StartEndStep2, i_label, j_label):
     processBeginTime=timeBeginPrint("multiple taskList")
     [tuningStart, tuningEnd, tuningStep] = StartEndStep
     [tuningStart2, tuningEnd2, tuningStep2] = StartEndStep2
@@ -176,7 +185,7 @@ def tuning2D(tuningLabel, StartEndStep, StartEndStep2):
                     j *= tuningStep2
                     continue
                 
-                [source_folder,scaAvgTime, availAppCount] = LoopCore(i, j)
+                [source_folder,scaAvgTime, availAppCount] = LoopCore(i, i_label, j, j_label)
                 
                 X.append(i)
                 Y.append(j)
@@ -207,7 +216,7 @@ def tuning2D(tuningLabel, StartEndStep, StartEndStep2):
     print(f"bestX {bestAvgTimeAndPos[1]} bestY {bestAvgTimeAndPos[2]} bestAvgTime {bestAvgTimeAndPos[0]} ")
     print(f"bestX {bestAppcountAndPos[1]} bestY {bestAppcountAndPos[2]} bestAvailAppCount {bestAppcountAndPos[0]} ")
             
-def tuningLSpressure(tuningLabel, StartEndStep):
+def tuning1D(tuningLabel, StartEndStep, i_label):
     processBeginTime=timeBeginPrint("multiple taskList")
     [tuningStart, tuningEnd, tuningStep] = StartEndStep
     iList = []    
@@ -219,9 +228,9 @@ def tuningLSpressure(tuningLabel, StartEndStep):
     
         i = tuningStart - tuningStep
         while i <= tuningEnd - tuningStep:
-            i = round(tuningStep+i,2)
+            i = round(tuningStep+i,4)
             errorPrint(f"----------------------------------- tuning {i}----------------------------------------")
-            target_folder = glv._get("resultPath")+f"tuning/{tuningLabel}/manual_lspressure_{i}"
+            target_folder = glv._get("resultPath")+f"tuning/{tuningLabel}/manual_{i_label}_{i}"
             result_file = target_folder + f"/scaResult.txt"
             
             # skip if already have result
@@ -236,7 +245,7 @@ def tuningLSpressure(tuningLabel, StartEndStep):
                 passPrint(f"-----------------------------------already get tuning {i} Result {scaAvgTime}----------------------------------------")
                 continue
             
-            [source_folder,scaAvgTime, availAppCount] = LoopCore(i, 0.0001)
+            [source_folder,scaAvgTime, availAppCount] = LoopCore(i, i_label, 0.0001, "tuning_dataThreshold")
             
             iList.append(i)
             scaAvgTimeList.append(scaAvgTime)

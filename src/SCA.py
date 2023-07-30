@@ -8,6 +8,9 @@ from tqdm import tqdm
 from multiProcess import parallelGetSCAResult, llvmCommand, decisionByXGB, decisionByManual
 from tsjPython.tsjCommonFunc import *
 from trainning.training_data import resultFromSCAFile
+from icecream import ic
+from disassembly import abstractBBLfromAssembly
+from subProcessCommand import *
 
 class CTS:
     
@@ -16,13 +19,13 @@ class CTS:
     graph = "kron-20"
     mem_cost = 60 + 30
     reg_cost = 30 #  value
-    cluster_threshold = -0.0001
     parallelism_threshlod = 16
     reAI_threshold = 0.5
     IC_threshold = 27
     ppressure_threshold = 5 
     
     def __init__(self,taskList):
+        self.cluster_threshold = glv._get("tuning_cluster_threshold")
         self.app_info_list = {}
         for path, name in taskList.items():
             prioriKnowDict = glv._get("prioriKnow")
@@ -35,24 +38,76 @@ class CTS:
     def update_app_info(self,name,app_info):
         self.app_info_list[name] = app_info
         
+    def delete_func_file(self):
+        for _, app_info in self.app_info_list.items():
+            app_info.delete_func_file()
+            
+    def compile_func_degree(self):
+        for _, app_info in self.app_info_list.items():
+            app_info.compile_func_degree()
+    
+    def disassembly_func_degree(self):
+        for _, app_info in self.app_info_list.items():
+            app_info.disassembly_func_degree()
+    
+    def print_sniper_command(self):
+        for _, app_info in self.app_info_list.items():
+            [command,targetFile] = app_info.sniper_command("cpu",1,glv._get("mode"))
+            print(command)
+            print(targetFile)
+            [command,targetFile] = app_info.sniper_command("pim",32,glv._get("mode"))
+            print(command)
+            print(targetFile)
+             
 class application_info(CTS):
     def __init__(self, name, path,prioriKnowDecision):
         self.name = name
-        self.path = path
-        prefix_name = self.assemblyPath + name
-        self.targetAssembly = prefix_name + '.s'
-        self.bblJsonFile = prefix_name + '_bbl.json'
-        self.bblSCAFile = prefix_name + '_bbl.sca'
-        self.bblSCAPickleFile = prefix_name + '_bbl_sca.pickle'
-        self.bblDecisionFile = prefix_name + '_bbl.decision'
-        self.ctsDecisionFile = prefix_name + '_bbl_cts.decision'
-        self.cts_cluster_file = prefix_name + '_bbl_cts.cluster'
+        self.path = re.match(r"^((.)*)/[a-z]*\.inj",path).group(1)
+        self.inj = path
+        self.fun_obj = self.inj + "f"
+        self.prefix_name = self.assemblyPath + name
+        
+        self.func_assembly_file = self.prefix_name + '_fun.s'
+        self.func_bblFile = self.prefix_name + "_fun.bbl"
+        self.func_bblJsonFile = self.prefix_name + "_fun_bbl.json"
+        self.func_tmpbblFile = self.prefix_name + "_fun.tmp"
+        
+        self.targetAssembly = self.prefix_name + '.s'
+        self.bblJsonFile = self.prefix_name + '_bbl.json'
+        self.bblSCAFile = self.prefix_name + '_bbl.sca'
+        self.bblSCAPickleFile = self.prefix_name + '_bbl_sca.pickle'
+        self.bblDecisionFile = self.prefix_name + '_bbl.decision'
+        self.ctsDecisionFile = self.prefix_name + '_bbl_cts.decision'
+        self.cts_cluster_file = self.prefix_name + '_bbl_cts.cluster'
         self.cpu_log_path = self.log_path + self.classify(name)
         self.app_log_path = self.cpu_log_path + "/" + name + "_pimprof_cpu_" + "1"
         self.bbl_flow_file =  self.app_log_path + "/pimprofreuse.out"
         self.id_hash_map_file =  self.app_log_path + "/pimprofstats.out"
         self.cluster_list = []
         self.prioriKnowDecision = prioriKnowDecision
+      
+    def delete_func_file(self):
+        delete_file(self.fun_obj)
+        delete_file(self.func_assembly_file)
+        
+    def compile_func_degree(self):
+        ic(self.path)
+        if not checkFileExists(self.fun_obj):
+            # command_list = "cd " + self.path + " ; make injf"
+            # COMMAND_LIST(command_list)
+            CMD_PATH(["make injf"],self.path)
+    
+    def disassembly_func_degree(self):
+        if not checkFileExists(self.func_assembly_file):
+            command = "objdump -d " + self.fun_obj
+            list=TIMEOUT_COMMAND_2FILE(1, command, self.func_assembly_file, glv._get("timeout"))
+            ic(list)
+            assert len(list)!=0
+        abstractBBLfromAssembly(self.func_assembly_file,
+                                self.func_bblFile,
+                                self.func_bblJsonFile,
+                                self.func_tmpbblFile)
+        
         
     def classify(self,name):
         if name in glv._get("gapbsList"):
@@ -61,6 +116,26 @@ class application_info(CTS):
             return "special"
         else:
             return "default"
+        
+    def sniper_command(self, cpu_pim, core_nums, bbls_func):
+        if bbls_func == "bbls":
+            if self.name in glv._get("gapbsList"):
+                [_, command,targetFile] = gapbsInput(self.inj, self.name, cpu_pim, core_nums)
+            elif self.name in glv._get("specialInputList"):
+                [_, command,targetFile] = specialInput(self.inj, self.name, cpu_pim, core_nums)
+            else:
+                [_, command,targetFile] = defaultInput(self.inj, self.name, cpu_pim, core_nums)
+        elif bbls_func == "func":
+            if self.name in glv._get("gapbsList"):
+                [_, command,targetFile] = gapbsInput(self.fun_obj, self.name, cpu_pim, core_nums)
+            elif self.name in glv._get("specialInputList"):
+                [_, command,targetFile] = specialInput(self.fun_obj, self.name, cpu_pim, core_nums)
+            else:
+                [_, command,targetFile] = defaultInput(self.fun_obj, self.name, cpu_pim, core_nums)
+        else:
+            assert("error bbls_func")
+        return [command, targetFile]
+            
         
     def append(self, cluster):
         self.cluster_list.append(cluster)
@@ -82,6 +157,8 @@ class application_info(CTS):
                     break
             
             for line in f:
+                if line.startswith("======="):
+                    break
                 parts = line.split()
                 id = int(parts[0])
                 
@@ -92,7 +169,7 @@ class application_info(CTS):
                             re.sub(r'^0+','',hash_second)
                             
                 self.id_hash_map[hash_value] = id 
-        ic(self.id_hash_map)
+        # ic(self.id_hash_map)
                 
     def read_bbl_flow(self):
         self.graph = {}
@@ -103,6 +180,8 @@ class application_info(CTS):
                     break
             
             for line in f:
+                if line.startswith("======="):
+                    break
                 from_node, to_nodes = line.split("|")
                 from_node = int(from_node.split("=")[1])
                 for item in to_nodes.split():
@@ -165,7 +244,7 @@ class cluster(application_info):
         
         connectivity_value = (self.mem_cost * mem_reuse + self.reg_cost * reg_resuse)\
             / ( (self.mem_cost + self.reg_cost) * max_ic)
-        return connectivity_value > self.cluster_threshold
+        return connectivity_value > glv._get("tuning_cluster_threshold")
         
     def bbl_ic(self):
         ic = 0
@@ -273,10 +352,16 @@ class basic_block(cluster):
             if match_pattern:
                 # ic(3)
                 tmp_write_addr.add(match_pattern.group(1))
+                contain_list = re.findall(r"\%[a-z0-9]*",match_pattern.group(1))
+                for reg in contain_list:
+                    tmp_write_reg.add(reg)
             match_pattern = re.search(r"^.*([0-9x]*\(.*\)),.*$",line)
             if match_pattern:
                 # ic(4)
                 tmp_read_addr.add(match_pattern.group(1))
+                contain_list = re.findall(r"\%[a-z0-9]*",match_pattern.group(1))
+                for reg in contain_list:
+                    tmp_read_reg.add(reg)
         # sleepRandom(0.5)
         self.instruction_count = len(bbl_assembly)
         self.read_register = tmp_read_reg
