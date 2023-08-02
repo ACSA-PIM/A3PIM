@@ -39,10 +39,11 @@ def generateAppStackedBar():
 	# show plot
 	plt.savefig(glv._get("graphlOutPathTest1"))
 
-def generateAppStackedBarPlotly(maxY):
+def generateAppStackedBarPlotly(maxY,all_for_one):
 	maxY = max(1.2, maxY)
 	# maxY = 2
-	[x, barDict] = detailNormalizedGraphAppDict()
+	# [x, barDict] = detailNormalizedGraphAppDict()
+	[x, barDict] = all_for_one.stacked_data()
 	ic(x)
 	# x = [
 	# 	["bc", "bc", "bc", "sssp", "sssp", "sssp"],
@@ -173,7 +174,7 @@ def SpeedUpGraph(species,dictData):
 		plt.yscale('linear')
 		ax.set_ylim(0, maxVal+2) # 2
 	ic(maxVal)
-	plt.savefig(glv._get("graphlOutPathTest1"), dpi=300)
+	# plt.savefig(glv._get("graphlOutPathTest1"), dpi=300)
 
 def BreakdownGraph(species,dictData, maxVal):
     # matplotlib.use("pgf")
@@ -243,7 +244,7 @@ def BreakdownGraph(species,dictData, maxVal):
 		plt.yscale('linear')
 		ax.set_ylim(0, maxVal+2) # 2
 	ic(maxVal)
-	plt.savefig(glv._get("graphlOutPath"), dpi=300)
+	# plt.savefig(glv._get("graphlOutPath"), dpi=300)
  
 def normalizedGraphAppDict():
     entryList = glv._get("graphEntryList")

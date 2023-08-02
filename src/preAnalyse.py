@@ -51,12 +51,11 @@ def main():
         analyseResults(taskList, coreCount=32 ) 
         all_for_one.get_time_result()
         all_for_one.print_time_result()
-        exit()
         errorPrint("-----------------------------------STEP4.2: Normalized data & Visualization ----------------------------------------")
         
         [maxValue, scaAvgTime,availAppCount] = generateAppComparisonGraph()   
         # generateAppStackedBar()
-        generateAppStackedBarPlotly(maxValue)
+        generateAppStackedBarPlotly(maxValue,all_for_one)
         
         passPrint(f"SCA AVG Time is {scaAvgTime}\n")
         passPrint(f"SCA AVG SpeedUp is {round(1/scaAvgTime,2)}\n")
