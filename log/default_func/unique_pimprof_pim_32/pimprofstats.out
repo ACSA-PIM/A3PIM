@@ -1,0 +1,138 @@
+============================================================
+Thread 0
+  BBLID       Time(ns)    Instruction  Memory Access          Hash(hi)          Hash(lo)
+      0           4849              3              0  0000000000000000  0000000000000000
+      1    1.29194e+08      126891844        8409324  0000000000000001  0000000000000001
+      2          13162           1283            210  48684ec8bfd97ded  6030b799debff625
+      3    1.20006e+08       16784100        1192393  e2b6fe18141c73c2  4a173c8b8e1eab3b
+============================================================
+Thread 1
+  BBLID       Time(ns)    Instruction  Memory Access          Hash(hi)          Hash(lo)
+      0         174839          60583            798  0000000000000000  0000000000000000
+      3    1.19976e+08       16783446        1192392  e2b6fe18141c73c2  4a173c8b8e1eab3b
+============================================================
+Thread 2
+  BBLID       Time(ns)    Instruction  Memory Access          Hash(hi)          Hash(lo)
+      0         196138          76978            622  0000000000000000  0000000000000000
+      3    1.19929e+08       16783446        1191539  e2b6fe18141c73c2  4a173c8b8e1eab3b
+============================================================
+Thread 3
+  BBLID       Time(ns)    Instruction  Memory Access          Hash(hi)          Hash(lo)
+      0         146146          52850            717  0000000000000000  0000000000000000
+      3    1.19982e+08       16784268        1192756  e2b6fe18141c73c2  4a173c8b8e1eab3b
+============================================================
+Thread 4
+  BBLID       Time(ns)    Instruction  Memory Access          Hash(hi)          Hash(lo)
+      0         231909          91077            657  0000000000000000  0000000000000000
+      3    1.19896e+08       16783446        1197464  e2b6fe18141c73c2  4a173c8b8e1eab3b
+============================================================
+Thread 5
+  BBLID       Time(ns)    Instruction  Memory Access          Hash(hi)          Hash(lo)
+      0          81564          22567            667  0000000000000000  0000000000000000
+      3    1.20037e+08       16783446        1191528  e2b6fe18141c73c2  4a173c8b8e1eab3b
+============================================================
+Thread 6
+  BBLID       Time(ns)    Instruction  Memory Access          Hash(hi)          Hash(lo)
+      0         225070          89850           2010  0000000000000000  0000000000000000
+      3    1.19896e+08       16783446        1187955  e2b6fe18141c73c2  4a173c8b8e1eab3b
+============================================================
+Thread 7
+  BBLID       Time(ns)    Instruction  Memory Access          Hash(hi)          Hash(lo)
+      0         967254         435985            560  0000000000000000  0000000000000000
+      3    1.19156e+08       16784227              0  e2b6fe18141c73c2  4a173c8b8e1eab3b
+============================================================
+Thread 8
+  BBLID       Time(ns)    Instruction  Memory Access          Hash(hi)          Hash(lo)
+      0              0              0             98  0000000000000000  0000000000000000
+============================================================
+Thread 9
+  BBLID       Time(ns)    Instruction  Memory Access          Hash(hi)          Hash(lo)
+      0              0              0             98  0000000000000000  0000000000000000
+============================================================
+Thread 10
+  BBLID       Time(ns)    Instruction  Memory Access          Hash(hi)          Hash(lo)
+      0              0              0             98  0000000000000000  0000000000000000
+============================================================
+Thread 11
+  BBLID       Time(ns)    Instruction  Memory Access          Hash(hi)          Hash(lo)
+      0              0              0             98  0000000000000000  0000000000000000
+============================================================
+Thread 12
+  BBLID       Time(ns)    Instruction  Memory Access          Hash(hi)          Hash(lo)
+      0              0              0             98  0000000000000000  0000000000000000
+============================================================
+Thread 13
+  BBLID       Time(ns)    Instruction  Memory Access          Hash(hi)          Hash(lo)
+      0              0              0             98  0000000000000000  0000000000000000
+============================================================
+Thread 14
+  BBLID       Time(ns)    Instruction  Memory Access          Hash(hi)          Hash(lo)
+      0              0              0             98  0000000000000000  0000000000000000
+============================================================
+Thread 15
+  BBLID       Time(ns)    Instruction  Memory Access          Hash(hi)          Hash(lo)
+      0              0              0             98  0000000000000000  0000000000000000
+============================================================
+Thread 16
+  BBLID       Time(ns)    Instruction  Memory Access          Hash(hi)          Hash(lo)
+      0              0              0             98  0000000000000000  0000000000000000
+============================================================
+Thread 17
+  BBLID       Time(ns)    Instruction  Memory Access          Hash(hi)          Hash(lo)
+      0              0              0             98  0000000000000000  0000000000000000
+============================================================
+Thread 18
+  BBLID       Time(ns)    Instruction  Memory Access          Hash(hi)          Hash(lo)
+      0              0              0             98  0000000000000000  0000000000000000
+============================================================
+Thread 19
+  BBLID       Time(ns)    Instruction  Memory Access          Hash(hi)          Hash(lo)
+      0              0              0             98  0000000000000000  0000000000000000
+============================================================
+Thread 20
+  BBLID       Time(ns)    Instruction  Memory Access          Hash(hi)          Hash(lo)
+      0              0              0             98  0000000000000000  0000000000000000
+============================================================
+Thread 21
+  BBLID       Time(ns)    Instruction  Memory Access          Hash(hi)          Hash(lo)
+      0              0              0             98  0000000000000000  0000000000000000
+============================================================
+Thread 22
+  BBLID       Time(ns)    Instruction  Memory Access          Hash(hi)          Hash(lo)
+      0              0              0             98  0000000000000000  0000000000000000
+============================================================
+Thread 23
+  BBLID       Time(ns)    Instruction  Memory Access          Hash(hi)          Hash(lo)
+      0              0              0             98  0000000000000000  0000000000000000
+============================================================
+Thread 24
+  BBLID       Time(ns)    Instruction  Memory Access          Hash(hi)          Hash(lo)
+      0              0              0             98  0000000000000000  0000000000000000
+============================================================
+Thread 25
+  BBLID       Time(ns)    Instruction  Memory Access          Hash(hi)          Hash(lo)
+      0              0              0             98  0000000000000000  0000000000000000
+============================================================
+Thread 26
+  BBLID       Time(ns)    Instruction  Memory Access          Hash(hi)          Hash(lo)
+      0              0              0             98  0000000000000000  0000000000000000
+============================================================
+Thread 27
+  BBLID       Time(ns)    Instruction  Memory Access          Hash(hi)          Hash(lo)
+      0              0              0             98  0000000000000000  0000000000000000
+============================================================
+Thread 28
+  BBLID       Time(ns)    Instruction  Memory Access          Hash(hi)          Hash(lo)
+      0              0              0             98  0000000000000000  0000000000000000
+============================================================
+Thread 29
+  BBLID       Time(ns)    Instruction  Memory Access          Hash(hi)          Hash(lo)
+      0              0              0             98  0000000000000000  0000000000000000
+============================================================
+Thread 30
+  BBLID       Time(ns)    Instruction  Memory Access          Hash(hi)          Hash(lo)
+      0              0              0             98  0000000000000000  0000000000000000
+============================================================
+Thread 31
+  BBLID       Time(ns)    Instruction  Memory Access          Hash(hi)          Hash(lo)
+      0              0              0        1199591  0000000000000000  0000000000000000

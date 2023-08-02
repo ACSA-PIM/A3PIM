@@ -1,0 +1,108 @@
+============================================================
+ReuseSegment - Thread 0
+head = 0, count = 97 | 0 10 
+head = 10, count = 7 | 10 1 
+head = 0, count = 19 | 0 1 
+head = 0, count = 3 | 0 10 1 
+head = 10, count = 1 | 0 10 1 
+head = 1, count = 38 | 1 4 
+head = 0, count = 4 | 0 4 
+head = 10, count = 3 | 10 1 4 
+head = 10, count = 13 | 10 4 
+head = 4, count = 15 | 4 5 
+head = 0, count = 1 | 0 5 
+head = 5, count = 18 | 5 11 
+head = 4, count = 35 | 4 11 
+head = 0, count = 1 | 0 1 11 
+head = 0, count = 1 | 0 11 
+head = 1, count = 12 | 1 11 
+head = 4, count = 1 | 4 5 11 
+head = 11, count = 41 | 11 6 
+head = 4, count = 1 | 4 6 
+head = 0, count = 1 | 0 6 
+head = 10, count = 1 | 10 1 4 6 
+head = 1, count = 1 | 1 4 5 11 6 
+head = 6, count = 11 | 11 6 
+head = 4, count = 1 | 4 11 6 
+head = 11, count = 16 | 5 11 
+head = 6, count = 17 | 5 6 
+head = 0, count = 1 | 0 4 5 
+head = 0, count = 1 | 0 10 1 4 5 11 
+head = 4, count = 1 | 4 11 9 
+head = 5, count = 9 | 5 9 
+head = 5, count = 18 | 5 13 
+head = 6, count = 4 | 6 13 
+head = 5, count = 1 | 5 11 13 
+head = 11, count = 5 | 11 13 
+head = 9, count = 1 | 9 13 
+head = 4, count = 1 | 4 9 13 
+head = 9, count = 1 | 9 8 
+head = 13, count = 8 | 13 8 
+head = 11, count = 1 | 11 13 8 
+head = 0, count = 1 | 0 8 
+head = 11, count = 2 | 11 8 
+head = 6, count = 127 | 6 8 
+head = 11, count = 1 | 11 6 8 
+head = 13, count = 1 | 9 13 8 
+head = 8, count = 4 | 9 8 
+head = 9, count = 1 | 9 2 
+head = 8, count = 9 | 8 2 
+head = 8, count = 1 | 9 8 2 
+head = 2, count = 1 | 9 2 
+head = 9, count = 1 | 9 3 
+head = 2, count = 7 | 2 3 
+head = 8, count = 3 | 8 3 
+head = 13, count = 1 | 13 8 3 
+head = 13, count = 19 | 13 3 
+head = 4, count = 1 | 4 11 3 
+head = 11, count = 1 | 5 11 9 3 
+head = 3, count = 1 | 9 3 
+head = 3, count = 8 | 3 7 
+head = 9, count = 1 | 9 7 
+head = 3, count = 1 | 9 3 7 
+head = 7, count = 2 | 9 7 
+head = 9, count = 2 | 9 14 
+head = 7, count = 7 | 7 14 
+head = 3, count = 21 | 3 14 
+head = 1, count = 1 | 1 14 
+head = 0, count = 1 | 0 14 
+head = 2, count = 1 | 2 14 
+head = 5, count = 1 | 5 3 14 
+head = 5, count = 1 | 5 7 14 
+head = 14, count = 7 | 9 14 
+head = 9, count = 3 | 9 12 
+head = 14, count = 24 | 14 12 
+head = 3, count = 1 | 3 7 12 
+head = 12, count = 30 | 9 12 
+head = 13, count = 1 | 9 13 
+head = 11, count = 10 | 11 9 
+head = 11, count = 1 | 11 9 12 
+head = 10, count = 1 | 10 1 9 12 
+head = 13, count = 1 | 9 13 8 2 3 7 
+head = 0, count = 17 | 0 9 
+head = 10, count = 1 | 10 4 5 9 
+head = 10, count = 2 | 10 1 4 9 8 2 
+head = 4, count = 2 | 4 5 9 
+head = 10, count = 5 | 10 9 
+head = 10, count = 1 | 10 9 14 
+head = 11, count = 1 | 5 11 9 8 14 
+head = 0, count = 2 | 0 10 9 
+head = 0, count = 2 | 0 10 1 4 5 11 6 9 13 3 14 12 
+head = 0, count = 1 | 0 10 1 4 5 11 6 9 13 14 
+head = 0, count = 5 | 0 10 1 4 11 6 9 3 12 
+============================================================
+BBLSwitchCount - Thread 0
+from = 0 | 10:1 
+from = 10 | 1:1 
+from = 1 | 4:1 
+from = 4 | 5:1 
+from = 5 | 11:1 
+from = 11 | 6:2 
+from = 6 | 11:1 9:1 
+from = 9 | 13:1 
+from = 13 | 8:1 
+from = 8 | 2:1 
+from = 2 | 3:1 
+from = 3 | 7:1 
+from = 7 | 14:1 
+from = 14 | 12:1 
