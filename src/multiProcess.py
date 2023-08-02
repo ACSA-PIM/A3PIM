@@ -76,23 +76,18 @@ def multiCorePIMMode(taskList, coreNums):
             yellowPrint("[   {}/{}   ] PIM-{:<10} Task {} already finished".format( countId, totolCount,coreNums, taskName))
         passPrint("[   {}/{}   ] PIM-{:<10} Task {} finished successfully".format( countId, totolCount,coreNums, taskName))
 
-def pimprof(queueDict, taskKey, taskName, countId, totolCount, coreCount):
-    yellowPrint("[   {:2}/{:2}   ] PIMProf {:<10} is running……".format( countId, totolCount, taskName))
-    if taskName in glv._get("gapbsList"):
-        [command,targetFile, redirect2log] = pimprofInput(taskKey, taskName, coreCount, glv._get("gapbsGraphName"))
-    elif taskName in glv._get("specialInputList"):
-        [command,targetFile, redirect2log] = pimprofInput(taskKey, taskName, coreCount, "special")
-    else:
-        [command,targetFile, redirect2log] = pimprofInput(taskKey, taskName, coreCount, "default")
+def pimprof(queueDict, app_info, countId, totolCount, coreCount):
+    yellowPrint("[   {:2}/{:2}   ] PIMProf {:<10} is running……".format( countId, totolCount, app_info.name))
+    [command,targetFile, redirect2log] = app_info.pimprof_command(coreCount, "bbls")
     print(command)
     if not checkFileExists(targetFile):
         list=TIMEOUT_COMMAND_2FILE(1, command, redirect2log, glv._get("timeout"))
         ic(list)
         assert len(list)!=0
     else:
-        yellowPrint("[   {:2}/{:2}   ] PIMProf {:<10} already finished".format( countId, totolCount, taskName))
-    passPrint("[   {:2}/{:2}   ] PIMProf {:<10} finished successfully".format( countId, totolCount, taskName))
-    queueDict.get("finishedSubTask").put(taskName)
+        yellowPrint("[   {:2}/{:2}   ] PIMProf {:<10} already finished".format( countId, totolCount, app_info.name))
+    passPrint("[   {:2}/{:2}   ] PIMProf {:<10} finished successfully".format( countId, totolCount, app_info.name))
+    queueDict.get("finishedSubTask").put(app_info.name)
     
 def singleCpuMode(queueDict, taskKey, taskName, countId, totolCount, **kwargs):
     sys.stdout.flush()
@@ -154,27 +149,27 @@ def singleDisassembly(queueDict, taskKey, taskName, countId, totolCount, **kwarg
     queueDict.get("finishedSubTask").put(taskName)
     
     
-def parallelTask(taskList, SubFunc,  **kwargs):
+def parallelTask(all_for_one, SubFunc,  **kwargs):
     
     dataDict = dataDictInit()
     queueDict = queueDictInit(dataDict)
     
     pList=[]
-    totolCount = len(taskList)
+    totolCount = len(all_for_one.app_info_list)
     countId = 0
-    for taskKey, taskName in taskList.items():
+    for _, app_info in all_for_one.app_info_list.items():
         countId = countId + 1
         if "coreCount" in kwargs:
             ic(kwargs)
-            pList.append(Process(target=SubFunc, args=(queueDict, taskKey, taskName, countId, totolCount, int(kwargs["coreCount"]))))
+            pList.append(Process(target=SubFunc, args=(queueDict, app_info, countId, totolCount, int(kwargs["coreCount"]))))
         else:
-            pList.append(Process(target=SubFunc, args=(queueDict, taskKey, taskName, countId, totolCount)))
+            pList.append(Process(target=SubFunc, args=(queueDict, app_info, countId, totolCount)))
             
         
     for p in pList:
         p.start()
         
-    ProcessNum = len(taskList)
+    ProcessNum = len(all_for_one.app_info_list)
     time.sleep(0.5)
     while queueDict.get("finishedSubTask").qsize()<ProcessNum:
         print("QueueNum : {}".format(queueDict.get("finishedSubTask").qsize()))

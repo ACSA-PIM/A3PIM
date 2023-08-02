@@ -7,7 +7,7 @@ from multiProcess import *
 from logPrint import *
 from analysis import *
 from graph import *
-from SCA import OffloadBySCA
+from SCA import *
 
 def main():
     ## icecream & input
@@ -38,14 +38,20 @@ def main():
         
         errorPrint("-----------------------------------STEP3: Get the real time base one different ways----------------------------------------")
         # Step3: run modified PIMProf result
-        parallelTask(taskList, pimprof, coreCount=32 ) # 
+        all_for_one = CTS(taskList)
+        parallelTask(all_for_one, pimprof, coreCount=32 ) # 
+        
+        errorPrint("-----------------------------------STEP3.1: Get the real time base one different ways----------------------------------------")
+        all_for_one.pimprof("func", 32)
         
         errorPrint("-----------------------------------STEP4----------------------------------------")
         # Step4: build excel & graphics to analyse results
         errorPrint("-----------------------------------STEP4.1: Read key value from real result file----------------------------------------")
         # save to global variable graphAppDict && graphAppDetailDict
         analyseResults(taskList, coreCount=32 ) 
-        
+        all_for_one.get_time_result()
+        all_for_one.print_time_result()
+        exit()
         errorPrint("-----------------------------------STEP4.2: Normalized data & Visualization ----------------------------------------")
         
         [maxValue, scaAvgTime,availAppCount] = generateAppComparisonGraph()   

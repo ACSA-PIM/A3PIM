@@ -17,15 +17,15 @@ def main():
     gapbsTaskfilePath = "/staff/shaojiemike/github/sniper_PIMProf/PIMProf/gapbs/"
     taskfilePath = "/staff/shaojiemike/github/sniper_PIMProf/PIMProf/"
     taskList = {
-            #  gapbsTaskfilePath+"bc.inj": "bc",
-             gapbsTaskfilePath+"sssp.inj": "sssp",
+             gapbsTaskfilePath+"bc.inj": "bc",
+            #  gapbsTaskfilePath+"sssp.inj": "sssp",
             #  gapbsTaskfilePath+"cc.inj": "cc",
             #  gapbsTaskfilePath+"bfs.inj": "bfs",
-            #  gapbsTaskfilePath+"pr.inj": "pr",
-            #  taskfilePath+"gemv/gemv.inj": "gemv", 
+             gapbsTaskfilePath+"pr.inj": "pr",
+             taskfilePath+"gemv/gemv.inj": "gemv", 
             #  taskfilePath+"spmv/spmv.inj": "spmv", #./spmv -f ./data/bcsstk30.mtx 
             #  taskfilePath+"select/select.inj": "select", # ./sel -i 1258291200 -t 4
-            #  taskfilePath+"unique/unique.inj": "unique" # first default
+            #  taskfilePath+"unique/unique.inj": "unique", # first default
             #  taskfilePath+"hashJoin/hashjoin.inj": "hashjoin", # ./hashjoin.inj checker/R.file checker/S.file hash 40
             #  taskfilePath+"mlp/mlp.inj": "mlp", # 3.9s
             #  taskfilePath+"svm/svm.inj": "svm" # 2.7s ./svm.inj ./SVM-RFE/outData.txt 253 15154 4

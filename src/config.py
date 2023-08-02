@@ -63,6 +63,8 @@ glv._set("graphEntryList",["CPU-ONLY","PIM-ONLY", 'MPKI-based',\
 #                 "Arch-Suity/Greedy"]) # theoretical upper bound
 glv._set("graphAppDict",{})
 glv._set("graphAppDetailDict",{})
+glv._set("graphAppDict_func",{})
+glv._set("graphAppDetailDict_func",{})
 # glv._set("graphDetailList",["CPU-Time","PIM-Time", 'DataMove',\
 #                 "Context Switch Time"])
 glv._set("graphDetailList",["CPU-Time","PIM-Time", 'REG-DM',\

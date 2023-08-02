@@ -13,6 +13,7 @@ def analyseResults(taskList, **kwargs):
     cpucore = 1
     class1 = glv._get("gapbsGraphName")
     pimprofResultPath = glv._get("resultPath")+class1+"_cpu_"+ str(cpucore)+"_pim_"+ str(pimCoreCount)
+    mkdir(pimprofResultPath)
     excelOutFile = pimprofResultPath+"/Summary_cpu_"+ str(cpucore)+"_pim_"+ str(pimCoreCount)+".xlsx"
     graphOutFile = pimprofResultPath+"/ExeTime_cpu_"+ str(cpucore)+"_pim_"+ str(pimCoreCount)+".png"
     graphOutFileTest1 = pimprofResultPath+"/speedup_ExeTime_cpu_"+ str(cpucore)+"_pim_"+ str(pimCoreCount)+".png"
@@ -24,11 +25,22 @@ def analyseResults(taskList, **kwargs):
     
     for taskKey, taskName in taskList.items():
         countId = countId + 1
+        
+        # func
+        [Instructions, resultList] = readDataFromOutputFile(taskName, pimCoreCount, "func")
+        glvGraphDict = glv._get("graphAppDict_func")
+        glvGraphDict[taskName] = resultList
+        # ic(glvGraphDict)
+        glv._set("graphAppDict_func",glvGraphDict)
+        
+        # bbls
         [Instructions, resultList] = readDataFromOutputFile(taskName, pimCoreCount)
         glvGraphDict = glv._get("graphAppDict")
         glvGraphDict[taskName] = resultList
         # ic(glvGraphDict)
         glv._set("graphAppDict",glvGraphDict)
+        
+        # set excel
         write2ExcelList = [taskName]
         write2ExcelList.append(Instructions) 
         write2ExcelList += resultList
@@ -36,7 +48,7 @@ def analyseResults(taskList, **kwargs):
     
     return pimprofResultPath
 
-def readDataFromOutputFile(taskName, pimCoreCount):
+def readDataFromOutputFile(taskName, pimCoreCount, bbls_func="bbls"):
     cpucore = 1
     if taskName in glv._get("gapbsList"):
         class1 = glv._get("gapbsGraphName")
@@ -44,6 +56,8 @@ def readDataFromOutputFile(taskName, pimCoreCount):
         class1 = "special"
     else:
         class1 = "default"
+        
+    class1 += f"{'_func' if bbls_func=='func' else ''}"
     pimprofResultPath = glv._get("resultPath")+class1+"_cpu_"+ str(cpucore)+"_pim_"+ str(pimCoreCount)
     mkdir(pimprofResultPath)
     targetFile = pimprofResultPath+"/reusedecision_"+taskName+"_cpu_"+ str(cpucore)+"_pim_"+ str(pimCoreCount)+".out"
@@ -53,10 +67,10 @@ def readDataFromOutputFile(taskName, pimCoreCount):
         errorPrint("Could not find pimprof result file!!!")
         exit(1)
     else:
-        glvGraphDict = glv._get("graphAppDetailDict")
+        glvGraphDict = glv._get("graphAppDetailDict"+f"{'_func' if bbls_func=='func' else ''}")
         glvGraphDict[taskName] = readListDetail(targetFile)
         # ic(glvGraphDict)
-        glv._set("graphAppDetailDict",glvGraphDict)
+        glv._set("graphAppDetailDict"+f"{'_func' if bbls_func=='func' else ''}",glvGraphDict)
         return readListBasedonName(targetFile)
     
 def readListDetail(targetFile):

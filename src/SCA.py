@@ -11,6 +11,7 @@ from trainning.training_data import resultFromSCAFile
 from icecream import ic
 from disassembly import abstractBBLfromAssembly
 from subProcessCommand import *
+from analysis import string2int
 
 class CTS:
     
@@ -58,7 +59,40 @@ class CTS:
             [command,targetFile] = app_info.sniper_command("pim",32,glv._get("mode"))
             print(command)
             print(targetFile)
-             
+            
+    def pimprof(self,bbls_func, core_num):
+        for _, app_info in self.app_info_list.items():
+            app_info.pimprof(bbls_func, core_num)
+        
+    def get_time_result(self):
+        for _, app_info in self.app_info_list.items():
+            app_info.get_time_result()
+            
+    def print_time_result(self):
+        sum_greedy = 0
+        sum_TUB = 0
+        for _, app_info in self.app_info_list.items():
+            [sum_greedy, sum_TUB] += app_info.print_time_result()
+        size = len( self.app_info_list)
+        print(f"Greedy Avg: {sum_greedy/size:2f} Avg TUB: {sum_TUB/size:2f}")
+
+
+class result_time():
+    def __init__(self, mode_name, total, cpu, pim, CL_DM, cxt) -> None:
+        self.mode = mode_name
+        self.total = int(total)
+        self.cpu = int(cpu)
+        self.pim = int(pim)
+        self.CL_DM = int(CL_DM)
+        self.cxt = int(cxt)
+        
+    def print(self, normalized_value):
+        print(f"{self.mode:4} {self.total:12d} {100*(self.total/normalized_value):10.2f}% "
+              f"{self.cpu:12d}  {100*(self.cpu/normalized_value):10.2f}% "
+              f"{self.pim:12d}  {100*(self.pim/normalized_value):10.2f}% "
+              f" {self.CL_DM:8d}  {100*(self.CL_DM/normalized_value):10.2f}% "
+              f"{self.cxt:12d} {100*(self.cxt/normalized_value):10.2f}% ")
+        
 class application_info(CTS):
     def __init__(self, name, path,prioriKnowDecision):
         self.name = name
@@ -85,7 +119,84 @@ class application_info(CTS):
         self.id_hash_map_file =  self.app_log_path + "/pimprofstats.out"
         self.cluster_list = []
         self.prioriKnowDecision = prioriKnowDecision
-      
+        
+        self.pimprof_bbls_result = self.pimprofResultFile("bbls")
+        self.pimprof_func_result = self.pimprofResultFile("func")
+    
+    def pimprofResultFile(self, bbls_func):
+        taskName = self.name
+        coreNums = 32
+        if taskName in glv._get("gapbsList"):
+            class1 = glv._get("gapbsGraphName") 
+        elif taskName in glv._get("specialInputList"):
+            class1 = "special" 
+        else:
+            class1 = "default"
+        class1 += f"{'_func' if bbls_func=='func' else ''}"
+        cpucore = 1
+        pimprofResultPath = glv._get("resultPath")+class1+"_cpu_"+ str(cpucore)+"_pim_"+ str(coreNums)
+        mkdir(pimprofResultPath)
+        return pimprofResultPath+"/reusedecision_"+taskName+"_cpu_"+ str(cpucore)+"_pim_"+ str(coreNums)+".out" 
+        
+    def get_time_result(self):
+        self.detail_bbl_dict = self.readListDetail(self.pimprof_bbls_result)
+        self.detail_func_dict = self.readListDetail(self.pimprof_func_result)
+        
+    def print_time_result(self):
+        print(f"\nbbls - func - {self.name}:")
+        bbls_cpu_time = self.detail_bbl_dict["CPU"].total
+        func_cpu_time = self.detail_func_dict["CPU"].total
+        print(f"{'name':4} {'total':<25} {'cpu':<25} {'pim':<25} {'CL-DM':<21} {'cxt':<20}")
+        for name , bbl in self.detail_bbl_dict.items():
+            bbl.print(bbls_cpu_time)
+            self.detail_func_dict[name].print(func_cpu_time)
+        bbl_G_percentage = self.detail_bbl_dict["G"].total / bbls_cpu_time
+        bbl_TUB_percentage = self.detail_bbl_dict["TUB"].total / bbls_cpu_time
+        return [bbl_G_percentage, bbl_TUB_percentage]
+        
+    def readListDetail(self,filename):
+        regexPattern = {
+            1:"CPU only time \(ns\): (.*)$",
+            2:"PIM only time \(ns\): (.*)$",
+            3:"Instruction (.*)$",
+            4:"MPKI offloading time \(ns\): (.*) = CPU (.*) \+ PIM (.*) \+ REUSE (.*) \+ SWITCH (.*)$",
+            5:"Greedy offloading time \(ns\): (.*) = CPU (.*) \+ PIM (.*) \+ REUSE (.*) \+ SWITCH (.*)$",
+            6:"Reuse offloading time \(ns\): (.*) = CPU (.*) \+ PIM (.*) \+ REUSE (.*) \+ SWITCH (.*)$",
+            7:"CTS offloading time \(ns\): (.*) = CPU (.*) \+ PIM (.*) \+ REUSE (.*) \+ SWITCH (.*)$",
+            8:"SCAFromfile offloading time \(ns\): (.*) = CPU (.*) \+ PIM (.*) \+ REUSE (.*) \+ SWITCH (.*)$",
+            # 9:"SCA offloading time \(ns\): (.*) = CPU (.*) \+ PIM (.*) \+ REUSE (.*) \+ SWITCH (.*)$"
+        }
+        lineNum2Name = ["0","CPU","PIM","3","MPKI","G","TUB","CTS","SCA"]
+        ic(filename)
+        fread=open(filename, 'r') 
+        useLineCount=8
+        lineNum = 1
+        result_dict={}
+        while lineNum <= useLineCount:
+            line = fread.readline()
+            ic(line)
+
+            if lineNum == 1:
+                costTime = string2int(re.search(regexPattern[lineNum],line).group(1)) 
+                result_dict["CPU"] = result_time("CPU", costTime, costTime, 0, 0, 0)    
+            elif lineNum == 2:
+                costTime = string2int(re.search(regexPattern[lineNum],line).group(1)) 
+                result_dict["PIM"] = result_time("PIM", costTime, 0, costTime, 0, 0)
+            elif lineNum == 3:
+                lineNum = lineNum + 1
+                continue
+            else:
+                total = string2int(re.search(regexPattern[lineNum],line).group(1)) 
+                CPU = string2int(re.search(regexPattern[lineNum],line).group(2)) 
+                PIM = string2int(re.search(regexPattern[lineNum],line).group(3)) 
+                CL_DM = string2int(re.search(regexPattern[lineNum],line).group(4)) 
+                cxt = string2int(re.search(regexPattern[lineNum],line).group(5)) 
+                result_dict[lineNum2Name[lineNum]] = result_time(lineNum2Name[lineNum], 
+                                                                total, CPU, PIM, CL_DM, cxt )
+            lineNum = lineNum + 1
+        ic(result_dict)
+        return result_dict
+        
     def delete_func_file(self):
         delete_file(self.fun_obj)
         delete_file(self.func_assembly_file)
@@ -135,8 +246,52 @@ class application_info(CTS):
         else:
             assert("error bbls_func")
         return [command, targetFile]
-            
+    
+    def pimprof(self,bbls_func, core_num):
+        [command,targetFile, redirect2log] = self.pimprof_command(core_num, bbls_func)
+        print(command)
+        if not checkFileExists(targetFile):
+            list=TIMEOUT_COMMAND_2FILE(1, command, redirect2log, glv._get("timeout"))
         
+    def pimprof_command(self, coreCount, bbls_func="bbls"):
+        taskName = self.name
+        coreNums = coreCount
+        if taskName in glv._get("gapbsList"):
+            class1 = glv._get("gapbsGraphName") 
+        elif taskName in glv._get("specialInputList"):
+            class1 = "special" 
+        else:
+            class1 = "default"
+        class1 += f"{'_func' if bbls_func=='func' else ''}"
+        cpucore = 1
+        cpulogPath = glv._get("logPath")+class1+\
+                        "/"+taskName+"_pimprof_cpu_"+ str(cpucore)
+        pimlogPath = glv._get("logPath")+class1+\
+                        "/"+taskName+"_pimprof_pim_"+ str(coreNums)
+        pimprofResultPath = glv._get("resultPath")+class1+"_cpu_"+ str(cpucore)+"_pim_"+ str(coreNums)
+        mkdir(pimprofResultPath)
+        pimprofResultFile = pimprofResultPath+"/reusedecision_"+taskName+"_cpu_"+ str(cpucore)+"_pim_"+ str(coreNums)+".out"
+        # if bbls_func == "bbls":
+        #     self.pimprof_bbls_result = pimprofResultFile
+        # else:
+        #     self.pimprof_func_result = pimprofResultFile     
+        cpuprofstatsPath = cpulogPath + "/pimprofstats.out"
+        pimprofstatsPath = pimlogPath + "/pimprofstats.out"
+        pimprofreusePath = cpulogPath + "/pimprofreuse.out"
+        redirect2log = pimprofResultPath +"/output_"+taskName+"_cpu_"+ str(cpucore)+"_pim_"+ str(coreNums)+".log"
+        bblDecisionFile = glv._get("logPath")+ "assembly/" + taskName + "_bbl.decision"
+        ctsDecisionFile = glv._get("logPath")+ "assembly/" + taskName + "_bbl_cts.decision"
+        command = glv._get("PIMProfSolverPath")+" reuse -c "+cpuprofstatsPath+\
+                    " -p " + pimprofstatsPath + \
+                    " -r " + pimprofreusePath + \
+                    " -o " + pimprofResultFile +\
+                    " -s " + bblDecisionFile +\
+                    " -t " + ctsDecisionFile +\
+                    " -d " + str(glv._get("tuning_dataThreshold"))
+        # print("command : {}".format(command))
+        ic(command)
+        return [command, pimprofResultFile, redirect2log]
+    
     def append(self, cluster):
         self.cluster_list.append(cluster)
                 
