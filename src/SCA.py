@@ -12,6 +12,7 @@ from icecream import ic
 from disassembly import abstractBBLfromAssembly
 from subProcessCommand import *
 from analysis import string2int
+import copy
 
 class CTS:
     
@@ -72,9 +73,66 @@ class CTS:
         sum_greedy = 0
         sum_TUB = 0
         for _, app_info in self.app_info_list.items():
-            [sum_greedy, sum_TUB] += app_info.print_time_result()
+            [tmp1, tmp2] = app_info.print_time_result()
+            sum_greedy += tmp1
+            sum_TUB += tmp2
         size = len( self.app_info_list)
         print(f"Greedy Avg: {sum_greedy/size:2f} Avg TUB: {sum_TUB/size:2f}")
+        
+    def stacked_data(self):
+        x_first = []
+        x_second = []
+        entryList = glv._get("graphEntryList")
+        tmp_sum_time = {"CPU-ONLY":result_time("CPU",0,0,0,0,0),
+                        "PIM-ONLY":result_time("PIM",0,0,0,0,0),
+                        "MPKI-based":result_time("MPKI",0,0,0,0,0),
+                        "Arch-Suity/Greedy":result_time("G",0,0,0,0,0),
+                        "TUB-func":result_time("TUB",0,0,0,0,0),
+                        "TUB-bbls":result_time("TUB",0,0,0,0,0),
+                        "CTS":result_time("CTS",0,0,0,0,0),
+                        }
+        stack_name_map = {"CPU-ONLY":"CPU","PIM-ONLY":"PIM", 'MPKI-based':"MPKI",\
+                "Arch-Suity/Greedy":"G","TUB-func":"TUB","TUB-bbls":"TUB", "CTS":"CTS"}
+        tmp_list = [[],[],[],[]]
+        for app_name, app_info in self.app_info_list.items():
+            x_first += [app_name] * len(entryList)
+            x_second += entryList
+            # glv._set("graphEntryList",["CPU-ONLY","PIM-ONLY", 'MPKI-based',\
+            #     "Arch-Suity/Greedy","TUB", "CTS"])
+            bbls_cpu_time = app_info.detail_bbl_dict["CPU"].total
+            func_cpu_time = app_info.detail_func_dict["CPU"].total
+            for entry in entryList:
+                if entry == "TUB-func":
+                    to_add = app_info.detail_func_dict["TUB"].normalize24(func_cpu_time)
+                    
+                else:
+                    to_add = app_info.detail_bbl_dict[stack_name_map[entry]].normalize24(bbls_cpu_time)
+                # ic(to_add,tmp_list)
+                tmp_sum_time[entry]+=to_add
+                [x.append(copy.deepcopy(entry)) for x,entry in zip(tmp_list, to_add)]
+                ic(entry,tmp_sum_time[entry].print(1))
+                # ic(tmp_list)
+        
+        # add Avg "application"
+        x_first += ["AVG"] * len(entryList)
+        x_second += entryList     
+        app_num = len(self.app_info_list)
+        for entry in entryList:
+            [x.append(entry0) for x,entry0 in zip(tmp_list, tmp_sum_time[entry].normalize24(app_num))]
+            
+        # data_dict
+        data_dict = {}
+        data_dict["CPU-Time"] = tmp_list[0]
+        data_dict["PIM-Time"] = tmp_list[1]
+        data_dict["CL-DM"] = tmp_list[2]
+        data_dict["Context Switch"] = tmp_list[3]
+        
+        # x = [
+        # 	["bc", "bc", "bc", "sssp", "sssp", "sssp"],
+        # 	["CPU-ONLY", "PIM_ONLY", "PIMProf", "CPU-ONLY", "PIM_ONLY", "PIMProf",]
+        # ]
+        # data_dict["CPU-ONLY"] = relatied normalized data
+        return [[x_first,x_second], data_dict]
 
 
 class result_time():
@@ -86,12 +144,22 @@ class result_time():
         self.CL_DM = int(CL_DM)
         self.cxt = int(cxt)
         
+    def normalize24(self, denominator):
+        return [self.cpu/denominator, self.pim/denominator, self.CL_DM/denominator, self.cxt/denominator]
+        
+    def __iadd__(self, other):
+        self.cpu += other[0]
+        self.pim += other[1]
+        self.CL_DM += other[2]
+        self.cxt += other[3]
+        return self
+        
     def print(self, normalized_value):
-        print(f"{self.mode:4} {self.total:12d} {100*(self.total/normalized_value):10.2f}% "
-              f"{self.cpu:12d}  {100*(self.cpu/normalized_value):10.2f}% "
-              f"{self.pim:12d}  {100*(self.pim/normalized_value):10.2f}% "
-              f" {self.CL_DM:8d}  {100*(self.CL_DM/normalized_value):10.2f}% "
-              f"{self.cxt:12d} {100*(self.cxt/normalized_value):10.2f}% ")
+        print(f"{self.mode:4} {self.total:12.0f} {100*(self.total/normalized_value):10.2f}% "
+              f"{self.cpu:12.0f}  {100*(self.cpu/normalized_value):10.2f}% "
+              f"{self.pim:12.0f}  {100*(self.pim/normalized_value):10.2f}% "
+              f" {self.CL_DM:8.0f}  {100*(self.CL_DM/normalized_value):10.2f}% "
+              f"{self.cxt:12.0f} {100*(self.cxt/normalized_value):10.2f}% ")
         
 class application_info(CTS):
     def __init__(self, name, path,prioriKnowDecision):
