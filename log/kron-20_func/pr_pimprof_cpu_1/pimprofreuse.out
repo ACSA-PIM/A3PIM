@@ -1,116 +1,117 @@
 ============================================================
 ReuseSegment - Thread 0
-head = 0, count = 108 | 0 15 
-head = 15, count = 2 | 15 1 
+head = 0, count = 109 | 0 15 
+head = 15, count = 1 | 0 15 
+head = 15, count = 4 | 15 1 
 head = 0, count = 1 | 0 23 
-head = 15, count = 23 | 15 23 
-head = 23, count = 5 | 23 7 
-head = 15, count = 4 | 15 7 
-head = 15, count = 3 | 15 5 
-head = 23, count = 16 | 23 5 
+head = 15, count = 24 | 15 23 
+head = 23, count = 6 | 23 7 
+head = 15, count = 2 | 15 5 
+head = 23, count = 17 | 23 5 
 head = 0, count = 10 | 0 5 
-head = 7, count = 3 | 7 5 
-head = 5, count = 49 | 5 21 
+head = 5, count = 55 | 5 21 
 head = 0, count = 4 | 0 21 
-head = 23, count = 6 | 23 21 
 head = 15, count = 1 | 15 21 
-head = 21, count = 70 | 21 19 
+head = 21, count = 64 | 21 19 
 head = 0, count = 3 | 0 19 
 head = 5, count = 4 | 5 21 19 
 head = 19, count = 28 | 5 19 
-head = 21, count = 5 | 5 21 
+head = 19, count = 3 | 5 21 19 
+head = 21, count = 10 | 5 21 
 head = 0, count = 1 | 0 5 21 19 
-head = 19, count = 31 | 21 19 
-head = 21, count = 34 | 21 6 
-head = 19, count = 10 | 6 19 
-head = 5, count = 18 | 5 6 
+head = 21, count = 30 | 21 6 
+head = 19, count = 3 | 21 6 19 
+head = 5, count = 16 | 5 6 
+head = 19, count = 6 | 6 19 
 head = 15, count = 1 | 15 6 
-head = 6, count = 49 | 21 6 
-head = 5, count = 7 | 5 21 6 
-head = 5, count = 2 | 5 19 
-head = 19, count = 2 | 5 21 19 
-head = 5, count = 2 | 5 13 
+head = 6, count = 42 | 21 6 
+head = 5, count = 5 | 5 21 6 
+head = 19, count = 27 | 21 19 
+head = 5, count = 3 | 5 19 
+head = 5, count = 1 | 5 13 
+head = 21, count = 44 | 21 13 
 head = 19, count = 1 | 21 19 13 
-head = 6, count = 16 | 6 13 
-head = 21, count = 48 | 21 13 
+head = 6, count = 15 | 6 13 
 head = 0, count = 1 | 0 13 
-head = 19, count = 4 | 19 13 
+head = 19, count = 3 | 19 13 
 head = 5, count = 1 | 5 21 13 
 head = 13, count = 1 | 5 13 
-head = 13, count = 64 | 21 13 
+head = 13, count = 55 | 21 13 
+head = 5, count = 1 | 5 6 13 
 head = 13, count = 5 | 21 6 13 
 head = 5, count = 10 | 7 5 
-head = 21, count = 3 | 7 5 21 
 head = 21, count = 24 | 7 21 
-head = 5, count = 6 | 7 5 21 
+head = 21, count = 4 | 7 5 21 
+head = 5, count = 5 | 7 5 21 
 head = 13, count = 4 | 7 13 
 head = 0, count = 2 | 0 7 
+head = 15, count = 3 | 15 7 
+head = 7, count = 30 | 7 21 
 head = 7, count = 2 | 7 6 
-head = 7, count = 7 | 7 21 6 
-head = 7, count = 29 | 7 21 
-head = 7, count = 13 | 7 13 
+head = 7, count = 4 | 7 21 6 
+head = 7, count = 9 | 7 13 
 head = 23, count = 4 | 23 13 
-head = 7, count = 1 | 7 6 13 
+head = 7, count = 2 | 7 21 13 
 head = 13, count = 1 | 6 13 
 head = 7, count = 1 | 7 21 19 
 head = 19, count = 1 | 7 19 
-head = 19, count = 1 | 21 6 19 
-head = 7, count = 7 | 23 7 
-head = 21, count = 5 | 23 21 
-head = 7, count = 1 | 23 7 21 
+head = 7, count = 1 | 7 5 
+head = 7, count = 6 | 23 7 
 head = 21, count = 1 | 23 7 21 
-head = 21, count = 1 | 7 21 13 
-head = 15, count = 1 | 15 13 
+head = 21, count = 4 | 23 21 
+head = 7, count = 2 | 23 7 21 
+head = 21, count = 2 | 7 21 13 
+head = 1, count = 1 | 1 13 
 head = 13, count = 2 | 23 13 
+head = 23, count = 2 | 23 6 13 
+head = 23, count = 7 | 23 21 
 head = 23, count = 2 | 23 21 6 
-head = 21, count = 1 | 7 21 6 
-head = 21, count = 1 | 23 21 13 
-head = 23, count = 1 | 23 6 13 
+head = 21, count = 1 | 23 21 6 13 
+head = 21, count = 1 | 1 21 
 head = 1, count = 1 | 1 16 
-head = 21, count = 17 | 21 16 
-head = 23, count = 3 | 23 16 
+head = 21, count = 16 | 21 16 
+head = 21, count = 3 | 23 21 16 
+head = 13, count = 3 | 13 16 
 head = 7, count = 2 | 7 16 
-head = 13, count = 2 | 13 16 
 head = 6, count = 1 | 23 7 21 6 16 
-head = 21, count = 2 | 23 21 16 
 head = 23, count = 1 | 23 21 16 
+head = 23, count = 2 | 23 16 
 head = 0, count = 3 | 0 16 
-head = 16, count = 2 | 16 4 
+head = 16, count = 4 | 16 4 
 head = 4, count = 2 | 4 9 
-head = 16, count = 20 | 16 9 
+head = 16, count = 5 | 16 3 
 head = 9, count = 1 | 9 3 
-head = 16, count = 4 | 16 3 
 head = 21, count = 3 | 21 3 
-head = 9, count = 2 | 16 4 9 
-head = 3, count = 1 | 16 9 3 
-head = 3, count = 1 | 9 3 
+head = 23, count = 1 | 23 3 
+head = 4, count = 2 | 16 4 
+head = 3, count = 1 | 16 4 9 3 
+head = 3, count = 1 | 16 3 
+head = 16, count = 19 | 16 9 
+head = 3, count = 2 | 9 3 
 head = 21, count = 2 | 21 9 
 head = 0, count = 2 | 0 9 
-head = 23, count = 1 | 23 9 
-head = 9, count = 1 | 16 9 
-head = 1, count = 1 | 1 23 
-head = 23, count = 1 | 1 23 16 
+head = 9, count = 1 | 16 4 9 
 head = 16, count = 1 | 1 16 
-head = 16, count = 3 | 16 11 
-head = 3, count = 5 | 3 11 
+head = 16, count = 2 | 16 11 
 head = 9, count = 2 | 9 11 
+head = 3, count = 5 | 3 11 
 head = 23, count = 1 | 23 11 
 head = 23, count = 1 | 23 21 3 11 
-head = 11, count = 3 | 8 11 
+head = 11, count = 5 | 8 11 
 head = 9, count = 18 | 8 9 
 head = 21, count = 1 | 21 8 
 head = 7, count = 2 | 7 8 
 head = 5, count = 1 | 23 7 5 21 8 3 11 
 head = 8, count = 23 | 8 11 
 head = 0, count = 1 | 0 11 
-head = 11, count = 28 | 11 18 
+head = 11, count = 26 | 11 18 
 head = 18, count = 1 | 8 18 
-head = 8, count = 4 | 8 18 
+head = 8, count = 5 | 8 18 
 head = 7, count = 6 | 7 18 
 head = 13, count = 42 | 13 18 
 head = 21, count = 21 | 21 18 
 head = 0, count = 59 | 0 18 
-head = 9, count = 2 | 9 18 
+head = 9, count = 3 | 9 18 
 head = 21, count = 1 | 21 16 11 18 
 head = 15, count = 14 | 15 18 
 head = 0, count = 3 | 0 23 7 5 21 19 3 11 18 
@@ -209,37 +210,38 @@ head = 21, count = 11 | 7 21 19 3 11 18
 head = 0, count = 1 | 0 15 13 9 18 
 head = 15, count = 1 | 15 13 16 
 head = 21, count = 1 | 21 6 13 16 3 11 18 
-head = 1, count = 1 | 1 11 
+head = 1, count = 1 | 1 23 
 head = 15, count = 1 | 15 5 21 6 19 9 18 2 
 head = 0, count = 2 | 0 15 6 18 
 head = 0, count = 1 | 0 15 13 18 
 head = 0, count = 1 | 0 21 6 
-head = 11, count = 1 | 8 11 18 
+head = 8, count = 1 | 8 11 18 
 head = 18, count = 4 | 11 18 
-head = 1, count = 1 | 22 1 
-head = 14, count = 1 | 14 22 18 
-head = 11, count = 4 | 22 11 
-head = 18, count = 44 | 22 18 
+head = 18, count = 1 | 1 18 
+head = 1, count = 2 | 22 1 
 head = 18, count = 1 | 14 22 18 
+head = 11, count = 3 | 22 11 
+head = 18, count = 45 | 22 18 
 head = 0, count = 1 | 0 15 23 6 18 
 head = 15, count = 1 | 15 6 18 
 head = 6, count = 1 | 23 7 21 6 8 13 3 11 18 
 head = 0, count = 1 | 0 15 7 5 
 head = 0, count = 1 | 0 15 21 18 
 head = 0, count = 1 | 0 15 7 18 
-head = 9, count = 1 | 1 9 
+head = 9, count = 1 | 1 16 9 11 
 head = 22, count = 1 | 22 1 
-head = 1, count = 1 | 12 1 
-head = 22, count = 15 | 22 12 
+head = 1, count = 2 | 12 1 
+head = 22, count = 18 | 22 12 
 head = 21, count = 2 | 23 7 5 21 3 11 18 
 head = 5, count = 1 | 23 7 5 21 3 11 18 
 head = 5, count = 1 | 23 7 5 21 19 3 11 18 
 head = 21, count = 1 | 23 7 5 21 19 3 11 18 
 head = 18, count = 32 | 12 18 
+head = 1, count = 1 | 1 11 
 head = 5, count = 1 | 23 7 5 11 18 2 
 head = 11, count = 1 | 12 11 
-head = 12, count = 15 | 12 17 
-head = 22, count = 9 | 22 17 
+head = 12, count = 17 | 12 17 
+head = 22, count = 7 | 22 17 
 head = 18, count = 51 | 17 18 
 head = 0, count = 2 | 0 15 18 2 
 head = 2, count = 6 | 17 2 
@@ -249,52 +251,51 @@ head = 18, count = 11 | 12 17 18
 head = 18, count = 9 | 17 11 18 
 head = 18, count = 5 | 12 17 11 18 
 head = 2, count = 1 | 22 12 17 11 18 2 
-head = 18, count = 1 | 22 12 18 
-head = 17, count = 2 | 12 17 
 head = 18, count = 1 | 22 12 17 18 
 head = 2, count = 1 | 22 12 17 18 2 
-head = 12, count = 373 | 12 10 
+head = 17, count = 2 | 12 17 
+head = 12, count = 379 | 12 10 
 head = 17, count = 2 | 17 10 
 head = 18, count = 47 | 22 17 18 
 head = 10, count = 8 | 12 10 
-head = 12, count = 280 | 12 20 
+head = 12, count = 264 | 12 20 
 head = 2, count = 34 | 22 17 18 2 
 head = 0, count = 1 | 0 21 2 
 head = 0, count = 1 | 0 15 23 5 18 
 head = 5, count = 1 | 5 18 
-head = 10, count = 13480 | 10 20 
-head = 20, count = 153 | 12 20 
-head = 20, count = 6172 | 10 20 
-head = 20, count = 294 | 12 10 20 
+head = 10, count = 13300 | 10 20 
+head = 20, count = 151 | 12 20 
+head = 20, count = 6101 | 10 20 
+head = 20, count = 287 | 12 10 20 
 head = 20, count = 1 | 12 20 1 
 head = 12, count = 24 | 12 1 
-head = 1, count = 2 | 14 1 
-head = 14, count = 3 | 14 1 
+head = 1, count = 3 | 14 1 
+head = 14, count = 2 | 14 1 
 head = 20, count = 4 | 20 1 
 head = 3, count = 1 | 16 3 11 
 ============================================================
 BBLSwitchCount - Thread 0
-from = 0 | 15:1 
-from = 15 | 1:1 
-from = 1 | 23:1 
-from = 23 | 7:1 
-from = 7 | 5:1 
-from = 5 | 21:1 
-from = 21 | 19:1 6:11 
-from = 19 | 21:4 13:1 
-from = 6 | 21:3 19:4 6:5 13:3 16:1 
-from = 13 | 21:4 
-from = 16 | 4:1 
-from = 4 | 9:2 
-from = 9 | 3:1 11:1 
-from = 3 | 4:1 
-from = 11 | 8:1 
-from = 8 | 18:1 2:1 
-from = 18 | 8:1 
-from = 2 | 14:1 
-from = 14 | 22:1 
-from = 22 | 12:1 
-from = 12 | 17:1 
-from = 17 | 10:1 
-from = 10 | 20:8 
-from = 20 | 14:1 10:7 
+from = 0 | 15:1 1:1 
+from = 15 | 0:1 
+from = 1 | 0:1 23:1 16:1 11:1 14:1 22:1 12:1 
+from = 23 | 1:1 7:1 21:2 13:2 
+from = 7 | 23:1 5:1 21:4 13:1 
+from = 5 | 7:1 21:6 13:1 
+from = 21 | 23:2 7:4 5:6 19:5 6:16 
+from = 19 | 21:5 
+from = 6 | 21:16 
+from = 13 | 23:2 7:1 5:1 
+from = 16 | 1:1 4:2 
+from = 4 | 16:2 9:2 
+from = 9 | 4:2 3:1 
+from = 3 | 9:1 
+from = 11 | 1:1 8:1 18:1 
+from = 8 | 11:1 18:1 
+from = 18 | 11:1 8:1 2:1 14:1 
+from = 2 | 18:1 
+from = 14 | 1:1 18:1 
+from = 22 | 1:1 
+from = 12 | 1:1 17:1 10:8 20:8 
+from = 17 | 12:1 
+from = 10 | 12:8 
+from = 20 | 12:8 

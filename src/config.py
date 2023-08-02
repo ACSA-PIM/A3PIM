@@ -4,7 +4,7 @@ import time
 
 glv._init()
 
-working_fold="/staff/shaojiemike/github/sniper-pim/"
+working_fold="/staff/shaojiemike/github/sniper-pim-old-cxt/"
 glv._set("logPath", working_fold+"log/")
 glv._set("resultPath", working_fold+"Summary/")
 
@@ -41,9 +41,9 @@ glv._set("taskList",
              gapbsTaskfilePath+"cc.inj": "cc",
              gapbsTaskfilePath+"bfs.inj": "bfs",
              gapbsTaskfilePath+"pr.inj": "pr",
-             taskfilePath+"gemv/gemv.inj": "gemv", 
+             taskfilePath+"gemv/gemv.inj": "gemv",
              taskfilePath+"spmv/spmv.inj": "spmv0", #./spmv -f ./data/bcsstk30.mtx && omp=4
-             taskfilePath+"spmv/spmv.inj": "spmv", #./spmv -f ./data/bcsstk30.mtx.16.mtx 
+             taskfilePath+"spmv/spmv.inj": "spmv", #./spmv -f ./data/bcsstk30.mtx.16.mtx
              taskfilePath+"select/select.inj": "select", # ./sel -i 1258291200 -t 4
              taskfilePath+"unique/unique.inj": "unique", # first default
              taskfilePath+"hashJoin/hashjoin.inj": "hashjoin", # ./hashjoin.inj checker/R.file checker/S.file hash 40
@@ -81,7 +81,7 @@ glv._set("xgb_train_metrix",
             #  "instrNums",
             #  "MayLoad",
             #  "MayStore",
-            #  "loadPressure", 
+            #  "loadPressure",
             #  "storePressure",
              "SBPort23Pressure"
             #  "portUsage",
@@ -90,9 +90,9 @@ glv._set("xgb_train_metrix",
             #  "resourcePressure",
             #  "registerPressure",
             #  "memoryPressure"
-        ]) 
+        ])
 
-glv._set("xgb_sca_dataIndex", 
+glv._set("xgb_sca_dataIndex",
          {
              "instrNums": 3,
              "MayLoad": 5,

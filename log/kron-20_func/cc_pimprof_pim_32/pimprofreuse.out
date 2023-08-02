@@ -1,310 +1,310 @@
 ============================================================
 ReuseSegment - Thread 0
-head = 0, count = 42 | 0 8 
+head = 0, count = 43 | 0 8 
 head = 8, count = 32 | 8 1 
-head = 1, count = 26 | 1 4 
-head = 8, count = 1 | 0 8 1 
-head = 0, count = 1 | 0 8 1 
-head = 8, count = 3 | 8 4 
+head = 0, count = 3 | 0 8 1 
+head = 1, count = 27 | 1 4 
+head = 8, count = 6 | 8 4 
 head = 8, count = 4 | 8 19 
 head = 4, count = 15 | 4 19 
 head = 8, count = 1 | 0 8 19 
-head = 0, count = 1 | 0 19 
-head = 4, count = 35 | 4 2 
+head = 19, count = 30 | 19 2 
+head = 8, count = 1 | 8 1 4 
+head = 4, count = 34 | 4 2 
 head = 0, count = 1 | 0 8 1 4 
-head = 0, count = 1 | 0 8 1 4 2 
-head = 8, count = 4 | 8 4 2 
-head = 19, count = 28 | 19 2 
-head = 8, count = 2 | 8 1 4 2 
-head = 0, count = 3 | 0 8 4 2 
-head = 2, count = 68 | 2 9 
-head = 8, count = 5 | 8 2 
-head = 8, count = 2 | 8 1 2 
-head = 19, count = 4 | 19 2 9 
-head = 9, count = 29 | 19 9 
-head = 2, count = 13 | 19 2 
-head = 0, count = 1 | 0 1 4 19 2 9 
-head = 1, count = 1 | 1 19 
-head = 1, count = 2 | 1 4 19 2 
-head = 9, count = 28 | 2 9 
-head = 2, count = 30 | 2 21 
-head = 9, count = 3 | 2 21 9 
-head = 19, count = 20 | 19 21 
-head = 9, count = 8 | 21 9 
-head = 8, count = 1 | 8 1 4 19 2 9 
-head = 1, count = 3 | 1 2 
-head = 8, count = 2 | 8 1 4 19 2 21 9 
-head = 8, count = 1 | 8 1 4 9 
-head = 8, count = 1 | 8 4 19 2 
-head = 21, count = 44 | 2 21 
-head = 19, count = 7 | 19 2 21 
-head = 4, count = 10 | 4 19 2 9 
-head = 1, count = 3 | 1 4 19 2 9 
-head = 19, count = 2 | 19 9 
+head = 8, count = 5 | 8 1 4 2 
+head = 0, count = 1 | 0 8 4 
+head = 8, count = 1 | 0 8 1 4 19 2 
+head = 0, count = 1 | 0 8 4 2 
+head = 2, count = 64 | 2 9 
+head = 19, count = 5 | 19 2 9 
+head = 9, count = 27 | 19 9 
 head = 9, count = 2 | 19 2 9 
-head = 19, count = 2 | 19 18 
+head = 8, count = 1 | 8 1 2 9 
+head = 8, count = 1 | 8 1 2 
+head = 8, count = 7 | 8 2 
+head = 8, count = 1 | 8 4 2 
+head = 8, count = 1 | 8 1 4 2 9 
+head = 2, count = 12 | 19 2 
+head = 0, count = 2 | 0 1 4 19 2 9 
+head = 2, count = 26 | 2 21 
+head = 9, count = 3 | 2 9 21 
+head = 19, count = 16 | 19 21 
+head = 9, count = 6 | 9 21 
+head = 8, count = 2 | 8 1 4 19 2 9 
+head = 8, count = 1 | 8 1 4 19 2 9 21 
+head = 8, count = 1 | 8 1 19 2 
+head = 0, count = 3 | 0 8 4 19 2 
+head = 8, count = 1 | 8 21 
+head = 21, count = 37 | 2 21 
+head = 19, count = 5 | 19 2 21 
+head = 9, count = 31 | 2 9 
+head = 19, count = 3 | 19 9 
+head = 19, count = 1 | 19 18 
+head = 2, count = 67 | 2 18 
 head = 9, count = 1 | 2 9 18 
 head = 21, count = 15 | 21 18 
-head = 2, count = 72 | 2 18 
+head = 1, count = 2 | 1 4 19 2 9 21 
+head = 4, count = 1 | 4 19 2 21 
 head = 8, count = 2 | 8 4 19 2 21 
-head = 2, count = 2 | 19 2 21 
-head = 9, count = 4 | 9 18 
-head = 0, count = 1 | 0 8 4 2 21 
+head = 8, count = 1 | 8 19 2 
+head = 19, count = 3 | 19 21 18 
+head = 9, count = 3 | 9 18 
 head = 19, count = 1 | 19 2 18 
-head = 4, count = 3 | 4 18 
-head = 18, count = 2 | 19 18 
-head = 18, count = 33 | 2 18 
-head = 19, count = 1 | 19 21 18 
-head = 18, count = 1 | 21 18 
+head = 18, count = 1 | 19 18 
+head = 18, count = 31 | 2 18 
 head = 18, count = 2 | 2 21 18 
-head = 2, count = 22 | 4 2 
-head = 19, count = 10 | 4 19 
-head = 19, count = 2 | 4 19 2 
-head = 2, count = 1 | 4 19 2 
-head = 8, count = 1 | 8 1 19 2 21 
-head = 1, count = 4 | 1 4 19 2 21 9 18 
-head = 18, count = 3 | 4 18 
-head = 2, count = 1 | 19 2 21 9 18 
-head = 8, count = 1 | 8 1 19 2 21 9 
-head = 18, count = 1 | 4 19 2 21 18 
-head = 8, count = 1 | 8 1 4 19 2 21 9 18 
-head = 2, count = 1 | 4 19 2 21 9 18 
-head = 4, count = 1 | 4 19 2 21 9 18 
-head = 4, count = 7 | 4 21 
-head = 4, count = 6 | 4 2 21 
+head = 1, count = 1 | 1 4 19 2 
+head = 4, count = 7 | 4 19 2 9 
+head = 2, count = 2 | 4 19 2 
+head = 19, count = 9 | 4 19 
+head = 9, count = 1 | 4 19 2 9 
+head = 0, count = 1 | 0 4 
+head = 2, count = 20 | 4 2 
+head = 18, count = 4 | 4 18 
+head = 2, count = 1 | 19 2 9 21 18 
+head = 8, count = 3 | 8 1 4 19 2 9 21 18 
+head = 4, count = 1 | 4 19 2 9 21 18 
+head = 1, count = 1 | 1 2 21 
+head = 8, count = 1 | 8 1 19 2 9 21 
+head = 19, count = 1 | 4 19 2 
+head = 4, count = 8 | 4 21 
+head = 4, count = 5 | 4 2 21 
+head = 4, count = 2 | 4 18 
+head = 1, count = 1 | 1 18 
 head = 4, count = 1 | 4 2 18 
-head = 4, count = 1 | 4 2 9 
+head = 18, count = 1 | 21 18 
+head = 4, count = 2 | 4 2 9 
 head = 9, count = 1 | 4 9 
 head = 2, count = 1 | 1 4 2 
 head = 4, count = 2 | 1 4 
-head = 1, count = 2 | 1 17 
-head = 2, count = 16 | 2 17 
-head = 4, count = 10 | 4 17 
-head = 0, count = 2 | 0 8 4 19 2 21 18 
-head = 8, count = 1 | 8 4 19 2 21 18 
-head = 2, count = 1 | 19 2 21 18 
-head = 4, count = 2 | 4 19 2 21 18 
+head = 1, count = 1 | 1 17 
+head = 2, count = 17 | 2 17 
+head = 4, count = 3 | 4 2 17 
+head = 4, count = 6 | 4 17 
+head = 1, count = 5 | 1 4 19 2 9 21 18 
+head = 8, count = 2 | 8 4 2 18 
+head = 0, count = 1 | 0 8 4 19 2 21 18 
+head = 2, count = 2 | 19 2 21 18 
+head = 8, count = 2 | 8 4 19 2 21 18 
+head = 8, count = 1 | 8 19 2 18 
 head = 21, count = 1 | 4 2 21 17 
-head = 4, count = 2 | 4 2 17 
-head = 17, count = 19 | 17 6 
-head = 17, count = 4 | 17 12 
+head = 2, count = 2 | 4 2 17 
+head = 17, count = 25 | 17 6 
 head = 6, count = 1 | 6 12 
-head = 4, count = 1 | 4 2 21 12 
-head = 2, count = 3 | 2 12 
-head = 4, count = 1 | 4 19 2 18 
+head = 4, count = 2 | 4 19 2 
+head = 17, count = 3 | 17 12 
+head = 2, count = 1 | 4 2 12 
+head = 1, count = 1 | 1 4 19 2 9 
+head = 2, count = 2 | 2 12 
+head = 9, count = 1 | 2 9 12 
+head = 6, count = 3 | 17 6 
 head = 12, count = 1 | 17 6 12 
-head = 12, count = 2 | 17 12 
-head = 1, count = 8 | 1 4 19 2 21 9 18 17 
-head = 12, count = 1 | 6 12 
-head = 4, count = 1 | 1 4 19 2 21 9 18 17 12 
-head = 4, count = 2 | 4 19 2 21 9 18 17 
-head = 8, count = 3 | 8 1 4 19 2 21 9 18 17 
-head = 0, count = 1 | 0 8 1 4 19 2 21 9 18 17 
-head = 8, count = 1 | 8 4 19 2 21 18 17 
-head = 0, count = 1 | 0 8 4 19 2 21 18 17 
-head = 19, count = 1 | 19 21 18 17 
-head = 8, count = 2 | 8 1 4 19 2 21 9 18 17 6 
+head = 12, count = 1 | 17 12 
+head = 1, count = 4 | 1 4 19 2 9 21 18 17 
+head = 12, count = 2 | 6 12 
+head = 8, count = 2 | 8 4 19 2 21 18 17 
 head = 8, count = 1 | 8 4 21 
-head = 4, count = 1 | 4 19 21 18 
-head = 8, count = 1 | 8 19 2 18 17 
-head = 8, count = 1 | 8 4 2 18 17 
-head = 6, count = 2 | 17 6 
+head = 0, count = 1 | 0 8 4 2 21 18 17 
 head = 2, count = 1 | 4 2 21 
-head = 17, count = 3 | 1 17 
+head = 17, count = 1 | 1 17 
 head = 17, count = 2 | 17 15 
 head = 12, count = 5 | 12 15 
-head = 4, count = 2 | 4 19 2 12 
-head = 2, count = 1 | 4 19 2 12 
-head = 1, count = 3 | 1 4 19 2 9 12 
-head = 4, count = 3 | 4 19 2 9 12 
-head = 6, count = 4 | 6 15 
-head = 9, count = 1 | 2 9 12 
-head = 9, count = 1 | 1 4 19 9 
+head = 4, count = 1 | 4 19 2 9 12 
+head = 6, count = 3 | 6 15 
+head = 1, count = 1 | 1 4 19 2 9 12 
+head = 19, count = 1 | 4 19 2 21 18 12 
 head = 1, count = 1 | 1 12 15 
-head = 1, count = 2 | 1 15 
-head = 19, count = 1 | 4 19 2 21 18 12 15 
-head = 15, count = 6 | 15 16 
-head = 6, count = 17 | 6 16 
-head = 1, count = 3 | 1 4 19 2 21 9 18 17 6 
-head = 4, count = 2 | 4 16 
-head = 19, count = 1 | 4 19 21 
+head = 15, count = 5 | 15 16 
+head = 6, count = 15 | 6 16 
+head = 8, count = 3 | 8 1 4 19 2 9 21 18 17 6 
+head = 1, count = 4 | 1 4 19 2 9 21 18 17 6 
+head = 4, count = 5 | 4 16 
+head = 8, count = 1 | 8 19 21 
+head = 1, count = 1 | 1 4 2 21 
+head = 1, count = 1 | 1 4 19 2 12 15 16 
 head = 16, count = 23 | 15 16 
-head = 8, count = 1 | 8 19 2 
-head = 1, count = 2 | 1 4 19 2 21 9 18 17 6 16 
+head = 2, count = 3 | 2 17 15 
+head = 2, count = 1 | 4 19 2 21 
+head = 8, count = 1 | 8 1 4 19 2 21 
+head = 1, count = 1 | 1 4 19 2 9 21 18 17 6 16 
+head = 1, count = 1 | 1 4 9 21 
+head = 1, count = 6 | 1 4 19 2 9 21 18 17 6 15 16 
 head = 8, count = 1 | 8 4 19 2 21 18 17 6 
-head = 2, count = 2 | 2 17 15 
-head = 15, count = 40 | 15 11 
+head = 2, count = 1 | 19 2 21 18 17 6 
+head = 15, count = 36 | 15 11 
 head = 11, count = 1 | 16 11 
 head = 16, count = 8 | 16 11 
-head = 4, count = 2 | 4 11 
-head = 18, count = 4 | 18 11 
-head = 1, count = 1 | 1 4 2 21 16 
+head = 4, count = 1 | 4 11 
+head = 8, count = 1 | 8 1 4 19 2 9 21 18 17 6 16 
+head = 18, count = 6 | 18 11 
+head = 2, count = 8 | 2 11 
+head = 19, count = 1 | 4 19 21 15 16 
+head = 1, count = 20 | 1 4 19 2 9 21 18 17 6 15 16 11 
 head = 8, count = 1 | 8 1 4 19 2 21 15 
 head = 2, count = 1 | 4 19 2 21 15 
-head = 1, count = 23 | 1 4 19 2 21 9 18 17 6 15 16 11 
-head = 8, count = 2 | 8 1 4 19 2 21 9 18 17 6 15 16 11 
-head = 4, count = 3 | 4 17 6 15 16 11 
-head = 2, count = 6 | 2 11 
-head = 4, count = 1 | 4 16 11 
-head = 8, count = 1 | 8 19 21 16 
+head = 21, count = 3 | 4 21 18 17 6 15 16 11 
+head = 8, count = 2 | 8 1 4 19 2 9 21 18 17 6 15 16 11 
+head = 2, count = 5 | 4 19 2 9 21 18 17 6 15 16 11 
+head = 4, count = 2 | 4 16 11 
+head = 21, count = 2 | 4 21 15 11 
+head = 0, count = 1 | 0 8 1 4 19 2 9 21 18 17 6 15 16 11 
 head = 2, count = 1 | 2 17 15 11 
-head = 8, count = 5 | 8 11 
-head = 4, count = 5 | 4 19 2 9 12 15 
-head = 8, count = 1 | 8 1 4 19 2 21 15 11 
+head = 9, count = 2 | 19 9 11 
+head = 4, count = 5 | 4 17 6 15 16 11 
 head = 4, count = 1 | 4 2 9 12 15 11 
-head = 17, count = 4 | 17 6 15 16 11 
 head = 4, count = 1 | 4 19 2 21 18 17 6 15 
-head = 8, count = 1 | 8 4 19 2 21 18 17 6 15 
+head = 17, count = 3 | 17 6 15 
 head = 0, count = 1 | 0 8 4 19 2 21 18 17 6 15 
-head = 19, count = 2 | 19 21 18 17 6 15 
-head = 21, count = 1 | 21 18 15 16 11 
-head = 2, count = 1 | 19 2 21 15 
-head = 9, count = 1 | 1 4 19 2 9 12 15 
-head = 1, count = 4 | 1 4 19 2 9 12 15 
-head = 9, count = 1 | 2 9 12 15 
+head = 18, count = 1 | 18 17 6 15 
+head = 16, count = 5 | 15 16 11 
+head = 19, count = 1 | 19 15 
+head = 19, count = 1 | 19 21 15 
+head = 2, count = 1 | 19 2 21 18 17 6 15 
+head = 4, count = 7 | 4 19 2 9 12 15 
+head = 1, count = 6 | 1 4 19 2 9 12 15 
 head = 15, count = 2 | 15 16 11 
 head = 8, count = 1 | 0 8 
-head = 2, count = 4 | 2 18 11 
+head = 2, count = 6 | 2 18 11 
 head = 0, count = 1 | 0 8 2 17 
-head = 4, count = 4 | 4 15 11 
-head = 16, count = 13 | 15 16 11 
-head = 9, count = 2 | 4 19 21 9 18 17 6 15 16 11 
+head = 17, count = 2 | 17 6 15 16 11 
 head = 4, count = 1 | 4 19 2 12 15 
-head = 0, count = 2 | 0 1 4 19 2 9 12 15 11 
-head = 0, count = 1 | 0 1 4 19 2 9 12 15 
-head = 4, count = 4 | 4 19 2 9 12 15 11 
+head = 4, count = 1 | 4 2 12 15 
+head = 0, count = 3 | 0 1 4 19 2 9 12 15 11 
+head = 2, count = 2 | 2 9 12 15 11 
 head = 17, count = 1 | 17 15 11 
-head = 4, count = 1 | 4 19 2 21 9 18 17 6 16 11 
-head = 18, count = 1 | 18 17 6 16 11 
-head = 6, count = 1 | 6 16 11 
-head = 8, count = 4 | 8 1 4 19 2 21 9 18 17 6 16 11 
+head = 4, count = 1 | 4 19 2 9 21 18 17 6 16 11 
+head = 17, count = 1 | 17 6 16 11 
+head = 8, count = 1 | 8 1 4 19 2 9 21 18 17 6 16 11 
 head = 4, count = 1 | 4 19 2 21 17 
-head = 1, count = 1 | 1 2 21 16 11 
+head = 8, count = 1 | 8 19 2 9 18 17 6 
 head = 8, count = 1 | 8 1 4 2 21 16 11 
-head = 21, count = 1 | 4 21 16 11 
-head = 21, count = 4 | 21 15 
 head = 2, count = 2 | 19 2 21 18 17 6 15 11 
-head = 19, count = 1 | 19 21 18 17 6 15 11 
+head = 18, count = 1 | 4 18 17 6 15 16 11 
 head = 6, count = 1 | 6 11 
-head = 2, count = 1 | 4 2 21 18 6 16 11 
+head = 2, count = 1 | 1 4 19 2 9 21 18 17 6 12 15 16 11 
+head = 9, count = 1 | 4 19 9 21 18 17 6 15 16 11 
 head = 4, count = 2 | 4 19 2 21 18 17 6 15 11 
-head = 1, count = 1 | 1 4 19 2 21 9 18 15 16 11 
-head = 2, count = 1 | 4 19 2 21 15 11 
-head = 21, count = 2 | 4 21 
-head = 19, count = 1 | 4 19 2 21 18 16 
-head = 1, count = 1 | 1 9 
-head = 21, count = 1 | 4 2 21 18 12 15 16 
-head = 6, count = 6 | 6 15 16 11 
-head = 4, count = 1 | 1 4 2 9 12 15 11 
-head = 2, count = 1 | 2 18 17 15 11 
-head = 2, count = 3 | 2 9 12 15 11 
-head = 4, count = 2 | 4 19 2 21 9 18 17 6 15 16 11 
-head = 2, count = 1 | 4 19 2 21 9 18 17 6 15 16 11 
 head = 6, count = 3 | 6 15 11 
-head = 19, count = 1 | 19 21 15 11 
-head = 4, count = 2 | 4 19 21 18 6 
-head = 17, count = 8 | 17 6 15 11 
-head = 2, count = 1 | 2 21 17 12 15 11 
+head = 19, count = 3 | 19 21 15 11 
+head = 21, count = 1 | 4 21 
+head = 19, count = 1 | 4 19 2 21 18 16 
+head = 6, count = 3 | 6 15 16 11 
+head = 1, count = 1 | 1 9 
+head = 4, count = 2 | 1 4 2 9 12 15 11 
+head = 4, count = 7 | 4 19 2 9 12 15 11 
 head = 12, count = 1 | 12 15 11 
-head = 17, count = 1 | 17 6 12 
+head = 1, count = 1 | 1 4 19 2 9 12 15 11 
+head = 21, count = 1 | 4 2 21 18 12 15 16 
+head = 4, count = 2 | 4 19 2 9 21 18 17 6 15 16 11 
+head = 21, count = 2 | 21 18 17 6 15 11 
+head = 17, count = 5 | 17 6 15 11 
+head = 4, count = 3 | 4 19 21 18 6 
+head = 8, count = 1 | 8 4 19 2 21 18 15 11 
+head = 2, count = 2 | 2 21 17 12 15 11 
 head = 8, count = 1 | 8 2 18 15 11 
+head = 2, count = 1 | 4 2 21 18 6 16 11 
 head = 4, count = 1 | 4 19 9 
-head = 21, count = 1 | 4 21 18 17 6 15 16 11 
 head = 8, count = 1 | 8 17 
 head = 19, count = 1 | 4 19 15 
 head = 2, count = 1 | 2 17 12 
 head = 2, count = 1 | 2 17 12 15 
-head = 9, count = 9 | 1 4 19 9 15 
+head = 9, count = 10 | 1 4 19 9 15 
 head = 9, count = 2 | 1 4 19 9 15 11 
-head = 4, count = 1 | 4 2 21 9 18 16 11 
+head = 4, count = 1 | 4 2 9 21 18 16 11 
 head = 8, count = 1 | 8 2 18 6 
 head = 19, count = 1 | 4 19 2 21 18 16 11 
 head = 8, count = 1 | 8 2 18 
-head = 17, count = 10 | 17 11 
+head = 17, count = 7 | 17 11 
+head = 0, count = 1 | 0 17 11 
+head = 17, count = 1 | 17 6 12 11 
 head = 2, count = 2 | 2 12 15 
-head = 8, count = 1 | 8 2 11 
-head = 21, count = 1 | 21 18 16 11 
-head = 2, count = 1 | 2 21 18 16 11 
+head = 8, count = 3 | 8 11 
+head = 2, count = 2 | 2 21 18 16 11 
+head = 21, count = 1 | 21 15 
 head = 2, count = 1 | 2 9 12 15 
+head = 1, count = 2 | 1 2 
 head = 9, count = 1 | 9 11 
-head = 11, count = 81 | 11 25 
-head = 2, count = 1 | 2 21 9 6 11 
-head = 9, count = 1 | 19 9 18 17 6 11 
-head = 25, count = 2 | 11 25 
+head = 11, count = 80 | 11 25 
+head = 2, count = 1 | 2 9 21 6 11 
+head = 8, count = 1 | 8 1 19 2 9 21 16 11 
+head = 25, count = 37 | 11 25 
 head = 8, count = 1 | 8 16 
-head = 8, count = 1 | 8 1 19 2 21 9 16 11 
+head = 19, count = 2 | 4 19 21 15 11 
 head = 19, count = 3 | 1 4 19 9 15 
 head = 11, count = 2 | 11 26 
 head = 19, count = 1 | 19 2 18 12 15 16 
+head = 4, count = 1 | 4 19 2 18 12 15 16 
 head = 2, count = 1 | 2 21 12 
 head = 21, count = 3 | 4 2 21 
-head = 8, count = 1 | 8 4 2 18 17 6 
 head = 26, count = 1 | 11 26 
 head = 21, count = 1 | 21 11 
+head = 11, count = 10 | 15 11 
 head = 1, count = 1 | 1 27 
 head = 11, count = 1 | 11 26 27 
-head = 11, count = 144 | 11 27 
-head = 26, count = 1 | 11 26 27 
-head = 11, count = 10 | 15 11 
 head = 15, count = 3 | 15 27 
+head = 26, count = 1 | 11 26 27 
+head = 11, count = 116 | 11 27 
+head = 11, count = 1 | 15 11 27 
+head = 25, count = 18 | 11 25 27 
+head = 6, count = 1 | 1 17 6 15 
 head = 27, count = 1 | 1 27 
-head = 27, count = 15 | 27 24 
-head = 11, count = 18 | 11 24 
-head = 24, count = 22 | 24 10 
-head = 27, count = 3 | 27 10 
-head = 15, count = 2 | 15 24 
-head = 27, count = 1 | 27 24 10 
-head = 24, count = 34 | 24 14 
-head = 11, count = 1 | 11 27 24 10 
-head = 11, count = 1 | 11 24 10 
-head = 11, count = 12 | 11 10 
-head = 11, count = 2 | 11 27 10 
-head = 11, count = 4 | 15 11 10 
+head = 27, count = 18 | 27 24 
+head = 11, count = 17 | 11 24 
+head = 1, count = 1 | 1 15 
+head = 1, count = 1 | 1 24 
+head = 24, count = 23 | 10 24 
+head = 27, count = 6 | 10 27 
+head = 11, count = 17 | 11 10 
+head = 25, count = 1 | 25 10 
+head = 11, count = 2 | 11 10 27 
+head = 27, count = 1 | 10 27 24 
+head = 10, count = 1 | 10 24 
+head = 24, count = 37 | 24 14 
+head = 11, count = 1 | 11 10 27 24 
+head = 11, count = 1 | 11 10 24 
+head = 11, count = 6 | 15 11 10 
 head = 15, count = 1 | 15 10 
-head = 10, count = 6 | 10 14 
-head = 14, count = 2 | 24 14 
-head = 24, count = 42 | 13 24 
-head = 14, count = 39 | 13 14 
-head = 13, count = 2 | 13 24 
-head = 13, count = 1 | 13 14 
+head = 10, count = 4 | 10 14 
+head = 14, count = 5 | 24 14 
+head = 24, count = 47 | 24 13 
+head = 14, count = 28 | 14 13 
+head = 13, count = 2 | 24 13 
 head = 24, count = 1 | 24 23 
 head = 5, count = 1 | 5 23 
-head = 11, count = 2 | 11 27 24 
-head = 23, count = 8 | 5 23 
-head = 24, count = 14 | 24 5 
-head = 5, count = 1024 | 5 3 
-head = 23, count = 1 | 5 23 3 
-head = 5, count = 79 | 5 20 
-head = 3, count = 1429 | 5 3 
-head = 3, count = 1 | 3 7 
-head = 23, count = 97 | 23 7 
-head = 5, count = 1097 | 5 7 
-head = 20, count = 2 | 5 20 7 
+head = 11, count = 1 | 11 27 24 
+head = 23, count = 9 | 5 23 
+head = 13, count = 2 | 5 13 
+head = 24, count = 13 | 5 24 
+head = 5, count = 1023 | 5 3 
+head = 5, count = 78 | 5 20 
+head = 3, count = 1024 | 5 3 
+head = 5, count = 1099 | 5 7 
+head = 23, count = 98 | 23 7 
+head = 5, count = 2 | 5 3 7 
 head = 23, count = 16 | 5 23 7 
-head = 7, count = 1593 | 5 7 
-head = 7, count = 406 | 3 7 
-head = 7, count = 2 | 5 20 7 
-head = 5, count = 1 | 5 3 7 
-head = 7, count = 5 | 5 3 7 
-head = 13, count = 1 | 13 5 
-head = 20, count = 8 | 24 20 
+head = 20, count = 2 | 20 7 
+head = 7, count = 1595 | 5 7 
+head = 7, count = 217 | 5 3 7 
+head = 7, count = 3 | 20 7 
+head = 20, count = 2 | 24 20 
 head = 24, count = 21 | 24 22 
-head = 20, count = 11 | 20 22 
-head = 5, count = 1 | 24 5 22 
-head = 5, count = 2 | 5 7 22 
-head = 5, count = 23 | 5 22 
+head = 20, count = 8 | 20 22 
+head = 5, count = 1 | 5 24 22 
+head = 5, count = 18 | 5 22 
 head = 7, count = 1 | 5 7 22 
-head = 22, count = 10 | 24 22 
-head = 22, count = 52 | 13 22 
-head = 22, count = 2 | 13 24 22 
-head = 13, count = 1 | 13 1 
-head = 24, count = 1 | 1 24 
-head = 1, count = 1 | 1 26 
-head = 26, count = 2 | 1 26 
-head = 12, count = 1 | 17 12 15 
+head = 5, count = 1 | 5 7 22 
+head = 22, count = 13 | 24 22 
+head = 22, count = 61 | 13 22 
+head = 22, count = 3 | 24 13 22 
+head = 24, count = 2 | 1 24 
+head = 13, count = 2 | 1 13 
+head = 1, count = 2 | 1 26 
+head = 26, count = 3 | 1 26 
+head = 5, count = 1 | 5 13 22 
 ============================================================
 ReuseSegment - Thread 1
-head = 0, count = 64 | 25 0 
+head = 0, count = 63 | 25 0 
 head = 25, count = 2 | 25 0 
 head = 0, count = 18 | 10 0 
 head = 25, count = 12 | 25 10 
@@ -313,100 +313,101 @@ head = 25, count = 1 | 25 10 0
 head = 0, count = 36 | 14 0 
 head = 10, count = 4 | 14 10 
 head = 14, count = 4 | 14 0 
-head = 0, count = 46 | 13 0 
-head = 14, count = 43 | 14 13 
+head = 0, count = 47 | 13 0 
+head = 14, count = 40 | 14 13 
 head = 13, count = 2 | 13 0 
-head = 13, count = 4 | 14 13 
+head = 13, count = 7 | 14 13 
 head = 0, count = 23 | 22 0 
-head = 22, count = 8 | 22 0 
-head = 22, count = 21 | 22 13 
-head = 13, count = 14 | 22 13 
-head = 22, count = 6 | 22 13 0 
+head = 22, count = 11 | 22 0 
+head = 22, count = 25 | 13 22 
+head = 22, count = 5 | 13 22 0 
 ============================================================
 ReuseSegment - Thread 2
-head = 0, count = 64 | 25 0 
+head = 0, count = 63 | 25 0 
 head = 25, count = 1 | 25 0 
 head = 0, count = 17 | 10 0 
 head = 10, count = 1 | 10 0 
 head = 0, count = 34 | 14 0 
-head = 10, count = 8 | 14 10 
+head = 10, count = 8 | 10 14 
 head = 14, count = 4 | 14 0 
-head = 0, count = 42 | 13 0 
-head = 14, count = 35 | 14 13 
-head = 13, count = 3 | 13 0 
-head = 13, count = 2 | 14 13 
+head = 0, count = 43 | 13 0 
+head = 14, count = 34 | 14 13 
+head = 13, count = 2 | 13 0 
+head = 13, count = 8 | 14 13 
 head = 0, count = 22 | 22 0 
-head = 22, count = 9 | 22 0 
-head = 22, count = 17 | 22 13 
-head = 22, count = 8 | 22 13 0 
-head = 13, count = 7 | 22 13 
+head = 22, count = 10 | 22 0 
+head = 22, count = 22 | 22 13 
+head = 13, count = 1 | 22 13 
+head = 22, count = 6 | 22 13 0 
 ============================================================
 ReuseSegment - Thread 3
-head = 0, count = 64 | 25 0 
+head = 0, count = 65 | 25 0 
 head = 25, count = 1 | 25 0 
 head = 0, count = 18 | 10 0 
 head = 10, count = 1 | 10 0 
 head = 0, count = 36 | 14 0 
 head = 10, count = 2 | 14 10 
 head = 14, count = 4 | 14 0 
-head = 0, count = 47 | 13 0 
-head = 14, count = 40 | 14 13 
+head = 0, count = 45 | 13 0 
+head = 14, count = 38 | 14 13 
 head = 13, count = 3 | 13 0 
-head = 13, count = 15 | 14 13 
+head = 13, count = 4 | 14 13 
 head = 0, count = 23 | 22 0 
-head = 22, count = 7 | 22 0 
-head = 22, count = 20 | 13 22 
-head = 22, count = 5 | 13 22 0 
+head = 22, count = 10 | 22 0 
+head = 22, count = 21 | 22 13 
+head = 22, count = 7 | 22 13 0 
 ============================================================
 ReuseSegment - Thread 4
-head = 0, count = 80 | 25 0 
+head = 0, count = 78 | 25 0 
 head = 25, count = 1 | 25 0 
-head = 0, count = 20 | 10 0 
+head = 0, count = 19 | 10 0 
+head = 25, count = 13 | 25 10 
 head = 10, count = 1 | 10 0 
+head = 25, count = 1 | 25 10 0 
 head = 0, count = 39 | 14 0 
 head = 14, count = 4 | 14 0 
-head = 0, count = 47 | 13 0 
-head = 14, count = 25 | 14 13 
+head = 0, count = 50 | 13 0 
+head = 14, count = 27 | 14 13 
 head = 13, count = 3 | 13 0 
-head = 13, count = 1 | 14 13 
-head = 0, count = 27 | 22 0 
-head = 22, count = 10 | 22 0 
-head = 22, count = 16 | 22 13 
-head = 22, count = 9 | 22 13 0 
+head = 13, count = 2 | 14 13 
+head = 0, count = 26 | 22 0 
+head = 22, count = 7 | 22 0 
+head = 22, count = 18 | 22 13 
+head = 22, count = 7 | 22 13 0 
 ============================================================
 ReuseSegment - Thread 5
-head = 0, count = 65 | 25 0 
+head = 0, count = 64 | 25 0 
 head = 25, count = 1 | 25 0 
-head = 0, count = 31 | 10 0 
+head = 0, count = 18 | 10 0 
 head = 10, count = 1 | 10 0 
 head = 0, count = 36 | 14 0 
-head = 10, count = 4 | 14 10 
+head = 10, count = 3 | 10 14 
 head = 14, count = 4 | 14 0 
-head = 0, count = 44 | 13 0 
-head = 14, count = 33 | 14 13 
+head = 0, count = 46 | 13 0 
+head = 14, count = 32 | 14 13 
 head = 13, count = 3 | 13 0 
-head = 13, count = 3 | 14 13 
+head = 13, count = 6 | 14 13 
 head = 0, count = 23 | 22 0 
-head = 22, count = 9 | 22 0 
-head = 22, count = 19 | 22 13 
-head = 22, count = 9 | 22 13 0 
+head = 22, count = 11 | 22 0 
+head = 22, count = 20 | 22 13 
+head = 22, count = 7 | 22 13 0 
 ============================================================
 ReuseSegment - Thread 6
-head = 0, count = 63 | 25 0 
+head = 0, count = 65 | 25 0 
 head = 25, count = 1 | 25 0 
 head = 0, count = 29 | 10 0 
 head = 10, count = 1 | 10 0 
 head = 0, count = 34 | 14 0 
 head = 10, count = 3 | 14 10 
 head = 14, count = 4 | 14 0 
-head = 0, count = 41 | 13 0 
-head = 14, count = 34 | 14 13 
+head = 0, count = 42 | 13 0 
+head = 14, count = 33 | 14 13 
 head = 13, count = 3 | 13 0 
 head = 13, count = 6 | 14 13 
 head = 0, count = 22 | 22 0 
-head = 22, count = 9 | 22 0 
-head = 22, count = 19 | 22 13 
-head = 22, count = 9 | 22 13 0 
+head = 22, count = 7 | 22 0 
+head = 22, count = 23 | 22 13 
+head = 22, count = 8 | 22 13 0 
 ============================================================
 ReuseSegment - Thread 7
 head = 0, count = 65 | 25 0 
@@ -416,89 +417,85 @@ head = 25, count = 12 | 25 10
 head = 10, count = 1 | 10 0 
 head = 25, count = 1 | 25 10 0 
 head = 0, count = 36 | 14 0 
-head = 10, count = 2 | 14 10 
+head = 10, count = 2 | 10 14 
 head = 14, count = 4 | 14 0 
-head = 0, count = 44 | 13 0 
+head = 0, count = 45 | 13 0 
+head = 14, count = 31 | 14 13 
+head = 13, count = 3 | 13 0 
+head = 13, count = 6 | 14 13 
+head = 0, count = 23 | 22 0 
+head = 22, count = 8 | 22 0 
+head = 22, count = 15 | 13 22 
+head = 22, count = 8 | 13 22 0 
+============================================================
+ReuseSegment - Thread 8
+head = 0, count = 66 | 25 0 
+head = 25, count = 1 | 25 0 
+head = 0, count = 20 | 10 0 
+head = 10, count = 1 | 10 0 
+head = 0, count = 39 | 14 0 
+head = 10, count = 1 | 14 10 
+head = 14, count = 4 | 14 0 
+head = 0, count = 49 | 13 0 
 head = 14, count = 29 | 14 13 
 head = 13, count = 3 | 13 0 
 head = 13, count = 5 | 14 13 
-head = 0, count = 23 | 22 0 
-head = 22, count = 10 | 22 0 
-head = 22, count = 22 | 22 13 
-head = 22, count = 8 | 22 13 0 
-============================================================
-ReuseSegment - Thread 8
-head = 0, count = 68 | 25 0 
-head = 25, count = 1 | 25 0 
-head = 0, count = 19 | 10 0 
-head = 25, count = 13 | 25 10 
-head = 10, count = 1 | 10 0 
-head = 25, count = 1 | 25 10 0 
-head = 0, count = 39 | 14 0 
-head = 14, count = 4 | 14 0 
-head = 0, count = 46 | 13 0 
-head = 14, count = 33 | 14 13 
-head = 13, count = 3 | 13 0 
-head = 13, count = 6 | 14 13 
 head = 0, count = 25 | 22 0 
-head = 22, count = 9 | 22 0 
-head = 22, count = 16 | 22 13 
-head = 22, count = 9 | 22 13 0 
+head = 22, count = 12 | 22 0 
+head = 22, count = 18 | 22 13 
+head = 22, count = 7 | 22 13 0 
 ============================================================
 ReuseSegment - Thread 9
-head = 0, count = 64 | 25 0 
+head = 0, count = 62 | 25 0 
 head = 25, count = 1 | 25 0 
 head = 0, count = 18 | 10 0 
 head = 10, count = 1 | 10 0 
 head = 0, count = 36 | 14 0 
-head = 10, count = 3 | 10 14 
+head = 10, count = 3 | 14 10 
 head = 14, count = 4 | 14 0 
 head = 0, count = 45 | 13 0 
-head = 14, count = 29 | 14 13 
+head = 14, count = 30 | 14 13 
 head = 13, count = 3 | 13 0 
-head = 13, count = 3 | 14 13 
-head = 0, count = 20 | 22 0 
-head = 22, count = 10 | 22 0 
-head = 22, count = 21 | 22 13 
-head = 0, count = 3 | 22 13 0 
-head = 22, count = 4 | 22 13 0 
+head = 13, count = 5 | 14 13 
+head = 0, count = 23 | 22 0 
+head = 22, count = 12 | 22 0 
+head = 22, count = 19 | 22 13 
+head = 22, count = 7 | 22 13 0 
 ============================================================
 ReuseSegment - Thread 10
-head = 0, count = 64 | 25 0 
+head = 0, count = 61 | 25 0 
 head = 25, count = 1 | 25 0 
 head = 0, count = 17 | 10 0 
 head = 25, count = 13 | 25 10 
 head = 10, count = 1 | 10 0 
 head = 25, count = 1 | 25 10 0 
 head = 0, count = 34 | 14 0 
-head = 14, count = 4 | 14 0 
-head = 0, count = 43 | 13 0 
-head = 14, count = 29 | 14 13 
-head = 13, count = 3 | 13 0 
+head = 14, count = 3 | 14 0 
+head = 0, count = 42 | 13 0 
+head = 14, count = 32 | 14 13 
+head = 13, count = 2 | 13 0 
 head = 13, count = 4 | 14 13 
 head = 0, count = 21 | 22 0 
-head = 22, count = 11 | 22 0 
-head = 22, count = 21 | 22 13 
-head = 22, count = 6 | 22 13 0 
+head = 22, count = 12 | 22 0 
+head = 22, count = 18 | 22 13 
+head = 22, count = 4 | 22 13 0 
 head = 0, count = 1 | 22 13 0 
 ============================================================
 ReuseSegment - Thread 11
-head = 0, count = 74 | 25 0 
-head = 25, count = 2 | 25 0 
+head = 0, count = 78 | 25 0 
+head = 25, count = 1 | 25 0 
 head = 0, count = 18 | 10 0 
-head = 25, count = 12 | 25 10 
 head = 10, count = 1 | 10 0 
-head = 25, count = 1 | 25 10 0 
 head = 0, count = 36 | 14 0 
-head = 10, count = 1 | 14 10 
+head = 10, count = 1 | 10 14 
 head = 14, count = 4 | 14 0 
-head = 0, count = 46 | 13 0 
-head = 14, count = 28 | 14 13 
+head = 0, count = 45 | 13 0 
+head = 14, count = 25 | 14 13 
 head = 13, count = 3 | 13 0 
-head = 13, count = 6 | 14 13 
+head = 13, count = 4 | 14 13 
 head = 0, count = 22 | 22 0 
-head = 22, count = 10 | 22 0 
-head = 22, count = 28 | 22 13 
+head = 22, count = 11 | 22 0 
+head = 22, count = 20 | 22 13 
 head = 22, count = 6 | 22 13 0 
 head = 0, count = 1 | 22 13 0 
 ============================================================
@@ -508,19 +505,19 @@ head = 25, count = 1 | 25 0
 head = 0, count = 20 | 10 0 
 head = 10, count = 1 | 10 0 
 head = 0, count = 39 | 14 0 
-head = 10, count = 2 | 10 14 
+head = 10, count = 1 | 14 10 
 head = 14, count = 4 | 14 0 
-head = 0, count = 51 | 13 0 
+head = 0, count = 49 | 13 0 
 head = 14, count = 22 | 14 13 
 head = 13, count = 3 | 13 0 
-head = 13, count = 3 | 14 13 
+head = 13, count = 4 | 14 13 
 head = 0, count = 27 | 22 0 
-head = 22, count = 14 | 22 0 
-head = 22, count = 16 | 22 13 
-head = 22, count = 4 | 22 13 0 
+head = 22, count = 13 | 22 0 
+head = 22, count = 18 | 22 13 
+head = 22, count = 5 | 22 13 0 
 ============================================================
 ReuseSegment - Thread 13
-head = 0, count = 63 | 25 0 
+head = 0, count = 65 | 25 0 
 head = 25, count = 2 | 25 0 
 head = 0, count = 18 | 10 0 
 head = 25, count = 12 | 25 10 
@@ -530,16 +527,16 @@ head = 0, count = 36 | 14 0
 head = 10, count = 1 | 14 10 
 head = 14, count = 4 | 14 0 
 head = 0, count = 45 | 13 0 
-head = 14, count = 26 | 14 13 
+head = 14, count = 28 | 14 13 
 head = 13, count = 3 | 13 0 
-head = 13, count = 6 | 14 13 
+head = 13, count = 5 | 14 13 
 head = 0, count = 23 | 22 0 
-head = 22, count = 11 | 22 0 
-head = 22, count = 20 | 22 13 
+head = 22, count = 9 | 22 0 
+head = 22, count = 17 | 22 13 
 head = 22, count = 8 | 22 13 0 
 ============================================================
 ReuseSegment - Thread 14
-head = 0, count = 61 | 25 0 
+head = 0, count = 62 | 25 0 
 head = 25, count = 1 | 25 0 
 head = 0, count = 17 | 10 0 
 head = 25, count = 13 | 25 10 
@@ -547,15 +544,15 @@ head = 10, count = 1 | 10 0
 head = 25, count = 1 | 25 10 0 
 head = 0, count = 34 | 14 0 
 head = 14, count = 4 | 14 0 
-head = 0, count = 42 | 13 0 
-head = 14, count = 32 | 14 13 
+head = 0, count = 43 | 13 0 
+head = 14, count = 30 | 14 13 
 head = 13, count = 3 | 13 0 
 head = 13, count = 2 | 14 13 
-head = 0, count = 21 | 22 0 
-head = 22, count = 10 | 22 0 
-head = 22, count = 17 | 13 22 
-head = 22, count = 7 | 13 22 0 
-head = 0, count = 1 | 13 22 0 
+head = 0, count = 20 | 22 0 
+head = 22, count = 13 | 22 0 
+head = 22, count = 21 | 22 13 
+head = 22, count = 4 | 22 13 0 
+head = 0, count = 2 | 22 13 0 
 ============================================================
 ReuseSegment - Thread 15
 head = 0, count = 64 | 25 0 
@@ -564,31 +561,33 @@ head = 0, count = 18 | 10 0
 head = 10, count = 1 | 10 0 
 head = 0, count = 36 | 14 0 
 head = 14, count = 4 | 14 0 
-head = 0, count = 46 | 13 0 
-head = 14, count = 32 | 14 13 
+head = 0, count = 43 | 13 0 
+head = 14, count = 33 | 14 13 
 head = 13, count = 3 | 13 0 
-head = 13, count = 1 | 14 13 
+head = 13, count = 3 | 14 13 
 head = 0, count = 23 | 22 0 
-head = 22, count = 7 | 22 0 
-head = 22, count = 18 | 22 13 
-head = 22, count = 7 | 22 13 0 
+head = 13, count = 1 | 22 13 
+head = 22, count = 10 | 22 0 
+head = 22, count = 20 | 22 13 
+head = 22, count = 8 | 22 13 0 
 ============================================================
 ReuseSegment - Thread 16
-head = 0, count = 48 | 25 0 
+head = 0, count = 52 | 25 0 
 head = 25, count = 1 | 25 0 
 head = 0, count = 20 | 10 0 
 head = 10, count = 1 | 10 0 
 head = 0, count = 39 | 14 0 
 head = 10, count = 1 | 14 10 
 head = 14, count = 4 | 14 0 
-head = 0, count = 52 | 13 0 
-head = 14, count = 28 | 14 13 
+head = 0, count = 51 | 13 0 
+head = 14, count = 30 | 14 13 
 head = 13, count = 3 | 13 0 
-head = 13, count = 5 | 14 13 
+head = 13, count = 4 | 14 13 
 head = 0, count = 25 | 22 0 
-head = 22, count = 17 | 22 0 
-head = 22, count = 16 | 22 13 
-head = 22, count = 2 | 22 13 0 
+head = 13, count = 1 | 22 13 
+head = 22, count = 14 | 22 0 
+head = 22, count = 17 | 22 13 
+head = 22, count = 4 | 22 13 0 
 ============================================================
 ReuseSegment - Thread 17
 head = 0, count = 62 | 25 0 
@@ -598,36 +597,34 @@ head = 10, count = 1 | 10 0
 head = 0, count = 36 | 14 0 
 head = 10, count = 2 | 14 10 
 head = 14, count = 4 | 14 0 
-head = 0, count = 46 | 13 0 
-head = 14, count = 28 | 14 13 
+head = 0, count = 44 | 13 0 
+head = 14, count = 37 | 14 13 
 head = 13, count = 3 | 13 0 
-head = 13, count = 4 | 14 13 
+head = 13, count = 2 | 14 13 
 head = 0, count = 22 | 22 0 
-head = 22, count = 11 | 22 0 
-head = 22, count = 21 | 22 13 
-head = 22, count = 6 | 22 13 0 
+head = 22, count = 12 | 22 0 
+head = 22, count = 18 | 22 13 
+head = 22, count = 5 | 22 13 0 
 ============================================================
 ReuseSegment - Thread 18
-head = 0, count = 76 | 25 0 
+head = 0, count = 63 | 25 0 
 head = 25, count = 1 | 25 0 
-head = 0, count = 17 | 10 0 
-head = 25, count = 13 | 25 10 
+head = 0, count = 30 | 10 0 
 head = 10, count = 1 | 10 0 
-head = 25, count = 1 | 25 10 0 
 head = 0, count = 34 | 14 0 
 head = 10, count = 1 | 14 10 
 head = 14, count = 4 | 14 0 
-head = 0, count = 41 | 13 0 
-head = 14, count = 31 | 14 13 
+head = 0, count = 42 | 13 0 
+head = 14, count = 32 | 14 13 
 head = 13, count = 3 | 13 0 
-head = 13, count = 3 | 14 13 
+head = 13, count = 4 | 14 13 
 head = 0, count = 21 | 22 0 
-head = 22, count = 10 | 22 0 
+head = 22, count = 7 | 22 0 
 head = 22, count = 21 | 22 13 
-head = 22, count = 7 | 22 13 0 
+head = 22, count = 8 | 22 13 0 
 ============================================================
 ReuseSegment - Thread 19
-head = 0, count = 65 | 25 0 
+head = 0, count = 64 | 25 0 
 head = 25, count = 2 | 25 0 
 head = 0, count = 18 | 10 0 
 head = 25, count = 12 | 25 10 
@@ -636,30 +633,30 @@ head = 25, count = 1 | 25 10 0
 head = 0, count = 36 | 14 0 
 head = 10, count = 1 | 10 14 
 head = 14, count = 4 | 14 0 
-head = 0, count = 44 | 13 0 
-head = 14, count = 38 | 14 13 
+head = 0, count = 46 | 13 0 
+head = 14, count = 35 | 14 13 
 head = 13, count = 3 | 13 0 
 head = 13, count = 2 | 14 13 
 head = 0, count = 21 | 22 0 
-head = 22, count = 9 | 22 0 
-head = 22, count = 20 | 22 13 
-head = 22, count = 8 | 22 13 0 
+head = 22, count = 11 | 22 0 
+head = 22, count = 23 | 22 13 
+head = 22, count = 6 | 22 13 0 
 ============================================================
 ReuseSegment - Thread 20
-head = 0, count = 69 | 25 0 
+head = 0, count = 66 | 25 0 
 head = 25, count = 1 | 25 0 
 head = 0, count = 20 | 10 0 
 head = 10, count = 1 | 10 0 
 head = 0, count = 39 | 14 0 
 head = 14, count = 4 | 14 0 
 head = 0, count = 49 | 13 0 
-head = 14, count = 26 | 14 13 
-head = 13, count = 3 | 14 13 
+head = 14, count = 28 | 14 13 
+head = 13, count = 3 | 13 0 
+head = 13, count = 1 | 14 13 
 head = 0, count = 26 | 22 0 
-head = 22, count = 11 | 22 0 
-head = 22, count = 19 | 22 13 
-head = 22, count = 8 | 22 13 0 
-head = 13, count = 1 | 13 0 
+head = 22, count = 13 | 22 0 
+head = 22, count = 20 | 22 13 
+head = 22, count = 6 | 22 13 0 
 ============================================================
 ReuseSegment - Thread 21
 head = 0, count = 64 | 25 0 
@@ -667,15 +664,14 @@ head = 25, count = 1 | 25 0
 head = 0, count = 18 | 10 0 
 head = 10, count = 1 | 10 0 
 head = 0, count = 36 | 14 0 
-head = 10, count = 1 | 14 10 
 head = 14, count = 4 | 14 0 
 head = 0, count = 46 | 13 0 
-head = 14, count = 26 | 14 13 
+head = 14, count = 23 | 14 13 
 head = 13, count = 3 | 13 0 
 head = 13, count = 7 | 14 13 
-head = 0, count = 20 | 22 0 
+head = 0, count = 21 | 22 0 
 head = 22, count = 10 | 22 0 
-head = 22, count = 24 | 22 13 
+head = 22, count = 21 | 22 13 
 head = 22, count = 7 | 22 13 0 
 ============================================================
 ReuseSegment - Thread 22
@@ -684,70 +680,72 @@ head = 25, count = 1 | 25 0
 head = 0, count = 17 | 10 0 
 head = 10, count = 1 | 10 0 
 head = 0, count = 34 | 14 0 
-head = 10, count = 1 | 10 14 
+head = 10, count = 1 | 14 10 
 head = 14, count = 4 | 14 0 
-head = 0, count = 43 | 13 0 
-head = 14, count = 30 | 14 13 
+head = 0, count = 41 | 13 0 
+head = 14, count = 33 | 14 13 
 head = 13, count = 3 | 13 0 
 head = 13, count = 5 | 14 13 
 head = 0, count = 20 | 22 0 
-head = 22, count = 11 | 22 0 
-head = 22, count = 20 | 22 13 
-head = 22, count = 5 | 22 13 0 
+head = 22, count = 10 | 22 0 
+head = 22, count = 23 | 22 13 
+head = 22, count = 6 | 22 13 0 
 head = 0, count = 1 | 22 13 0 
 ============================================================
 ReuseSegment - Thread 23
-head = 0, count = 63 | 25 0 
+head = 0, count = 66 | 25 0 
 head = 25, count = 1 | 25 0 
 head = 0, count = 18 | 10 0 
 head = 10, count = 1 | 10 0 
 head = 0, count = 36 | 14 0 
 head = 14, count = 4 | 14 0 
-head = 0, count = 45 | 13 0 
-head = 14, count = 28 | 14 13 
+head = 0, count = 46 | 13 0 
+head = 14, count = 30 | 14 13 
 head = 13, count = 3 | 13 0 
-head = 13, count = 2 | 14 13 
+head = 13, count = 1 | 14 13 
 head = 0, count = 22 | 22 0 
-head = 22, count = 13 | 22 0 
+head = 13, count = 1 | 22 13 
+head = 22, count = 11 | 22 0 
 head = 22, count = 22 | 22 13 
-head = 22, count = 5 | 22 13 0 
+head = 22, count = 7 | 22 13 0 
 ============================================================
 ReuseSegment - Thread 24
 head = 0, count = 69 | 25 0 
 head = 25, count = 1 | 25 0 
 head = 0, count = 20 | 10 0 
 head = 10, count = 1 | 10 0 
-head = 0, count = 40 | 14 0 
-head = 10, count = 2 | 10 14 
+head = 0, count = 39 | 14 0 
+head = 10, count = 2 | 14 10 
 head = 14, count = 4 | 14 0 
-head = 0, count = 50 | 13 0 
-head = 14, count = 24 | 14 13 
+head = 0, count = 49 | 13 0 
+head = 14, count = 21 | 13 14 
 head = 13, count = 3 | 13 0 
-head = 13, count = 4 | 14 13 
+head = 13, count = 6 | 13 14 
 head = 0, count = 27 | 22 0 
-head = 22, count = 12 | 22 0 
-head = 22, count = 17 | 22 13 
-head = 22, count = 7 | 22 13 0 
+head = 22, count = 11 | 22 0 
+head = 22, count = 20 | 13 22 
+head = 22, count = 5 | 13 22 0 
 ============================================================
 ReuseSegment - Thread 25
-head = 0, count = 64 | 25 0 
+head = 0, count = 65 | 25 0 
 head = 25, count = 1 | 25 0 
 head = 0, count = 18 | 10 0 
 head = 10, count = 1 | 10 0 
-head = 0, count = 35 | 14 0 
-head = 10, count = 2 | 14 10 
+head = 0, count = 36 | 14 0 
+head = 10, count = 2 | 10 14 
 head = 14, count = 4 | 14 0 
 head = 0, count = 46 | 13 0 
-head = 14, count = 31 | 14 13 
+head = 14, count = 32 | 14 13 
 head = 13, count = 3 | 13 0 
-head = 13, count = 6 | 14 13 
+head = 13, count = 3 | 14 13 
 head = 0, count = 23 | 22 0 
-head = 22, count = 14 | 22 0 
-head = 22, count = 21 | 13 22 
-head = 22, count = 5 | 13 22 0 
+head = 13, count = 1 | 22 13 
+head = 22, count = 12 | 22 0 
+head = 22, count = 19 | 22 13 
+head = 22, count = 5 | 22 13 0 
 ============================================================
 ReuseSegment - Thread 26
-head = 0, count = 72 | 25 0 
+head = 0, count = 61 | 25 0 
 head = 25, count = 1 | 25 0 
 head = 0, count = 17 | 10 0 
 head = 10, count = 1 | 10 0 
@@ -755,83 +753,87 @@ head = 0, count = 34 | 14 0
 head = 10, count = 1 | 10 14 
 head = 14, count = 4 | 14 0 
 head = 0, count = 42 | 13 0 
-head = 14, count = 26 | 14 13 
+head = 14, count = 25 | 14 13 
 head = 13, count = 3 | 13 0 
-head = 13, count = 2 | 14 13 
+head = 13, count = 3 | 14 13 
 head = 0, count = 22 | 22 0 
 head = 22, count = 12 | 22 0 
-head = 22, count = 19 | 22 13 
+head = 22, count = 23 | 22 13 
 head = 22, count = 6 | 22 13 0 
 ============================================================
 ReuseSegment - Thread 27
-head = 0, count = 65 | 25 0 
+head = 0, count = 63 | 25 0 
 head = 25, count = 1 | 25 0 
 head = 0, count = 18 | 10 0 
 head = 10, count = 1 | 10 0 
 head = 0, count = 36 | 14 0 
 head = 14, count = 4 | 14 0 
-head = 0, count = 44 | 13 0 
-head = 14, count = 37 | 14 13 
+head = 0, count = 43 | 13 0 
+head = 14, count = 39 | 14 13 
 head = 13, count = 3 | 13 0 
-head = 13, count = 8 | 14 13 
+head = 13, count = 5 | 14 13 
 head = 0, count = 22 | 22 0 
-head = 22, count = 11 | 22 0 
-head = 22, count = 21 | 22 13 
+head = 22, count = 10 | 22 0 
+head = 22, count = 18 | 22 13 
 head = 22, count = 7 | 22 13 0 
 head = 0, count = 1 | 22 13 0 
 ============================================================
 ReuseSegment - Thread 28
-head = 0, count = 67 | 25 0 
+head = 0, count = 69 | 25 0 
 head = 25, count = 1 | 25 0 
 head = 0, count = 20 | 10 0 
+head = 10, count = 1 | 10 0 
 head = 0, count = 39 | 14 0 
 head = 14, count = 4 | 14 0 
 head = 0, count = 49 | 13 0 
-head = 14, count = 28 | 14 13 
+head = 14, count = 27 | 14 13 
 head = 13, count = 3 | 13 0 
-head = 13, count = 3 | 14 13 
+head = 13, count = 2 | 14 13 
 head = 0, count = 27 | 22 0 
 head = 22, count = 10 | 22 0 
-head = 22, count = 18 | 13 22 
-head = 22, count = 7 | 13 22 0 
+head = 22, count = 22 | 22 13 
+head = 22, count = 7 | 22 13 0 
 ============================================================
 ReuseSegment - Thread 29
-head = 0, count = 65 | 25 0 
+head = 0, count = 64 | 25 0 
 head = 25, count = 1 | 25 0 
 head = 0, count = 18 | 10 0 
 head = 10, count = 1 | 10 0 
-head = 0, count = 36 | 14 0 
+head = 0, count = 35 | 14 0 
 head = 10, count = 1 | 14 10 
 head = 14, count = 4 | 14 0 
-head = 0, count = 46 | 13 0 
-head = 14, count = 29 | 14 13 
+head = 0, count = 45 | 13 0 
+head = 14, count = 27 | 14 13 
 head = 13, count = 3 | 13 0 
-head = 13, count = 6 | 14 13 
+head = 13, count = 3 | 14 13 
 head = 0, count = 23 | 22 0 
-head = 22, count = 9 | 22 0 
-head = 22, count = 19 | 22 13 
+head = 13, count = 1 | 22 13 
+head = 22, count = 7 | 22 0 
+head = 22, count = 21 | 22 13 
 head = 22, count = 7 | 22 13 0 
 ============================================================
 ReuseSegment - Thread 30
-head = 0, count = 59 | 25 0 
+head = 0, count = 63 | 25 0 
 head = 25, count = 1 | 25 0 
 head = 0, count = 17 | 10 0 
+head = 25, count = 13 | 25 10 
 head = 10, count = 1 | 10 0 
-head = 0, count = 33 | 14 0 
+head = 25, count = 1 | 25 10 0 
+head = 0, count = 34 | 14 0 
 head = 10, count = 1 | 14 10 
 head = 14, count = 4 | 14 0 
-head = 0, count = 40 | 13 0 
-head = 14, count = 31 | 14 13 
+head = 0, count = 42 | 13 0 
+head = 14, count = 33 | 14 13 
 head = 13, count = 3 | 13 0 
 head = 13, count = 2 | 14 13 
 head = 0, count = 20 | 22 0 
-head = 22, count = 8 | 22 0 
-head = 22, count = 19 | 22 13 
-head = 22, count = 7 | 22 13 0 
+head = 22, count = 11 | 22 0 
+head = 22, count = 18 | 22 13 
+head = 22, count = 4 | 22 13 0 
 head = 0, count = 2 | 22 13 0 
 ============================================================
 ReuseSegment - Thread 31
-head = 0, count = 86 | 25 0 
+head = 0, count = 85 | 25 0 
 head = 25, count = 2 | 25 0 
 head = 0, count = 18 | 10 0 
 head = 25, count = 12 | 25 10 
@@ -840,289 +842,288 @@ head = 25, count = 1 | 25 10 0
 head = 0, count = 36 | 14 0 
 head = 14, count = 4 | 14 0 
 head = 0, count = 43 | 13 0 
-head = 14, count = 26 | 14 13 
+head = 14, count = 29 | 14 13 
 head = 13, count = 3 | 13 0 
 head = 13, count = 3 | 14 13 
-head = 0, count = 22 | 22 0 
-head = 22, count = 9 | 22 0 
-head = 22, count = 24 | 22 13 
-head = 22, count = 7 | 22 13 0 
-head = 0, count = 1 | 22 13 0 
+head = 0, count = 23 | 22 0 
+head = 22, count = 7 | 22 0 
+head = 22, count = 16 | 22 13 
+head = 22, count = 9 | 22 13 0 
 ============================================================
 BBLSwitchCount - Thread 0
-from = 0 | 8:1 
-from = 8 | 1:1 
-from = 1 | 4:1 
-from = 4 | 19:1 
-from = 19 | 2:1 
-from = 2 | 9:1 21:9 
-from = 9 | 2:4 18:1 
-from = 21 | 2:3 9:4 21:3 18:1 17:1 
-from = 18 | 2:2 
-from = 17 | 6:1 
-from = 6 | 12:1 15:1 
+from = 0 | 8:1 1:1 
+from = 8 | 0:1 
+from = 1 | 0:1 4:1 17:1 15:1 26:1 27:1 24:1 
+from = 4 | 1:1 19:1 2:4 18:1 
+from = 19 | 4:1 2:6 18:1 
+from = 2 | 4:4 19:6 9:5 21:12 
+from = 9 | 2:5 
+from = 21 | 2:12 
+from = 18 | 4:1 19:1 
+from = 17 | 1:1 6:2 
+from = 6 | 17:2 12:1 
 from = 12 | 6:1 
-from = 15 | 16:1 
-from = 16 | 11:1 25:1 
-from = 11 | 16:1 
-from = 25 | 26:1 
-from = 26 | 27:1 
-from = 27 | 24:1 
-from = 24 | 10:1 
-from = 10 | 14:1 
-from = 14 | 13:2 
-from = 13 | 26:1 14:1 5:1 
-from = 5 | 23:1 
-from = 23 | 3:1 
-from = 3 | 20:1024 
-from = 20 | 3:617 7:406 22:1 
-from = 7 | 3:406 
-from = 22 | 13:1 
+from = 15 | 1:1 16:1 11:1 
+from = 16 | 15:1 11:1 
+from = 11 | 15:1 16:1 25:1 26:1 
+from = 25 | 11:1 
+from = 26 | 1:1 11:1 
+from = 27 | 1:1 
+from = 24 | 1:1 10:1 14:2 13:3 5:1 22:1 
+from = 10 | 24:1 
+from = 14 | 24:2 
+from = 13 | 24:3 
+from = 5 | 24:1 23:1 3:1024 7:406 
+from = 23 | 5:1 
+from = 3 | 5:1024 20:1024 
+from = 20 | 3:1024 
+from = 7 | 5:406 
+from = 22 | 24:1 
 ============================================================
 BBLSwitchCount - Thread 1
-from = 0 | 25:1 
-from = 25 | 10:1 
-from = 10 | 14:1 
-from = 14 | 13:2 
-from = 13 | 14:1 22:1 
-from = 22 | 13:1 
+from = 0 | 25:1 10:1 14:2 13:3 22:1 
+from = 25 | 0:1 
+from = 10 | 0:1 
+from = 14 | 0:2 
+from = 13 | 0:3 
+from = 22 | 0:1 
 ============================================================
 BBLSwitchCount - Thread 2
-from = 0 | 25:1 
-from = 25 | 10:1 
-from = 10 | 14:1 
-from = 14 | 13:2 
-from = 13 | 14:1 22:1 
-from = 22 | 13:1 
+from = 0 | 25:1 10:1 14:2 13:3 22:1 
+from = 25 | 0:1 
+from = 10 | 0:1 
+from = 14 | 0:2 
+from = 13 | 0:3 
+from = 22 | 0:1 
 ============================================================
 BBLSwitchCount - Thread 3
-from = 0 | 25:1 
-from = 25 | 10:1 
-from = 10 | 14:1 
-from = 14 | 13:2 
-from = 13 | 14:1 22:1 
-from = 22 | 13:1 
+from = 0 | 25:1 10:1 14:2 13:3 22:1 
+from = 25 | 0:1 
+from = 10 | 0:1 
+from = 14 | 0:2 
+from = 13 | 0:3 
+from = 22 | 0:1 
 ============================================================
 BBLSwitchCount - Thread 4
-from = 0 | 25:1 
-from = 25 | 10:1 
-from = 10 | 14:1 
-from = 14 | 13:2 
-from = 13 | 14:1 22:1 
-from = 22 | 13:1 
+from = 0 | 25:1 10:1 14:2 13:3 22:1 
+from = 25 | 0:1 
+from = 10 | 0:1 
+from = 14 | 0:2 
+from = 13 | 0:3 
+from = 22 | 0:1 
 ============================================================
 BBLSwitchCount - Thread 5
-from = 0 | 25:1 
-from = 25 | 10:1 
-from = 10 | 14:1 
-from = 14 | 13:2 
-from = 13 | 14:1 22:1 
-from = 22 | 13:1 
+from = 0 | 25:1 10:1 14:2 13:3 22:1 
+from = 25 | 0:1 
+from = 10 | 0:1 
+from = 14 | 0:2 
+from = 13 | 0:3 
+from = 22 | 0:1 
 ============================================================
 BBLSwitchCount - Thread 6
-from = 0 | 25:1 
-from = 25 | 10:1 
-from = 10 | 14:1 
-from = 14 | 13:2 
-from = 13 | 14:1 22:1 
-from = 22 | 13:1 
+from = 0 | 25:1 10:1 14:2 13:3 22:1 
+from = 25 | 0:1 
+from = 10 | 0:1 
+from = 14 | 0:2 
+from = 13 | 0:3 
+from = 22 | 0:1 
 ============================================================
 BBLSwitchCount - Thread 7
-from = 0 | 25:1 
-from = 25 | 10:1 
-from = 10 | 14:1 
-from = 14 | 13:2 
-from = 13 | 14:1 22:1 
-from = 22 | 13:1 
+from = 0 | 25:1 10:1 14:2 13:3 22:1 
+from = 25 | 0:1 
+from = 10 | 0:1 
+from = 14 | 0:2 
+from = 13 | 0:3 
+from = 22 | 0:1 
 ============================================================
 BBLSwitchCount - Thread 8
-from = 0 | 25:1 
-from = 25 | 10:1 
-from = 10 | 14:1 
-from = 14 | 13:2 
-from = 13 | 14:1 22:1 
-from = 22 | 13:1 
+from = 0 | 25:1 10:1 14:2 13:3 22:1 
+from = 25 | 0:1 
+from = 10 | 0:1 
+from = 14 | 0:2 
+from = 13 | 0:3 
+from = 22 | 0:1 
 ============================================================
 BBLSwitchCount - Thread 9
-from = 0 | 25:1 
-from = 25 | 10:1 
-from = 10 | 14:1 
-from = 14 | 13:2 
-from = 13 | 14:1 22:1 
-from = 22 | 13:1 
+from = 0 | 25:1 10:1 14:2 13:3 22:1 
+from = 25 | 0:1 
+from = 10 | 0:1 
+from = 14 | 0:2 
+from = 13 | 0:3 
+from = 22 | 0:1 
 ============================================================
 BBLSwitchCount - Thread 10
-from = 0 | 25:1 
-from = 25 | 10:1 
-from = 10 | 14:1 
-from = 14 | 13:2 
-from = 13 | 14:1 22:1 
-from = 22 | 13:1 
+from = 0 | 25:1 10:1 14:2 13:3 22:1 
+from = 25 | 0:1 
+from = 10 | 0:1 
+from = 14 | 0:2 
+from = 13 | 0:3 
+from = 22 | 0:1 
 ============================================================
 BBLSwitchCount - Thread 11
-from = 0 | 25:1 
-from = 25 | 10:1 
-from = 10 | 14:1 
-from = 14 | 13:2 
-from = 13 | 14:1 22:1 
-from = 22 | 13:1 
+from = 0 | 25:1 10:1 14:2 13:3 22:1 
+from = 25 | 0:1 
+from = 10 | 0:1 
+from = 14 | 0:2 
+from = 13 | 0:3 
+from = 22 | 0:1 
 ============================================================
 BBLSwitchCount - Thread 12
-from = 0 | 25:1 
-from = 25 | 10:1 
-from = 10 | 14:1 
-from = 14 | 13:2 
-from = 13 | 14:1 22:1 
-from = 22 | 13:1 
+from = 0 | 25:1 10:1 14:2 13:3 22:1 
+from = 25 | 0:1 
+from = 10 | 0:1 
+from = 14 | 0:2 
+from = 13 | 0:3 
+from = 22 | 0:1 
 ============================================================
 BBLSwitchCount - Thread 13
-from = 0 | 25:1 
-from = 25 | 10:1 
-from = 10 | 14:1 
-from = 14 | 13:2 
-from = 13 | 14:1 22:1 
-from = 22 | 13:1 
+from = 0 | 25:1 10:1 14:2 13:3 22:1 
+from = 25 | 0:1 
+from = 10 | 0:1 
+from = 14 | 0:2 
+from = 13 | 0:3 
+from = 22 | 0:1 
 ============================================================
 BBLSwitchCount - Thread 14
-from = 0 | 25:1 
-from = 25 | 10:1 
-from = 10 | 14:1 
-from = 14 | 13:2 
-from = 13 | 14:1 22:1 
-from = 22 | 13:1 
+from = 0 | 25:1 10:1 14:2 13:3 22:1 
+from = 25 | 0:1 
+from = 10 | 0:1 
+from = 14 | 0:2 
+from = 13 | 0:3 
+from = 22 | 0:1 
 ============================================================
 BBLSwitchCount - Thread 15
-from = 0 | 25:1 
-from = 25 | 10:1 
-from = 10 | 14:1 
-from = 14 | 13:2 
-from = 13 | 14:1 22:1 
-from = 22 | 13:1 
+from = 0 | 25:1 10:1 14:2 13:3 22:1 
+from = 25 | 0:1 
+from = 10 | 0:1 
+from = 14 | 0:2 
+from = 13 | 0:3 
+from = 22 | 0:1 
 ============================================================
 BBLSwitchCount - Thread 16
-from = 0 | 25:1 
-from = 25 | 10:1 
-from = 10 | 14:1 
-from = 14 | 13:2 
-from = 13 | 14:1 22:1 
-from = 22 | 13:1 
+from = 0 | 25:1 10:1 14:2 13:3 22:1 
+from = 25 | 0:1 
+from = 10 | 0:1 
+from = 14 | 0:2 
+from = 13 | 0:3 
+from = 22 | 0:1 
 ============================================================
 BBLSwitchCount - Thread 17
-from = 0 | 25:1 
-from = 25 | 10:1 
-from = 10 | 14:1 
-from = 14 | 13:2 
-from = 13 | 14:1 22:1 
-from = 22 | 13:1 
+from = 0 | 25:1 10:1 14:2 13:3 22:1 
+from = 25 | 0:1 
+from = 10 | 0:1 
+from = 14 | 0:2 
+from = 13 | 0:3 
+from = 22 | 0:1 
 ============================================================
 BBLSwitchCount - Thread 18
-from = 0 | 25:1 
-from = 25 | 10:1 
-from = 10 | 14:1 
-from = 14 | 13:2 
-from = 13 | 14:1 22:1 
-from = 22 | 13:1 
+from = 0 | 25:1 10:1 14:2 13:3 22:1 
+from = 25 | 0:1 
+from = 10 | 0:1 
+from = 14 | 0:2 
+from = 13 | 0:3 
+from = 22 | 0:1 
 ============================================================
 BBLSwitchCount - Thread 19
-from = 0 | 25:1 
-from = 25 | 10:1 
-from = 10 | 14:1 
-from = 14 | 13:2 
-from = 13 | 14:1 22:1 
-from = 22 | 13:1 
+from = 0 | 25:1 10:1 14:2 13:3 22:1 
+from = 25 | 0:1 
+from = 10 | 0:1 
+from = 14 | 0:2 
+from = 13 | 0:3 
+from = 22 | 0:1 
 ============================================================
 BBLSwitchCount - Thread 20
-from = 0 | 25:1 
-from = 25 | 10:1 
-from = 10 | 14:1 
-from = 14 | 13:2 
-from = 13 | 14:1 22:1 
-from = 22 | 13:1 
+from = 0 | 25:1 10:1 14:2 13:3 22:1 
+from = 25 | 0:1 
+from = 10 | 0:1 
+from = 14 | 0:2 
+from = 13 | 0:3 
+from = 22 | 0:1 
 ============================================================
 BBLSwitchCount - Thread 21
-from = 0 | 25:1 
-from = 25 | 10:1 
-from = 10 | 14:1 
-from = 14 | 13:2 
-from = 13 | 14:1 22:1 
-from = 22 | 13:1 
+from = 0 | 25:1 10:1 14:2 13:3 22:1 
+from = 25 | 0:1 
+from = 10 | 0:1 
+from = 14 | 0:2 
+from = 13 | 0:3 
+from = 22 | 0:1 
 ============================================================
 BBLSwitchCount - Thread 22
-from = 0 | 25:1 
-from = 25 | 10:1 
-from = 10 | 14:1 
-from = 14 | 13:2 
-from = 13 | 14:1 22:1 
-from = 22 | 13:1 
+from = 0 | 25:1 10:1 14:2 13:3 22:1 
+from = 25 | 0:1 
+from = 10 | 0:1 
+from = 14 | 0:2 
+from = 13 | 0:3 
+from = 22 | 0:1 
 ============================================================
 BBLSwitchCount - Thread 23
-from = 0 | 25:1 
-from = 25 | 10:1 
-from = 10 | 14:1 
-from = 14 | 13:2 
-from = 13 | 14:1 22:1 
-from = 22 | 13:1 
+from = 0 | 25:1 10:1 14:2 13:3 22:1 
+from = 25 | 0:1 
+from = 10 | 0:1 
+from = 14 | 0:2 
+from = 13 | 0:3 
+from = 22 | 0:1 
 ============================================================
 BBLSwitchCount - Thread 24
-from = 0 | 25:1 
-from = 25 | 10:1 
-from = 10 | 14:1 
-from = 14 | 13:2 
-from = 13 | 14:1 22:1 
-from = 22 | 13:1 
+from = 0 | 25:1 10:1 14:2 13:3 22:1 
+from = 25 | 0:1 
+from = 10 | 0:1 
+from = 14 | 0:2 
+from = 13 | 0:3 
+from = 22 | 0:1 
 ============================================================
 BBLSwitchCount - Thread 25
-from = 0 | 25:1 
-from = 25 | 10:1 
-from = 10 | 14:1 
-from = 14 | 13:2 
-from = 13 | 14:1 22:1 
-from = 22 | 13:1 
+from = 0 | 25:1 10:1 14:2 13:3 22:1 
+from = 25 | 0:1 
+from = 10 | 0:1 
+from = 14 | 0:2 
+from = 13 | 0:3 
+from = 22 | 0:1 
 ============================================================
 BBLSwitchCount - Thread 26
-from = 0 | 25:1 
-from = 25 | 10:1 
-from = 10 | 14:1 
-from = 14 | 13:2 
-from = 13 | 14:1 22:1 
-from = 22 | 13:1 
+from = 0 | 25:1 10:1 14:2 13:3 22:1 
+from = 25 | 0:1 
+from = 10 | 0:1 
+from = 14 | 0:2 
+from = 13 | 0:3 
+from = 22 | 0:1 
 ============================================================
 BBLSwitchCount - Thread 27
-from = 0 | 25:1 
-from = 25 | 10:1 
-from = 10 | 14:1 
-from = 14 | 13:2 
-from = 13 | 14:1 22:1 
-from = 22 | 13:1 
+from = 0 | 25:1 10:1 14:2 13:3 22:1 
+from = 25 | 0:1 
+from = 10 | 0:1 
+from = 14 | 0:2 
+from = 13 | 0:3 
+from = 22 | 0:1 
 ============================================================
 BBLSwitchCount - Thread 28
-from = 0 | 25:1 
-from = 25 | 10:1 
-from = 10 | 14:1 
-from = 14 | 13:2 
-from = 13 | 14:1 22:1 
-from = 22 | 13:1 
+from = 0 | 25:1 10:1 14:2 13:3 22:1 
+from = 25 | 0:1 
+from = 10 | 0:1 
+from = 14 | 0:2 
+from = 13 | 0:3 
+from = 22 | 0:1 
 ============================================================
 BBLSwitchCount - Thread 29
-from = 0 | 25:1 
-from = 25 | 10:1 
-from = 10 | 14:1 
-from = 14 | 13:2 
-from = 13 | 14:1 22:1 
-from = 22 | 13:1 
+from = 0 | 25:1 10:1 14:2 13:3 22:1 
+from = 25 | 0:1 
+from = 10 | 0:1 
+from = 14 | 0:2 
+from = 13 | 0:3 
+from = 22 | 0:1 
 ============================================================
 BBLSwitchCount - Thread 30
-from = 0 | 25:1 
-from = 25 | 10:1 
-from = 10 | 14:1 
-from = 14 | 13:2 
-from = 13 | 14:1 22:1 
-from = 22 | 13:1 
+from = 0 | 25:1 10:1 14:2 13:3 22:1 
+from = 25 | 0:1 
+from = 10 | 0:1 
+from = 14 | 0:2 
+from = 13 | 0:3 
+from = 22 | 0:1 
 ============================================================
 BBLSwitchCount - Thread 31
-from = 0 | 25:1 
-from = 25 | 10:1 
-from = 10 | 14:1 
-from = 14 | 13:2 
-from = 13 | 14:1 22:1 
-from = 22 | 13:1 
+from = 0 | 25:1 10:1 14:2 13:3 22:1 
+from = 25 | 0:1 
+from = 10 | 0:1 
+from = 14 | 0:2 
+from = 13 | 0:3 
+from = 22 | 0:1 
