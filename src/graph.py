@@ -83,8 +83,8 @@ def generateAppStackedBarPlotly(maxY,all_for_one):
 				ax=0,  # 箭头 x 偏移量
 				ay=-10,  # 箭头 y 偏移量，负值表示向下偏移
 				# bgcolor="rgba(255, 255, 255, 0.8)",  # 注释框背景颜色
-				# font=dict(size=4)  # 注释文本字体大小
-				font=dict(size=8)  # 注释文本字体大小
+				font=dict(size=4)  # 注释文本字体大小
+				# font=dict(size=8)  # 注释文本字体大小
 			)
 		else:
 			fig.add_annotation(
@@ -101,7 +101,7 @@ def generateAppStackedBarPlotly(maxY,all_for_one):
 	# fig.add_bar(x=x,y=[6,5,4,3,2,1], name="DataMove")
 	# fig.add_bar(x=x,y=[6,5,4,3,2,1], name="PIM")
 	ic(maxY)
-	width=1200
+	width=1400
 	height=400
 	fig.update_layout(barmode="relative", 
 					title={

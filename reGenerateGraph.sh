@@ -3,8 +3,8 @@
 set -e
 set -v
 
-cd /staff/shaojiemike/github/sniper-pim
-source ./pyEnv/bin/activate
+# cd /staff/shaojiemike/github/sniper-pim
+# source ./pyEnv/bin/activate
 
 # trainning
 # python ./src/trainning/main.py
@@ -12,8 +12,8 @@ source ./pyEnv/bin/activate
 # delete exist inter files 
 # rm -rf ./log/assembly
 rm -rf ./Summary/default_cpu_1_pim_32 ./Summary/kron-20_cpu_1_pim_32 ./Summary/special_cpu_1_pim_32
-# rm -rf ./Summary/default_func_cpu_1_pim_32 ./Summary/kron-20_func_cpu_1_pim_32 ./Summary/special_func_cpu_1_pim_32
+rm -rf ./Summary/default_func_cpu_1_pim_32 ./Summary/kron-20_func_cpu_1_pim_32 ./Summary/special_func_cpu_1_pim_32
 
 # data test
 # python ./src/preScaTest.py -d no
-python ./src/preAnalyse.py -m func
+python ./src/preAnalyse.py -m func -d no

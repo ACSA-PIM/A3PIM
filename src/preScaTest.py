@@ -44,10 +44,10 @@ def main():
         # disassembly to get the instructions of BBLs
         errorPrint("-----------------------------------STEP 1.1 disassembly----------------------------------------")
         
-        parallelTask(taskList, singleDisassembly)
+        all_for_one = CTS(taskList)
+        parallelTask(all_for_one, singleDisaxssembly)
      
         # get the llvm-mca result of BBLs
-        all_for_one = CTS(taskList)
         errorPrint("-----------------------------------STEP 1.1.2 disassembly function degree----------------------------------------")
         all_for_one.delete_func_file()
         all_for_one.compile_func_degree()

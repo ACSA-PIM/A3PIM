@@ -89,10 +89,11 @@ class CTS:
                         "Arch-Suity/Greedy":result_time("G",0,0,0,0,0),
                         "TUB-func":result_time("TUB",0,0,0,0,0),
                         "TUB-bbls":result_time("TUB",0,0,0,0,0),
-                        "CTS":result_time("CTS",0,0,0,0,0),
+                        "CTS-func":result_time("CTS",0,0,0,0,0),
+                        "CTS-bbls":result_time("CTS",0,0,0,0,0),
                         }
         stack_name_map = {"CPU-ONLY":"CPU","PIM-ONLY":"PIM", 'MPKI-based':"MPKI",\
-                "Arch-Suity/Greedy":"G","TUB-func":"TUB","TUB-bbls":"TUB", "CTS":"CTS"}
+                "Arch-Suity/Greedy":"G","TUB-func":"TUB","TUB-bbls":"TUB", "CTS-func":"SCA", "CTS-bbls":"SCA"}
         tmp_list = [[],[],[],[]]
         for app_name, app_info in self.app_info_list.items():
             x_first += [app_name] * len(entryList)
@@ -103,8 +104,9 @@ class CTS:
             func_cpu_time = app_info.detail_func_dict["CPU"].total
             for entry in entryList:
                 if entry == "TUB-func":
-                    to_add = app_info.detail_func_dict["TUB"].normalize24(func_cpu_time)
-                    
+                    to_add = app_info.detail_func_dict[stack_name_map[entry]].normalize24(func_cpu_time)
+                elif entry == "CTS-func":
+                    to_add = app_info.detail_func_dict[stack_name_map[entry]].normalize24(func_cpu_time)
                 else:
                     to_add = app_info.detail_bbl_dict[stack_name_map[entry]].normalize24(bbls_cpu_time)
                 # ic(to_add,tmp_list)
@@ -133,6 +135,14 @@ class CTS:
         # ]
         # data_dict["CPU-ONLY"] = relatied normalized data
         return [[x_first,x_second], data_dict]
+    
+    def avg_time(self, bbls_func, mode ):
+        sum_time = 0
+        for _, app_info in self.app_info_list.items():
+            sum_time += app_info.mode_time(bbls_func, mode)
+        size = len( self.app_info_list)
+        return sum_time / size
+            
 
 
 class result_time():
@@ -177,8 +187,11 @@ class application_info(CTS):
         self.targetAssembly = self.prefix_name + '.s'
         self.bblJsonFile = self.prefix_name + '_bbl.json'
         self.bblSCAFile = self.prefix_name + '_bbl.sca'
+        self.funcSCAFile = self.prefix_name + '_func.sca'
         self.bblSCAPickleFile = self.prefix_name + '_bbl_sca.pickle'
+        self.funcSCAPickleFile = self.prefix_name + '_func_sca.pickle'
         self.bblDecisionFile = self.prefix_name + '_bbl.decision'
+        self.funcDecisionFile = self.prefix_name + '_func.decision'
         self.ctsDecisionFile = self.prefix_name + '_bbl_cts.decision'
         self.cts_cluster_file = self.prefix_name + '_bbl_cts.cluster'
         self.cpu_log_path = self.log_path + self.classify(name)
@@ -221,7 +234,17 @@ class application_info(CTS):
         bbl_G_percentage = self.detail_bbl_dict["G"].total / bbls_cpu_time
         bbl_TUB_percentage = self.detail_bbl_dict["TUB"].total / bbls_cpu_time
         return [bbl_G_percentage, bbl_TUB_percentage]
-        
+    
+    def mode_time(self, bbls_func, mode ): 
+        bbls_cpu_time = self.detail_bbl_dict["CPU"].total
+        func_cpu_time = self.detail_func_dict["CPU"].total
+        if bbls_func == "func":
+            return self.detail_func_dict[mode].total/func_cpu_time
+        elif bbls_func == "bbls":
+            return self.detail_bbl_dict[mode].total/bbls_cpu_time
+        else:
+            assert f"time mode is wrong: {bbls_func}"
+            
     def readListDetail(self,filename):
         regexPattern = {
             1:"CPU only time \(ns\): (.*)$",
@@ -347,7 +370,7 @@ class application_info(CTS):
         pimprofstatsPath = pimlogPath + "/pimprofstats.out"
         pimprofreusePath = cpulogPath + "/pimprofreuse.out"
         redirect2log = pimprofResultPath +"/output_"+taskName+"_cpu_"+ str(cpucore)+"_pim_"+ str(coreNums)+".log"
-        bblDecisionFile = glv._get("logPath")+ "assembly/" + taskName + "_bbl.decision"
+        bblDecisionFile = glv._get("logPath")+ "assembly/" + taskName + "_" + f"{'func' if bbls_func=='func' else 'bbl'}"+ ".decision"
         ctsDecisionFile = glv._get("logPath")+ "assembly/" + taskName + "_bbl_cts.decision"
         command = glv._get("PIMProfSolverPath")+" reuse -c "+cpuprofstatsPath+\
                     " -p " + pimprofstatsPath + \
@@ -669,14 +692,25 @@ def loadStoreDataMove(bblHashDict, targetFile):
 
 def llvmAnalysis(all_for_one):
     for name, app_info in all_for_one.app_info_list.items():
+        # bbls-grained analysis
         if not checkFileExists(app_info.bblSCAPickleFile):
             bblHashDict = dict()
             with open(app_info.bblJsonFile, 'r') as f:
                 bblHashDict = json.load(f)
             
-            parallelGetSCAResult(app_info, bblHashDict)
+            parallelGetSCAResult(app_info.name, app_info.bblSCAFile, app_info.bblSCAPickleFile, bblHashDict)
         else:
             yellowPrint("{:<10} bblSCAPickleFile already existed".format(app_info.name))
+        # func-grained analysis
+        if not checkFileExists(app_info.funcSCAPickleFile):
+            funcHashDict = dict()
+            with open(app_info.func_bblJsonFile, 'r') as f:
+                funcHashDict = json.load(f)
+            
+            parallelGetSCAResult(app_info.name, app_info.funcSCAFile, app_info.funcSCAPickleFile , funcHashDict)
+        else:
+            yellowPrint("{:<10} funcSCAPickleFile already existed".format(app_info.name))
+        
 
 def cluster_apps(all_for_one):
     for name, app_info in all_for_one.app_info_list.items():
@@ -776,12 +810,18 @@ def OffloadBySCA(all_for_one:CTS):
     for _,app_info in all_for_one.app_info_list.items():
         with open(app_info.bblSCAPickleFile, 'rb') as f:
             bblDict = pickle.load(f)
+        with open(app_info.funcSCAPickleFile, 'rb') as f:
+            bblDict_func = pickle.load(f)
         prioriKnowDict = glv._get("prioriKnow")
         if app_info.name in prioriKnowDict and prioriKnowDict[app_info.name]["parallelism"] < 16:
             prioriKnowDecision = "Full-CPU"
         else:
             prioriKnowDecision = "No influence"
+        # bbls-grained decision
         decisionByManual(bblDict,app_info.bblDecisionFile, prioriKnowDecision)
+        # func-grained decision
+        decisionByManual(bblDict_func,app_info.funcDecisionFile, prioriKnowDecision)
+        
             
 def llvmResult(bblList):
     command = llvmCommand(bblList)

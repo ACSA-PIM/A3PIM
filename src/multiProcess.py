@@ -128,7 +128,9 @@ def singlePIMMode(queueDict, taskKey, taskName, countId, totolCount, coreNums):
     queueDict.get("finishedSubTask").put(taskName)
 
 
-def singleDisassembly(queueDict, taskKey, taskName, countId, totolCount, **kwargs):
+def singleDisassembly(queueDict, app_info, countId, totolCount, **kwargs):
+    taskName = app_info.name
+    taskKey = app_info.inj
     sys.stdout.flush()
     yellowPrint("[   {:2}/{:2}   ] Disassembly-1 Task {:<10} is running……".format( countId, totolCount, taskName))
     # if taskName in glv._get("gapbsList"):
@@ -230,7 +232,7 @@ def getBBLFunc(bblHashDict, sendPipe,rank,queueDict):
                 sendPipe.send(i)
             i+=1
             command = llvmCommand(bblList)
-            [list, errList]=TIMEOUT_severalCOMMAND(command, glv._get("timeout"))
+            [list, errList]=TIMEOUT_severalCOMMAND(command, 5)
             # ic(errList)
             MayLoad = 0
             MayStore = 0
@@ -310,7 +312,8 @@ def getBBLFunc(bblHashDict, sendPipe,rank,queueDict):
     except Exception as e:
         sendPipe.send(e)
         errorPrint("error = {}".format(e))
-        raise TypeError("paralleReadProcess = {}".format(e))
+        print(command)
+        # raise TypeError("paralleReadProcess = {}".format(e))
     queueDict.get("llvmCycles").put(llvmCycles)
     queueDict.get("llvmInstrNums").put(llvmInstrNums)
     queueDict.get("llvmMayLoad").put(llvmMayLoad)
@@ -328,11 +331,11 @@ def getBBLFunc(bblHashDict, sendPipe,rank,queueDict):
     sendPipe.send(i+sendSkipNum)
     sendPipe.close()
     
-def parallelGetSCAResult(app_info, bblHashDict):
+def parallelGetSCAResult(taskName, bblSCAFile ,bblSCAPickleFile , bblHashDict):
     
-    taskName = app_info.name
-    bblSCAFile = app_info.bblSCAFile
-    bblSCAPickleFile = app_info.bblSCAPickleFile
+    # taskName = app_info.name
+    # bblSCAFile = app_info.bblSCAFile
+    # bblSCAPickleFile = app_info.bblSCAPickleFile
     
     bblDict = bblDictInit()
     ProcessNum=glv._get("ProcessNum")

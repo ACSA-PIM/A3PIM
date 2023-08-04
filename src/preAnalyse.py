@@ -28,7 +28,7 @@ def main():
              taskfilePath+"select/select.inj": "select", # ./sel -i 1258291200 -t 4
              taskfilePath+"unique/unique.inj": "unique", # first default
              taskfilePath+"hashJoin/hashjoin.inj": "hashjoin", # ./hashjoin.inj checker/R.file checker/S.file hash 40
-            #  taskfilePath+"mlp/mlp.inj": "mlp" # 3.9s
+             taskfilePath+"mlp/mlp.inj": "mlp" # 3.9s
             #  taskfilePath+"svm/svm.inj": "svm" # 2.7s ./svm.inj ./SVM-RFE/outData.txt 253 15154 4
          }
     processBeginTime=timeBeginPrint("multiple taskList")
@@ -53,10 +53,11 @@ def main():
         all_for_one.print_time_result()
         errorPrint("-----------------------------------STEP4.2: Normalized data & Visualization ----------------------------------------")
         
-        [maxValue, scaAvgTime,availAppCount] = generateAppComparisonGraph()   
+        # [maxValue, scaAvgTime,availAppCount] = generateAppComparisonGraph()   
         # generateAppStackedBar()
-        generateAppStackedBarPlotly(maxValue,all_for_one)
+        generateAppStackedBarPlotly(2,all_for_one)
         
+        scaAvgTime = all_for_one.avg_time("bbls", "SCA")
         passPrint(f"SCA AVG Time is {scaAvgTime}\n")
         passPrint(f"SCA AVG SpeedUp is {round(1/scaAvgTime,2)}\n")
         
