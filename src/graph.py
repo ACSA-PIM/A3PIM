@@ -77,13 +77,13 @@ def generateAppStackedBarPlotly(maxY,all_for_one):
 			fig.add_annotation(
 				x=[x[0][i],x[1][i]],  # 注释的 x 坐标为 "bc"
 				y=maxY,  # 注释的 y 坐标为该列的最大值
-				text=f'{entry:.2f}',  # 注释的文本内容
+				text=f'{entry:.0f}',  # 注释的文本内容
 				showarrow=True,  # 显示箭头
 				arrowhead=1,  # 箭头样式
 				ax=0,  # 箭头 x 偏移量
 				ay=-10,  # 箭头 y 偏移量，负值表示向下偏移
 				# bgcolor="rgba(255, 255, 255, 0.8)",  # 注释框背景颜色
-				font=dict(size=4)  # 注释文本字体大小
+				font=dict(size=8)  # 注释文本字体大小
 				# font=dict(size=8)  # 注释文本字体大小
 			)
 		else:

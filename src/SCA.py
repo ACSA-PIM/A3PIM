@@ -83,6 +83,15 @@ class CTS:
         x_first = []
         x_second = []
         entryList = glv._get("graphEntryList")
+        # fix entryList
+        fixedEntryList = []
+        for y in entryList:
+            if y=="A3PIM-func": 
+                fixedEntryList+=[r'$\text{A}^3\text{PIM-func}$' ]
+            elif y=="A3PIM-bbls": 
+                fixedEntryList+=[r'$\text{A}^3\text{PIM-bbls}$' ]
+            else:
+                fixedEntryList+=[y]
         tmp_sum_time = {"CPU-ONLY":result_time("CPU",0,0,0,0,0),
                         "PIM-ONLY":result_time("PIM",0,0,0,0,0),
                         "MPKI-based":result_time("MPKI",0,0,0,0,0),
@@ -97,7 +106,7 @@ class CTS:
         tmp_list = [[],[],[],[]]
         for app_name, app_info in self.app_info_list.items():
             x_first += [app_name] * len(entryList)
-            x_second += entryList
+            x_second += fixedEntryList
             # glv._set("graphEntryList",["CPU-ONLY","PIM-ONLY", 'MPKI-based',\
             #     "Arch-Suity/Greedy","TUB", "CTS"])
             bbls_cpu_time = app_info.detail_bbl_dict["CPU"].total
