@@ -89,11 +89,11 @@ class CTS:
                         "Arch-Suity/Greedy":result_time("G",0,0,0,0,0),
                         "TUB-func":result_time("TUB",0,0,0,0,0),
                         "TUB-bbls":result_time("TUB",0,0,0,0,0),
-                        "CTS-func":result_time("CTS",0,0,0,0,0),
-                        "CTS-bbls":result_time("CTS",0,0,0,0,0),
+                        "A3PIM-func":result_time("CTS",0,0,0,0,0),
+                        "A3PIM-bbls":result_time("CTS",0,0,0,0,0),
                         }
         stack_name_map = {"CPU-ONLY":"CPU","PIM-ONLY":"PIM", 'MPKI-based':"MPKI",\
-                "Arch-Suity/Greedy":"G","TUB-func":"TUB","TUB-bbls":"TUB", "CTS-func":"SCA", "CTS-bbls":"SCA"}
+                "Arch-Suity/Greedy":"G","TUB-func":"TUB","TUB-bbls":"TUB", "A3PIM-func":"SCA", "A3PIM-bbls":"SCA"}
         tmp_list = [[],[],[],[]]
         for app_name, app_info in self.app_info_list.items():
             x_first += [app_name] * len(entryList)
@@ -105,7 +105,7 @@ class CTS:
             for entry in entryList:
                 if entry == "TUB-func":
                     to_add = app_info.detail_func_dict[stack_name_map[entry]].normalize24(func_cpu_time)
-                elif entry == "CTS-func":
+                elif entry == "A3PIM-func":
                     to_add = app_info.detail_func_dict[stack_name_map[entry]].normalize24(func_cpu_time)
                 else:
                     to_add = app_info.detail_bbl_dict[stack_name_map[entry]].normalize24(bbls_cpu_time)

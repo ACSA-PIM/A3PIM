@@ -1,5 +1,9 @@
 # sniper-pim
 
+## the difference between this branch and the main
+
+* When we develop the A3PIM, we found out the couting way of Context Switch in the Sniper code of PIMProf paper is wrong, which leading to the much higher CXT overhead prediction.
+* So we develop this branch followed the old-wrong PIMProf CXT counting way, and main branch using the corrected log result as a comparision.
 
 ## Installation
 
