@@ -126,7 +126,7 @@ class CTS:
         
         # add Avg "application"
         x_first += ["AVG"] * len(entryList)
-        x_second += entryList     
+        x_second += fixedEntryList     
         app_num = len(self.app_info_list)
         for entry in entryList:
             [x.append(entry0) for x,entry0 in zip(tmp_list, tmp_sum_time[entry].normalize24(app_num))]

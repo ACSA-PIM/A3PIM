@@ -40,8 +40,8 @@ def generateAppStackedBar():
 	plt.savefig(glv._get("graphlOutPathTest1"))
 
 def generateAppStackedBarPlotly(maxY,all_for_one):
-	maxY = max(1.2, maxY)
-	# maxY = 2
+	# maxY = max(1.2, maxY)
+	maxY = 1.5
 	# [x, barDict] = detailNormalizedGraphAppDict()
 	[x, barDict] = all_for_one.stacked_data()
 	ic(x)
@@ -83,7 +83,7 @@ def generateAppStackedBarPlotly(maxY,all_for_one):
 				ax=0,  # 箭头 x 偏移量
 				ay=-10,  # 箭头 y 偏移量，负值表示向下偏移
 				# bgcolor="rgba(255, 255, 255, 0.8)",  # 注释框背景颜色
-				font=dict(size=8)  # 注释文本字体大小
+				font=dict(size=10)  # 注释文本字体大小
 				# font=dict(size=8)  # 注释文本字体大小
 			)
 		else:
@@ -93,7 +93,7 @@ def generateAppStackedBarPlotly(maxY,all_for_one):
 				text=f'{entry:.2f}',  # 注释的文本内容
 				showarrow=False,  # 显示箭头
 				# bgcolor="rgba(255, 255, 255, 0.8)",  # 注释框背景颜色
-				font=dict(size=6)  # 注释文本字体大小
+				font=dict(size=8)  # 注释文本字体大小
 			)
  
 
@@ -103,16 +103,48 @@ def generateAppStackedBarPlotly(maxY,all_for_one):
 	ic(maxY)
 	width=1400
 	height=400
+ 
+	# Create custom legend-like annotations
+	
+	# legend_annotations = [
+	# 	dict(
+	# 		x=0.2 + i * 10,  # Adjust x positions to spread the labels horizontally
+	# 		y=1.1,            # Set y to move the labels above the plot
+	# 		# xref="paper",
+	# 		# yref="paper",
+	# 		text=entry[0],
+	# 		showarrow=False,
+	# 		font=dict(size=12),
+	# 	)
+	# 	for i, entry in enumerate( barDict.items())
+	# ]
+
+	# # Add the custom annotations to the layout
+	# fig.update_layout(
+	# 	annotations=legend_annotations
+	# )
+	legend_num = len( barDict.items())
+    # ic(legend_num)
+	fig.add_hline(y=1)
+	fig.add_vline(x=7*10-0.5, line_width=1, line_dash="dot", line_color="black")
+	
 	fig.update_layout(barmode="relative", 
-					title={
-						"text": "Execution time breakdown of GAP and PrIM workloads using different offloading decisions",
-						"x": 0.5,  # Set the title's x position to 0.5 for center alignment
-						"pad": {"t": 30}  # Adjust the padding of the title
-					},
-     				xaxis_title="GAP and PrIM workloads",
+					# title={
+					# 	# "text": "Execution time breakdown of GAP and PrIM workloads using different offloading decisions",
+					# 	"x": 0.5,  # Set the title's x position to 0.5 for center alignment
+					# 	"pad": {"t": 30}  # Adjust the padding of the title
+					# },
+     				# xaxis_title="GAP and PrIM workloads",
 					yaxis_title="Normalized Execution Time",
 					yaxis_range=[0,maxY],
-					legend_title="Legend Title",
+					# legend_title="Legend Title",
+					legend = dict(
+         				entrywidthmode='fraction',
+						entrywidth= 0.2,
+						x=0.5 - 0.5 * legend_num * 0.2,        # Set x to 0.5 for the center
+						y=1.2,       # Set y to a value greater than 1 to move it above the plot
+						orientation="h",  # Display legend items in a single line
+					),
 					font=dict(
 						family="serif",
 						size=12,
@@ -234,7 +266,7 @@ def BreakdownGraph(species,dictData, maxVal):
 
 	# Add some text for labels, title and custom x-axis tick labels, etc.
 	ax.set_ylabel('Normalized Execution Time')
-	ax.set_title('Execution time of GAP and PrIM workloads using different offloading decisions')
+	# ax.set_title('Execution time of GAP and PrIM workloads using different offloading decisions')
 	ax.set_xticks(x + 2 * width, species)
 	ax.legend(loc='upper left', ncols=3)
 	if(maxVal > 15):
