@@ -1,5 +1,9 @@
 # A3PIM
 
+The initial release of A3PIM is described in the following paper:
+
+[DATE'2024] Qingcai Jiang, Shaojie Tan, Junshi Chen and Hong An. [A3PIM: An Automated, Analytic and Accurate Processing-in-Memory Offloader](https://arxiv.org/abs/2402.18592), 27th Design, Automation and Test in Europe Conference (DATE), 2024. 
+
 
 ## Installation
 
@@ -102,12 +106,5 @@ FileNotFoundError: Matplotlib's TeX implementation searched for a file named 'cm
       1         P           C           C             1       1312156    1.13788e+06    4.01082e+06   -2.87294e+06                      1                      1
 ```
 
-## Programming Format Explanation
-
-Initially, the program was not anticipated to be as complex as it turned out to be. It was developed using a procedural programming approach and followed the convention of using small camel-case naming format.
-
-However, during the internship, the hosting organization requested us to use an underscore naming format and adopt object-oriented programming. I made an effort to refactor some portions of the code and continued writing new code using the new format.
-
-Unfortunately, this led to confusion in the codebase and resulted in a decrease in code readability. As a result, I would like to clarify this situation here.
-
-Moving forward, we will adhere to the new requirements and use the underscore naming format while following object-oriented programming principles consistently throughout the project. This will ensure code consistency and enhance overall readability for future development and maintenance.
+## Contact:
+Qingcai Jiang: jqc9707@gmail.com
